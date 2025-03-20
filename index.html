@@ -1,31 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamingX</title>
+    <title>Anime Streaming</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
-        <h1>StreamingX</h1>
+        <h1>Daftar Anime</h1>
     </header>
     
-    <main>
-        <section class="anime-cards">
-            <div class="card" onclick="goToAnime('sololevelingS1')">
-                <img src="public/Sololeveling.jpg" alt="Solo Leveling Season 1">
-            </div>
-            <div class="card" onclick="goToAnime('sololevelingS2')">
-                <img src="public/SololevelingS2.jpg" alt="Solo Leveling Season 2">
-            </div>
-        </section>
-    </main>
-    
-    <script>
-        function goToAnime(title) {
-            window.location.href = `anime.html?title=${title}`;
-        }
-    </script>
+    <main class="anime-grid" id="anime-list"></main>
+
+    <script type="module" src="assets/script.js"></script>
 </body>
 </html>
