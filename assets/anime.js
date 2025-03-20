@@ -1,6 +1,6 @@
 export async function fetchAnimeList() {
     try {
-        const response = await fetch('./anime-list.json');
+        const response = await fetch('../anime-list.json');
         return await response.json();
     } catch (error) {
         console.error('Error fetching anime list:', error);
