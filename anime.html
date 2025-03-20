@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Anime</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Kembali</a>
+        <h1 id="anime-title"></h1>
+    </header>
+    
+    <main class="anime-container">
+        <div class="anime-info">
+            <img id="anime-poster" src="" alt="Poster Anime">
+            <div class="anime-meta">
+                <p><strong>Judul Jepang:</strong> <span id="anime-jtitle"></span></p>
+                <p><strong>Skor:</strong> <span id="anime-score"></span></p>
+                <p><strong>Studio:</strong> <span id="anime-studio"></span></p>
+                <p><strong>Tipe:</strong> <span id="anime-type"></span></p>
+                <p><strong>Status:</strong> <span id="anime-status"></span></p>
+                <p><strong>Durasi:</strong> <span id="anime-duration"></span></p>
+                <p><strong>Tanggal Rilis:</strong> <span id="anime-release"></span></p>
+                <p><strong>Genre:</strong> <span id="anime-genre"></span></p>
+            </div>
+        </div>
+        
+        <section class="episode-section">
+            <h2>Daftar Episode</h2>
+            <div class="episode-list" id="episode-list"></div>
+        </section>
+        
+        <section class="player-section">
+            <h2>Pemutar</h2>
+            <iframe id="anime-embed" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <script type="module" src="assets/anime.js"></script>
+</body>
+</html>
