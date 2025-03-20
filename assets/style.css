@@ -1,52 +1,109 @@
+/* Style Umum */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #1e1e1e;
     padding: 20px;
-    font-size: 24px;
-}
-
-.anime-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card {
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.card:hover {
-    transform: scale(1.1);
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff4500;
-    color: white;
-    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Halaman Utama */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.anime-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
     cursor: pointer;
-    font-size: 16px;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.anime-card h2 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Halaman Detail */
+.anime-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.anime-info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+#anime-poster {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.anime-meta {
+    flex: 1;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.anime-meta p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.episode-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.episode-list a {
+    background: #3a3a3a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
     border-radius: 5px;
+    text-decoration: none;
     transition: background 0.3s;
 }
 
-.back-button:hover {
-    background-color: #ff5722;
+.episode-list a:hover {
+    background: #007bff;
+}
+
+.player-section {
+    margin-top: 40px;
+}
+
+#anime-embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    background: #000;
 }
