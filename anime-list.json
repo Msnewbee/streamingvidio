@@ -17,6 +17,7 @@
       { "episode": 1, "url": "https://mega.nz/embed/wVQESDiL#rWrzrxNp6Ip17-s-dICc2iaMr73T5Pic5Ep563F3vlY" },
       { "episode": 2, "url": "https://mega.nz/embed/gA5VnRBL#7RQII5KdmoV-Tj4OwaBOJ3ncg7q70Et7K86OE4WLPA0" }
     ]
+  },
   {
     "title": "Solo Leveling Season 2",
     "folder": "sololevelingseason2",
@@ -28,12 +29,13 @@
     "status": "Ongoing",
     "total_episodes": 12,
     "duration": "23 Menit",
-    "release_date": "5 Januari 2025",
+    "release_date": "5 Januari 2026",
     "studio": "A-1 Pictures",
     "genre": ["Action", "Adventure", "Fantasy"],
     "episodes": [
-      { "episode": 1, "url": "https://example.com/s2ep1" },
-      { "episode": 2, "url": "https://example.com/s2ep2" }
+      { "episode": 1, "url": "https://mega.nz/embed/example1" },
+      { "episode": 2, "url": "https://mega.nz/embed/example2" }
     ]
   }
 ]
+
