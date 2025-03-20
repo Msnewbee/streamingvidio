@@ -2,7 +2,7 @@
   {
     "title": "Solo Leveling Season 1",
     "folder": "sololevelingseason1",
-    "image": "public/SololevelingS2.jpg",
+    "image": "/SololevelingS2.jpg",
     "japanese_title": "俺だけレベルアップな件",
     "score": 8.29,
     "producers": ["Aniplex", "Crunchyroll", "Netmarble", "Kakao Piccoma", "D&C Media"],
@@ -20,7 +20,7 @@
   },
   {
     "title": "Solo Leveling Season 2",
-    "image": "public/Sololeveling.jpg",
+    "image": "/Sololeveling.jpg",
     "image": "SololevelingS2.jpg",
     "japanese_title": "俺だけレベルアップな件",
     "score": 8.29,
