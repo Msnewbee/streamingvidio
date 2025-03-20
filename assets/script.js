@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         animeCard.addEventListener("click", () => {
           animeInfoDiv.classList.remove("hidden");
           animeTitle.textContent = anime.title;
-          animeImage.src = `Anime/${anime.folder}/${anime.image}`;
+          animeImage.src = `public/${anime.folder}/${anime.image}`;
           animeJapanese.textContent = anime.japanese_title;
           animeScore.textContent = anime.score;
           animeProducers.textContent = anime.producers.join(", ");
