@@ -54,7 +54,7 @@ export async function loadAnimeDetail() {
 
     // Load first episode by default (hanya jika URL valid)
     if (anime.episodes.length > 0) {
-        const trustedDomains = ['example.com', 'another-trusted.com']; // Ganti dengan domain terpercaya
+        const trustedDomains = ['mega.nz', 'example.com', 'another-trusted.com']; // Ganti dengan domain terpercaya
         const url = new URL(anime.episodes[0].url);
         
         if (trustedDomains.includes(url.hostname)) {
