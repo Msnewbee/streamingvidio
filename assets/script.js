@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let animeCard = document.createElement("div");
         animeCard.classList.add("anime-card");
         animeCard.innerHTML = `
-          <img src="Anime/${anime.folder}/${anime.image}" alt="${anime.title}">
+          <img src="public/${anime.folder}/${anime.image}" alt="${anime.title}">
           <h3>${anime.title}</h3>
         `;
 
