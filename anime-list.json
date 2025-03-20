@@ -1,8 +1,9 @@
 [
   {
+    "id": 1,
     "title": "Solo Leveling Season 1",
     "folder": "sololevelingseason1",
-    "image": "/SololevelingS2.jpg",
+    "image": "Sololeveling.jpg",
     "japanese_title": "俺だけレベルアップな件",
     "score": 8.29,
     "producers": ["Aniplex", "Crunchyroll", "Netmarble", "Kakao Piccoma", "D&C Media"],
@@ -19,14 +20,15 @@
     ]
   },
   {
+    "id": 2,
     "title": "Solo Leveling Season 2",
-    "image": "/Sololeveling.jpg",
+    "folder": "sololevelingseason2",
     "image": "SololevelingS2.jpg",
     "japanese_title": "俺だけレベルアップな件",
     "score": 8.29,
     "producers": ["Aniplex", "Crunchyroll", "Netmarble", "Kakao Piccoma", "D&C Media"],
     "type": "TV",
-    "status": "Ongoing",
+    "status": "Ongoing", 
     "total_episodes": 12,
     "duration": "23 Menit",
     "release_date": "5 Januari 2026",
@@ -38,4 +40,3 @@
     ]
   }
 ]
-
