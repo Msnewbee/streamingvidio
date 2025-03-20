@@ -1,12 +1,19 @@
+/* Reset & Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Style Umum */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
     background-color: #1a1a1a;
     color: #fff;
+    padding: 20px;
 }
 
+/* Tombol Kembali */
 .back-button {
     color: #fff;
     text-decoration: none;
@@ -25,12 +32,13 @@ body {
     background: #2a2a2a;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .anime-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .anime-card img {
@@ -43,6 +51,9 @@ body {
     padding: 15px;
     margin: 0;
     font-size: 1.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Halaman Detail */
@@ -93,7 +104,7 @@ body {
 }
 
 .episode-list a:hover {
-    background: #007bff;
+    background: #0056b3;
 }
 
 .player-section {
@@ -106,4 +117,25 @@ body {
     border: none;
     border-radius: 10px;
     background: #000;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .anime-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #anime-poster {
+        width: 80%;
+    }
+
+    .anime-meta {
+        width: 100%;
+    }
+
+    #anime-embed {
+        height: 400px;
+    }
 }
