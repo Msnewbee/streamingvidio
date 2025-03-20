@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.anime-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+}
+
+#anime-info {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+}
+
+.episode-link {
+  display: block;
+  margin: 5px;
+  text-decoration: none;
+  color: blue;
+}
+
+.hidden {
+  display: none;
+}
