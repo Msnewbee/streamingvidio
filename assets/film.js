@@ -59,6 +59,7 @@ function loadFilms() {
 
         const titleElement = document.createElement("h3");
         titleElement.textContent = film.title;
+        titleElement.classList.add("film-title");
 
         const videoContainer = document.createElement('div');
         videoContainer.classList.add("video-container");
