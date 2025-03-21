@@ -40,21 +40,24 @@
         </section>
     </main>
 
-    <!-- Sticky Footer dengan Unit Iklan AdSense -->
-    <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
-        <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
-        <div class="ads-footer">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1357574968133580"
-                 data-ad-slot="5544332211"
-                 data-ad-format="auto"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </footer>
+    <footer style="background: #222; color: white; position: fixed; bottom: 0; width: 100%; text-align: center; padding: 5px 0;">
+    <!-- Bagian Iklan -->
+    <div class="ads-footer" style="margin-bottom: 5px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Ubah width & height agar iklan lebih kecil (misal 320x50) -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-1357574968133580"
+             data-ad-slot="5544332211"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!-- Bagian Copyright -->
+    <p style="margin: 0; font-size: 14px;">
+        &copy; 2025 StreamingX. Semua hak dilindungi.
+    </p>
+</footer>
 
     <script type="module" src="assets/anime.js"></script>
 </body>
