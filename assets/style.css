@@ -2,9 +2,8 @@
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
-    color: gray;
+    color: #ccc; /* Improved contrast for readability */
 }
-
 
 /* Reset & Box Sizing */
 * {
@@ -13,7 +12,7 @@
     padding: 0;
 }
 
-/* Style Umum */
+/* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1a1a1a;
@@ -21,14 +20,14 @@ body {
     padding: 20px;
 }
 
-/* Tombol Kembali */
+/* Back Button */
 .back-button {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-/* Halaman Utama */
+/* Main Page */
 .anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -38,16 +37,15 @@ body {
 
 @media screen and (max-width: 480px) {
     .anime-grid {
-        grid-template-columns: repeat(2, 1fr); /* Hanya 2 kolom di HP kecil */
+        grid-template-columns: repeat(2, 1fr); /* Only 2 columns on small screens */
     }
 }
 
 @media screen and (max-width: 320px) {
     .anime-grid {
-        grid-template-columns: 1fr; /* Hanya 1 kolom di layar sangat kecil */
+        grid-template-columns: 1fr; /* 1 column on very small screens */
     }
 }
-
 
 .anime-card {
     background: #2a2a2a;
@@ -72,12 +70,11 @@ body {
     padding: 15px;
     margin: 0;
     font-size: 1.1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word; /* Prevents text overflow */
 }
 
-/* Halaman Detail */
+/* Detail Page */
 .anime-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -92,7 +89,7 @@ body {
 #anime-poster {
     width: 300px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .anime-meta {
@@ -125,7 +122,7 @@ body {
 }
 
 .episode-list a:hover {
-    background: #0056b3;
+    background: #007bff; /* Unified hover color */
 }
 
 .player-section {
@@ -143,7 +140,7 @@ body {
     border-radius: 10px;
 }
 
-/* Responsivitas */
+/* Responsiveness */
 @media (max-width: 768px) {
     .anime-info {
         flex-direction: column;
@@ -164,13 +161,14 @@ body {
     }
 }
 
+/* Contact Section */
 .contact-container {
     max-width: 600px;
     margin: 50px auto;
     background: #2a2a2a;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-container h2 {
@@ -192,7 +190,9 @@ input, textarea {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #888; /* Improved border color for dark mode */
+    background: #2a2a2a;
+    color: #fff;
 }
 
 button {
@@ -217,6 +217,7 @@ button:hover {
     font-weight: bold;
 }
 
+/* Film Section */
 .film-item {
     margin-bottom: 20px;
     padding: 10px;
@@ -230,19 +231,19 @@ button:hover {
     border-radius: 10px;
 }
 
-/* ========== Sticky Ads CSS ========== */
+/* ========== Sticky Ads ========== */
 .sticky-ads {
     position: fixed;
-    bottom: 50px; /* Jarak dari bawah agar tidak bertabrakan dengan footer */
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-radius: 8px;
     z-index: 1000;
+    max-width: 90%; /* Adjusted for smaller screens */
 }
 
-/* Tombol Tutup Iklan */
 .close-ads {
     position: absolute;
     top: -15px;
@@ -256,18 +257,20 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Responsive untuk HP */
+/* Responsive Ads */
 @media screen and (max-width: 768px) {
     .sticky-ads {
-        padding: 5px 0;
+        width: 90%;
+        bottom: 20px;
     }
 
     .close-ads {
-    display: block;
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
+        display: block;
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
 }
