@@ -1,3 +1,11 @@
+.nav-description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+
 /* Reset & Box Sizing */
 * {
     box-sizing: border-box;
