@@ -192,3 +192,19 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+.film-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.film-item iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
