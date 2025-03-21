@@ -1,10 +1,18 @@
 .film-container {
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #f9f9f9;
     text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.film-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .play-button {
@@ -16,6 +24,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .play-button:hover {
@@ -25,6 +34,7 @@
 .video-container {
     margin-top: 10px;
 }
+
 
 
 .nav-description {
