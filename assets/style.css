@@ -206,5 +206,42 @@ button:hover {
     border-radius: 10px;
 }
 
+/* ========== Sticky Ads CSS ========== */
+.sticky-ads {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 9999;
+    border-top: 2px solid #ff0000;
+}
 
+/* Tombol Tutup Iklan */
+.close-ads {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+/* Responsive untuk HP */
+@media screen and (max-width: 768px) {
+    .sticky-ads {
+        padding: 5px 0;
+    }
+
+    .close-ads {
+        top: -10px;
+        font-size: 12px;
+        padding: 3px 7px;
+    }
+}
