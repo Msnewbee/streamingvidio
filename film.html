@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film 18+ - StreamingX</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>StreamingX</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="film.html">Film 18+</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="age-verification">
+            <h2>Verifikasi Usia</h2>
+            <p>Masukkan tanggal lahir Anda:</p>
+            <input type="date" id="dob">
+            <button onclick="verifyAge()">Submit</button>
+        </div>
+
+        <div id="restricted-content" style="display: none;">
+            <h2>Daftar Film 18+</h2>
+            <div id="film-list"></div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 10px; background: #222; color: white;">
+        <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
+    </footer>
+
+    <script type="module" src="assets/film.js"></script>
+</body>
+</html>
