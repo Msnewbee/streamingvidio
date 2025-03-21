@@ -22,36 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function verifyAge() {
-    const dobInput = document.getElementById('dob').value;
-    const errorMessage = document.getElementById("error-message");
+    // Simpan status verifikasi
+    sessionStorage.setItem("verified", "true");
 
-    if (!dobInput) {
-        alert('Silakan masukkan tanggal lahir Anda.');
-        return;
-    }
+    // Sembunyikan form verifikasi dan tampilkan konten
+    document.getElementById('age-verification').style.display = 'none';
+    document.getElementById('restricted-content').style.display = 'block';
 
-    const birthDate = new Date(dobInput);
-    const today = new Date();
-
-    // Hitung usia dengan lebih akurat
-    const ageDiff = today - birthDate;
-    const age = Math.floor(ageDiff / (1000 * 60 * 60 * 24 * 365.25));
-
-    if (age >= 18) {
-        sessionStorage.setItem("verified", "true"); // Simpan status verifikasi
-        document.getElementById('age-verification').style.display = 'none';
-        document.getElementById('restricted-content').style.display = 'block';
-        loadFilms();
-
-        // Jika Firebase ada, kirim event ke Analytics
-        if (typeof firebase !== "undefined") {
-            const analytics = firebase.analytics();
-            analytics.logEvent("user_verified");
-        }
-    } else {
-        errorMessage.style.display = "block"; // Tampilkan pesan kesalahan
-        setTimeout(() => errorMessage.style.display = "none", 3000); // Sembunyikan setelah 3 detik
-    }
+    loadFilms();
 }
 
 function loadFilms() {
