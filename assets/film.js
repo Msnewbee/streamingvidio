@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ageVerification = document.getElementById("age-verification");
     const restrictedContent = document.getElementById("restricted-content");
 
-    // Cek apakah pengguna sudah diverifikasi sebelumnya
+    // Cek jika pengguna sudah diverifikasi sebelumnya
     if (sessionStorage.getItem("verified") === "true") {
         ageVerification.style.display = "none";
         restrictedContent.style.display = "block";
@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Tombol verifikasi tidak ditemukan!");
     }
+
+    // Nonaktifkan event sensor (menghindari error devicemotion)
+    window.removeEventListener("devicemotion", () => {});
+    window.removeEventListener("deviceorientation", () => {});
 });
 
 function verifyAge() {
@@ -29,7 +33,7 @@ function verifyAge() {
     const birthDate = new Date(dobInput);
     const today = new Date();
 
-    // Hitung usia dengan lebih akurat menggunakan Date.UTC()
+    // Hitung usia dengan lebih akurat
     const ageDiff = today - birthDate;
     const age = Math.floor(ageDiff / (1000 * 60 * 60 * 24 * 365.25));
 
@@ -38,6 +42,12 @@ function verifyAge() {
         document.getElementById('age-verification').style.display = 'none';
         document.getElementById('restricted-content').style.display = 'block';
         loadFilms();
+
+        // Jika Firebase ada, kirim event ke Analytics
+        if (typeof firebase !== "undefined") {
+            const analytics = firebase.analytics();
+            analytics.logEvent("user_verified");
+        }
     } else {
         errorMessage.style.display = "block"; // Tampilkan pesan kesalahan
         setTimeout(() => errorMessage.style.display = "none", 3000); // Sembunyikan setelah 3 detik
