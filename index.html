@@ -28,24 +28,27 @@
 
     <main class="anime-grid" id="anime-list"></main>
 
-   <footer style="background: #222; color: white; position: fixed; bottom: 0; width: 100%; text-align: center; padding: 5px 0;">
-    <!-- Bagian Iklan -->
-    <div class="ads-footer" style="margin-bottom: 5px;">
+   <!-- Sticky Footer Ads -->
+<div class="sticky-ads" id="stickyAds">
+    <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
+    <div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Ubah width & height agar iklan lebih kecil (misal 320x50) -->
         <ins class="adsbygoogle"
-             style="display:inline-block;width:320px;height:50px"
+             style="display:inline-block;width:728px;height:90px"
              data-ad-client="ca-pub-1357574968133580"
              data-ad-slot="5544332211"></ins>
         <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <!-- Bagian Copyright -->
-    <p style="margin: 0; font-size: 14px;">
-        &copy; 2025 StreamingX. Semua hak dilindungi.
-    </p>
-</footer>
+</div>
+
+<script>
+    // Fungsi untuk menutup iklan
+    function closeAds() {
+        document.getElementById("stickyAds").style.display = "none";
+    }
+</script>
 
     <script type="module" src="assets/anime.js"></script>
 </body>
