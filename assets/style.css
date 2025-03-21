@@ -1,3 +1,32 @@
+.film-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.play-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background: #0056b3;
+}
+
+.video-container {
+    margin-top: 10px;
+}
+
+
 .nav-description {
     text-align: center;
     margin-top: 10px;
