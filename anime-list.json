@@ -58,5 +58,49 @@
       { "episode": 11, "url": "https://mega.nz/embed/PtYCUIzZ#x7M9jXcYZOfgIMz36czRo4h6CtbfIYZy825r62-giic" },
       { "episode": 12, "url": "" }
     ]
-  }
+  },
+  {
+  "id": 3,
+  "title": "Kimetsu no Yaiba",
+  "folder": "kimetsunoyaiba",
+  "image": "kimetsunoyaiba.jpg",
+  "japanese_title": "鬼滅の刃",
+  "score": 8.8,
+  "producers": ["Aniplex", "Shueisha", "ufotable"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 26,
+  "duration": "23 Menit",
+  "release_date": "6 April 2019",
+  "studio": "ufotable",
+  "genre": ["Action", "Adventure", "Fantasy"],
+  "episodes": [
+    { "episode": 1, "url": "https://mega.nz/embed/AY5BTLiI#YO3PCrSR-_KtDL2JxeOVipU8tDzk2dAhLS2vVSX3nIQ" },
+    { "episode": 2, "url": "https://mega.nz/embed/lFx20DqC#Hmjm3TBzzZ9iv3MK3P0f4Wnnc7IIWshsiNgnnSomck4" },
+    { "episode": 3, "url": "https://mega.nz/embed/oZJ2HZIK#WNUu4cMjS2jFhB6oaS0iAjjHw8LPrd6Ek9SfkJY4rDs" },
+    { "episode": 4, "url": "https://mega.nz/embed/tdx1WIBa#ug1iDE8OH_6xx_XEShxaONzBu5n_lW6800I6W34IQaM" },
+    { "episode": 5, "url": "https://mega.nz/embed/pEBAhDLK#8NsImrWjLAH5wXVaQHf4l-frgtKrdnQGMNS1EQ7Q66M" },
+    { "episode": 6, "url": "https://acefile.co/player/98002540" },
+    { "episode": 7, "url": "https://acefile.co/player/98002541" },
+    { "episode": 8, "url": "https://mega.nz/embed/episode8url" },
+    { "episode": 9, "url": "https://mega.nz/embed/episode9url" },
+    { "episode": 10, "url": "https://mega.nz/embed/episode10url" },
+    { "episode": 11, "url": "https://mega.nz/embed/episode11url" },
+    { "episode": 12, "url": "https://mega.nz/embed/episode12url" },
+    { "episode": 13, "url": "https://mega.nz/embed/episode13url" },
+    { "episode": 14, "url": "https://mega.nz/embed/episode14url" },
+    { "episode": 15, "url": "https://mega.nz/embed/episode15url" },
+    { "episode": 16, "url": "https://mega.nz/embed/episode16url" },
+    { "episode": 17, "url": "https://mega.nz/embed/episode17url" },
+    { "episode": 18, "url": "https://mega.nz/embed/episode18url" },
+    { "episode": 19, "url": "https://mega.nz/embed/episode19url" },
+    { "episode": 20, "url": "https://mega.nz/embed/episode20url" },
+    { "episode": 21, "url": "https://mega.nz/embed/episode21url" },
+    { "episode": 22, "url": "https://mega.nz/embed/episode22url" },
+    { "episode": 23, "url": "https://mega.nz/embed/episode23url" },
+    { "episode": 24, "url": "https://mega.nz/embed/episode24url" },
+    { "episode": 25, "url": "https://mega.nz/embed/episode25url" },
+    { "episode": 26, "url": "https://mega.nz/embed/episode26url" }
+  ]
+}
 ]
