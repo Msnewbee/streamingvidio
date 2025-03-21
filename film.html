@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film 18+ - StreamingX</title>
     <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Permissions Policy untuk menghindari sensor errors -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=(), geolocation=()" />
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 <body>
     <header>
@@ -35,6 +46,8 @@
         <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="assets/firebase-config.js"></script> <!-- File Firebase config -->
     <script src="assets/film.js"></script>
 </body>
 </html>
