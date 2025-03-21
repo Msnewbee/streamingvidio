@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ageVerification = document.getElementById("age-verification");
     const restrictedContent = document.getElementById("restricted-content");
 
-    // Cek jika pengguna sudah diverifikasi sebelumnya
+    // Check if user is already verified
     if (sessionStorage.getItem("verified") === "true") {
         ageVerification.style.display = "none";
         restrictedContent.style.display = "block";
@@ -13,19 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (verifyButton) {
         verifyButton.addEventListener("click", verifyAge);
     } else {
-        console.error("Tombol verifikasi tidak ditemukan!");
+        console.error("Verification button not found!");
     }
-
-    // Nonaktifkan event sensor (menghindari error devicemotion)
-    window.removeEventListener("devicemotion", () => {});
-    window.removeEventListener("deviceorientation", () => {});
 });
 
 function verifyAge() {
-    // Simpan status verifikasi
     sessionStorage.setItem("verified", "true");
 
-    // Sembunyikan form verifikasi dan tampilkan konten
     document.getElementById('age-verification').style.display = 'none';
     document.getElementById('restricted-content').style.display = 'block';
 
@@ -39,7 +33,7 @@ function loadFilms() {
             embed: "https://terabox.com/sharing/embed?surl=oEY8jxE4Tv0pJaz6d_2oYQ&resolution=1080&autoplay=true&mute=false&uk=81366251617206&fid=843976327435458&slid="
         },
         {
-            title: "Cewe cantik Ini beramain sendirian di kamar mandi",
+            title: "Cewe cantik Ini bermain sendirian di kamar mandi",
             embed: "https://terabox.com/sharing/embed?surl=8eNwlybnhiOoLzAC__1MGw&resolution=1080&autoplay=true&mute=false&uk=81366251617206&fid=1017568112374262&slid="
         },
         {
@@ -47,21 +41,55 @@ function loadFilms() {
             embed: "https://terabox.com/sharing/embed?surl=355FHPJlwRhisnF8keIbjg&resolution=360&autoplay=true&mute=false&uk=81366251617206&fid=65017207422990&slid="
         },
         {
-            title: "mengintip kaka nya bermain di kamar mandi",
+            title: "Mengintip kaka nya bermain di kamar mandi",
             embed: "https://terabox.com/sharing/embed?surl=OcKoQEy8pG5vTiLMr2WCMg&resolution=1080&autoplay=true&mute=false&uk=81366251617206&fid=732675653952914&slid="
         }
     ];
 
     const filmList = document.getElementById('film-list');
-    filmList.innerHTML = ""; // Bersihkan daftar sebelumnya
+    if (!filmList) {
+        console.error("Element #film-list not found!");
+        return;
+    }
+    filmList.innerHTML = ""; 
 
-    films.forEach(film => {
+    films.forEach((film, index) => {
         const filmContainer = document.createElement('div');
-        filmContainer.classList.add('film-item');
-        filmContainer.innerHTML = `
-            <h3>${film.title}</h3>
-            <iframe width="100%" height="400px" src="${film.embed}" frameborder="0" allowfullscreen></iframe>
-        `;
+
+        const titleElement = document.createElement("p");
+        titleElement.classList.add("film-item");
+        titleElement.textContent = film.title;
+        titleElement.dataset.index = index;
+
+        const videoContainer = document.createElement('div');
+        videoContainer.classList.add("video-container");
+        videoContainer.id = `video-${index}`;
+
+        filmContainer.appendChild(titleElement);
+        filmContainer.appendChild(videoContainer);
         filmList.appendChild(filmContainer);
+
+        titleElement.addEventListener("click", function () {
+            showVideo(index, film.embed);
+        });
     });
+}
+
+function showVideo(index, embedUrl) {
+    const videoContainer = document.getElementById(`video-${index}`);
+    
+    if (videoContainer.innerHTML === "") {
+        const iframe = document.createElement("iframe");
+        iframe.width = "100%";
+        iframe.height = "400px";
+        iframe.src = embedUrl;
+        iframe.frameBorder = "0";
+        iframe.allowFullscreen = true;
+
+        videoContainer.appendChild(iframe);
+        videoContainer.style.display = "block";
+    } else {
+        videoContainer.innerHTML = "";
+        videoContainer.style.display = "none";
+    }
 }
