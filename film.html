@@ -10,8 +10,10 @@
     <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=(), geolocation=()" />
 
     <!-- Facebook SDK -->
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <!-- Google AdSense Header Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -36,8 +38,20 @@
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 10px; background: #222; color: white;">
+    <!-- Sticky Footer dengan Unit Iklan AdSense -->
+    <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
         <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
+        <div class="ads-footer">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1357574968133580"
+                 data-ad-slot="5544332211"
+                 data-ad-format="auto"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </footer>
 
     <!-- JavaScript -->
