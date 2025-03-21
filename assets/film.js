@@ -55,27 +55,33 @@ function loadFilms() {
 
     films.forEach((film, index) => {
         const filmContainer = document.createElement('div');
+        filmContainer.classList.add("film-container");
 
-        const titleElement = document.createElement("p");
-        titleElement.classList.add("film-item");
+        const titleElement = document.createElement("h3");
         titleElement.textContent = film.title;
-        titleElement.dataset.index = index;
 
         const videoContainer = document.createElement('div');
         videoContainer.classList.add("video-container");
         videoContainer.id = `video-${index}`;
+        videoContainer.style.display = "none";
+
+        const playButton = document.createElement("button");
+        playButton.textContent = "Tonton Video";
+        playButton.classList.add("play-button");
+        playButton.dataset.index = index;
+
+        playButton.addEventListener("click", function () {
+            toggleVideo(index, film.embed);
+        });
 
         filmContainer.appendChild(titleElement);
+        filmContainer.appendChild(playButton);
         filmContainer.appendChild(videoContainer);
         filmList.appendChild(filmContainer);
-
-        titleElement.addEventListener("click", function () {
-            showVideo(index, film.embed);
-        });
     });
 }
 
-function showVideo(index, embedUrl) {
+function toggleVideo(index, embedUrl) {
     const videoContainer = document.getElementById(`video-${index}`);
     
     if (videoContainer.innerHTML === "") {
