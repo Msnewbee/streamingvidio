@@ -1,4 +1,15 @@
-window.verifyAge = function () {
+document.addEventListener("DOMContentLoaded", function () {
+    // Pastikan elemen HTML ada sebelum menjalankan kode
+    const verifyButton = document.getElementById("verify-button");
+    
+    if (verifyButton) {
+        verifyButton.addEventListener("click", verifyAge);
+    } else {
+        console.error("Tombol verifikasi tidak ditemukan!");
+    }
+});
+
+function verifyAge() {
     const dob = document.getElementById('dob').value;
     if (!dob) {
         alert('Silakan masukkan tanggal lahir Anda.');
@@ -7,7 +18,7 @@ window.verifyAge = function () {
 
     const birthDate = new Date(dob);
     const today = new Date();
-    const age = today.getFullYear() - birthDate.getFullYear();
+    let age = today.getFullYear() - birthDate.getFullYear();
 
     if (today.getMonth() < birthDate.getMonth() || 
         (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
@@ -22,9 +33,9 @@ window.verifyAge = function () {
         alert('Maaf, Anda harus berusia minimal 18 tahun untuk mengakses konten ini.');
         window.location.href = 'index.html';
     }
-};
+}
 
-window.loadFilms = function () {
+function loadFilms() {
     const films = [
         {
             title: "Film Dewasa 1",
@@ -37,6 +48,8 @@ window.loadFilms = function () {
     ];
 
     const filmList = document.getElementById('film-list');
+    filmList.innerHTML = ""; // Bersihkan daftar sebelumnya
+
     films.forEach(film => {
         const filmContainer = document.createElement('div');
         filmContainer.classList.add('film-item');
@@ -46,4 +59,4 @@ window.loadFilms = function () {
         `;
         filmList.appendChild(filmContainer);
     });
-};
+}
