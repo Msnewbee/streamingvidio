@@ -209,14 +209,13 @@ button:hover {
 /* ========== Sticky Ads CSS ========== */
 .sticky-ads {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
-    text-align: center;
-    z-index: 9999;
-    border-top: 2px solid #ff0000;
+    bottom: 50px; /* Jarak dari bawah agar tidak bertabrakan dengan footer */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
 }
 
 /* Tombol Tutup Iklan */
@@ -240,8 +239,11 @@ button:hover {
     }
 
     .close-ads {
-        top: -10px;
-        font-size: 12px;
-        padding: 3px 7px;
-    }
+    display: block;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
