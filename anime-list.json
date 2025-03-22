@@ -102,5 +102,30 @@
     { "episode": 25, "url": "https://mega.nz/embed/5Y5kgLxC#9S_K_wq330uSIybsaz5VbJmeDIFcUJ_eo04Z3MGj1ec" },
     { "episode": 26, "url": "https://mega.nz/embed/NFYygCrA#2l35Szt8JpVk81wGZt1WFuoue_mlKJvJ_hfuyEMrl8w" }
   ]
+},
+{
+  "id": 4,
+  "title": "Kimetsu no Yaiba: Mugen Ressha-hen",
+  "folder": "kimetsu_no_yaiba_mugen_ressha_hen",
+  "image": "kimetsu_no_yaiba_mugen_ressha_hen.jpg",
+  "japanese_title": "鬼滅の刃 無限列車編",
+  "score": 8.5,
+  "producers": ["Aniplex", "Shueisha", "ufotable"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 7,
+  "duration": "23 Menit per episode",
+  "release_date": "10 Oktober 2021",
+  "studio": "ufotable",
+  "genre": ["Action", "Supernatural", "Demons", "Historical", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://mega.nz/embed/JIohmJIZ#BUvWvNRJHoLk40kOdRkwweqCY4m7EUVKUd0pDWbb80k" },
+    { "episode": 2, "url": "https://mega.nz/embed/IAoCwLaa#Vd1Fj3-1Xt3iJ-tn2ceQ61oetl-XvzZnW6BRCgrRbUg" },
+    { "episode": 3, "url": "https://mega.nz/embed/AMJWhJoK#zM8UVsdgI6IGJXZC5yIWYuHC_oI9X5urXbqSnflC6sc" },
+    { "episode": 4, "url": "https://mega.nz/embed/RJRHSBrb#lBW4OzYMRqYVWk20xuL16EpVMkLJAXmPh6-ADu89mAk" },
+    { "episode": 5, "url": "https://mega.nz/embed/4JoRnDKI#Nb2JpIbGNI3OvsZtkmMhJGix9G_sVey-B6_6FSeycq4" },
+    { "episode": 6, "url": "https://mega.nz/embed/kEon0JoR#E8GYRDzynRt5SmFRUTYlbA204c6RZcoSHK2-XX44Hgo" },
+    { "episode": 7, "url": "https://mega.nz/embed/pAhGXaQC#ePAYcwwnUWNYvwKFGTtyjM4ai6mTsLx7QTw4_3geHog" }
+  ]
 }
 ]
