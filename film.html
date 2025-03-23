@@ -6,8 +6,8 @@
     <title>Film 18+ - StreamingX</title>
     <link rel="stylesheet" href="assets/style.css">
 
-    <!-- Permissions Policy untuk menghindari sensor errors -->
-    <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), magnetometer=(), geolocation=()" />
+    <!-- Content Security Policy to prevent XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://trusted-cdn.com; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;">
 
     <!-- Facebook SDK -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
@@ -25,16 +25,16 @@
         </nav>
 
         <div class="nav-description">
-          <p>Untuk Menonoton Vidio Ini Klik 8x sampai tidak muncul iklan dan jika membuka tab baru hapus saja teb baru nya ituh iklan</p>
+            <p>Untuk menonton video ini, klik 8x sampai iklan tidak muncul. Jika terbuka tab baru, tutup saja karena itu iklan.</p>
         </div>
-        
     </header>
 
     <main>
         <div id="age-verification">
             <h2>Verifikasi Usia</h2>
-            <p>Klik tombol di bawah untuk mengakses konten:</p>
-            <button id="verify-button">Verif</button>
+            <p>Anda harus berusia minimal 18 tahun untuk mengakses konten ini.</p>
+            <button id="verify-button">Verifikasi Usia</button>
+            <p id="verification-status" style="display:none; color: green;">Verifikasi berhasil! Memuat konten...</p>
         </div>
 
         <div id="restricted-content" style="display: none;">
@@ -44,26 +44,18 @@
     </main>
 
     <!-- Sticky Footer Ads -->
-<div class="sticky-ads" id="stickyAds">
-    <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
-    <div>
-        
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-1357574968133580"
-             data-ad-slot="5544332211"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <div class="sticky-ads" id="stickyAds">
+        <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
+        <div>
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-1357574968133580"
+                data-ad-slot="5544332211"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </div>
-</div>
-
-<script>
-    // Fungsi untuk menutup iklan
-    function closeAds() {
-        document.getElementById("stickyAds").style.display = "none";
-    }
-</script>
 
     <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
         <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
