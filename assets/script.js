@@ -1,66 +1,55 @@
 import { fetchAnimeList } from './anime.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const container = document.getElementById('anime-list');
-    const searchInput = document.getElementById('search');
-    
-    container.innerHTML = '<p>Memuat daftar anime...</p>'; // Placeholder loading
+document.addEventListener("DOMContentLoaded", async () => {
+    const searchInput = document.getElementById("search");
+    const searchResults = document.getElementById("search-results");
+    const animeListContainer = document.getElementById("anime-list");
 
-    try {
-        const animeList = await fetchAnimeList();
+    let animeList = [];
 
-        // Hapus placeholder setelah data dimuat
-        container.innerHTML = '';
-
-        if (!animeList || animeList.length === 0) {
-            container.innerHTML = '<p>Tidak ada anime yang tersedia.</p>';
-            return;
+    // Fungsi mengambil data anime
+    async function fetchAnimeList() {
+        try {
+            const response = await fetch("assets/anime.json"); // Sesuaikan dengan sumber data
+            animeList = await response.json();
+            renderAnimeList(animeList);
+        } catch (error) {
+            console.error("Gagal memuat daftar anime:", error);
         }
-
-        // Menyimpan daftar anime asli untuk pencarian
-        let originalAnimeList = animeList;
-
-        // Fungsi render anime list
-        function renderAnimeList(filteredList) {
-            container.innerHTML = ''; // Bersihkan daftar sebelum menampilkan hasil pencarian
-
-            filteredList.forEach(anime => {
-                const card = document.createElement('div');
-                card.className = 'anime-card';
-
-                const img = document.createElement('img');
-                img.src = `public/${anime.image}`;
-                img.alt = anime.title;
-                img.onerror = () => img.src = 'default-poster.jpg'; // Gambar default jika tidak tersedia
-
-                const title = document.createElement('h2');
-                title.textContent = anime.title;
-
-                card.appendChild(img);
-                card.appendChild(title);
-
-                card.addEventListener('click', () => {
-                    window.location.href = `anime.html?id=${anime.id}`;
-                });
-
-                container.appendChild(card);
-            });
-        }
-
-        // Tampilkan daftar anime pertama kali
-        renderAnimeList(originalAnimeList);
-
-        // Event listener untuk pencarian
-        searchInput.addEventListener("input", function () {
-            const searchText = searchInput.value.toLowerCase();
-            const filteredAnime = originalAnimeList.filter(anime =>
-                anime.title.toLowerCase().includes(searchText)
-            );
-            renderAnimeList(filteredAnime);
-        });
-
-    } catch (error) {
-        console.error('Gagal memuat daftar anime:', error);
-        container.innerHTML = '<p>Gagal memuat daftar anime. Silakan coba lagi nanti.</p>';
     }
+
+    // Fungsi untuk merender daftar anime
+    function renderAnimeList(list) {
+        animeListContainer.innerHTML = "";
+        list.forEach(anime => {
+            const card = document.createElement("div");
+            card.className = "anime-card";
+            
+            const img = document.createElement("img");
+            img.src = anime.image;
+            img.alt = anime.title;
+
+            const title = document.createElement("h2");
+            title.textContent = anime.title;
+
+            card.appendChild(img);
+            card.appendChild(title);
+            animeListContainer.appendChild(card);
+        });
+    }
+
+    // Fungsi pencarian
+    searchInput.addEventListener("input", function () {
+        const searchText = searchInput.value.toLowerCase();
+        const filteredAnime = animeList.filter(anime => anime.title.toLowerCase().includes(searchText));
+
+        if (searchText.length > 0) {
+            renderAnimeList(filteredAnime);
+        } else {
+            renderAnimeList(animeList);
+        }
+    });
+
+    // Panggil fungsi awal
+    fetchAnimeList();
 });
