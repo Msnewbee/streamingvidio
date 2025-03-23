@@ -3,7 +3,7 @@ import { fetchAnimeList } from './anime.js';
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('anime-list');
     const searchInput = document.getElementById('search');
-
+    
     container.innerHTML = '<p>Memuat daftar anime...</p>'; // Placeholder loading
 
     try {
