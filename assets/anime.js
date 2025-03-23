@@ -100,3 +100,57 @@ export async function loadAnimeDetail() {
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
+// Fitur Pencarian Anime & Film
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search");
+    const animeList = document.getElementById("anime-list");
+    
+    searchInput.addEventListener("input", function () {
+        const searchText = searchInput.value.toLowerCase();
+        const animeItems = animeList.getElementsByTagName("li");
+        
+        for (let item of animeItems) {
+            const title = item.textContent.toLowerCase();
+            if (title.includes(searchText)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        }
+    });
+});
+
+// Auto-Next Episode
+const videoPlayer = document.getElementById("video-player");
+const nextEpisodeBtn = document.getElementById("next-episode");
+const prevEpisodeBtn = document.getElementById("prev-episode");
+let currentEpisodeIndex = 0;
+const episodes = [
+    "episode1.mp4", "episode2.mp4", "episode3.mp4" // Ganti dengan sumber asli
+];
+
+function loadEpisode(index) {
+    if (index >= 0 && index < episodes.length) {
+        videoPlayer.src = episodes[index];
+        currentEpisodeIndex = index;
+    }
+}
+
+videoPlayer.addEventListener("ended", function () {
+    if (currentEpisodeIndex < episodes.length - 1) {
+        loadEpisode(currentEpisodeIndex + 1);
+    }
+});
+
+nextEpisodeBtn.addEventListener("click", function () {
+    if (currentEpisodeIndex < episodes.length - 1) {
+        loadEpisode(currentEpisodeIndex + 1);
+    }
+});
+
+prevEpisodeBtn.addEventListener("click", function () {
+    if (currentEpisodeIndex > 0) {
+        loadEpisode(currentEpisodeIndex - 1);
+    }
+});
+
