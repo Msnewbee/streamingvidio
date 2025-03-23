@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="public/${anime.image}" alt="${anime.title}" />
         <div class="card-content">
           <h3>${anime.title}</h3>
+          <p>Score: ${anime.score}</p>
+          <p>Tanggal Rilis: ${anime.release_date}</p>
         </div>
       `;
 
