@@ -119,38 +119,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// Auto-Next Episode
-const videoPlayer = document.getElementById("video-player");
-const nextEpisodeBtn = document.getElementById("next-episode");
-const prevEpisodeBtn = document.getElementById("prev-episode");
-let currentEpisodeIndex = 0;
-const episodes = [
-    "episode1.mp4", "episode2.mp4", "episode3.mp4" // Ganti dengan sumber asli
-];
-
-function loadEpisode(index) {
-    if (index >= 0 && index < episodes.length) {
-        videoPlayer.src = episodes[index];
-        currentEpisodeIndex = index;
-    }
-}
-
-videoPlayer.addEventListener("ended", function () {
-    if (currentEpisodeIndex < episodes.length - 1) {
-        loadEpisode(currentEpisodeIndex + 1);
-    }
-});
-
-nextEpisodeBtn.addEventListener("click", function () {
-    if (currentEpisodeIndex < episodes.length - 1) {
-        loadEpisode(currentEpisodeIndex + 1);
-    }
-});
-
-prevEpisodeBtn.addEventListener("click", function () {
-    if (currentEpisodeIndex > 0) {
-        loadEpisode(currentEpisodeIndex - 1);
-    }
-});
-
