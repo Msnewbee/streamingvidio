@@ -100,22 +100,3 @@ export async function loadAnimeDetail() {
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
-// Fitur Pencarian Anime & Film
-document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("search");
-    const animeList = document.getElementById("anime-list");
-    
-    searchInput.addEventListener("input", function () {
-        const searchText = searchInput.value.toLowerCase();
-        const animeItems = animeList.getElementsByTagName("li");
-        
-        for (let item of animeItems) {
-            const title = item.textContent.toLowerCase();
-            if (title.includes(searchText)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
-        }
-    });
-});
