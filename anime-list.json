@@ -185,5 +185,32 @@
     { "episode": 10, "url": "https://filedon.co/embed/JBWyypMHvD" },
     { "episode": 11, "url": "https://filedon.co/embed/1omrRiMFxC" }
   ]
+},
+ {
+  "id": 7,
+  "title": "Kimetsu no Yaiba: Hashira Geiko-hen",
+  "folder": "kimetsu_no_yaiba_hashira_geiko_hen",
+  "image": "kimetsu_no_yaiba_hashira_geiko_hen.jpg",
+  "japanese_title": "鬼滅の刃 柱稽古編",
+  "score": 8.7,
+  "producers": ["Aniplex", "Shueisha", "ufotable"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 8,
+  "duration": "23 Menit per episode",
+  "release_date": "12 Mei 2024",
+  "studio": "ufotable",
+  "genre": ["Action", "Supernatural", "Demons", "Historical", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/Rf1iS0LPgv" },
+    { "episode": 2, "url": "https://filedon.co/embed/m5VNIMNJGT" },
+    { "episode": 3, "url": "https://mega.nz/embed/episode3_url" },
+    { "episode": 4, "url": "https://mega.nz/embed/episode4_url" },
+    { "episode": 5, "url": "https://mega.nz/embed/episode5_url" },
+    { "episode": 6, "url": "https://mega.nz/embed/episode6_url" },
+    { "episode": 7, "url": "https://mega.nz/embed/episode7_url" },
+    { "episode": 8, "url": "https://mega.nz/embed/episode8_url" }
+  ]
 }
+
 ]
