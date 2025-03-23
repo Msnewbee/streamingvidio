@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film 18+ - StreamingX</title>
     <link rel="stylesheet" href="assets/style.css">
-
-    <!-- Content Security Policy to prevent XSS attacks -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://terabox.com; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com;">
-
-    <!-- Google AdSense Header Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -20,18 +14,14 @@
             <a href="film.html">Film 18+</a>
             <a href="contact.html">Kontak</a>
         </nav>
-
-        <div class="nav-description">
-            <p>Untuk menonton video ini, klik 8x sampai iklan tidak muncul. Jika terbuka tab baru, tutup saja karena itu iklan.</p>
-        </div>
     </header>
 
     <main>
         <div id="age-verification">
             <h2>Verifikasi Usia</h2>
-            <p>Anda harus berusia minimal 18 tahun untuk mengakses konten ini.</p>
-            <button id="verify-button">Verifikasi Usia</button>
-            <p id="verification-status" style="display:none; color: green;">Verifikasi berhasil! Memuat konten...</p>
+            <p>Masukkan tanggal lahir Anda:</p>
+            <input type="date" id="dob">
+            <button id="verify-button">Submit</button>
         </div>
 
         <div id="restricted-content" style="display: none;">
@@ -40,25 +30,11 @@
         </div>
     </main>
 
-    <!-- Sticky Footer Ads -->
-    <div class="sticky-ads" id="stickyAds">
-        <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
-        <div>
-            <ins class="adsbygoogle"
-                style="display:inline-block;width:728px;height:90px"
-                data-ad-client="ca-pub-1357574968133580"
-                data-ad-slot="5544332211"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-
-    <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
-        <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
+    <footer style="text-align: center; padding: 10px; background: #222; color: white;">
+        <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Pastikan JavaScript dimuat setelah HTML -->
     <script src="assets/film.js"></script>
 </body>
 </html>
