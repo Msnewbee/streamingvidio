@@ -1,5 +1,3 @@
-import { fetchAnimeList } from './anime.js';
-
 document.addEventListener("DOMContentLoaded", async () => {
     const searchInput = document.getElementById("search");
     const searchResults = document.getElementById("search-results");
