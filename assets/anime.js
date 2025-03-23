@@ -108,17 +108,20 @@ if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
 
+// Anime Search Feature (Prevents null error)
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search");
     const animeList = document.getElementById("anime-list");
-    
-    searchInput.addEventListener("input", function () {
-        const searchText = searchInput.value.toLowerCase();
-        const animeItems = animeList.getElementsByTagName("li");
-        
-        for (let item of animeItems) {
-            const title = item.textContent.toLowerCase();
-            item.style.display = title.includes(searchText) ? "block" : "none";
-        }
-    });
+
+    if (searchInput && animeList) {
+        searchInput.addEventListener("input", function () {
+            const searchText = searchInput.value.toLowerCase();
+            const animeItems = animeList.getElementsByTagName("li");
+
+            for (let item of animeItems) {
+                const title = item.textContent.toLowerCase();
+                item.style.display = title.includes(searchText) ? "block" : "none";
+            }
+        });
+    }
 });
