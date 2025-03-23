@@ -31,9 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
 
-      animeListContainer.appendChild(animeCard);
-    });
-  }
+      const title = document.createElement('h2');
+            title.textContent = anime.title;
+
+            card.appendChild(img);
+            card.appendChild(title);
+
+            card.addEventListener('click', () => {
+                window.location.href = `anime.html?id=${anime.id}`;
+            });
+
+            container.appendChild(card);
+        })
 
   // Event listener untuk pencarian
   searchInput.addEventListener("input", function () {
