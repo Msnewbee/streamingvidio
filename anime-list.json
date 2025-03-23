@@ -156,5 +156,34 @@
     { "episode": 10, "url": "https://mega.nz/embed/xMxigSJK#knzsFs2D0DdxJXVhh4dxB4FtmXebj3yUDqSVZGdq8oA" },
     { "episode": 11, "url": "https://mega.nz/embed/dUhCzCxL#--JipweRav_lKiqZ10lXjba1cE5DgWF49mapnOLAwTc" }
   ]
+},
+ {
+  "id": 6,
+  "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+  "folder": "kimetsu_no_yaiba_katanakaji_no_sato_hen",
+  "image": "kimetsu_no_yaiba_katanakaji_no_sato_hen.jpg",
+  "japanese_title": "鬼滅の刃 刀鍛冶の里編",
+  "score": 8.6,
+  "producers": ["Aniplex", "Shueisha", "ufotable"],
+  "type": "TV",
+  "status": "Completed",
+  "total_episodes": 11,
+  "duration": "23 Menit per episode",
+  "release_date": "9 April 2023",
+  "studio": "ufotable",
+  "genre": ["Action", "Supernatural", "Demons", "Historical", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/HNPnpORpNi" },
+    { "episode": 2, "url": "https://filedon.co/embed/sZEO2m0j80" },
+    { "episode": 3, "url": "https://filedon.co/embed/NBTiEgJz2x" },
+    { "episode": 4, "url": "https://mega.nz/embed/episode4_url" },
+    { "episode": 5, "url": "https://mega.nz/embed/episode5_url" },
+    { "episode": 6, "url": "https://mega.nz/embed/episode6_url" },
+    { "episode": 7, "url": "https://mega.nz/embed/episode7_url" },
+    { "episode": 8, "url": "https://mega.nz/embed/episode8_url" },
+    { "episode": 9, "url": "https://mega.nz/embed/episode9_url" },
+    { "episode": 10, "url": "https://mega.nz/embed/episode10_url" },
+    { "episode": 11, "url": "https://mega.nz/embed/episode11_url" }
+  ]
 }
 ]
