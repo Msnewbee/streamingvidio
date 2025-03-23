@@ -41,7 +41,7 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
     // Validasi domain terpercaya sebelum menampilkan video
-    const trustedDomains = ['mega.nz', 'acefile.co', 'another-trusted.com'];
+    const trustedDomains = ['mega.nz', 'filedon.co', 'another-trusted.com'];
 
     function isTrustedURL(url) {
         try {
