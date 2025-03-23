@@ -32,7 +32,20 @@
     </nav>
    </header>
 
-    <main class="anime-grid" id="anime-list"></main>    
+    <!-- Konten utama -->
+  <main>
+    <div class="search-container">
+      <input type="text" id="search-anime" placeholder="Cari anime...">
+      <select id="sort-anime">
+        <option value="">Sort By</option>
+        <option value="score">Score</option>
+        <option value="release_date">Tanggal Rilis</option>
+      </select>
+    </div>
+
+    <!-- Daftar anime -->
+    <div class="anime-grid" id="anime-list"></div>    
+  </main>   
 
    <!-- Sticky Footer Ads -->
 <div class="sticky-ads" id="stickyAds">
