@@ -1,3 +1,36 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Memberikan ruang di atas konten utama agar tidak tertutup header */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    padding-top: 80px; /* Ruang tambahan untuk header */
+}
+
+/* Header dengan posisi di pojok kiri atas */
+header {
+    position: absolute;
+    top: 20px;    /* Jarak dari atas */
+    left: 20px;   /* Jarak dari kiri */
+    text-align: left;
+    padding: 10px;
+    z-index: 100;
+}
+
+/*Footer */
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Film Section */
 .film-container {
     margin: 20px auto;
     padding: 15px;
@@ -15,8 +48,8 @@
     font-weight: bold;
     margin-bottom: 10px;
     padding: 10px;
-    background: #007bff; /* Blue background */
-    color: white; /* White text */
+    background: #007bff;
+    color: white;
     border-radius: 5px;
     display: inline-block;
     width: 100%;
@@ -26,7 +59,7 @@
     display: inline-block;
     margin: 10px;
     padding: 10px 15px;
-    background: #ff5722; /* Orange button */
+    background: #ff5722;
     color: white;
     border: none;
     border-radius: 5px;
@@ -35,122 +68,83 @@
 }
 
 .play-button:hover {
-    background: #e64a19; /* Darker orange */
+    background: #e64a19;
 }
 
 .video-container {
     margin-top: 10px;
 }
 
-
-
-
-.nav-description {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc; /* Improved contrast for readability */
-}
-
-/* Reset & Box Sizing */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 20px;
-}
-
-/* Back Button */
-.back-button {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-/* Main Page */
+/* Anime Grid */
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
     padding: 10px;
 }
 
 @media screen and (max-width: 480px) {
     .anime-grid {
-        grid-template-columns: repeat(2, 1fr); /* Only 2 columns on small screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 320px) {
     .anime-grid {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
+        grid-template-columns: 1fr;
     }
 }
 
+/* Anime Card */
 .anime-card {
-    background: #2a2a2a;
-    border-radius: 10px;
+    background-color: #2b2b2b;
+    border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
 }
 
 .anime-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
 }
 
 .anime-card img {
     width: 100%;
-    height: 350px;
+    height: 270px;
     object-fit: cover;
+    display: block;
 }
 
-.anime-card h2 {
+.card-content {
     padding: 15px;
-    margin: 0;
-    font-size: 1.1em;
-    white-space: normal;
-    word-wrap: break-word; /* Prevents text overflow */
 }
 
-/* Detail Page */
-.anime-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.card-content h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-.anime-info {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 40px;
+.card-content p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 4px;
 }
 
-#anime-poster {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+/* Contoh CSS untuk input pencarian dan sort */
+#search-anime, #sort-anime {
+    padding: 10px;
+    margin: 10px 5px 20px 0;
+    width: 200px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
 }
 
-.anime-meta {
-    flex: 1;
-    background: #2a2a2a;
-    padding: 20px;
-    border-radius: 10px;
+#search-anime:focus, #sort-anime:focus {
+    border: 2px solid #6c63ff;
 }
 
-.anime-meta p {
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-
+/* Episode List */
 .episode-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -169,43 +163,7 @@ body {
 }
 
 .episode-list a:hover {
-    background: #007bff; /* Unified hover color */
-}
-
-.player-section {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-#anime-embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .anime-info {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #anime-poster {
-        width: 80%;
-    }
-
-    .anime-meta {
-        width: 100%;
-    }
-
-    #anime-embed {
-        height: 400px;
-    }
+    background: #007bff;
 }
 
 /* Contact Section */
@@ -237,7 +195,7 @@ input, textarea {
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    border: 1px solid #888; /* Improved border color for dark mode */
+    border: 1px solid #888;
     background: #2a2a2a;
     color: #fff;
 }
@@ -264,21 +222,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* Film Section */
-.film-item {
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #222;
-    color: white;
-    text-align: center;
-}
-
-.film-item iframe {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-/* ========== Sticky Ads ========== */
+/* Sticky Ads */
 .sticky-ads {
     position: fixed;
     bottom: 50px;
@@ -288,7 +232,7 @@ button:hover {
     padding: 10px;
     border-radius: 8px;
     z-index: 1000;
-    max-width: 90%; /* Adjusted for smaller screens */
+    max-width: 90%;
 }
 
 .close-ads {
@@ -304,20 +248,12 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Responsive Ads */
 @media screen and (max-width: 768px) {
     .sticky-ads {
         width: 90%;
         bottom: 20px;
     }
-
     .close-ads {
         display: block;
-        background: red;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        margin-bottom: 5px;
-        cursor: pointer;
     }
 }
