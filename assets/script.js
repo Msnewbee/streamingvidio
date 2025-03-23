@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch anime data
     async function fetchAnimeList() {
         try {
-            const response = await fetch("assets/anime.json"); // Ensure the correct path
+            const response = await fetch("/anime-list.json"); // Ensure the correct path
             if (!response.ok) throw new Error("Gagal memuat daftar anime");
             
             animeList = await response.json();
