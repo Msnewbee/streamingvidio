@@ -6,12 +6,10 @@ export async function fetchAnimeList() {
     } catch (error) {
         console.error('Error fetching anime list:', error);
 
-        // Tampilkan pesan error di halaman
         const episodeSection = document.getElementById('episode-list');
         if (episodeSection) {
             episodeSection.innerHTML = `<p style="color: red;">Gagal memuat daftar anime. Silakan coba lagi nanti.</p>`;
         }
-
         return [];
     }
 }
@@ -28,7 +26,7 @@ export async function loadAnimeDetail() {
         return;
     }
 
-    // Update metadata di halaman
+    // Update metadata on the page
     document.getElementById('anime-title').textContent = anime.title;
     document.getElementById('anime-jtitle').textContent = anime.japanese_title;
     document.getElementById('anime-score').textContent = anime.score;
@@ -40,67 +38,76 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-genre').textContent = anime.genre.join(', ');
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
-    // Validasi domain terpercaya sebelum menampilkan video
-    const trustedDomains = ['mega.nz', 'filedon.co','acefile.co','another-trusted.com'];
+    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co', 'another-trusted.com'];
 
     function isTrustedURL(url) {
         try {
             const parsedURL = new URL(url);
             return trustedDomains.includes(parsedURL.hostname);
         } catch (e) {
-            return false; // Jika URL tidak valid
+            return false;
         }
     }
 
-    // Muat daftar episode
     const episodeList = document.getElementById('episode-list');
-    episodeList.textContent = '';
+    episodeList.innerHTML = '';
 
     if (anime.episodes.length === 0) {
         episodeList.innerHTML = '<p>Belum ada episode tersedia.</p>';
     } else {
-        anime.episodes.forEach((ep, index) => {
-            const episodeLink = document.createElement('a');
-            episodeLink.href = "#";
-            episodeLink.textContent = `Episode ${ep.episode}`;
-            episodeLink.classList.add("episode-item");
+        anime.episodes.forEach((ep) => {
+            const episodeButton = document.createElement('button');
+            episodeButton.textContent = `Episode ${ep.episode}`;
+            episodeButton.classList.add("episode-item");
 
-            episodeLink.addEventListener('click', (event) => {
+            episodeButton.addEventListener('click', (event) => {
                 event.preventDefault();
-
+                
                 if (isTrustedURL(ep.url)) {
-                    document.getElementById('anime-embed').src = ep.url;
-
-                    // Hapus highlight dari episode sebelumnya
-                    document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
-                    episodeLink.classList.add('active');
+                    playEpisode(ep.url, ep.episode, anime.id);
                 } else {
                     console.warn('URL episode tidak terpercaya:', ep.url);
                 }
             });
 
-            episodeList.appendChild(episodeLink);
+            episodeList.appendChild(episodeButton);
         });
     }
 
-    // Load episode pertama jika tersedia & aman
-    if (anime.episodes.length > 0) {
-        const firstEpisodeURL = anime.episodes[0].url;
-        if (isTrustedURL(firstEpisodeURL)) {
-            document.getElementById('anime-embed').src = firstEpisodeURL;
-            // Highlight episode pertama
-            document.querySelector('.episode-item')?.classList.add('active');
-        } else {
-            console.warn('URL pertama tidak terpercaya:', firstEpisodeURL);
-        }
+    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
+    if (lastWatched && lastWatched.animeId === anime.id) {
+        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
     }
 }
 
-// Jalankan hanya jika elemen anime-title ada (mencegah error di halaman lain)
+function playEpisode(url, episode, animeId) {
+    const videoPlayer = document.getElementById('anime-video');
+    const videoSource = document.getElementById('video-source');
+    const downloadLink = document.getElementById('download-link');
+
+    videoSource.src = url;
+    videoPlayer.load();
+    downloadLink.href = url;
+    downloadLink.textContent = `Download Episode ${episode}`;
+
+    localStorage.setItem('lastWatched', JSON.stringify({
+        animeId: animeId,
+        episode: episode,
+        url: url
+    }));
+
+    document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
+    document.querySelectorAll('.episode-item').forEach(e => {
+        if (e.textContent.includes(`Episode ${episode}`)) {
+            e.classList.add('active');
+        }
+    });
+}
+
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
-// Fitur Pencarian Anime & Film
+
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search");
     const animeList = document.getElementById("anime-list");
@@ -111,11 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         for (let item of animeItems) {
             const title = item.textContent.toLowerCase();
-            if (title.includes(searchText)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
+            item.style.display = title.includes(searchText) ? "block" : "none";
         }
     });
 });
