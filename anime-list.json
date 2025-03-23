@@ -211,6 +211,49 @@
     { "episode": 7, "url": "https://acefile.co/player/105875535" },
     { "episode": 8, "url": "https://acefile.co/player/106033844" }
   ]
+},
+{
+  "id": 5,
+  "title": "Hunter x Hunter (2011)",
+  "folder": "hunter_x_hunter_2011",
+  "image": "hunter_x_hunter_2011.jpg",
+  "japanese_title": "ハンター×ハンター",
+  "score": 9.0,
+  "producers": ["VAP", "Nippon Television Network", "Shueisha"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 148,
+  "duration": "23 Menit per episode",
+  "release_date": "2 Oktober 2011",
+  "studio": "Madhouse",
+  "genre": ["Action", "Adventure", "Fantasy", "Shounen", "Super Power"],
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/CIHa7S9fw8" },
+    { "episode": 2, "url": "https://filedon.co/embed/MJm1nnvYUp" },
+    { "episode": 3, "url": "https://Smoothpre.com/embed/88988tusjpv4" },
+    { "episode": 4, "url": "https://Smoothpre.com/file/gb8lp77f96gk" },
+    { "episode": 5, "url": "https://Smoothpre.com/file/wna8s53c9cew" },
+    { "episode": 6, "url": "https://Smoothpre.com/file/dbkap0aglyp3" },
+    { "episode": 7, "url": "https://acefile.co/player/106693659" },
+    { "episode": 8, "url": "https://Smoothpre.com/file/jrbc7joqk3nc" },
+    { "episode": 9, "url": "https://Smoothpre.com/file/gcd2dc7cu20t" },
+    { "episode": 10, "url": "https://Smoothpre.com/file/9s45bfvy0tju" },
+    { "episode": 11, "url": "https://mega.nz/embed/episode5_url" },
+    { "episode": 12, "url": "https://mega.nz/embed/episode6_url" },
+    { "episode": 13, "url": "https://mega.nz/embed/episode1_url" },
+    { "episode": 14, "url": "https://mega.nz/embed/episode1_url" },
+    { "episode": 15, "url": "https://mega.nz/embed/episode2_url" },
+    { "episode": 16, "url": "https://mega.nz/embed/episode3_url" },
+    { "episode": 17, "url": "https://mega.nz/embed/episode4_url" },
+    { "episode": 18, "url": "https://mega.nz/embed/episode5_url" },
+    { "episode": 19, "url": "https://mega.nz/embed/episode6_url" },
+    { "episode": 20, "url": "https://mega.nz/embed/episode2_url" },
+    { "episode": 21, "url": "https://mega.nz/embed/episode3_url" },
+    { "episode": 22, "url": "https://mega.nz/embed/episode4_url" },
+    { "episode": 23, "url": "https://mega.nz/embed/episode5_url" },
+    { "episode": 24, "url": "https://mega.nz/embed/episode6_url" },
+    { "episode": 7, "url": "https://mega.nz/embed/episode7_url" }
+  ]
 }
 
 ]
