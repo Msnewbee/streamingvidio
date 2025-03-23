@@ -16,12 +16,13 @@
         </nav>
     </header>
 
-    <main>
+    <main class="film-page-container">
         <div id="age-verification">
             <h2>Verifikasi Usia</h2>
             <p>Masukkan tanggal lahir Anda:</p>
             <input type="date" id="dob">
             <button id="verify-button">Submit</button>
+            <p id="error-message" style="color: red; display: none;">Maaf, Anda harus berusia minimal 18 tahun.</p>
         </div>
 
         <div id="restricted-content" style="display: none;">
@@ -30,11 +31,10 @@
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 10px; background: #222; color: white;">
+    <footer>
         <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- Pastikan JavaScript dimuat setelah HTML -->
     <script src="assets/film.js"></script>
 </body>
 </html>
