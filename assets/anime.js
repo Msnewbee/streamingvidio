@@ -81,12 +81,10 @@ export async function loadAnimeDetail() {
 }
 
 function playEpisode(url, episode, animeId) {
-    const videoPlayer = document.getElementById('anime-video');
-    const videoSource = document.getElementById('video-source');
+    const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
 
-    videoSource.src = url;
-    videoPlayer.load();
+    iframePlayer.src = url;
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
 
@@ -108,7 +106,7 @@ if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
 
-// Anime Search Feature (Prevents null error)
+// Anime Search Feature (Fixes null error)
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search");
     const animeList = document.getElementById("anime-list");
