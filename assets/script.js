@@ -1,4 +1,4 @@
-import { fetchAnimeList } from './anime.js';
+import { fetchAnimeList } from "./anime.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-anime");
@@ -7,23 +7,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let animeData = [];
 
-  // Mengambil data anime melalui fungsi yang sudah disediakan di anime.js
+  // Fetch anime data
   fetchAnimeList()
-    .then(data => {
+    .then((data) => {
       animeData = data;
       displayAnime(animeData);
     })
-    .catch(error => console.error("Error fetching data:", error));
+    .catch((error) => console.error("Error fetching data:", error));
 
-  // Fungsi untuk menampilkan daftar anime dalam bentuk card
+  // Function to display anime list
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
-    animes.forEach(anime => {
+    animes.forEach((anime) => {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
 
       animeCard.innerHTML = `
-        <img src="public/${anime.image}" alt="${anime.title}" />
+        <img src="${anime.image.startsWith('http') ? anime.image : 'public/' + anime.image}" alt="${anime.title}" />
         <div class="card-content">
           <h3>${anime.title}</h3>
           <p>Score: ${anime.score}</p>
@@ -31,38 +31,31 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
 
-      const title = document.createElement('h2');
-            title.textContent = anime.title;
+      animeCard.addEventListener("click", () => {
+        window.location.href = `anime.html?id=${anime.id}`;
+      });
 
-            card.appendChild(img);
-            card.appendChild(title);
+      animeListContainer.appendChild(animeCard);
+    });
+  }
 
-            card.addEventListener('click', () => {
-                window.location.href = `anime.html?id=${anime.id}`;
-            });
-
-            container.appendChild(card);
-        })
-
-  // Event listener untuk pencarian
+  // Search functionality
   searchInput.addEventListener("input", function () {
     const query = searchInput.value.toLowerCase();
-    const filteredAnime = animeData.filter(anime =>
+    const filteredAnime = animeData.filter((anime) =>
       anime.title.toLowerCase().includes(query)
     );
     displayAnime(filteredAnime);
   });
 
-  // Event listener untuk pengurutan
+  // Sorting functionality
   sortSelect.addEventListener("change", function () {
     const sortBy = sortSelect.value;
     let sortedAnime = [...animeData];
 
     if (sortBy === "score") {
-      // Urutkan descending berdasarkan score
       sortedAnime.sort((a, b) => b.score - a.score);
     } else if (sortBy === "release_date") {
-      // Urutkan descending berdasarkan tanggal rilis
       sortedAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
     displayAnime(sortedAnime);
