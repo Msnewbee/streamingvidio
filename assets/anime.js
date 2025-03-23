@@ -6,13 +6,11 @@ export async function fetchAnimeList() {
     } catch (error) {
         console.error('Error fetching anime list:', error);
 
-        // Tampilkan pesan error di halaman
-        const episodeSection = document.getElementById('episode-list');
-        if (episodeSection) {
-            episodeSection.innerHTML = `<p style="color: red;">Gagal memuat daftar anime. Silakan coba lagi nanti.</p>`;
-        }
-
-        return [];
+        // Menampilkan pesan error di halaman jika elemen tersedia
+        document.getElementById('episode-list')?.innerHTML = 
+            `<p style="color: red;">Gagal memuat daftar anime. Silakan coba lagi nanti.</p>`;
+        
+        return null; // Mengembalikan null untuk ditangani di loadAnimeDetail()
     }
 }
 
@@ -20,46 +18,61 @@ export async function loadAnimeDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
 
-    const animeList = await fetchAnimeList();
-    const anime = animeList.find(a => a.id == animeId);
+    if (!animeId) {
+        alert("Anime ID tidak ditemukan!");
+        window.location.href = 'index.html';
+        return;
+    }
 
+    const animeList = await fetchAnimeList();
+    if (!animeList) {
+        alert("Gagal memuat data anime.");
+        return;
+    }
+
+    const anime = animeList.find(a => a.id == animeId);
     if (!anime) {
+        alert("Anime tidak ditemukan.");
         window.location.href = 'index.html';
         return;
     }
 
     // Update metadata di halaman
-    document.getElementById('anime-title').textContent = anime.title;
-    document.getElementById('anime-jtitle').textContent = anime.japanese_title;
-    document.getElementById('anime-score').textContent = anime.score;
-    document.getElementById('anime-studio').textContent = anime.studio;
-    document.getElementById('anime-type').textContent = anime.type;
-    document.getElementById('anime-status').textContent = anime.status;
-    document.getElementById('anime-duration').textContent = anime.duration;
-    document.getElementById('anime-release').textContent = anime.release_date;
-    document.getElementById('anime-genre').textContent = anime.genre.join(', ');
-    document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
+    document.getElementById('anime-title')?.textContent = anime.title ?? 'Tidak tersedia';
+    document.getElementById('anime-jtitle')?.textContent = anime.japanese_title ?? 'Tidak tersedia';
+    document.getElementById('anime-score')?.textContent = anime.score ?? 'N/A';
+    document.getElementById('anime-studio')?.textContent = anime.studio ?? 'Tidak diketahui';
+    document.getElementById('anime-type')?.textContent = anime.type ?? 'Tidak diketahui';
+    document.getElementById('anime-status')?.textContent = anime.status ?? 'Tidak diketahui';
+    document.getElementById('anime-duration')?.textContent = anime.duration ?? 'Tidak tersedia';
+    document.getElementById('anime-release')?.textContent = anime.release_date ?? 'Tidak diketahui';
+    document.getElementById('anime-genre')?.textContent = anime.genre?.join(', ') ?? 'Tidak ada genre';
+    document.getElementById('anime-poster')?.src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
-    // Validasi domain terpercaya sebelum menampilkan video
-    const trustedDomains = ['mega.nz', 'filedon.co','acefile.co','another-trusted.com'];
+    // Daftar domain terpercaya
+    const trustedDomains = [
+        'https://mega.nz/', 
+        'https://filedon.co/', 
+        'https://acefile.co/', 
+        'https://another-trusted.com/'
+    ];
 
     function isTrustedURL(url) {
         try {
-            const parsedURL = new URL(url);
-            return trustedDomains.includes(parsedURL.hostname);
+            return trustedDomains.some(domain => url.startsWith(domain));
         } catch (e) {
-            return false; // Jika URL tidak valid
+            return false;
         }
     }
 
     // Muat daftar episode
     const episodeList = document.getElementById('episode-list');
-    episodeList.textContent = '';
+    episodeList.textContent = ''; // Bersihkan daftar sebelumnya
 
-    if (anime.episodes.length === 0) {
-        episodeList.innerHTML = '<p>Belum ada episode tersedia.</p>';
+    if (!anime.episodes || anime.episodes.length === 0) {
+        episodeList.textContent = 'Belum ada episode tersedia.';
     } else {
-        anime.episodes.forEach((ep, index) => {
+        anime.episodes.forEach((ep) => {
             const episodeLink = document.createElement('a');
             episodeLink.href = "#";
             episodeLink.textContent = `Episode ${ep.episode}`;
@@ -75,7 +88,7 @@ export async function loadAnimeDetail() {
                     document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
                     episodeLink.classList.add('active');
                 } else {
-                    console.warn('URL episode tidak terpercaya:', ep.url);
+                    alert('URL episode ini tidak aman dan tidak akan diputar.');
                 }
             });
 
@@ -88,7 +101,6 @@ export async function loadAnimeDetail() {
         const firstEpisodeURL = anime.episodes[0].url;
         if (isTrustedURL(firstEpisodeURL)) {
             document.getElementById('anime-embed').src = firstEpisodeURL;
-            // Highlight episode pertama
             document.querySelector('.episode-item')?.classList.add('active');
         } else {
             console.warn('URL pertama tidak terpercaya:', firstEpisodeURL);
