@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const searchInput = document.getElementById("search");
-    const searchResults = document.getElementById("search-results");
     const animeListContainer = document.getElementById("anime-list");
 
     let animeList = [];
 
-    // Fungsi mengambil data anime
+    // Fetch anime data
     async function fetchAnimeList() {
         try {
-            const response = await fetch("assets/anime.json"); // Sesuaikan dengan sumber data
+            const response = await fetch("assets/anime.json"); // Ensure the correct path
+            if (!response.ok) throw new Error("Gagal memuat daftar anime");
+            
             animeList = await response.json();
             renderAnimeList(animeList);
         } catch (error) {
@@ -16,38 +17,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    // Fungsi untuk merender daftar anime
+    // Render anime list
     function renderAnimeList(list) {
-        animeListContainer.innerHTML = "";
-        list.forEach(anime => {
-            const card = document.createElement("div");
-            card.className = "anime-card";
-            
-            const img = document.createElement("img");
-            img.src = anime.image;
-            img.alt = anime.title;
-
-            const title = document.createElement("h2");
-            title.textContent = anime.title;
-
-            card.appendChild(img);
-            card.appendChild(title);
-            animeListContainer.appendChild(card);
-        });
+        animeListContainer.innerHTML = list.map(anime => `
+            <div class="anime-card">
+                <img src="${anime.image}" alt="${anime.title}">
+                <h2>${anime.title}</h2>
+            </div>
+        `).join('');
     }
 
-    // Fungsi pencarian
+    // Search functionality
     searchInput.addEventListener("input", function () {
         const searchText = searchInput.value.toLowerCase();
         const filteredAnime = animeList.filter(anime => anime.title.toLowerCase().includes(searchText));
-
-        if (searchText.length > 0) {
-            renderAnimeList(filteredAnime);
-        } else {
-            renderAnimeList(animeList);
-        }
+        renderAnimeList(filteredAnime);
     });
 
-    // Panggil fungsi awal
+    // Initial data fetch
     fetchAnimeList();
 });
