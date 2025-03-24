@@ -61,11 +61,11 @@ export async function loadAnimeDetail() {
             episodeButton.textContent = `Episode ${ep.episode}`;
             episodeButton.classList.add("episode-item");
 
-            episodeButton.addEventListener('click', (event) => {
+            episodeButton.addEventListener('click', async (event) => {
                 event.preventDefault();
                 
                 if (isTrustedURL(ep.url)) {
-                    playEpisode(ep.url, ep.episode, anime.id);
+                    await playEpisode(ep.url, ep.episode, anime.id);
                 } else {
                     console.warn('URL episode tidak terpercaya:', ep.url);
                 }
@@ -75,13 +75,39 @@ export async function loadAnimeDetail() {
         });
     }
 
-    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
-    if (lastWatched && lastWatched.animeId === anime.id) {
-        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
+    // 🔹 Ambil episode terakhir yang ditonton dari server
+    const lastWatched = await getLastWatchedEpisode(anime.id);
+    if (lastWatched) {
+        await playEpisode(lastWatched.url, lastWatched.episode, anime.id);
     }
 }
 
-function playEpisode(url, episode, animeId) {
+// 🔹 Fungsi untuk mengambil episode terakhir yang ditonton dari server
+async function getLastWatchedEpisode(animeId) {
+    try {
+        const response = await fetch(`/last-watched/${animeId}`);
+        const data = await response.json();
+        return data.lastWatched || null;
+    } catch (error) {
+        console.error("Gagal mengambil episode terakhir yang ditonton:", error);
+        return null;
+    }
+}
+
+// 🔹 Fungsi untuk menyimpan episode terakhir yang ditonton ke server
+async function saveLastWatchedEpisode(animeId, episode, url) {
+    try {
+        await fetch(`/last-watched/${animeId}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ episode, url })
+        });
+    } catch (error) {
+        console.error("Gagal menyimpan episode terakhir:", error);
+    }
+}
+
+async function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
 
@@ -89,11 +115,7 @@ function playEpisode(url, episode, animeId) {
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
 
-    localStorage.setItem('lastWatched', JSON.stringify({
-        animeId: animeId,
-        episode: episode,
-        url: url
-    }));
+    await saveLastWatchedEpisode(animeId, episode, url); // 🔹 Simpan di server
 
     document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
     document.querySelectorAll('.episode-item').forEach(e => {
