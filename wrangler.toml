@@ -1,12 +1,10 @@
+name = "anime-streaming-worker"
+type = "javascript"
+
+account_id = "b28649ce82eac859f113666c482934e9"
+workers_dev = true
+
 [[d1_databases]]
 binding = "DB"
 database_name = "anime_database"
 database_id = "757ff463-027b-44f7-a456-75da8deb94af"
-
-
-name = "streaming-anime"
-type = "javascript"
-
-[[kv_namespaces]]
-binding = "WATCH_COUNT_KV"
-id = "d23f0f859b974b7d89edcd15d3817796"
