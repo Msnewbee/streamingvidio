@@ -26,7 +26,7 @@ export async function loadAnimeDetail() {
         return;
     }
 
-    // Update metadata pada halaman
+    // Update metadata on the page
     document.getElementById('anime-title').textContent = anime.title;
     document.getElementById('anime-jtitle').textContent = anime.japanese_title;
     document.getElementById('anime-score').textContent = anime.score;
@@ -56,61 +56,31 @@ export async function loadAnimeDetail() {
         episodeList.innerHTML = '<p>Belum ada episode tersedia.</p>';
     } else {
         anime.episodes.forEach((ep) => {
-            const episodeContainer = document.createElement('div');
-            episodeContainer.classList.add('episode-container');
+            const episodeButton = document.createElement('button');
+            episodeButton.textContent = `Episode ${ep.episode}`;
+            episodeButton.classList.add("episode-item");
 
-            const episodeLabel = document.createElement('p');
-            episodeLabel.textContent = `Episode ${ep.episode}:`;
-            episodeContainer.appendChild(episodeLabel);
-
-            const playButton = document.createElement('button');
-            playButton.textContent = `Putar Episode ${ep.episode}`;
-            playButton.classList.add("episode-button");
-
-            playButton.addEventListener('click', (event) => {
+            episodeButton.addEventListener('click', (event) => {
                 event.preventDefault();
-                showServerOptions(ep.servers, ep.episode, anime.id);
+                
+                if (isTrustedURL(ep.url)) {
+                    playEpisode(ep.url, ep.episode, anime.id);
+                } else {
+                    console.warn('URL episode tidak terpercaya:', ep.url);
+                }
             });
 
-            episodeContainer.appendChild(playButton);
-            episodeList.appendChild(episodeContainer);
+            episodeList.appendChild(episodeButton);
         });
     }
 
     const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
     if (lastWatched && lastWatched.animeId === anime.id) {
-        showServerOptions(lastWatched.servers, lastWatched.episode, anime.id, lastWatched.url);
+        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
     }
 }
 
-function showServerOptions(servers, episode, animeId, selectedURL = null) {
-    const serverList = document.getElementById('server-list');
-    serverList.innerHTML = ''; // Bersihkan server list
-
-    servers.forEach(server => {
-        const serverButton = document.createElement('button');
-        serverButton.textContent = server.name;
-        serverButton.classList.add("server-button");
-
-        if (selectedURL === server.url) {
-            serverButton.classList.add("active");
-        }
-
-        serverButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            playEpisode(server.url, episode, animeId, servers);
-        });
-
-        serverList.appendChild(serverButton);
-    });
-
-    // Putar episode pertama saat tombol pertama diklik
-    if (selectedURL === null && servers.length > 0) {
-        playEpisode(servers[0].url, episode, animeId, servers);
-    }
-}
-
-function playEpisode(url, episode, animeId, servers) {
+function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
 
@@ -121,13 +91,12 @@ function playEpisode(url, episode, animeId, servers) {
     localStorage.setItem('lastWatched', JSON.stringify({
         animeId: animeId,
         episode: episode,
-        url: url,
-        servers: servers
+        url: url
     }));
 
-    document.querySelectorAll('.server-button').forEach(e => e.classList.remove('active'));
-    document.querySelectorAll('.server-button').forEach(e => {
-        if (e.textContent.includes(url)) {
+    document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
+    document.querySelectorAll('.episode-item').forEach(e => {
+        if (e.textContent.includes(`Episode ${episode}`)) {
             e.classList.add('active');
         }
     });
@@ -137,7 +106,7 @@ if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
 
-// Anime Search Feature
+// Anime Search Feature (Fixes null error)
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search");
     const animeList = document.getElementById("anime-list");
