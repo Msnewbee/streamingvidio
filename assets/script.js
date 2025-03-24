@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3>${anime.title}</h3>
           <p>Score: ${anime.score}</p>
           <p>Tanggal Rilis: ${anime.release_date}</p>
+          <p>Genre: ${anime.genre.join(', ')}</p>
         </div>
       `;
 
