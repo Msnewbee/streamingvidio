@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
         <div class="card-content">
           <h3>${anime.title}</h3>
-          <p>Score: ${anime.score}</p>
           <p>Tanggal Rilis: ${anime.release_date}</p>
+          <p>Genre: ${anime.genre.join(', ')}</p>
         </div>
       `;
 
