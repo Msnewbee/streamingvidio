@@ -1,41 +1,54 @@
+// Worker code example
 export default {
-    async fetch(request, env) {
-        const url = new URL(request.url);
-        if (url.pathname.startsWith('/watch/')) {
-            return handleWatchCount(request, env);
-        } else if (url.pathname.startsWith('/last-watched/')) {
-            return handleLastWatched(request, env);
-        }
-        return new Response("Not Found", { status: 404 });
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const path = url.pathname;
+    
+    // Watch count endpoints
+    if (path.startsWith('/api/watch-counts')) {
+      if (request.method === 'GET') {
+        // Get all watch counts
+        const { results } = await env.DB.prepare(
+          "SELECT anime_id, count FROM watch_counts"
+        ).all();
+        return new Response(JSON.stringify(results), {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      } else if (request.method === 'POST' && path.includes('/api/watch-counts/')) {
+        // Increment watch count for specific anime
+        const animeId = path.split('/').pop();
+        await env.DB.prepare(
+          "INSERT INTO watch_counts (anime_id, count) VALUES (?, 1) ON CONFLICT(anime_id) DO UPDATE SET count = count + 1"
+        ).bind(animeId).run();
+        return new Response(null, { status: 204 });
+      }
     }
-};
-
-async function handleWatchCount(request, env) {
-    const animeId = request.url.split('/').pop();
-
-    if (request.method === "GET") {
-        const { results } = await env.DB.prepare("SELECT watch_count FROM anime WHERE id = ?").bind(animeId).all();
-        const watchCount = results.length ? results[0].watch_count : 0;
-        return new Response(JSON.stringify({ count: watchCount }), { headers: { "Content-Type": "application/json" } });
-    } else if (request.method === "POST") {
-        await env.DB.prepare("UPDATE anime SET watch_count = watch_count + 1 WHERE id = ?").bind(animeId).run();
-        return new Response("Updated", { status: 200 });
+    
+    // Last watched endpoints
+    if (path.startsWith('/api/last-watched/')) {
+      const animeId = path.split('/').pop();
+      
+      if (request.method === 'GET') {
+        // Get last watched episode
+        const result = await env.DB.prepare(
+          "SELECT episode, url FROM last_watched WHERE anime_id = ?"
+        ).bind(animeId).first();
+        
+        return new Response(JSON.stringify({
+          lastWatched: result || null
+        }), {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      } else if (request.method === 'POST') {
+        // Save last watched episode
+        const data = await request.json();
+        await env.DB.prepare(
+          "INSERT INTO last_watched (anime_id, episode, url) VALUES (?, ?, ?) ON CONFLICT(anime_id) DO UPDATE SET episode = ?, url = ?"
+        ).bind(animeId, data.episode, data.url, data.episode, data.url).run();
+        return new Response(null, { status: 204 });
+      }
     }
-    return new Response("Method Not Allowed", { status: 405 });
-}
-
-async function handleLastWatched(request, env) {
-    const animeId = request.url.split('/').pop();
-
-    if (request.method === "GET") {
-        const { results } = await env.DB.prepare("SELECT episode, url FROM last_watched WHERE anime_id = ?").bind(animeId).all();
-        return new Response(JSON.stringify({ lastWatched: results.length ? results[0] : null }), { headers: { "Content-Type": "application/json" } });
-    } else if (request.method === "POST") {
-        const { episode, url } = await request.json();
-        await env.DB.prepare("INSERT INTO last_watched (anime_id, episode, url) VALUES (?, ?, ?) ON CONFLICT(anime_id) DO UPDATE SET episode = excluded.episode, url = excluded.url")
-            .bind(animeId, episode, url)
-            .run();
-        return new Response("Saved", { status: 200 });
-    }
-    return new Response("Method Not Allowed", { status: 405 });
+    
+    return new Response('Not found', { status: 404 });
+  }
 }
