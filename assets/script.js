@@ -49,19 +49,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load watch counts from D1 database
   async function loadWatchCounts() {
     try {
-      const response = await fetch('/api/watch-counts');
-      const counts = await response.json();
-      
-      animeData.forEach(anime => {
-        const countData = counts.find(c => c.anime_id === anime.id);
-        anime.watchCount = countData ? countData.count : 0;
-      });
-      
-      animeData.sort((a, b) => b.watchCount - a.watchCount);
+        const response = await fetch('/api/watch-counts');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new TypeError("Received non-JSON response");
+        }
+
+        const counts = await response.json();
+        
+        animeData.forEach(anime => {
+            const countData = counts.find(c => c.anime_id === anime.id);
+            anime.watchCount = countData ? countData.count : 0;
+        });
+        
+        animeData.sort((a, b) => b.watchCount - a.watchCount);
     } catch (error) {
-      console.error("Gagal mengambil watch count:", error);
+        console.error("Gagal mengambil watch count:", error);
     }
-  }
+}
 
   // Update watch count in D1 database
   async function increaseWatchCount(animeId) {
