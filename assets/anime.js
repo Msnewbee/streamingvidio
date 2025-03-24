@@ -30,6 +30,7 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-title').textContent = anime.title;
     document.getElementById('anime-jtitle').textContent = anime.japanese_title;
     document.getElementById('anime-score').textContent = anime.score;
+    document.getElementById('anime-producers').textContent = anime.producers;
     document.getElementById('anime-studio').textContent = anime.studio;
     document.getElementById('anime-type').textContent = anime.type;
     document.getElementById('anime-status').textContent = anime.status;
