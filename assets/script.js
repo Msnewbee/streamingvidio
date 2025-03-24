@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       animeCard.classList.add("anime-card");
 
       animeCard.innerHTML = `
-        <img src="${anime.image.startsWith('http') ? anime.image : 'public/' + anime.image}" alt="${anime.title}" />
+        <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
         <div class="card-content">
           <h3>${anime.title}</h3>
           <p>Score: ${anime.score}</p>
