@@ -377,6 +377,36 @@
     { "episode": 147, "url": "https://filedon.co/embed/UDcgyDiSPv" },
     { "episode": 148, "url": "https://filedon.co/embed/dTqgjIdPny" }
   ]
- }
+ },
+  {
+  "id": 5,
+  "title": "Dandadan",
+  "folder": "dandadan",
+  "image": "dandadan.jpeg",
+  "japanese_title": "ダンダダン",
+  "score": 8.7,
+  "producers": ["Science Saru"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "24 Menit per episode",
+  "release_date": "3 Oktober 2024",
+  "studio": "Science Saru",
+  "genre": ["Action", "Supernatural", "Sci-Fi", "Comedy", "Romance"],
+  "episodes": [
+    { "episode": 1, "url": "https://acefile.co/player/107555828" },
+    { "episode": 2, "url": "https://acefile.co/player/107555830" },
+    { "episode": 3, "url": "https://acefile.co/player/107555833" },
+    { "episode": 4, "url": "https://acefile.co/player/107542800" },
+    { "episode": 5, "url": "https://filedon.co/embed/hPMUCkWEZl" },
+    { "episode": 6, "url": "https://filedon.co/embed/AqDRRXUdWb" },
+    { "episode": 7, "url": "https://filedon.co/embed/N1nfy7I4Dm" },
+    { "episode": 8, "url": "https://filedon.co/embed/DbX4KGjkq2" },
+    { "episode": 9, "url": "https://filedon.co/embed/ZjMRgXdCYA" },
+    { "episode": 10, "url": "https://filedon.co/embed/wYj1geV1j1" },
+    { "episode": 11, "url": "https://filedon.co/embed/r4eVW93Uj1" },
+    { "episode": 12, "url": "https://filedon.co/embed/XYUae90bz5" }
+  ]
+}
   
 ]
