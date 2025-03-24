@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchAnimeList()
     .then(async (data) => {
       animeData = data;
-      await loadWatchCounts();  // 🔹 Ambil watch count dari server
+      await loadWatchCounts();  // Get watch counts from D1 database
       populateGenreOptions(animeData);
       displayAnime(animeData);
     })
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
 
-      const watchCount = anime.watchCount || 0; // 🔹 Ambil dari server
+      const watchCount = anime.watchCount || 0;
 
       animeCard.innerHTML = `
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       animeCard.addEventListener("click", async () => {
-        await increaseWatchCount(anime.id); // 🔹 Perbarui watch count di server
+        await increaseWatchCount(anime.id); // Update watch count in D1
         window.location.href = `anime.html?id=${anime.id}`;
       });
 
@@ -46,33 +46,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 🔹 Load watch count dari Cloudflare KV
+  // Load watch counts from D1 database
   async function loadWatchCounts() {
-    const requests = animeData.map(async (anime) => {
-      const count = await getWatchCount(anime.id);
-      anime.watchCount = count;
-    });
-
-    await Promise.all(requests); // Tunggu semua request selesai
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
-  }
-
-  // 🔹 Ambil watch count dari server
-  async function getWatchCount(animeId) {
     try {
-      const response = await fetch(`/watch/${animeId}`);
-      const data = await response.json();
-      return data.count || 0;
+      const response = await fetch('/api/watch-counts');
+      const counts = await response.json();
+      
+      animeData.forEach(anime => {
+        const countData = counts.find(c => c.anime_id === anime.id);
+        anime.watchCount = countData ? countData.count : 0;
+      });
+      
+      animeData.sort((a, b) => b.watchCount - a.watchCount);
     } catch (error) {
       console.error("Gagal mengambil watch count:", error);
-      return 0;
     }
   }
 
-  // 🔹 Perbarui watch count di server
+  // Update watch count in D1 database
   async function increaseWatchCount(animeId) {
     try {
-      await fetch(`/watch/${animeId}`, { method: "POST" });
+      await fetch(`/api/watch-counts/${animeId}`, { 
+        method: "POST" 
+      });
     } catch (error) {
       console.error("Gagal memperbarui watch count:", error);
     }
