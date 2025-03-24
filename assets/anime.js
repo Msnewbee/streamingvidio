@@ -75,17 +75,17 @@ export async function loadAnimeDetail() {
         });
     }
 
-    // 🔹 Ambil episode terakhir yang ditonton dari server
+    // Get last watched episode from D1 database
     const lastWatched = await getLastWatchedEpisode(anime.id);
     if (lastWatched) {
         await playEpisode(lastWatched.url, lastWatched.episode, anime.id);
     }
 }
 
-// 🔹 Fungsi untuk mengambil episode terakhir yang ditonton dari server
+// Get last watched episode from D1 database
 async function getLastWatchedEpisode(animeId) {
     try {
-        const response = await fetch(`/last-watched/${animeId}`);
+        const response = await fetch(`/api/last-watched/${animeId}`);
         const data = await response.json();
         return data.lastWatched || null;
     } catch (error) {
@@ -94,10 +94,10 @@ async function getLastWatchedEpisode(animeId) {
     }
 }
 
-// 🔹 Fungsi untuk menyimpan episode terakhir yang ditonton ke server
+// Save last watched episode to D1 database
 async function saveLastWatchedEpisode(animeId, episode, url) {
     try {
-        await fetch(`/last-watched/${animeId}`, {
+        await fetch(`/api/last-watched/${animeId}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ episode, url })
@@ -115,7 +115,7 @@ async function playEpisode(url, episode, animeId) {
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
 
-    await saveLastWatchedEpisode(animeId, episode, url); // 🔹 Simpan di server
+    await saveLastWatchedEpisode(animeId, episode, url); // Save to D1 database
 
     document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
     document.querySelectorAll('.episode-item').forEach(e => {
