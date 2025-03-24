@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchAnimeList()
     .then((data) => {
       animeData = data;
+      loadWatchCounts();
       populateGenreOptions(animeData);
       displayAnime(animeData);
     })
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
 
+      const watchCount = getWatchCount(anime.id);
+
       animeCard.innerHTML = `
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
         <div class="card-content">
@@ -34,11 +37,31 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       animeCard.addEventListener("click", () => {
+        increaseWatchCount(anime.id);
         window.location.href = `anime.html?id=${anime.id}`;
       });
 
       animeListContainer.appendChild(animeCard);
     });
+  }
+
+  // Load watch count data
+  function loadWatchCounts() {
+    animeData.forEach(anime => {
+      anime.watchCount = getWatchCount(anime.id);
+    });
+    animeData.sort((a, b) => b.watchCount - a.watchCount);
+  }
+
+  // Get watch count from localStorage
+  function getWatchCount(animeId) {
+    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
+  }
+
+  // Increase watch count when anime is clicked
+  function increaseWatchCount(animeId) {
+    const currentCount = getWatchCount(animeId);
+    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
   }
 
   // Populate genre dropdown
