@@ -103,17 +103,6 @@ function playEpisode(url, episode, animeId) {
     });
 }
 
-// Move Episode List Below Video Player
-document.addEventListener("DOMContentLoaded", function () {
-    const moveEpisodesBtn = document.getElementById("move-episodes-btn");
-    const playerSection = document.querySelector(".player-section");
-    const episodeSection = document.querySelector(".episode-section");
-
-    moveEpisodesBtn.addEventListener("click", function () {
-        playerSection.insertAdjacentElement("afterend", episodeSection);
-    });
-});
-
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
