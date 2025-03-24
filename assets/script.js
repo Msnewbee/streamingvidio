@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch anime data
   fetchAnimeList()
-    .then((data) => {
+    .then(async (data) => {
       animeData = data;
-      loadWatchCounts();
+      await loadWatchCounts();  // 🔹 Ambil watch count dari server
       populateGenreOptions(animeData);
       displayAnime(animeData);
     })
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
 
-      const watchCount = getWatchCount(anime.id);
+      const watchCount = anime.watchCount || 0; // 🔹 Ambil dari server
 
       animeCard.innerHTML = `
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
@@ -33,11 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3>${anime.title}</h3>
           <p>Tanggal Rilis: ${anime.release_date}</p>
           <p>Genre: ${anime.genre.join(', ')}</p>
+          <p>Ditonton: ${watchCount} kali</p>
         </div>
       `;
 
-      animeCard.addEventListener("click", () => {
-        increaseWatchCount(anime.id);
+      animeCard.addEventListener("click", async () => {
+        await increaseWatchCount(anime.id); // 🔹 Perbarui watch count di server
         window.location.href = `anime.html?id=${anime.id}`;
       });
 
@@ -45,23 +46,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load watch count data
-  function loadWatchCounts() {
-    animeData.forEach(anime => {
-      anime.watchCount = getWatchCount(anime.id);
+  // 🔹 Load watch count dari Cloudflare KV
+  async function loadWatchCounts() {
+    const requests = animeData.map(async (anime) => {
+      const count = await getWatchCount(anime.id);
+      anime.watchCount = count;
     });
+
+    await Promise.all(requests); // Tunggu semua request selesai
     animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
-  // Get watch count from localStorage
-  function getWatchCount(animeId) {
-    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
+  // 🔹 Ambil watch count dari server
+  async function getWatchCount(animeId) {
+    try {
+      const response = await fetch(`/watch/${animeId}`);
+      const data = await response.json();
+      return data.count || 0;
+    } catch (error) {
+      console.error("Gagal mengambil watch count:", error);
+      return 0;
+    }
   }
 
-  // Increase watch count when anime is clicked
-  function increaseWatchCount(animeId) {
-    const currentCount = getWatchCount(animeId);
-    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
+  // 🔹 Perbarui watch count di server
+  async function increaseWatchCount(animeId) {
+    try {
+      await fetch(`/watch/${animeId}`, { method: "POST" });
+    } catch (error) {
+      console.error("Gagal memperbarui watch count:", error);
+    }
   }
 
   // Populate genre dropdown
@@ -70,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     animes.forEach((anime) => {
       anime.genre.forEach((g) => genres.add(g));
     });
-    
+
     genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
     genres.forEach((genre) => {
       const option = document.createElement("option");
