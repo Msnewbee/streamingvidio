@@ -3,6 +3,7 @@ import { fetchAnimeList } from "./anime.js";
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
+  const genreSelect = document.getElementById("genre-anime");
   const animeListContainer = document.getElementById("anime-list");
 
   let animeData = [];
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchAnimeList()
     .then((data) => {
       animeData = data;
+      populateGenreOptions(animeData);
       displayAnime(animeData);
     })
     .catch((error) => console.error("Error fetching data:", error));
@@ -39,25 +41,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Populate genre dropdown
+  function populateGenreOptions(animes) {
+    const genres = new Set();
+    animes.forEach((anime) => {
+      anime.genre.forEach((g) => genres.add(g));
+    });
+    
+    genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
+    genres.forEach((genre) => {
+      const option = document.createElement("option");
+      option.value = genre;
+      option.textContent = genre;
+      genreSelect.appendChild(option);
+    });
+  }
+
   // Search functionality
   searchInput.addEventListener("input", function () {
-    const query = searchInput.value.toLowerCase();
-    const filteredAnime = animeData.filter((anime) =>
-      anime.title.toLowerCase().includes(query)
-    );
-    displayAnime(filteredAnime);
+    filterAnime();
   });
 
   // Sorting functionality
   sortSelect.addEventListener("change", function () {
+    filterAnime();
+  });
+
+  // Genre filter functionality
+  genreSelect.addEventListener("change", function () {
+    filterAnime();
+  });
+
+  function filterAnime() {
+    const query = searchInput.value.toLowerCase();
     const sortBy = sortSelect.value;
-    let sortedAnime = [...animeData];
+    const selectedGenre = genreSelect.value;
+
+    let filteredAnime = animeData.filter((anime) =>
+      anime.title.toLowerCase().includes(query) &&
+      (selectedGenre === "" || anime.genre.includes(selectedGenre))
+    );
 
     if (sortBy === "score") {
-      sortedAnime.sort((a, b) => b.score - a.score);
+      filteredAnime.sort((a, b) => b.score - a.score);
     } else if (sortBy === "release_date") {
-      sortedAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
+      filteredAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
-    displayAnime(sortedAnime);
-  });
+
+    displayAnime(filteredAnime);
+  }
 });
