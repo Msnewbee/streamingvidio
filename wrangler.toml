@@ -1,0 +1,6 @@
+name = "streaming-anime"
+type = "javascript"
+
+[[kv_namespaces]]
+binding = "WATCH_COUNT_KV"
+id = "d23f0f859b974b7d89edcd15d3817796"
