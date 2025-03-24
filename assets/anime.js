@@ -102,24 +102,17 @@ function playEpisode(url, episode, animeId) {
     });
 }
 
+// Move Episode List Below Video Player
+document.addEventListener("DOMContentLoaded", function () {
+    const moveEpisodesBtn = document.getElementById("move-episodes-btn");
+    const playerSection = document.querySelector(".player-section");
+    const episodeSection = document.querySelector(".episode-section");
+
+    moveEpisodesBtn.addEventListener("click", function () {
+        playerSection.insertAdjacentElement("afterend", episodeSection);
+    });
+});
+
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
 }
-
-// Anime Search Feature (Fixes null error)
-document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("search");
-    const animeList = document.getElementById("anime-list");
-
-    if (searchInput && animeList) {
-        searchInput.addEventListener("input", function () {
-            const searchText = searchInput.value.toLowerCase();
-            const animeItems = animeList.getElementsByTagName("li");
-
-            for (let item of animeItems) {
-                const title = item.textContent.toLowerCase();
-                item.style.display = title.includes(searchText) ? "block" : "none";
-            }
-        });
-    }
-});
