@@ -1,6 +1,6 @@
 import { fetchAnimeList } from "./anime.js";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbw8MtpuOAp2EyJe9tLO2haW5fjCZZEcvOx19kdVpMAZ2GtD3bTRbgggoC-tZ0XrlxGJ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwxTH2-E5RdWIfSquKzgcgLRVkuXtLfRRTC45Q3TyoH96a3evggOexA3wMxMkDQpCgybg/exec";
 
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-anime");
