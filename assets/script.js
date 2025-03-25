@@ -1,7 +1,5 @@
 import { fetchAnimeList } from "./anime.js";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwxTH2-E5RdWIfSquKzgcgLRVkuXtLfRRTC45Q3TyoH96a3evggOexA3wMxMkDQpCgybg/exec";
-
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
@@ -12,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch anime data
   fetchAnimeList()
-    .then(async (data) => {
+    .then((data) => {
       animeData = data;
-      await loadWatchCounts();
+      loadWatchCounts();
       populateGenreOptions(animeData);
       displayAnime(animeData);
     })
@@ -26,9 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     animes.forEach((anime) => {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
-      animeCard.dataset.id = anime.id;
 
-      const watchCount = anime.watchCount || 0;
+      const watchCount = getWatchCount(anime.id);
 
       animeCard.innerHTML = `
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
@@ -36,12 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3>${anime.title}</h3>
           <p>Tanggal Rilis: ${anime.release_date}</p>
           <p>Genre: ${anime.genre.join(', ')}</p>
-          <p>Ditonton: <span id="watch-count-${anime.id}">${watchCount}</span> kali</p>
         </div>
       `;
 
-      animeCard.addEventListener("click", async () => {
-        await increaseWatchCount(anime.id);
+      animeCard.addEventListener("click", () => {
+        increaseWatchCount(anime.id);
         window.location.href = `anime.html?id=${anime.id}`;
       });
 
@@ -49,43 +45,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load watch count data from Google Sheets
-  async function loadWatchCounts() {
-    try {
-      const response = await fetch(`${API_URL}?action=getAll`);
-      const data = await response.json();
-
-      animeData.forEach(anime => {
-        anime.watchCount = data[anime.id] || 0;
-      });
-
-      animeData.sort((a, b) => b.watchCount - a.watchCount);
-    } catch (error) {
-      console.error("Gagal mengambil watch count:", error);
-    }
+  // Load watch count data
+  function loadWatchCounts() {
+    animeData.forEach(anime => {
+      anime.watchCount = getWatchCount(anime.id);
+    });
+    animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
-  // Get watch count from Google Sheets
-  async function getWatchCount(animeId) {
-    try {
-      const response = await fetch(`${API_URL}?animeId=${animeId}&action=get`);
-      const data = await response.json();
-      return data.watchCount || 0;
-    } catch (error) {
-      console.error("Gagal mengambil watch count:", error);
-      return 0;
-    }
+  // Get watch count from localStorage
+  function getWatchCount(animeId) {
+    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
   }
 
-  // Increase watch count in Google Sheets
-  async function increaseWatchCount(animeId) {
-    try {
-      await fetch(`${API_URL}?animeId=${animeId}&action=increase`);
-      const newCount = await getWatchCount(animeId);
-      document.getElementById(`watch-count-${animeId}`).textContent = newCount;
-    } catch (error) {
-      console.error("Gagal menambahkan watch count:", error);
-    }
+  // Increase watch count when anime is clicked
+  function increaseWatchCount(animeId) {
+    const currentCount = getWatchCount(animeId);
+    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
   }
 
   // Populate genre dropdown
@@ -94,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     animes.forEach((anime) => {
       anime.genre.forEach((g) => genres.add(g));
     });
-
+    
     genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
     genres.forEach((genre) => {
       const option = document.createElement("option");
