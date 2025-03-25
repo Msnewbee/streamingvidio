@@ -8,11 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let animeData = [];
 
+  // Fungsi untuk berinteraksi dengan D1 database
+  async function queryD1(sql, params = []) {
+    try {
+      const response = await fetch('/api/d1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ sql, params }),
+      });
+      return await response.json();
+    } catch (error) {
+      console.error('Error querying D1:', error);
+      return { error };
+    }
+  }
+
   // Fetch anime data
   fetchAnimeList()
-    .then((data) => {
+    .then(async (data) => {
       animeData = data;
-      loadWatchCounts();
+      await loadWatchCounts();
       populateGenreOptions(animeData);
       displayAnime(animeData);
     })
@@ -25,19 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const animeCard = document.createElement("div");
       animeCard.classList.add("anime-card");
 
-      const watchCount = getWatchCount(anime.id);
-
       animeCard.innerHTML = `
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
         <div class="card-content">
           <h3>${anime.title}</h3>
           <p>Tanggal Rilis: ${anime.release_date}</p>
           <p>Genre: ${anime.genre.join(', ')}</p>
+          <p>Ditonton: ${anime.watchCount || 0} kali</p>
         </div>
       `;
 
-      animeCard.addEventListener("click", () => {
-        increaseWatchCount(anime.id);
+      animeCard.addEventListener("click", async () => {
+        await increaseWatchCount(anime.id);
         window.location.href = `anime.html?id=${anime.id}`;
       });
 
@@ -45,26 +61,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load watch count data
-  function loadWatchCounts() {
-    animeData.forEach(anime => {
-      anime.watchCount = getWatchCount(anime.id);
-    });
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
+  // Load watch count data from D1
+  async function loadWatchCounts() {
+    try {
+      // Ambil semua watch count sekaligus untuk optimasi
+      const result = await queryD1("SELECT * FROM anime_watch_counts");
+      
+      if (result.error) throw result.error;
+      
+      // Buat mapping untuk akses cepat
+      const watchCountMap = new Map();
+      result.forEach(row => {
+        watchCountMap.set(row.anime_id, row.count);
+      });
+      
+      // Update animeData dengan watch count
+      animeData.forEach(anime => {
+        anime.watchCount = watchCountMap.get(anime.id) || 0;
+      });
+      
+      // Urutkan berdasarkan watch count
+      animeData.sort((a, b) => b.watchCount - a.watchCount);
+    } catch (error) {
+      console.error("Error loading watch counts:", error);
+    }
   }
 
-  // Get watch count from localStorage
-  function getWatchCount(animeId) {
-    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
+  // Increase watch count in D1
+  async function increaseWatchCount(animeId) {
+    try {
+      // Gunakan UPSERT untuk menambah atau membuat record baru
+      await queryD1(
+        `INSERT INTO anime_watch_counts (anime_id, count) 
+         VALUES (?, 1)
+         ON CONFLICT(anime_id) DO UPDATE SET count = count + 1`,
+        [animeId]
+      );
+    } catch (error) {
+      console.error("Error increasing watch count:", error);
+    }
   }
 
-  // Increase watch count when anime is clicked
-  function increaseWatchCount(animeId) {
-    const currentCount = getWatchCount(animeId);
-    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
-  }
-
-  // Populate genre dropdown
+  // Populate genre dropdown (sama seperti sebelumnya)
   function populateGenreOptions(animes) {
     const genres = new Set();
     animes.forEach((anime) => {
@@ -80,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Search functionality
+  // Search functionality (sama seperti sebelumnya)
   searchInput.addEventListener("input", function () {
     filterAnime();
   });
 
-  // Sorting functionality
+  // Sorting functionality (sama seperti sebelumnya)
   sortSelect.addEventListener("change", function () {
     filterAnime();
   });
 
-  // Genre filter functionality
+  // Genre filter functionality (sama seperti sebelumnya)
   genreSelect.addEventListener("change", function () {
     filterAnime();
   });
