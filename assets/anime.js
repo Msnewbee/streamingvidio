@@ -75,6 +75,12 @@ export async function loadAnimeDetail() {
         });
     }
 
+    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
+    if (lastWatched && lastWatched.animeId === anime.id) {
+        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
+    }
+}
+
 function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
@@ -96,6 +102,17 @@ function playEpisode(url, episode, animeId) {
         }
     });
 }
+
+// Move Episode List Below Video Player
+document.addEventListener("DOMContentLoaded", function () {
+    const moveEpisodesBtn = document.getElementById("move-episodes-btn");
+    const playerSection = document.querySelector(".player-section");
+    const episodeSection = document.querySelector(".episode-section");
+
+    moveEpisodesBtn.addEventListener("click", function () {
+        playerSection.insertAdjacentElement("afterend", episodeSection);
+    });
+});
 
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
