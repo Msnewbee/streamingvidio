@@ -75,12 +75,6 @@ export async function loadAnimeDetail() {
         });
     }
 
-    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
-    if (lastWatched && lastWatched.animeId === anime.id) {
-        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
-    }
-}
-
 function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
