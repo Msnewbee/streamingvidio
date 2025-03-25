@@ -75,38 +75,6 @@ export async function loadAnimeDetail() {
         });
     }
 
-    // Get last watched episode from D1 database
-    const lastWatched = await getLastWatchedEpisode(anime.id);
-    if (lastWatched) {
-        await playEpisode(lastWatched.url, lastWatched.episode, anime.id);
-    }
-}
-
-// Get last watched episode from D1 database
-async function getLastWatchedEpisode(animeId) {
-    try {
-        const response = await fetch(`/api/last-watched/${animeId}`);
-        const data = await response.json();
-        return data.lastWatched || null;
-    } catch (error) {
-        console.error("Gagal mengambil episode terakhir yang ditonton:", error);
-        return null;
-    }
-}
-
-// Save last watched episode to D1 database
-async function saveLastWatchedEpisode(animeId, episode, url) {
-    try {
-        await fetch(`/api/last-watched/${animeId}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ episode, url })
-        });
-    } catch (error) {
-        console.error("Gagal menyimpan episode terakhir:", error);
-    }
-}
-
 async function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
