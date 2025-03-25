@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 10,
     "title": "Solo Leveling Season 1",
     "folder": "sololevelingseason1",
     "image": "Sololeveling.jpg",
@@ -60,7 +60,7 @@
     ]
   },
   {
-  "id": 3,
+  "id": 1,
   "title": "Kimetsu no Yaiba",
   "folder": "kimetsunoyaiba",
   "image": "kimetsunoyaiba.jpg",
@@ -407,6 +407,47 @@
     { "episode": 11, "url": "https://filedon.co/embed/r4eVW93Uj1" },
     { "episode": 12, "url": "https://filedon.co/embed/XYUae90bz5" }
   ]
-}
-  
+},
+{
+  "id": 3,
+  "title": "Jujutsu Kaisen",
+  "folder": "jujutsu_kaisen",
+  "image": "jujutsu_kaisen.jpg",
+  "japanese_title": "呪術廻戦",
+  "score": 8.7,
+  "producers": ["TOHO Animation", "Shueisha", "MAPPA"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 24,
+  "duration": "23 Menit per episode",
+  "release_date": "3 Oktober 2020",
+  "studio": "MAPPA",
+  "genre": ["Action", "Supernatural", "Fantasy", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://acefile.co/player/29693868" },
+    { "episode": 2, "url": "https://acefile.co/player/30088934" },
+    { "episode": 3, "url": "https://acefile.co/player/30370476" },
+    { "episode": 4, "url": "https://acefile.co/player/30716404" },
+    { "episode": 5, "url": "https://acefile.co/player/31060392" },
+    { "episode": 6, "url": "https://acefile.co/player/31429772" },
+    { "episode": 7, "url": "https://acefile.co/player/31780103" },
+    { "episode": 8, "url": "https://acefile.co/player/32140796" },
+    { "episode": 9, "url": "https://acefile.co/player/32514380" },
+    { "episode": 10, "url": "https://acefile.co/player/32877190" },
+    { "episode": 11, "url": "https://acefile.co/player/33312385" },
+    { "episode": 12, "url": "https://acefile.co/player/33681478" },
+    { "episode": 13, "url": "https://acefile.co/player/34140548" },
+    { "episode": 14, "url": "https://acefile.co/player/35426533" },
+    { "episode": 15, "url": "https://acefile.co/player/35855575" },
+    { "episode": 16, "url": "https://acefile.co/player/36289163" },
+    { "episode": 17, "url": "https://acefile.co/player/36721820" },
+    { "episode": 18, "url": "https://acefile.co/player/37136719" },
+    { "episode": 19, "url": "https://acefile.co/player/37573949" },
+    { "episode": 20, "url": "https://acefile.co/player/38024595" },
+    { "episode": 21, "url": "https://acefile.co/player/38556213" },
+    { "episode": 22, "url": "https://acefile.co/player/39264559" },
+    { "episode": 23, "url": "https://acefile.co/player/40032504" },
+    { "episode": 24, "url": "https://acefile.co/player/40717000" }
+  ]
+}  
 ]
