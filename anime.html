@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +9,39 @@
 <body>
     <header>
         <a href="index.html" class="back-button">← Kembali</a>
-        <h1 id="anime-title"></h1>
+        <h1 id="anime-title">Memuat...</h1>
     </header>
     
     <main class="anime-container">
         <div class="anime-info">
-            <img id="anime-poster" src="" alt="Poster Anime">
+            <img id="anime-poster" src="default-poster.jpg" alt="Poster Anime">
             <div class="anime-meta">
-                <p><strong>Judul Jepang:</strong> <span id="anime-jtitle"></span></p>
-                <p><strong>Skor:</strong> <span id="anime-score"></span></p>
-                <p><strong>producers:</strong> <span id="anime-producers"></span></p>
-                <p><strong>Studio:</strong> <span id="anime-studio"></span></p>
-                <p><strong>Tipe:</strong> <span id="anime-type"></span></p>
-                <p><strong>Status:</strong> <span id="anime-status"></span></p>
-                <p><strong>Durasi:</strong> <span id="anime-duration"></span></p>
-                <p><strong>Tanggal Rilis:</strong> <span id="anime-release"></span></p>
-                <p><strong>Genre:</strong> <span id="anime-genre"></span></p>
+                <p><strong>Judul Jepang:</strong> <span id="anime-jtitle">-</span></p>
+                <p><strong>Skor:</strong> <span id="anime-score">-</span></p>
+                <p><strong>Produser:</strong> <span id="anime-producers">-</span></p>
+                <p><strong>Studio:</strong> <span id="anime-studio">-</span></p>
+                <p><strong>Tipe:</strong> <span id="anime-type">-</span></p>
+                <p><strong>Status:</strong> <span id="anime-status">-</span></p>
+                <p><strong>Durasi:</strong> <span id="anime-duration">-</span></p>
+                <p><strong>Tanggal Rilis:</strong> <span id="anime-release">-</span></p>
+                <p><strong>Genre:</strong> <span id="anime-genre">-</span></p>
             </div>
         </div>
         
         <section class="player-section">
             <h2>Pemutar</h2>
-            <iframe id="anime-embed" allowfullscreen></iframe>
+            <iframe id="anime-embed" width="100%" height="400px" allowfullscreen></iframe>
         </section>
         
-        <p><a id="download-link" href="" download>Download Episode</a></p>
+        <p>
+            <a id="download-link" href="#" download>Download Episode</a>
+        </p>
 
         <section class="episode-section">
             <h2>Daftar Episode</h2>
-            <div class="episode-list" id="episode-list"></div>
+            <div class="episode-list" id="episode-list">
+                <p>Sedang memuat daftar episode...</p>
+            </div>
         </section>
     </main>
 
