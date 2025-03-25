@@ -17,6 +17,7 @@ export async function fetchAnimeList() {
 export async function loadAnimeDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
+    const episodeParam = urlParams.get('episode');
 
     const animeList = await fetchAnimeList();
     const anime = animeList.find(a => a.id == animeId);
@@ -39,7 +40,7 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-genre').textContent = anime.genre.join(', ');
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
-    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co', 'Smoothpre.com', 'another-trusted.com'];
+    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co']; // Domain yang diizinkan
 
     function isTrustedURL(url) {
         try {
@@ -63,9 +64,10 @@ export async function loadAnimeDetail() {
 
             episodeButton.addEventListener('click', (event) => {
                 event.preventDefault();
-                
+
                 if (isTrustedURL(ep.url)) {
                     playEpisode(ep.url, ep.episode, anime.id);
+                    updateUrlWithEpisode(anime.id, ep.episode);
                 } else {
                     console.warn('URL episode tidak terpercaya:', ep.url);
                 }
@@ -75,9 +77,11 @@ export async function loadAnimeDetail() {
         });
     }
 
-    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
-    if (lastWatched && lastWatched.animeId === anime.id) {
-        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
+    if (episodeParam) {
+        const selectedEpisode = anime.episodes.find(ep => ep.episode == episodeParam);
+        if (selectedEpisode) {
+            playEpisode(selectedEpisode.url, selectedEpisode.episode, anime.id);
+        }
     }
 }
 
@@ -89,12 +93,6 @@ function playEpisode(url, episode, animeId) {
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
 
-    localStorage.setItem('lastWatched', JSON.stringify({
-        animeId: animeId,
-        episode: episode,
-        url: url
-    }));
-
     document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
     document.querySelectorAll('.episode-item').forEach(e => {
         if (e.textContent.includes(`Episode ${episode}`)) {
@@ -103,16 +101,11 @@ function playEpisode(url, episode, animeId) {
     });
 }
 
-// Move Episode List Below Video Player
-document.addEventListener("DOMContentLoaded", function () {
-    const moveEpisodesBtn = document.getElementById("move-episodes-btn");
-    const playerSection = document.querySelector(".player-section");
-    const episodeSection = document.querySelector(".episode-section");
-
-    moveEpisodesBtn.addEventListener("click", function () {
-        playerSection.insertAdjacentElement("afterend", episodeSection);
-    });
-});
+function updateUrlWithEpisode(animeId, episode) {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('episode', episode);
+    window.history.pushState(null, '', newUrl.toString());
+}
 
 if (document.getElementById('anime-title')) {
     loadAnimeDetail();
