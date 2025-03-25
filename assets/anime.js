@@ -61,11 +61,11 @@ export async function loadAnimeDetail() {
             episodeButton.textContent = `Episode ${ep.episode}`;
             episodeButton.classList.add("episode-item");
 
-            episodeButton.addEventListener('click', async (event) => {
+            episodeButton.addEventListener('click', (event) => {
                 event.preventDefault();
                 
                 if (isTrustedURL(ep.url)) {
-                    await playEpisode(ep.url, ep.episode, anime.id);
+                    playEpisode(ep.url, ep.episode, anime.id);
                 } else {
                     console.warn('URL episode tidak terpercaya:', ep.url);
                 }
@@ -74,8 +74,14 @@ export async function loadAnimeDetail() {
             episodeList.appendChild(episodeButton);
         });
     }
-    
-async function playEpisode(url, episode, animeId) {
+
+    const lastWatched = JSON.parse(localStorage.getItem('lastWatched'));
+    if (lastWatched && lastWatched.animeId === anime.id) {
+        playEpisode(lastWatched.url, lastWatched.episode, anime.id);
+    }
+}
+
+function playEpisode(url, episode, animeId) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
 
@@ -83,7 +89,11 @@ async function playEpisode(url, episode, animeId) {
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
 
-    await saveLastWatchedEpisode(animeId, episode, url); // 🔹 Simpan di server
+    localStorage.setItem('lastWatched', JSON.stringify({
+        animeId: animeId,
+        episode: episode,
+        url: url
+    }));
 
     document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
     document.querySelectorAll('.episode-item').forEach(e => {
