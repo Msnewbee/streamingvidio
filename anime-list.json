@@ -449,5 +449,35 @@
     { "episode": 23, "url": "https://acefile.co/player/40032504" },
     { "episode": 24, "url": "https://acefile.co/player/40717000" }
   ]
-}  
+},
+{
+  "id": 11,
+  "title": "Sakamoto Days",
+  "folder": "sakamoto_days",
+  "image": "sakamoto_days.jpg",
+  "japanese_title": "サカモトデイズ",
+  "score": 8.2,
+  "producers": ["TMS Entertainment", "Shueisha"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 11,
+  "duration": "24 Menit per episode",
+  "release_date": "11 Januari 2025",
+  "studio": "TMS Entertainment",
+  "genre": ["Action", "Comedy", "Slice of Life"],
+  "synopsis": "Taro Sakamoto, dulunya adalah pembunuh bayaran paling ditakuti. Namun, setelah jatuh cinta dan memulai keluarga, ia pensiun dan menjalani kehidupan damai sebagai pemilik toko serba ada. Meskipun demikian, masa lalunya terus menghantuinya, memaksanya untuk kembali ke dunia yang ingin ditinggalkannya demi melindungi keluarganya.",
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/TBO3unVFNk" },
+    { "episode": 2, "url": "https://filedon.co/embed/RVJz8ByVh1" },
+    { "episode": 3, "url": "https://filedon.co/embed/uu3dvN2hVr" },
+    { "episode": 4, "url": "https://filedon.co/embed/Ses8HUT8U8" },
+    { "episode": 5, "url": "https://filedon.co/embed/uIRNbLhWzi" },
+    { "episode": 6, "url": "https://filedon.co/embed/s9J5DIpeRD" },
+    { "episode": 7, "url": "https://acefile.co/player/108580313" },
+    { "episode": 8, "url": "https://acefile.co/player/108644868" },
+    { "episode": 9, "url": "https://filedon.co/embed/TljsZiIi5X" },
+    { "episode": 10, "url": "https://filedon.co/embed/jPKHyFwpRI" },
+    { "episode": 11, "url": "https://filedon.co/embed/VoYedZO1J7" }
+  ]
+}
 ]
