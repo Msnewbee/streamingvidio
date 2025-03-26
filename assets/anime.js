@@ -1,16 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const prevEpisodeBtn = document.getElementById('prev-episode');
-    const nextEpisodeBtn = document.getElementById('next-episode');
-
-    if (prevEpisodeBtn) prevEpisodeBtn.addEventListener('click', () => navigateEpisode(-1));
-    if (nextEpisodeBtn) nextEpisodeBtn.addEventListener('click', () => navigateEpisode(1));
-
-    if (document.getElementById('anime-title')) {
-        loadAnimeDetail();
-    }
-});
-
-async function fetchAnimeList() {
+// Fungsi untuk mengambil data anime dari JSON
+export async function fetchAnimeList() {
     try {
         const response = await fetch('./anime-list.json');
         if (!response.ok) throw new Error('Gagal mengambil data dari server');
@@ -21,7 +10,8 @@ async function fetchAnimeList() {
     }
 }
 
-async function loadAnimeDetail() {
+// Fungsi untuk memuat detail anime
+export async function loadAnimeDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
     const episodeParam = urlParams.get('episode');
@@ -47,6 +37,7 @@ async function loadAnimeDetail() {
     }
 }
 
+// Fungsi untuk memperbarui tampilan detail anime
 function updateAnimeDetails(anime) {
     document.getElementById('anime-title').textContent = anime.title;
     document.getElementById('anime-jtitle').textContent = anime.japanese_title;
@@ -61,6 +52,7 @@ function updateAnimeDetails(anime) {
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 }
 
+// Fungsi untuk menampilkan daftar episode
 function populateEpisodeList(anime) {
     const episodeList = document.getElementById('episode-list');
     episodeList.innerHTML = '';
@@ -86,6 +78,7 @@ function populateEpisodeList(anime) {
     });
 }
 
+// Fungsi untuk navigasi episode (sebelum/sesudah)
 function navigateEpisode(direction) {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
@@ -106,6 +99,7 @@ function navigateEpisode(direction) {
     });
 }
 
+// Fungsi untuk memutar episode
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
@@ -120,8 +114,22 @@ function playEpisode(url, episode, animeId, mirrors = []) {
     downloadLink.textContent = `Download Episode ${episode}`;
 }
 
+// Fungsi untuk memperbarui URL dengan episode terpilih
 function updateUrlWithEpisode(animeId, episode) {
     const newUrl = new URL(window.location.href);
     newUrl.searchParams.set('episode', episode);
     window.history.pushState(null, '', newUrl.toString());
 }
+
+// Event listener saat DOM siap
+document.addEventListener("DOMContentLoaded", () => {
+    const prevEpisodeBtn = document.getElementById('prev-episode');
+    const nextEpisodeBtn = document.getElementById('next-episode');
+
+    if (prevEpisodeBtn) prevEpisodeBtn.addEventListener('click', () => navigateEpisode(-1));
+    if (nextEpisodeBtn) nextEpisodeBtn.addEventListener('click', () => navigateEpisode(1));
+
+    if (document.getElementById('anime-title')) {
+        loadAnimeDetail();
+    }
+});
