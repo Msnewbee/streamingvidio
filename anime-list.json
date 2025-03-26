@@ -571,7 +571,7 @@
   ]
 },
   {
-  "id": 6,
+  "id": 15,
   "title": "Kaiju No. 8",
   "folder": "kaiju_no_8",
   "image": "kaiju_no_8.jpg",
@@ -579,7 +579,7 @@
   "score": 8.15,
   "producers": ["Production I.G", "Shueisha", "TOHO animation", "Bandai Namco Filmworks"],
   "type": "TV",
-  "status": "Ongoing",
+  "status": "Selesai",
   "total_episodes": 12,
   "duration": "24 Menit per episode",
   "release_date": "2024-04-13",
