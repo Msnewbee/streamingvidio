@@ -1,39 +1,15 @@
-async function checkVideoAvailability(url) {
-    try {
-        let response = await fetch(url, { method: 'HEAD' });
-        return response.ok;
-    } catch (e) {
-        return false;
-    }
-}
-
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
-    
+
     if (!iframePlayer) {
         console.error('Elemen #anime-embed tidak ditemukan');
         return;
     }
 
-    iframePlayer.src = '';
-    iframePlayer.insertAdjacentHTML('afterend', '<p id="loading-message">Loading video...</p>');
-    
-    checkVideoAvailability(url).then(isAvailable => {
-        document.getElementById('loading-message')?.remove();
-        if (isAvailable) {
-            iframePlayer.src = url;
-            downloadLink.href = url;
-            downloadLink.textContent = `Download Episode ${episode}`;
-        } else if (mirrors.length > 0) {
-            playEpisode(mirrors[0], episode, animeId, mirrors.slice(1));
-        } else {
-            iframePlayer.insertAdjacentHTML('afterend', '<p>Video tidak tersedia.</p>');
-        }
-    }).catch(() => {
-        document.getElementById('loading-message')?.remove();
-        iframePlayer.insertAdjacentHTML('afterend', '<p>Video tidak bisa dimuat.</p>');
-    });
+    iframePlayer.src = url;
+    downloadLink.href = url;
+    downloadLink.textContent = `Download Episode ${episode}`;
 }
 
 export async function fetchAnimeList() {
