@@ -236,7 +236,7 @@ footer {
  overflow: hidden;
 }
 
-.embed-container iframe {
+ .#anime-embed iframe {
  position: absolute;
  top: 0;
  left: 0;
