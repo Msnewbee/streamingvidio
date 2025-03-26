@@ -509,8 +509,35 @@
     { "episode": 11, "url": "https://filedon.co/embed/pcW6wbvUUO" },
     { "episode": 12, "url": "https://filedon.co/embed/RG9jsCfzkH" }
   ]
-}
-
-
-  
+},
+ {
+  "id": 6,
+  "title": "Zenshu",
+  "folder": "zenshu",
+  "image": "zenshu.jpg",
+  "japanese_title": "全修。",
+  "score": 8.9,
+  "producers": ["MAPPA", "Crunchyroll"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "23 Menit per episode",
+  "release_date": "2025-01-05",
+  "studio": "MAPPA",
+  "genre": ["Isekai", "Fantasi", "Petualangan", "Drama"],
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/episode1" },
+    { "episode": 2, "url": "https://filedon.co/embed/episode2" },
+    { "episode": 3, "url": "https://filedon.co/embed/episode3" },
+    { "episode": 4, "url": "https://filedon.co/embed/episode4" },
+    { "episode": 5, "url": "https://filedon.co/embed/episode5" },
+    { "episode": 6, "url": "https://filedon.co/embed/episode6" },
+    { "episode": 7, "url": "https://filedon.co/embed/episode7" },
+    { "episode": 8, "url": "https://filedon.co/embed/episode8" },
+    { "episode": 9, "url": "https://filedon.co/embed/episode9" },
+    { "episode": 10, "url": "https://filedon.co/embed/episode10" },
+    { "episode": 11, "url": "https://filedon.co/embed/episode11" },
+    { "episode": 12, "url": "https://filedon.co/embed/episode12" }
+  ]
+}  
 ]
