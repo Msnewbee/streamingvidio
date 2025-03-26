@@ -109,9 +109,26 @@ function playEpisode(url, episode, animeId, mirrors = []) {
         return;
     }
 
+    // Update player source
     iframePlayer.src = url;
+    
+    // Update download link
     downloadLink.href = url;
     downloadLink.textContent = `Download Episode ${episode}`;
+    downloadLink.download = `Episode_${episode}.mp4`;
+    
+    // Update URL
+    updateUrlWithEpisode(animeId, episode);
+    
+    // Highlight current episode in list
+    const episodeButtons = document.querySelectorAll('.episode-item');
+    episodeButtons.forEach(btn => {
+        if (parseInt(btn.dataset.episode) === episode) {
+            btn.style.backgroundColor = '#007bff';
+        } else {
+            btn.style.backgroundColor = '#3a3a3a';
+        }
+    });
 }
 
 // Fungsi untuk memperbarui URL dengan episode terpilih
