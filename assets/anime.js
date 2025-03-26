@@ -53,7 +53,7 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-genre').textContent = anime.genre.join(', ');
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
-    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co'];
+    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co', 'pixeldrain.com'];
 
     function isTrustedURL(url) {
         try {
