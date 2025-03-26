@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('prev-episode').addEventListener('click', () => navigateEpisode(-1));
+    document.getElementById('next-episode').addEventListener('click', () => navigateEpisode(1));
+});
+
+function navigateEpisode(direction) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const animeId = urlParams.get('id');
+    let currentEpisode = parseInt(urlParams.get('episode')) || 1;
+
+    fetchAnimeList().then(animeList => {
+        const anime = animeList.find(a => a.id == animeId);
+        if (!anime) return;
+
+        const episodeIndex = anime.episodes.findIndex(ep => ep.episode == currentEpisode);
+        let newIndex = episodeIndex + direction;
+
+        if (newIndex >= 0 && newIndex < anime.episodes.length) {
+            const newEpisode = anime.episodes[newIndex];
+            updateUrlWithEpisode(animeId, newEpisode.episode);
+            playEpisode(newEpisode.url, newEpisode.episode, animeId, newEpisode.mirrors || []);
+        }
+    });
+}
+
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
@@ -19,11 +44,6 @@ export async function fetchAnimeList() {
         return await response.json();
     } catch (error) {
         console.error('Error fetching anime list:', error);
-
-        const episodeSection = document.getElementById('episode-list');
-        if (episodeSection) {
-            episodeSection.innerHTML = `<p style="color: red;">Gagal memuat daftar anime. Silakan coba lagi nanti.</p>`;
-        }
         return [];
     }
 }
@@ -53,17 +73,6 @@ export async function loadAnimeDetail() {
     document.getElementById('anime-genre').textContent = anime.genre.join(', ');
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
-    const trustedDomains = ['mega.nz', 'filedon.co', 'acefile.co', 'pixeldrain.com'];
-
-    function isTrustedURL(url) {
-        try {
-            const parsedURL = new URL(url);
-            return trustedDomains.includes(parsedURL.hostname);
-        } catch (e) {
-            return false;
-        }
-    }
-
     const episodeList = document.getElementById('episode-list');
     episodeList.innerHTML = '';
 
@@ -78,13 +87,8 @@ export async function loadAnimeDetail() {
 
             episodeButton.addEventListener('click', (event) => {
                 event.preventDefault();
-                if (isTrustedURL(ep.url)) {
-                    playEpisode(ep.url, ep.episode, anime.id, ep.mirrors || []);
-                    updateUrlWithEpisode(anime.id, ep.episode);
-                } else {
-                    console.warn('URL episode tidak terpercaya:', ep.url);
-                    alert('Sumber video ini tidak dipercaya!');
-                }
+                playEpisode(ep.url, ep.episode, anime.id, ep.mirrors || []);
+                updateUrlWithEpisode(anime.id, ep.episode);
             });
 
             episodeList.appendChild(episodeButton);
