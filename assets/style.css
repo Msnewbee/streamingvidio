@@ -229,15 +229,6 @@ footer {
     margin-bottom: 30px;
 }
 
-.video-container {
-    position: relative;
-    width: 75%;
-    height: 75%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    background: #000;
-    border-radius: 10px;
-}
-
 #anime-embed {
     position: relative;
     top: 0;
