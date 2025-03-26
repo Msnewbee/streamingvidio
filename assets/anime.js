@@ -10,11 +10,17 @@ async function checkVideoAvailability(url) {
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
-    const videoContainer = document.getElementById('video-player');
     
-    videoContainer.innerHTML = '<p>Loading video...</p>';
+    if (!iframePlayer) {
+        console.error('Elemen #anime-embed tidak ditemukan');
+        return;
+    }
 
+    iframePlayer.src = '';
+    iframePlayer.insertAdjacentHTML('afterend', '<p id="loading-message">Loading video...</p>');
+    
     checkVideoAvailability(url).then(isAvailable => {
+        document.getElementById('loading-message')?.remove();
         if (isAvailable) {
             iframePlayer.src = url;
             downloadLink.href = url;
@@ -22,21 +28,11 @@ function playEpisode(url, episode, animeId, mirrors = []) {
         } else if (mirrors.length > 0) {
             playEpisode(mirrors[0], episode, animeId, mirrors.slice(1));
         } else {
-            videoContainer.innerHTML = '<p>Video tidak tersedia.</p>';
+            iframePlayer.insertAdjacentHTML('afterend', '<p>Video tidak tersedia.</p>');
         }
     }).catch(() => {
-        videoContainer.innerHTML = '<p>Video tidak bisa dimuat.</p>';
-    });
-
-    iframePlayer.onerror = function () {
-        alert('Gagal memuat video. Coba sumber lain.');
-    };
-
-    document.querySelectorAll('.episode-item').forEach(e => e.classList.remove('active'));
-    document.querySelectorAll('.episode-item').forEach(e => {
-        if (e.dataset.episode == episode) {
-            e.classList.add('active');
-        }
+        document.getElementById('loading-message')?.remove();
+        iframePlayer.insertAdjacentHTML('afterend', '<p>Video tidak bisa dimuat.</p>');
     });
 }
 
