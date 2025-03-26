@@ -231,8 +231,8 @@ footer {
 
 .embed-container {
  position: relative;
-  width: 75%;
- height: 75%;
+ width: 80%;
+ height: 480px;
  overflow: hidden;
 }
 
