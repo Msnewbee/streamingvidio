@@ -236,7 +236,6 @@ footer {
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     background: #000;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 #anime-embed {
