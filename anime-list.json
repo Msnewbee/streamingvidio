@@ -539,5 +539,36 @@
     { "episode": 11, "url": "https://filedon.co/embed/LqcpTzHXrK" },
     { "episode": 12, "url": "https://filedon.co/embed/vW7fBKNMVb" }
   ]
-}  
+},
+  {
+  "id": 6,
+  "title": "Oshi no Ko Season 2",
+  "folder": "oshi_no_ko_s2",
+  "image": "oshi_no_ko_s2.jpg",
+  "japanese_title": "【推しの子】第2期",
+  "score": 8.64,
+  "producers": ["Doga Kobo", "Shueisha"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "24 Menit per episode",
+  "release_date": "2024-07-03",
+  "studio": "Doga Kobo",
+  "genre": ["Drama", "Misteri", "Psikologis", "Supernatural"],
+  "episodes": [
+    { "episode": 1, "url": "https://acefile.co/player/106061099" },
+    { "episode": 2, "url": "https://acefile.co/player/106175471" },
+    { "episode": 3, "url": "https://acefile.co/player/106292019" },
+    { "episode": 4, "url": "https://acefile.co/player/106408158" },
+    { "episode": 5, "url": "https://acefile.co/player/106518336" },
+    { "episode": 6, "url": "https://acefile.co/player/106625644" },
+    { "episode": 7, "url": "https://acefile.co/player/106722013" },
+    { "episode": 8, "url": "https://acefile.co/player/106826672" },
+    { "episode": 9, "url": "https://acefile.co/player/106914692" },
+    { "episode": 10, "url": "https://acefile.co/player/107070942" },
+    { "episode": 11, "url": "https://acefile.co/player/107156752" },
+    { "episode": 12, "url": "https://acefile.co/player/107237389" }
+  ]
+}
+
 ]
