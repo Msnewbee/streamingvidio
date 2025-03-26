@@ -482,32 +482,35 @@
  },
   {
   "id": 12,
-  "title": "Bleach",
-  "folder": "bleach",
-  "image": "bleach.jpg",
-  "japanese_title": "ブリーチ",
-  "score": 7.6,
-  "producers": ["TV Tokyo", "Dentsu", "Studio Pierrot"],
+  "title": "Chainsaw Man",
+  "folder": "chainsaw_man",
+  "image": "chainsaw_man.jpg",
+  "japanese_title": "チェンソーマン",
+  "score": 8.7,
+  "producers": ["MAPPA", "Shueisha"],
   "type": "TV",
-  "status": "Completed",
-  "total_episodes": 366,
-  "duration": "24 Menit",
-  "release_date": "5 Oktober 2004",
-  "studio": "Studio Pierrot",
-  "genre": ["Action", "Adventure", "Supernatural", "Martial Arts"],
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "23 Menit per episode",
+  "release_date": "12 Oktober 2022",
+  "studio": "MAPPA",
+  "genre": ["Action", "Adventure", "Dark Fantasy", "Horror"],
   "episodes": [
-    { "episode": 1, "url": "https://pixeldrain.com/u/VsdS8JPT" },
-    { "episode": 2, "url": "https://pixeldrain.com/u/JaonEwBh" },
-    { "episode": 3, "url": "https://pixeldrain.com/u/qsEXFbYU" },
-    { "episode": 4, "url": "https://pixeldrain.com/u/r8NtW8Ad" },
-    { "episode": 5, "url": "https://pixeldrain.com/u/PibEtiXQ" },
-    { "episode": 6, "url": "https://pixeldrain.com/u/9BZPcuaV" },
-    { "episode": 7, "url": "https://pixeldrain.com/u/CG6S878z" },
-    { "episode": 8, "url": "https://pixeldrain.com/u/MwRo3WQn" },
-    { "episode": 9, "url": "https://pixeldrain.com/u/bUvnDzM8" },
-    { "episode": 10, "url": "https://pixeldrain.com/u/Z68STGZK" }
+    { "episode": 1, "url": "https://filedon.co/embed/qbgnJZntxJ" },
+    { "episode": 2, "url": "https://filedon.co/embed/UrK5cNLfI6" },
+    { "episode": 3, "url": "https://filedon.co/embed/QUd4FR2bgX" },
+    { "episode": 4, "url": "https://filedon.co/embed/Tc4c0Ti3VI" },
+    { "episode": 5, "url": "https://filedon.co/embed/2YIjXe6Qrd" },
+    { "episode": 6, "url": "https://filedon.co/embed/tijfKKk63a" },
+    { "episode": 7, "url": "https://filedon.co/embed/GveHRJ3H9x" },
+    { "episode": 8, "url": "https://filedon.co/embed/APfTvmeoOf" },
+    { "episode": 9, "url": "https://filedon.co/embed/eodOoFq2lI" },
+    { "episode": 10, "url": "https://filedon.co/embed/9rgzugbUGo" },
+    { "episode": 11, "url": "https://filedon.co/embed/pcW6wbvUUO" },
+    { "episode": 12, "url": "https://filedon.co/embed/RG9jsCfzkH" }
   ]
 }
+
 
   
 ]
