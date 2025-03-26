@@ -229,31 +229,56 @@ footer {
     margin-bottom: 30px;
 }
 
+/* Embedded Video Player */
 .embed-container {
- position: relative;
- width: 80%;
- height: 480px;
- overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
- .#anime-embed iframe {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
+#anime-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Download Button */
+.download-container {
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #0056b3;
 }
 
 /* Episode Navigation */
 .episode-navigation {
     display: flex;
-    justify-content: space-between;
-    margin: 15px 0;
+    justify-content: center;
+    margin-top: 20px;
     gap: 10px;
 }
 
 .episode-nav-btn {
-    flex: 1;
     padding: 12px 15px;
     font-size: 16px;
     background-color: #007bff;
@@ -264,51 +289,21 @@ footer {
     transition: all 0.2s ease;
 }
 
-.episode-nav-btn:active {
+.episode-nav-btn:hover {
     background-color: #0056b3;
-    transform: scale(0.98);
 }
 
-/* Episode List */
-.episode-section h2 {
-    margin-bottom: 15px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .embed-container {
+        height: 400px;
+    }
 }
 
-.episode-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-}
-
-.episode-item {
-    background: #3a3a3a;
-    color: #fff;
-    padding: 12px;
-    text-align: center;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.episode-item:active {
-    background: #007bff;
-    transform: scale(0.98);
-}
-
-/* Sticky Ads */
-.sticky-ads {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 1000;
-    max-width: 90%;
+@media (max-width: 480px) {
+    .embed-container {
+        height: 300px;
+    }
 }
 
 .close-ads {
