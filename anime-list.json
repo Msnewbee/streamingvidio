@@ -640,6 +640,25 @@
     { "episode": 22, "url": "https://pixeldrain.com/api/file/CXEobaLP" },
     { "episode": 23, "url": "https://pixeldrain.com/api/file/tBEpzD8W" }
   ]
+},
+ {
+  "id": 17,
+  "title": "Jujutsu Kaisen 0 Movie",
+  "folder": "jujutsu_kaisen_0",
+  "image": "jujutsu_kaisen_0.jpg",
+  "japanese_title": "劇場版 呪術廻戦 0",
+  "score": 8.5,
+  "producers": ["MAPPA", "Shueisha", "TOHO animation"],
+  "type": "Movie",
+  "status": "Selesai",
+  "total_episodes": 1,
+  "duration": "105 Menit",
+  "release_date": "2021-12-24",
+  "studio": "MAPPA",
+  "genre": ["Action", "Dark Fantasy", "Supernatural", "Shounen"],
+  "episodes": [
+   { "episode": 1, "url": "https://acefile.co/player/84301731" }
+  ]
 }
 
 ]
