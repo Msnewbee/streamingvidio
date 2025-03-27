@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             const animeCard = document.createElement("div");
             animeCard.classList.add("anime-card");
             animeCard.setAttribute("data-anime-id", anime.id);
-
+            animeCard.dataset.id = anime.id;
             animeCard.innerHTML = `
-                <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" 
+                <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" /> 
                      alt="${anime.title}" 
                      loading="lazy">
                 <div class="card-content">
