@@ -1,14 +1,14 @@
-// Konfigurasi
-const CONFIG = {
-    DEFAULT_POSTER: 'default-poster.jpg',
-    FALLBACK_ANIME: {
-        id: 'fallback',
-        title: 'Anime Tidak Ditemukan',
-        image: 'default-poster.jpg',
-        episodes: []
-    },
-    TIMEOUT: 8000 // 8 detik timeout untuk fetch
-};
+// Fungsi untuk mengambil data anime dari JSON
+export async function fetchAnimeList() {
+    try {
+        const response = await fetch('./anime-list.json');
+        if (!response.ok) throw new Error('Gagal mengambil data dari server');
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching anime list:', error);
+        return [];
+    }
+}
 
 // Fungsi utama untuk mengambil data anime dengan error handling yang lebih baik
 export async function fetchAnimeList() {
