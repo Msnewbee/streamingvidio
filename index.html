@@ -3,61 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSP diperbarui untuk mengizinkan domain iklan eksternal yang diperlukan, termasuk ep2.adtrafficquality.google -->
-    <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self';
-                   script-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google;
-                   img-src 'self' data: https://*.googleusercontent.com https://pagead2.googlesyndication.com https://*.doubleclick.net;
-                   style-src 'self' 'unsafe-inline';
-                   frame-src https://googleads.g.doubleclick.net;
-                   connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google;
-                   child-src https://googleads.g.doubleclick.net">
     <title>StreamingX - Nonton Anime Gratis</title>
     <meta name="google-adsense-account" content="ca-pub-1357574968133580">
-    <!-- Link CSS -->
+    
+    <meta name="description" content="StreamingX adalah situs terbaik untuk nonton anime subtitle Indonesia dengan kualitas tinggi. Tonton anime favoritmu tanpa buffering!">
+    <meta name="keywords" content="anime, streaming anime, nonton anime, anime subtitle indonesia, anime sub indo, anime HD">
+    <meta name="author" content="StreamingX">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="StreamingX - Nonton Anime Gratis">
+    <meta property="og:description" content="Saksikan anime favoritmu secara gratis dengan kualitas terbaik hanya di StreamingX.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://streamingvidio.pages.dev/">
+    <meta property="og:image" content="public/preview.jpg">
+    <link rel="canonical" href="https://streamingvidio.pages.dev/">
     <link rel="stylesheet" href="assets/style.css">
     
-    <!-- Google AdSense Modern Implementation -->
-    <script async 
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580"
-            crossorigin="anonymous"
-            data-ad-host="streamingvidio.pages.dev"></script>
+
+    <!-- Google AdSense Header Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header dan konten utama tetap sama -->
+    
+   <header>
+    <h1>StreamingX</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="film.html">Film 18+</a>
+        <a href="contact.html">Kontak</a>
+    </nav>
+   </header>
 
-    <!-- Misalnya, elemen input pencarian, filter, dan container anime -->
-    <input type="text" id="search-anime" placeholder="Cari Anime...">
-    <select id="sort-anime">
-        <option value="">Sort By</option>
-        <option value="score">Score</option>
-        <option value="release_date">Release Date</option>
-    </select>
-    <select id="genre-anime">
-        <!-- Opsi genre akan diisi oleh script.js -->
-    </select>
-    <div id="anime-list">
-        <!-- Daftar anime akan diisi oleh script.js -->
-    </div>
+    <!-- Konten utama -->
+  <main>
+     <div class="search-container">
+   <input type="text" id="search-anime" placeholder="Cari anime...">
+   <select id="sort-anime">
+     <option value="">Sort By</option>
+     <option value="score">Score</option>
+     <option value="release_date">Tanggal Rilis</option>
+   </select>
+   <select id="genre-anime">
+     <option value="">Pilih Genre</option>
+   </select>
+</div>
 
-    <!-- Sticky Footer Ads - Diperbarui -->
-    <div class="sticky-ads" id="stickyAds">
-        <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+    <!-- Daftar anime -->
+    <div class="anime-grid" id="anime-list"></div>    
+  </main>   
+
+   <!-- Sticky Footer Ads -->
+<div class="sticky-ads" id="stickyAds">
+    <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
+    <div>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
-             style="display:block"
+             style="display:inline-block;width:728px;height:90px"
              data-ad-client="ca-pub-1357574968133580"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+             data-ad-slot="5544332211"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
+</div>
 
-    <!-- Footer tetap sama -->
+<script>
+    // Fungsi untuk menutup iklan
+    function closeAds() {
+        document.getElementById("stickyAds").style.display = "none";
+    }
+</script>
+    
+    <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
+    </footer>
 
-    <!-- Muat file JavaScript (type="module" jika Anda menggunakan module import) -->
-    <script type="module" src="assets/script.js"></script>
-    <script type="module" src="assets/ads.js"></script>
-
-    <!-- Jika diperlukan, muat juga script eksternal tambahan (misalnya sodar2.js) -->
-    <script src="https://ep2.adtrafficquality.google/sodar/sodar2.js"></script>
+ <script type="module" src="assets/script.js"></script>
 </body>
 </html>
