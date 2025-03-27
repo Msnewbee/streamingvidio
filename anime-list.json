@@ -599,6 +599,47 @@
     { "episode": 11, "url": "https://www.yourupload.com/embed/k8PtbGOEesp0" },
     { "episode": 12, "url": "https://www.yourupload.com/embed/1o65i8SlWQ11" }
   ]
+},
+  {
+  "id": 16,
+  "title": "Jujutsu Kaisen 2nd Season",
+  "folder": "jujutsu_kaisen_2nd_season",
+  "image": "jujutsu_kaisen_2nd_season.jpg",
+  "japanese_title": "呪術廻戦 第2期",
+  "score": 8.9,
+  "producers": ["MAPPA", "Shueisha", "TOHO animation"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 23,
+  "duration": "23 Menit per episode",
+  "release_date": "2023-07-06",
+  "studio": "MAPPA",
+  "genre": ["Action", "Dark Fantasy", "Supernatural", "Horror"],
+  "episodes": [
+    { "episode": 1, "url": "https://pixeldrain.com/api/file/uFiWQYqK" },
+    { "episode": 2, "url": "https://pixeldrain.com/api/file/xcHSiifV" },
+    { "episode": 3, "url": "https://filedon.co/embed/QUd4FR2bgX" },
+    { "episode": 4, "url": "https://filedon.co/embed/Tc4c0Ti3VI" },
+    { "episode": 5, "url": "https://filedon.co/embed/2YIjXe6Qrd" },
+    { "episode": 6, "url": "https://filedon.co/embed/tijfKKk63a" },
+    { "episode": 7, "url": "https://filedon.co/embed/GveHRJ3H9x" },
+    { "episode": 8, "url": "https://filedon.co/embed/APfTvmeoOf" },
+    { "episode": 9, "url": "https://filedon.co/embed/eodOoFq2lI" },
+    { "episode": 10, "url": "https://filedon.co/embed/9rgzugbUGo" },
+    { "episode": 11, "url": "https://filedon.co/embed/pcW6wbvUUO" },
+    { "episode": 12, "url": "https://filedon.co/embed/RG9jsCfzkH" },
+    { "episode": 13, "url": "https://filedon.co/embed/example13" },
+    { "episode": 14, "url": "https://filedon.co/embed/example14" },
+    { "episode": 15, "url": "https://filedon.co/embed/example15" },
+    { "episode": 16, "url": "https://filedon.co/embed/example16" },
+    { "episode": 17, "url": "https://filedon.co/embed/example17" },
+    { "episode": 18, "url": "https://filedon.co/embed/example18" },
+    { "episode": 19, "url": "https://filedon.co/embed/example19" },
+    { "episode": 20, "url": "https://filedon.co/embed/example20" },
+    { "episode": 21, "url": "https://filedon.co/embed/example21" },
+    { "episode": 22, "url": "https://filedon.co/embed/example22" },
+    { "episode": 23, "url": "https://filedon.co/embed/example23" }
+  ]
 }
 
 ]
