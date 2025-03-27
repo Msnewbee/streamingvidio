@@ -587,17 +587,17 @@
   "genre": ["Action", "Sci-Fi", "Monster", "Military"],
   "episodes": [
     { "episode": 1, "url": "https://www.yourupload.com/embed/4ipBNA266Bt7" },
-    { "episode": 2, "url": "https://acefile.co/player/104690834" },
-    { "episode": 3, "url": "https://acefile.co/player/104820853" },
-    { "episode": 4, "url": "https://acefile.co/player/104947671" },
-    { "episode": 5, "url": "https://acefile.co/player/105076642" },
-    { "episode": 6, "url": "https://acefile.co/player/105218650" },
-    { "episode": 7, "url": "https://acefile.co/player/105346756" },
-    { "episode": 8, "url": "https://acefile.co/player/105478957" },
-    { "episode": 9, "url": "https://acefile.co/player/105602313" },
-    { "episode": 10, "url": "https://acefile.co/player/105729957" },
-    { "episode": 11, "url": "https://acefile.co/player/105851857" },
-    { "episode": 12, "url": "https://acefile.co/player/105982512" }
+    { "episode": 2, "url": "https://filedon.co/embed/y3Jr1QKpNf" },
+    { "episode": 3, "url": "https://filedon.co/embed/oYNqsNFOPH" },
+    { "episode": 4, "url": "https://filedon.co/embed/xllVG2nfyy" },
+    { "episode": 5, "url": "https://filedon.co/embed/mmVppoknzr" },
+    { "episode": 6, "url": "https://filedon.co/embed/xd8rfDpuAn" },
+    { "episode": 7, "url": "https://acefile.co/player/105347126" },
+    { "episode": 8, "url": "https://acefile.co/player/105479025" },
+    { "episode": 9, "url": "https://acefile.co/player/105602493" },
+    { "episode": 10, "url": "https://acefile.co/player/105730109" },
+    { "episode": 11, "url": "https://acefile.co/player/105851756" },
+    { "episode": 12, "url": "https://acefile.co/player/105982247" }
   ]
 }
 
