@@ -676,7 +676,7 @@
   "studio": "8bit",
   "genre": ["Action", "Adventure", "Comedy", "Fantasy", "Isekai"],
   "episodes": [
-    { "episode": 1, "url": "https://pixeldrain.com/api/file/8KDUQx53" },
+    { "episode": 1, "url": "https://pixeldrain.com/u/8KDUQx53?embed" },
     { "episode": 2, "url": "https://filedon.co/embed/example2" },
     { "episode": 3, "url": "https://filedon.co/embed/example3" },
     { "episode": 4, "url": "https://filedon.co/embed/example4" },
