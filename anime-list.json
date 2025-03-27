@@ -702,7 +702,50 @@
     { "episode": 24, "url": "https://mega.nz/embed/qvZRyK7Y#-DWzL91W064D9WfhSXyut1K-2r4zQXeOG2T4tGgViRo" },
     { "episode": 25, "url": "https://mega.nz/embed/CvZXTIoJ#xflp6MBqRZj7PXcpnal7KKivsYrKa3VbVE0hVrNs1x8" }
   ]
+},
+  {
+  "id": 19,
+  "title": "Tensei shitara Slime Datta Ken 2nd Season",
+  "folder": "tensei_shitara_slime_datta_ken_s2",
+  "image": "tensei_shitara_slime_datta_ken_s2.jpg",
+  "japanese_title": "転生したらスライムだった件 第2期",
+  "score": 8.36,
+  "producers": ["Kodansha"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 24,
+  "duration": "23 Menit per episode",
+  "release_date": "2021-01-12",
+  "studio": "8-Bit",
+  "genre": ["Aksi", "Fantasi", "Drama", "Komedi", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://www.yourupload.com/embed/04C361To0DK0" },
+    { "episode": 2, "url": "https://filedon.co/embed/episode2_url" },
+    { "episode": 3, "url": "https://filedon.co/embed/episode3_url" },
+    { "episode": 4, "url": "https://filedon.co/embed/episode4_url" },
+    { "episode": 5, "url": "https://filedon.co/embed/episode5_url" },
+    { "episode": 6, "url": "https://filedon.co/embed/episode6_url" },
+    { "episode": 7, "url": "https://filedon.co/embed/episode7_url" },
+    { "episode": 8, "url": "https://filedon.co/embed/episode8_url" },
+    { "episode": 9, "url": "https://filedon.co/embed/episode9_url" },
+    { "episode": 10, "url": "https://filedon.co/embed/episode10_url" },
+    { "episode": 11, "url": "https://filedon.co/embed/episode11_url" },
+    { "episode": 12, "url": "https://filedon.co/embed/episode12_url" },
+    { "episode": 13, "url": "https://filedon.co/embed/episode13_url" },
+    { "episode": 14, "url": "https://filedon.co/embed/episode14_url" },
+    { "episode": 15, "url": "https://filedon.co/embed/episode15_url" },
+    { "episode": 16, "url": "https://filedon.co/embed/episode16_url" },
+    { "episode": 17, "url": "https://filedon.co/embed/episode17_url" },
+    { "episode": 18, "url": "https://filedon.co/embed/episode18_url" },
+    { "episode": 19, "url": "https://filedon.co/embed/episode19_url" },
+    { "episode": 20, "url": "https://filedon.co/embed/episode20_url" },
+    { "episode": 21, "url": "https://filedon.co/embed/episode21_url" },
+    { "episode": 22, "url": "https://filedon.co/embed/episode22_url" },
+    { "episode": 23, "url": "https://filedon.co/embed/episode23_url" },
+    { "episode": 24, "url": "https://filedon.co/embed/episode24_url" }
+  ]
 }
+
 
   
 ]
