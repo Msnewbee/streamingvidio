@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSP diperbarui untuk mengizinkan domain iklan eksternal yang diperlukan, termasuk ep2.adtrafficquality.google -->
     <meta http-equiv="Content-Security-Policy" 
           content="default-src 'self';
-                   script-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google;
+                   script-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google;
                    img-src 'self' data: https://*.googleusercontent.com https://pagead2.googlesyndication.com https://*.doubleclick.net;
                    style-src 'self' 'unsafe-inline';
                    frame-src https://googleads.g.doubleclick.net;
                    connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://ep1.adtrafficquality.google;
                    child-src https://googleads.g.doubleclick.net">
-    <!-- Metadata lainnya tetap sama -->
     <title>StreamingX - Nonton Anime Gratis</title>
     <meta name="google-adsense-account" content="ca-pub-1357574968133580">
-    <!-- ... (meta tags lainnya tetap sama) ... -->
+    <!-- Link CSS -->
     <link rel="stylesheet" href="assets/style.css">
     
     <!-- Google AdSense Modern Implementation -->
@@ -25,7 +25,21 @@
 </head>
 <body>
     <!-- Header dan konten utama tetap sama -->
-    
+
+    <!-- Misalnya, elemen input pencarian, filter, dan container anime -->
+    <input type="text" id="search-anime" placeholder="Cari Anime...">
+    <select id="sort-anime">
+        <option value="">Sort By</option>
+        <option value="score">Score</option>
+        <option value="release_date">Release Date</option>
+    </select>
+    <select id="genre-anime">
+        <!-- Opsi genre akan diisi oleh script.js -->
+    </select>
+    <div id="anime-list">
+        <!-- Daftar anime akan diisi oleh script.js -->
+    </div>
+
     <!-- Sticky Footer Ads - Diperbarui -->
     <div class="sticky-ads" id="stickyAds">
         <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
@@ -39,7 +53,11 @@
 
     <!-- Footer tetap sama -->
 
+    <!-- Muat file JavaScript (type="module" jika Anda menggunakan module import) -->
     <script type="module" src="assets/script.js"></script>
     <script type="module" src="assets/ads.js"></script>
+
+    <!-- Jika diperlukan, muat juga script eksternal tambahan (misalnya sodar2.js) -->
+    <script src="https://ep2.adtrafficquality.google/sodar/sodar2.js"></script>
 </body>
 </html>
