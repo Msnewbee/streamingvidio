@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; 
+                   img-src 'self' data: https://*.googleusercontent.com;
+                   style-src 'self' 'unsafe-inline';
+                   frame-src https://googleads.g.doubleclick.net">
     <title>StreamingX - Nonton Anime Gratis</title>
     <meta name="google-adsense-account" content="ca-pub-1357574968133580">
     
@@ -18,9 +24,11 @@
     <link rel="canonical" href="https://streamingvidio.pages.dev/">
     <link rel="stylesheet" href="assets/style.css">
     
-
-    <!-- Google AdSense Header Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
+    <!-- Google AdSense Modern Implementation -->
+    <script async 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580"
+            crossorigin="anonymous"
+            data-ad-host="streamingvidio.pages.dev"></script>
 </head>
 <body>
     
@@ -36,48 +44,64 @@
     <!-- Konten utama -->
   <main>
      <div class="search-container">
-   <input type="text" id="search-anime" placeholder="Cari anime...">
-   <select id="sort-anime">
-     <option value="">Sort By</option>
-     <option value="score">Score</option>
-     <option value="release_date">Tanggal Rilis</option>
-   </select>
-   <select id="genre-anime">
-     <option value="">Pilih Genre</option>
-   </select>
-</div>
+       <input type="text" id="search-anime" placeholder="Cari anime...">
+       <select id="sort-anime">
+         <option value="">Sort By</option>
+         <option value="score">Score</option>
+         <option value="release_date">Tanggal Rilis</option>
+       </select>
+       <select id="genre-anime">
+         <option value="">Pilih Genre</option>
+       </select>
+    </div>
 
     <!-- Daftar anime -->
     <div class="anime-grid" id="anime-list"></div>    
   </main>   
 
-   <!-- Sticky Footer Ads -->
-<div class="sticky-ads" id="stickyAds">
-    <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
+   <!-- Sticky Footer Ads - Modern Implementation -->
+<div class="sticky-ads" id="stickyAds" data-page-url="https://streamingvidio.pages.dev/">
+    <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
     <div>
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-1357574968133580"
-             data-ad-slot="5544332211"></ins>
         <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
+        if(window.adsbygoogle && document.location.protocol === 'https:') {
+            (adsbygoogle = window.adsbygoogle || []).push({
+                params: {
+                    // User-Agent Client Hints alternative
+                    ua_platform: navigator.userAgentData ? navigator.userAgentData.platform : null,
+                    ua_mobile: navigator.userAgentData ? navigator.userAgentData.mobile : null
+                }
+            });
+        }
         </script>
     </div>
 </div>
-
-<script>
-    // Fungsi untuk menutup iklan
-    function closeAds() {
-        document.getElementById("stickyAds").style.display = "none";
-    }
-</script>
     
     <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
         <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
     </footer>
 
- <script type="module" src="assets/script.js"></script>
+    <script type="module" src="assets/script.js"></script>
+    <script>
+        // Inisialisasi iklan setelah memastikan browser support
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeBtn = document.getElementById('closeAdsBtn');
+            if(closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    const stickyAds = document.getElementById('stickyAds');
+                    if(stickyAds) {
+                        stickyAds.style.display = 'none';
+                        localStorage.setItem('hideAds', 'true');
+                    }
+                });
+            }
+            
+            // Cek preferensi pengguna
+            if(localStorage.getItem('hideAds') === 'true') {
+                const stickyAds = document.getElementById('stickyAds');
+                if(stickyAds) stickyAds.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
