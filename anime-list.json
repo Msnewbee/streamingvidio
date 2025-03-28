@@ -764,7 +764,50 @@
     { "episode": 11, "url": "https://mega.nz/embed/Y0t1mKhJ#Yl1nlq3kQowD4_SqOToMrPwws8zSQ14nsVCFwoLLQiA" },
     { "episode": 12, "url": "https://mega.nz/embed/px9lFQYK#nTCndtFBUyxAO5pyE1zX6qsTtQ-jAfNwsebt5TvmsLw" }
   ]
+},
+  {
+  "id": 21,
+  "title": "Tensei Shitara Slime Datta Ken Season 3",
+  "folder": "tensei_shitara_slime_datta_ken_s3",
+  "image": "tensei_shitara_slime_datta_ken_s3.jpg",
+  "japanese_title": "転生したらスライムだった件 3",
+  "score": 8.5,
+  "producers": ["Eight Bit", "Kodansha"],
+  "type": "TV",
+  "status": "Sedang Tayang",
+  "total_episodes": 24,
+  "duration": "23 Menit per episode",
+  "release_date": "2024-04-05",
+  "studio": "Eight Bit",
+  "genre": ["Action", "Fantasy", "Isekai"],
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/22nPn94XOe" },
+    { "episode": 2, "url": "https://filedon.co/embed/5Tg3ELI2Bj" },
+    { "episode": 3, "url": "https://filedon.co/embed/0XtvudJ9Q5" },
+    { "episode": 4, "url": "https://filedon.co/embed/t2W8j26TI9" },
+    { "episode": 5, "url": "https://filedon.co/embed/axsIdXI98O" },
+    { "episode": 6, "url": "https://acefile.co/player/105057779" },
+    { "episode": 7, "url": "https://filedon.co/embed/w816AfZBKn" },
+    { "episode": 8, "url": "https://acefile.co/player/105329866" },
+    { "episode": 9, "url": "https://acefile.co/player/105460506" },
+    { "episode": 10, "url": "https://acefile.co/player/105584260" },
+    { "episode": 11, "url": "https://acefile.co/player/105712467" },
+    { "episode": 12, "url": "https://acefile.co/player/105835538" },
+    { "episode": 13, "url": "https://acefile.co/player/105965130" },
+    { "episode": 14, "url": "https://acefile.co/player/106094355" },
+    { "episode": 15, "url": "https://acefile.co/player/106324406" },
+    { "episode": 16, "url": "https://acefile.co/player/106438255" },
+    { "episode": 17, "url": "https://acefile.co/player/106548471" },
+    { "episode": 18, "url": "https://acefile.co/player/106750678" },
+    { "episode": 19, "url": "https://acefile.co/player/106851017" },
+    { "episode": 20, "url": "https://acefile.co/player/106938932" },
+    { "episode": 21, "url": "https://acefile.co/player/107013563" },
+    { "episode": 22, "url": "https://acefile.co/player/107093731" },
+    { "episode": 23, "url": "https://mega.nz/embed/x4BRXBYY#NFGR1btAR0cB8EWLA1Fc8G2JNCJbzBZ5Rf08XEGE-WE" },
+    { "episode": 24, "url": "https://mega.nz/embed/kp5QWCiI#VOuSWB1FkOtqIJLam-sxJPz56JcOQtZQ6ugG-Jq_UNU" }
+  ]
 }
+
 
 
 
