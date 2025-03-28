@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const genreSelect = document.getElementById("genre-anime");
   const animeListContainer = document.getElementById("anime-list");
   const newAnimeContainer = document.getElementById("new-anime-list");
+  const paginationContainer = document.getElementById("pagination");
 
   let animeData = [];
+  let currentPage = 1;
+  const itemsPerPage = 10;
+  
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
@@ -22,22 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       loadWatchCounts();
       populateGenreOptions(animeData);
-      displayAnime(animeData);
+      displayAnimePaginated(animeData, currentPage);
       displayNewlyAddedAnime(animeData);
     })
     .catch((error) => console.error("Error fetching data:", error));
 
-  function displayAnime(animes) {
+  function displayAnimePaginated(animes, page) {
     animeListContainer.innerHTML = "";
-    animes.forEach((anime) => {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedAnime = animes.slice(start, end);
+    
+    paginatedAnime.forEach((anime) => {
       const animeCard = createAnimeCard(anime);
       animeListContainer.appendChild(animeCard);
     });
+    setupPagination(animes.length);
   }
 
   function displayNewlyAddedAnime(animes) {
     newAnimeContainer.innerHTML = "";
-    const latestAnimes = filterNewlyAddedAnime(animes);
+    const latestAnimes = animes.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated)).slice(0, 5);
     latestAnimes.forEach((anime) => {
       const animeCard = createAnimeCard(anime);
       newAnimeContainer.appendChild(animeCard);
@@ -56,16 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Terakhir Diperbarui: ${anime.last_updated}</p>
       </div>
     `;
-
+    
     animeCard.addEventListener("click", () => {
       increaseWatchCount(anime.id);
       window.location.href = `anime.html?id=${anime.id}`;
     });
     return animeCard;
-  }
-
-  function filterNewlyAddedAnime(animes) {
-    return animes.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
   }
 
   function loadWatchCounts() {
@@ -105,6 +110,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function setupPagination(totalItems) {
+    paginationContainer.innerHTML = "";
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = document.createElement("button");
+      pageButton.textContent = i;
+      pageButton.classList.add("page-btn");
+      if (i === currentPage) pageButton.classList.add("active");
+      pageButton.addEventListener("click", () => {
+        currentPage = i;
+        displayAnimePaginated(animeData, currentPage);
+      });
+      paginationContainer.appendChild(pageButton);
+    }
+  }
+
   searchInput.addEventListener("input", function () {
     filterAnime();
   });
@@ -132,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (sortBy === "release_date") {
       filteredAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
-
-    displayAnime(filteredAnime);
+    currentPage = 1;
+    displayAnimePaginated(filteredAnime, currentPage);
   }
 });
