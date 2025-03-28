@@ -888,7 +888,39 @@
     { "episode": 12, "url": "https://acefile.co/player/84009078" },
     { "episode": 13, "url": "https://acefile.co/player/84580664" }
   ]
+},
+  {
+  "id": 25,
+  "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite) 3nd Season",
+  "folder": "classroom_of_the_elite_s3",
+  "image": "classroom_of_the_elite_s3.jpg",
+  "japanese_title": "ようこそ実力至上主義の教室へ 3rd Season",
+  "score": 7.9,
+  "producers": ["KADOKAWA", "Crunchyroll", "Bandai Namco Music Live", "AT-X", "Sammy", "Movic", "Kadokawa Media House", "Studio Hibari"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 13,
+  "duration": "24 Menit per episode",
+  "release_date": "2024-01-03",
+  "studio": "Lerche",
+  "genre": ["Drama", "Psikologis"],
+  "episodes": [
+    { "episode": 1, "url": "https://pixeldrain.com/api/file/6HoRwMb2" },
+    { "episode": 2, "url": "https://acefile.co/player/102819307" },
+    { "episode": 3, "url": "https://acefile.co/player/102945887" },
+    { "episode": 4, "url": "https://acefile.co/player/103072152" },
+    { "episode": 5, "url": "https://acefile.co/player/103193957" },
+    { "episode": 6, "url": "https://acefile.co/player/103308562" },
+    { "episode": 7, "url": "https://acefile.co/player/103420807" },
+    { "episode": 8, "url": "https://acefile.co/player/103535735" },
+    { "episode": 9, "url": "https://acefile.co/player/103655959" },
+    { "episode": 10, "url": "https://acefile.co/player/103773091" },
+    { "episode": 11, "url": "https://acefile.co/player/103918879" },
+    { "episode": 12, "url": "https://acefile.co/player/104071150" },
+    { "episode": 13, "url": "https://acefile.co/player/104229400" }
+  ]
 }
+
 
 
 
