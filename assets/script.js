@@ -35,21 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
- function displayNewlyAddedAnime(animes) {
+function displayNewlyAddedAnime(animes) {
     if (!newAnimeContainer) {
         console.error("Element with ID 'new-anime-list' not found.");
         return;
     }
-    newAnimeContainer.innerHTML = "";
     
-    // Jika pencarian, sortir, atau pemilihan genre dilakukan, sembunyikan daftar anime terbaru
+    // Jika pencarian, sortir, atau pemilihan genre dilakukan, kosongkan daftar anime terbaru
     const searchInput = document.getElementById("search-anime");
     const sortSelect = document.getElementById("sort-anime");
     const genreSelect = document.getElementById("genre-anime");
     
     if (searchInput.value || sortSelect.value || genreSelect.value) {
+        newAnimeContainer.innerHTML = "";
         return;
     }
+    
+    newAnimeContainer.innerHTML = "";
     
     // Ambil hanya 5 anime terbaru berdasarkan tanggal rilis
     const latestAnimes = animes.sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
