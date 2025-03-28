@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamingX - Nonton Anime Gratis</title>
+    <title>StreamingX - Nonton Anime Gratis</title> 
+
     <meta name="description" content="StreamingX adalah situs terbaik untuk nonton anime subtitle Indonesia dengan kualitas tinggi. Tonton anime favoritmu tanpa buffering!">
     <meta name="keywords" content="anime, streaming anime, nonton anime, anime subtitle indonesia, anime sub indo, anime HD">
     <meta name="author" content="StreamingX">
@@ -14,11 +15,14 @@
     <meta property="og:url" content="https://streamingvidio.pages.dev/">
     <meta property="og:image" content="public/preview.jpg">
     <link rel="canonical" href="https://streamingvidio.pages.dev/">
+    <link rel="stylesheet" href="assets/style.css">
     
-    
+
+    <!-- Google AdSense Header Script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
 </head>
 <body>
+    
    <header>
     <h1>StreamingX</h1>
     <nav>
@@ -28,44 +32,41 @@
     </nav>
    </header>
 
-   <main>
-       <div class="search-container">
-           <input type="text" id="search-anime" placeholder="Cari anime...">
-           <select id="sort-anime">
-               <option value="">Sort By</option>
-               <option value="score">Score</option>
-               <option value="release_date">Tanggal Rilis</option>
-           </select>
-           <select id="genre-anime">
-               <option value="">Pilih Genre</option>
-           </select>
-       </div>
+    <!-- Konten utama -->
+  <main>
+     <div class="search-container">
+   <input type="text" id="search-anime" placeholder="Cari anime...">
+   <select id="sort-anime">
+     <option value="">Sort By</option>
+     <option value="score">Score</option>
+     <option value="release_date">Tanggal Rilis</option>
+   </select>
+   <select id="genre-anime">
+     <option value="">Pilih Genre</option>
+   </select>
+</div>
 
-       <h2>Anime Terbaru</h2>
-       <div class="anime-grid" id="new-anime-list"></div>
+    <!-- Daftar anime -->
+    <div class="anime-grid" id="anime-list"></div>    
+  </main>   
 
-       <h2>Daftar Anime</h2>
-       <div class="anime-grid" id="anime-list"></div>
-       
-       <div class="pagination-container button" id="pagination">
-           <button id="prevPageBtn" disabled>Prev</button>
-           <span id="pagination-info"></span>
-           <button id="nextPageBtn" disabled>Next</button>
-       </div>
-   </main>
+   <!-- Sticky Footer Ads - Diperbarui -->
+     <div class="sticky-ads" id="stickyAds">
+         <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+         <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-1357574968133580"
+              data-ad-slot="1234567890"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+     </div>
 
-   <div class="sticky-ads" id="stickyAds">
-       <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
-       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1357574968133580" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
-   </div>
+    
+    <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
+        <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
+    </footer>
 
-   <footer style="text-align: center; padding: 10px; background: #222; color: white; position: fixed; bottom: 0; width: 100%;">
-       <p>&copy; 2025 StreamingX. Semua hak dilindungi. StreamingX tidak menyimpan konten video di server kami.</p>
-   </footer>
-
-   <script type="module" src="assets/script.js"></script>
-   <script type="module" src="assets/ads.js"></script>
-    <link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="assets/style.css"> <!-- Pastikan ini terakhir -->
+ <script type="module" src="assets/script.js"></script>
+     <script type="module" src="assets/ads.js"></script>
 </body>
 </html>
