@@ -24,12 +24,6 @@ header {
     z-index: 100;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 /* =========[ Film Page Styles ]========= */
 
 /* Film Page Container */
@@ -426,32 +420,56 @@ footer {
     margin: 20px 0;
 }
 
-/* Pagination buttons */
+/* Perbaikan Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+    z-index: 10; /* Pastikan tidak tertutup elemen lain */
+}
+
 .pagination-container button {
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Perbesar tombol */
     margin: 5px;
-    font-size: 16px;
+    font-size: 18px; /* Perbesar teks tombol */
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-/* Hover effect */
 .pagination-container button:hover {
     background-color: #0056b3;
 }
 
-/* Disabled buttons */
 .pagination-container button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-/* Active page button */
 .pagination-container .page-btn.active {
-    background-color: #28a745; /* Green for active */
+    background-color: #28a745; /* Hijau untuk halaman aktif */
     font-weight: bold;
 }
+
+/* Pastikan footer tidak menutupi konten */
+main {
+    margin-bottom: 80px; /* Tambahkan ruang agar pagination tidak tertutup footer */
+}
+
+/* Perbaikan untuk footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
