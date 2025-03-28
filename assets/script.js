@@ -59,15 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
     
-    const imageUrl = anime.image.startsWith("http") ? anime.image : `public/${anime.image}`;
 
     animeCard.innerHTML = `
-      <img src="${imageUrl}" alt="${anime.title}" />
+       <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
       <div class="card-content">
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
         <p>Genre: ${anime.genre.join(', ')}</p>
-        <p>Ditonton: <span id="watch-count-${anime.id}">${getWatchCount(anime.id)}</span> kali</p>
       </div>
     `;
 
