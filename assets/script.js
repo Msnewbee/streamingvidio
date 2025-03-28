@@ -41,26 +41,31 @@ function displayNewlyAddedAnime(animes) {
         return;
     }
     
+    // Tampilkan indikator loading saat proses berjalan
+    newAnimeContainer.innerHTML = "<p>Loading...</p>";
+    
     // Jika pencarian, sortir, atau pemilihan genre dilakukan, kosongkan daftar anime terbaru
     const searchInput = document.getElementById("search-anime");
     const sortSelect = document.getElementById("sort-anime");
     const genreSelect = document.getElementById("genre-anime");
     
-    if (searchInput.value || sortSelect.value || genreSelect.value) {
+    setTimeout(() => {
+        if (searchInput.value || sortSelect.value || genreSelect.value) {
+            newAnimeContainer.innerHTML = "";
+            return;
+        }
+    
         newAnimeContainer.innerHTML = "";
-        return;
-    }
     
-    newAnimeContainer.innerHTML = "";
+        // Ambil hanya 5 anime terbaru berdasarkan tanggal rilis
+        const latestAnimes = animes.sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+                                   .slice(0, 5);
     
-    // Ambil hanya 5 anime terbaru berdasarkan tanggal rilis
-    const latestAnimes = animes.sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
-                               .slice(0, 5);
-    
-    latestAnimes.forEach((anime) => {
-        const animeCard = createAnimeCard(anime);
-        newAnimeContainer.appendChild(animeCard);
-    });
+        latestAnimes.forEach((anime) => {
+            const animeCard = createAnimeCard(anime);
+            newAnimeContainer.appendChild(animeCard);
+        });
+    }, 500); // Simulasi delay loading 500ms
 }
 
   function createAnimeCard(anime) {
