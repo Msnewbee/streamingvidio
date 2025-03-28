@@ -414,10 +414,15 @@ header {
     }
 }
 
-/* Pagination container */
+/* Perbaikan Pagination */
 .pagination-container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin: 20px 0;
+    position: relative;
+    z-index: 10; /* Pastikan tidak tertutup elemen lain */
 }
 
 /* Perbaikan Tombol Pagination */
