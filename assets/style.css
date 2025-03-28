@@ -420,39 +420,30 @@ header {
     margin: 20px 0;
 }
 
-/* Perbaikan Pagination */
-.pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    position: relative;
-    z-index: 10; /* Pastikan tidak tertutup elemen lain */
-}
-
-.pagination-container button {
+/* Perbaikan Tombol Pagination */
+.page-btn {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 20px; /* Perbesar tombol */
+    padding: 15px 25px; /* Perbesar tombol */
     margin: 5px;
-    font-size: 18px; /* Perbesar teks tombol */
+    font-size: 20px; /* Perbesar teks tombol */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.pagination-container button:hover {
+.page-btn:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
 }
 
-.pagination-container button:disabled {
+.page-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-.pagination-container .page-btn.active {
+.page-btn.active {
     background-color: #28a745; /* Hijau untuk halaman aktif */
     font-weight: bold;
 }
@@ -472,4 +463,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
