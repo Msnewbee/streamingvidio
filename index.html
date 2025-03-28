@@ -16,6 +16,7 @@
     <meta property="og:image" content="public/preview.jpg">
     <link rel="canonical" href="https://streamingvidio.pages.dev/">
     <link rel="stylesheet" href="assets/style.css">
+
     
 
     <!-- Google AdSense Header Script -->
@@ -47,13 +48,15 @@
 </div>
 
     <!-- Daftar anime -->
-    <div class="anime-grid" id="anime-list"></div>    
-  </main>
-    <div>
-    <button onclick="prevPage()">Prev</button>
+    <div class="anime-grid" id="anime-list"></div> 
+
+    <div class="pagination-container">
+    <button id="prevPageBtn" disabled>Prev</button>
     <span id="pagination-info"></span>
-    <button onclick="nextPage()">Next</button>
-</div>
+    <button id="nextPageBtn" disabled>Next</button>
+    </div>
+
+  </main>
 
    <!-- Sticky Footer Ads - Diperbarui -->
      <div class="sticky-ads" id="stickyAds">
