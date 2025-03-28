@@ -30,7 +30,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 23,
     "title": "Solo Leveling Season 2",
     "folder": "sololevelingseason2",
     "image": "SololevelingS2.jpg",
@@ -60,7 +60,7 @@
     ]
   },
   {
-  "id": 1,
+  "id": 2,
   "title": "Kimetsu no Yaiba",
   "folder": "kimetsunoyaiba",
   "image": "kimetsunoyaiba.jpg",
@@ -827,5 +827,37 @@
   "episodes": [
     { "episode": 1, "url": "https://filedon.co/embed/5jMYrXofU5" }
   ]
-}  
+},
+  {
+  "id": 1,
+  "title": "Classroom of the Elite",
+  "folder": "classroom_of_the_elite",
+  "image": "classroom_of_the_elite.jpg",
+  "japanese_title": "ようこそ実力至上主義の教室へ",
+  "score": 7.9,
+  "producers": ["Lerche", "Media Factory"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "24 Menit per episode",
+  "release_date": "2017-07-12",
+  "studio": "Lerche",
+  "genre": ["Psychological Thriller", "Drama", "Slice of Life"],
+  "episodes": [
+    { "episode": 1, "url": "https://mega.nz/embed/fvp0mBBI#JmwgBjDQuvtbmcxIDX2_RAGefVauUKduDDnEdZsxg9I" },
+    { "episode": 2, "url": "https://mega.nz/embed/2zhjxASJ#uKX_HzXTH__MZpt_FNsCvTrO5O7lwjUUqbpeCqkH2Qo" },
+    { "episode": 3, "url": "https://mega.nz/embed/Wr5WkSTQ#tRtjmMBpOHcBdpqijVRZ79QlvDdsHbEYqxpwFQbmRgA" },
+    { "episode": 4, "url": "https://mega.nz/embed/z3pyUK5A#Ra_F4uGU0LMfcAHRUnJ2UiyDant-MapuBd7b1TdVe00" },
+    { "episode": 5, "url": "https://mega.nz/embed/TvJD1RYR#gs_j1TF1EzNlvHV6dfeuV5eoYIST6jGkNJ9Xu4zVEaU" },
+    { "episode": 6, "url": "https://mega.nz/embed/OrBRyCIB#0y1oavbWrU6cG-2Y1G5M1hkzvx6eQ-GoEnL7DA674jI" },
+    { "episode": 7, "url": "https://mega.nz/embed/r7p0WRLC#qldTvnZJjWSTUCrXJVK_fV-FGiQM-PYh1LXutkkV_bA" },
+    { "episode": 8, "url": "https://mega.nz/embed/6r5lwYrS#urTNslcJ_9GMkDL5XRV_P8UtWUwtmMzA4y3E6VaQ4SE" },
+    { "episode": 9, "url": "https://mega.nz/embed/26ICGaaS#ziiPi1aF_dURAHYGFmOfxj4YFNBAA0TBTXMono7DdBw" },
+    { "episode": 10, "url": "https://mega.nz/embed/2nwT0L7Q#uJd-fWMxVFlSADDQHmvwFCk2Jqf7TD62KqJejhwRapw" },
+    { "episode": 11, "url": "https://mega.nz/embed/6mw2WQZY#ATRRK7nj-gYw28i5ynSPdd6UjYDHsx8ny1GSOk9jq38" },
+    { "episode": 12, "url": "https://mega.nz/embed/r7QDkJ7T#iEaqF3VulN6U-bt5e_padyn2LfZWFcxn1XUuhHZ-pzM" }
+  ]
+}
+
+
 ]
