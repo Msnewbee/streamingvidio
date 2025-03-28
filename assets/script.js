@@ -36,13 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function displayNewlyAddedAnime(animes) {
+    if (!newAnimeContainer) {
+        console.error("Element with ID 'new-anime-list' not found.");
+        return;
+    }
     newAnimeContainer.innerHTML = "";
     const latestAnimes = filterNewlyAddedAnime(animes);
     latestAnimes.forEach((anime) => {
-      const animeCard = createAnimeCard(anime);
-      newAnimeContainer.appendChild(animeCard);
+        const animeCard = createAnimeCard(anime);
+        newAnimeContainer.appendChild(animeCard);
     });
-  }
+}
+
 
   function createAnimeCard(anime) {
     const animeCard = document.createElement("div");
