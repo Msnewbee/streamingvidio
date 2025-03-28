@@ -419,3 +419,39 @@ footer {
         height: auto !important;
     }
 }
+
+/* Pagination container */
+.pagination-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Pagination buttons */
+.pagination-container button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.pagination-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Disabled buttons */
+.pagination-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Active page button */
+.pagination-container .page-btn.active {
+    background-color: #28a745; /* Green for active */
+    font-weight: bold;
+}
