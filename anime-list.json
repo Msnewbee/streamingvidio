@@ -717,7 +717,7 @@
   "duration": "23 Menit per episode",
   "release_date": "2021-01-12",
   "studio": "8-Bit",
-  "genre": ["Aksi", "Fantasi", "Drama", "Komedi", "Shounen"],
+  "genre": ["Aksi", "Fantasi", "Drama", "Komedi", "Shounen", "Isekai"],
   "episodes": [
     { "episode": 0, "url": "https://www.yourupload.com/embed/04C361To0DK0" },
     { "episode": 1, "url": "https://mega.nz/embed/jg4w2IQJ#J_TmvlC0Mj4h9e3L7O4FcjieKCjN-7Q8eINs2OAtK0E" },
@@ -748,7 +748,7 @@
   "duration": "23 Menit per episode",
   "release_date": "2021-01-12",
   "studio": "8-Bit",
-  "genre": ["Aksi", "Fantasi", "Drama", "Komedi", "Shounen"],
+  "genre": ["Aksi", "Fantasi", "Drama", "Komedi", "Shounen", "Isekai"],
   "episodes": [
     { "episode": 0, "url": "https://www.youtube.com/embed/dvYATg3_Djs?si=HNHmwaQt5tHL4Fyp" },
     { "episode": 1, "url": "https://mega.nz/embed/B88nwKoQ#wODawqMO_mrNN8hZG_MWmh9V_xILYLaisMZ9nJfyHC0" },
@@ -806,7 +806,29 @@
     { "episode": 23, "url": "https://mega.nz/embed/x4BRXBYY#NFGR1btAR0cB8EWLA1Fc8G2JNCJbzBZ5Rf08XEGE-WE" },
     { "episode": 24, "url": "https://mega.nz/embed/kp5QWCiI#VOuSWB1FkOtqIJLam-sxJPz56JcOQtZQ6ugG-Jq_UNU" }
   ]
+},
+  {
+  "id": 22,
+  "title": "Tensei Shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
+  "folder": "tensei_shitara_slime_movie",
+  "image": "tensei_shitara_slime_movie.jpg",
+  "japanese_title": "劇場版 転生したらスライムだった件 紅蓮の絆編",
+  "score": 7.5,
+  "producers": ["Bandai Namco Filmworks"],
+  "type": "Movie",
+  "status": "Selesai",
+  "total_episodes": 1,
+  "duration": "108 Menit",
+  "release_date": "2022-11-25",
+  "studio": "8-Bit",
+  "genre": ["Action", "Adventure", "Fantasy", "Isekai"],
+  "synopsis": "Film ini mengikuti Rimuru Tempest yang bertemu dengan Hiiro, seorang ogre yang selamat, di kerajaan Raja yang misterius. Mereka bersama-sama menghadapi konspirasi yang melibatkan kekuatan misterius yang dikenal sebagai 'Queen'.",
+  "trailer_url": "https://www.youtube.com/watch?v=BznqF_Sa6A0",
+  "episodes": [
+    { "episode": 1, "url": "https://filedon.co/embed/5jMYrXofU5" }
+  ]
 }
+
 
 
 
