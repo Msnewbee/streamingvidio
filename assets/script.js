@@ -41,12 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
     newAnimeContainer.innerHTML = "";
-    const latestAnimes = filterNewlyAddedAnime(animes);
+    
+    // Ambil hanya 5 anime terbaru berdasarkan tanggal rilis
+    const latestAnimes = animes.sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+                               .slice(0, 5);
+    
     latestAnimes.forEach((anime) => {
         const animeCard = createAnimeCard(anime);
         newAnimeContainer.appendChild(animeCard);
     });
 }
+
 
 
   function createAnimeCard(anime) {
