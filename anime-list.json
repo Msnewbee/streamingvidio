@@ -857,7 +857,39 @@
     { "episode": 11, "url": "https://mega.nz/embed/6mw2WQZY#ATRRK7nj-gYw28i5ynSPdd6UjYDHsx8ny1GSOk9jq38" },
     { "episode": 12, "url": "https://mega.nz/embed/r7QDkJ7T#iEaqF3VulN6U-bt5e_padyn2LfZWFcxn1XUuhHZ-pzM" }
   ]
+},
+  {
+  "id": 6,
+  "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e (Classroom of the Elite) 2nd Season",
+  "folder": "classroom_of_the_elite_s2",
+  "image": "classroom_of_the_elite_s2.jpg",
+  "japanese_title": "ようこそ実力至上主義の教室へ 2nd Season",
+  "score": 7.9,
+  "producers": ["KADOKAWA", "Crunchyroll", "Bandai Namco Music Live", "AT-X", "Sammy", "Movic", "Kadokawa Media House", "Studio Hibari"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 13,
+  "duration": "24 Menit per episode",
+  "release_date": "2022-07-04",
+  "studio": "Lerche",
+  "genre": ["Drama", "Mystery", "Psychological"],
+  "episodes": [
+    { "episode": 1, "url": "https://acefile.co/player/78608293" },
+    { "episode": 2, "url": "https://acefile.co/player/79153336" },
+    { "episode": 3, "url": "https://acefile.co/player/79677735" },
+    { "episode": 4, "url": "https://acefile.co/player/80171292" },
+    { "episode": 5, "url": "https://acefile.co/player/80635079" },
+    { "episode": 6, "url": "https://acefile.co/player/81110464" },
+    { "episode": 7, "url": "https://acefile.co/player/81576695" },
+    { "episode": 8, "url": "https://acefile.co/player/82099842" },
+    { "episode": 9, "url": "https://acefile.co/player/82552887" },
+    { "episode": 10, "url": "https://acefile.co/player/83025069" },
+    { "episode": 11, "url": "https://acefile.co/player/83515881" },
+    { "episode": 12, "url": "https://acefile.co/player/84009078"" },
+    { "episode": 13, "url": "https://acefile.co/player/84580664" }
+  ]
 }
+
 
 
 ]
