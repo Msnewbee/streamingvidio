@@ -113,6 +113,8 @@ function navigateEpisode(direction) {
     });
 }
 
+let currentServerIndex = 0;
+
 // Fungsi untuk memutar episode
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
@@ -120,16 +122,24 @@ function playEpisode(url, episode, animeId, mirrors = []) {
     const switchButton = document.getElementById('switch-server');
 
     if (!iframePlayer) {
-        console.error('Elemen #anime-embed tidak ditemukan');
+        console.error('Pemutar video tidak ditemukan.');
         return;
     }
 
-    // Update player source
-    iframePlayer.src = url;
+    // Pastikan urls adalah array dan memiliki setidaknya satu elemen
+    if (!Array.isArray(urls) || urls.length === 0) {
+        console.error('URL video tidak tersedia.');
+        return;
+    }
 
-    if (mirrors.length > 0) {
+    // Setel pemutar ke server pertama
+    currentServerIndex = 0;
+    iframePlayer.src = urls[currentServerIndex];
+
+    // Jika ada lebih dari satu server, tampilkan tombol ganti server
+    if (urls.length > 1) {
         switchButton.style.display = "block";
-        switchButton.onclick = () => switchServer(mirrors);
+        switchButton.onclick = () => switchServer(urls);
     } else {
         switchButton.style.display = "none";
     }
