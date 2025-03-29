@@ -126,6 +126,14 @@ function playEpisode(url, episode, animeId, mirrors = []) {
 
     // Update player source
     iframePlayer.src = url;
+
+    if (mirrors.length > 0) {
+        switchButton.style.display = "block";
+        switchButton.onclick = () => switchServer(mirrors);
+    } else {
+        switchButton.style.display = "none";
+    }
+}
     
     // Update download link
     downloadLink.href = url;
