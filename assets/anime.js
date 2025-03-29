@@ -1,170 +1,152 @@
-import { fetchAnimeList } from "./anime.js";
-
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("search-anime");
-  const sortSelect = document.getElementById("sort-anime");
-  const genreSelect = document.getElementById("genre-anime");
-  const animeListContainer = document.getElementById("anime-list");
-  const newAnimeContainer = document.getElementById("new-anime-list");
-
-  let animeData = [];
-  let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
-
-  fetchAnimeList()
-    .then((data) => {
-      const newAnimeIds = data.map(anime => anime.id);
-      const isUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
-      
-      animeData = data;
-      if (isUpdated) {
-        localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
-        resetWatchCounts();
-      }
-      loadWatchCounts();
-      populateGenreOptions(animeData);
-      displayAnime(animeData);
-      displayNewlyAddedAnime(animeData);
-    })
-    .catch((error) => console.error("Error fetching data:", error));
-
-  function displayAnime(animes) {
-    animeListContainer.innerHTML = "";
-    animes.forEach((anime) => {
-      const animeCard = createAnimeCard(anime);
-      animeListContainer.appendChild(animeCard);
-    });
-  }
-
-  function displayNewlyAddedAnime(animes) {
-    if (!newAnimeContainer) {
-      console.error("Element with ID 'new-anime-list' not found.");
-      return;
+// Fungsi untuk mengambil data anime dari JSON
+export async function fetchAnimeList() {
+    try {
+        const response = await fetch('./anime-list.json');
+        if (!response.ok) throw new Error('Gagal mengambil data dari server');
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching anime list:', error);
+        return [];
     }
-    
-    // Tampilkan indikator loading saat proses berjalan
-    newAnimeContainer.innerHTML = "<p>Loading...</p>";
-    
-    // Dapatkan elemen kontrol pencarian, sortir, dan genre
-    const searchInput = document.getElementById("search-anime");
-    const sortSelect = document.getElementById("sort-anime");
-    const genreSelect = document.getElementById("genre-anime");
-    
-    // Simulasikan delay loading (misalnya 500ms)
-    setTimeout(() => {
-      // Jika ada pencarian, sortir, atau pemilihan genre, kosongkan daftar anime terbaru
-      if (searchInput.value || sortSelect.value || genreSelect.value) {
-        newAnimeContainer.innerHTML = "";
+}
+
+// Fungsi untuk memuat detail anime
+export async function loadAnimeDetail() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const animeId = urlParams.get('id');
+    const episodeParam = urlParams.get('episode');
+
+    const animeList = await fetchAnimeList();
+    const anime = animeList.find(a => a.id == animeId);
+
+    if (!anime) {
+        window.location.href = 'index.html';
         return;
-      }
-      
-      newAnimeContainer.innerHTML = "";
-      
-      // Ambil hanya 5 anime terbaru berdasarkan tanggal rilis
-      const latestAnimes = animes
-        .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
-        .slice(0, 5);
-      
-      latestAnimes.forEach((anime) => {
-        const animeCard = createAnimeCard(anime);
-        newAnimeContainer.appendChild(animeCard);
-      });
-    }, 500);
-  }
-
-  function createAnimeCard(anime) {
-    const animeCard = document.createElement("div");
-    animeCard.classList.add("anime-card");
-    animeCard.innerHTML = `
-      <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
-      <div class="card-content">
-        <h3>${anime.title}</h3>
-        <p>Tanggal Rilis: ${anime.release_date}</p>
-        <p>Genre: ${anime.genre.join(', ')}</p>
-        <p>Terakhir Diperbarui: ${anime.last_updated}</p>
-      </div>
-    `;
-
-    animeCard.addEventListener("click", () => {
-      increaseWatchCount(anime.id);
-      window.location.href = `anime.html?id=${anime.id}`;
-    });
-    return animeCard;
-  }
-
-  function filterNewlyAddedAnime(animes) {
-    return animes.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
-  }
-
-  function loadWatchCounts() {
-    animeData.forEach(anime => {
-      anime.watchCount = getWatchCount(anime.id);
-    });
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
-  }
-
-  function resetWatchCounts() {
-    animeData.forEach(anime => {
-      localStorage.removeItem(`watchCount_${anime.id}`);
-    });
-  }
-
-  function getWatchCount(animeId) {
-    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
-  }
-
-  function increaseWatchCount(animeId) {
-    const currentCount = getWatchCount(animeId);
-    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
-  }
-
-  function populateGenreOptions(animes) {
-    const genres = new Set();
-    animes.forEach((anime) => {
-      anime.genre.forEach((g) => genres.add(g));
-    });
-    
-    genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
-    genres.forEach((genre) => {
-      const option = document.createElement("option");
-      option.value = genre;
-      option.textContent = genre;
-      genreSelect.appendChild(option);
-    });
-  }
-
-  // Ketika terjadi perubahan pada pencarian, sortir, atau pemilihan genre,
-  // pastikan kontainer newAnimeContainer dikosongkan agar daftar anime terbaru tidak muncul.
-  searchInput.addEventListener("input", function () {
-    newAnimeContainer.innerHTML = "";
-    filterAnime();
-  });
-
-  sortSelect.addEventListener("change", function () {
-    newAnimeContainer.innerHTML = "";
-    filterAnime();
-  });
-
-  genreSelect.addEventListener("change", function () {
-    newAnimeContainer.innerHTML = "";
-    filterAnime();
-  });
-
-  function filterAnime() {
-    const query = searchInput.value.toLowerCase();
-    const sortBy = sortSelect.value;
-    const selectedGenre = genreSelect.value;
-
-    let filteredAnime = animeData.filter((anime) =>
-      anime.title.toLowerCase().includes(query) &&
-      (selectedGenre === "" || anime.genre.includes(selectedGenre))
-    );
-
-    if (sortBy === "score") {
-      filteredAnime.sort((a, b) => b.score - a.score);
-    } else if (sortBy === "release_date") {
-      filteredAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
 
-    displayAnime(filteredAnime);
-  }
+    updateAnimeDetails(anime);
+    populateEpisodeList(anime);
+
+    if (episodeParam) {
+        const selectedEpisode = anime.episodes.find(ep => ep.episode == episodeParam);
+        if (selectedEpisode) {
+            playEpisode(selectedEpisode.url, selectedEpisode.episode, anime.id, selectedEpisode.mirrors || []);
+        } else {
+            alert('Episode tidak ditemukan!');
+        }
+    }
+}
+
+// Fungsi untuk memperbarui tampilan detail anime
+function updateAnimeDetails(anime) {
+    document.getElementById('anime-title').textContent = anime.title;
+    document.getElementById('anime-jtitle').textContent = anime.japanese_title;
+    document.getElementById('anime-score').textContent = anime.score;
+    document.getElementById('anime-producers').textContent = anime.producers;
+    document.getElementById('anime-studio').textContent = anime.studio;
+    document.getElementById('anime-type').textContent = anime.type;
+    document.getElementById('anime-status').textContent = anime.status;
+    document.getElementById('anime-duration').textContent = anime.duration;
+    document.getElementById('anime-release').textContent = anime.release_date;
+    document.getElementById('anime-genre').textContent = anime.genre.join(', ');
+    document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
+}
+
+// Fungsi untuk menampilkan daftar episode
+function populateEpisodeList(anime) {
+    const episodeList = document.getElementById('episode-list');
+    episodeList.innerHTML = '';
+
+    if (anime.episodes.length === 0) {
+        episodeList.innerHTML = '<p>Belum ada episode tersedia.</p>';
+        return;
+    }
+
+    anime.episodes.forEach((ep) => {
+        const episodeButton = document.createElement('button');
+        episodeButton.textContent = `Episode ${ep.episode}`;
+        episodeButton.classList.add("episode-item");
+        episodeButton.dataset.episode = ep.episode;
+
+        episodeButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            playEpisode(ep.url, ep.episode, anime.id, ep.mirrors || []);
+            updateUrlWithEpisode(anime.id, ep.episode);
+        });
+
+        episodeList.appendChild(episodeButton);
+    });
+}
+
+// Fungsi untuk navigasi episode (sebelum/sesudah)
+function navigateEpisode(direction) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const animeId = urlParams.get('id');
+    let currentEpisode = parseInt(urlParams.get('episode')) || 1;
+
+    fetchAnimeList().then(animeList => {
+        const anime = animeList.find(a => a.id == animeId);
+        if (!anime) return;
+
+        const episodeIndex = anime.episodes.findIndex(ep => ep.episode == currentEpisode);
+        const newIndex = episodeIndex + direction;
+
+        if (newIndex >= 0 && newIndex < anime.episodes.length) {
+            const newEpisode = anime.episodes[newIndex];
+            updateUrlWithEpisode(animeId, newEpisode.episode);
+            playEpisode(newEpisode.url, newEpisode.episode, animeId, newEpisode.mirrors || []);
+        }
+    });
+}
+
+// Fungsi untuk memutar episode
+function playEpisode(url, episode, animeId, mirrors = []) {
+    const iframePlayer = document.getElementById('anime-embed');
+    const downloadLink = document.getElementById('download-link');
+
+    if (!iframePlayer) {
+        console.error('Elemen #anime-embed tidak ditemukan');
+        return;
+    }
+
+    // Update player source
+    iframePlayer.src = url;
+    
+    // Update download link
+    downloadLink.href = url;
+    downloadLink.textContent = `Download Episode ${episode}`;
+    downloadLink.download = `Episode_${episode}.mp4`;
+    
+    // Update URL
+    updateUrlWithEpisode(animeId, episode);
+    
+    // Highlight current episode in list
+    const episodeButtons = document.querySelectorAll('.episode-item');
+    episodeButtons.forEach(btn => {
+        if (parseInt(btn.dataset.episode) === episode) {
+            btn.style.backgroundColor = '#007bff';
+        } else {
+            btn.style.backgroundColor = '#3a3a3a';
+        }
+    });
+}
+
+// Fungsi untuk memperbarui URL dengan episode terpilih
+function updateUrlWithEpisode(animeId, episode) {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('episode', episode);
+    window.history.pushState(null, '', newUrl.toString());
+}
+
+// Event listener saat DOM siap
+document.addEventListener("DOMContentLoaded", () => {
+    const prevEpisodeBtn = document.getElementById('prev-episode');
+    const nextEpisodeBtn = document.getElementById('next-episode');
+
+    if (prevEpisodeBtn) prevEpisodeBtn.addEventListener('click', () => navigateEpisode(-1));
+    if (nextEpisodeBtn) nextEpisodeBtn.addEventListener('click', () => navigateEpisode(1));
+
+    if (document.getElementById('anime-title')) {
+        loadAnimeDetail();
+    }
 });
