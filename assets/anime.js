@@ -10,19 +10,6 @@ export async function fetchAnimeList() {
     }
 }
 
-// Fungsi untuk mengganti server pemutaran video
-function switchServer(mirrors) {
-    if (mirrors.length === 0) {
-        alert("Tidak ada server alternatif tersedia.");
-        return;
-    }
-    
-    currentServerIndex = (currentServerIndex + 1) % mirrors.length;
-    const newUrl = mirrors[currentServerIndex];
-
-    const iframePlayer = document.getElementById("anime-embed");
-    iframePlayer.src = newUrl;
-}
 
 // Fungsi untuk memuat detail anime
 export async function loadAnimeDetail() {
