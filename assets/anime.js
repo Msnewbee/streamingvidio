@@ -10,6 +10,22 @@ export async function fetchAnimeList() {
     }
 }
 
+let currentServerIndex = 0;
+
+// Fungsi untuk mengganti server pemutaran video
+function switchServer(mirrors) {
+    if (mirrors.length === 0) {
+        alert("Tidak ada server alternatif tersedia.");
+        return;
+    }
+    
+    currentServerIndex = (currentServerIndex + 1) % mirrors.length;
+    const newUrl = mirrors[currentServerIndex];
+
+    const iframePlayer = document.getElementById("anime-embed");
+    iframePlayer.src = newUrl;
+}
+
 // Fungsi untuk memuat detail anime
 export async function loadAnimeDetail() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -99,10 +115,11 @@ function navigateEpisode(direction) {
     });
 }
 
-// Fungsi untuk memutar episode
+// Fungsi untuk memutar episode dengan opsi ganti server
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
     const downloadLink = document.getElementById('download-link');
+    const switchButton = document.getElementById('switch-server');
 
     if (!iframePlayer) {
         console.error('Elemen #anime-embed tidak ditemukan');
@@ -120,7 +137,7 @@ function playEpisode(url, episode, animeId, mirrors = []) {
     // Update URL
     updateUrlWithEpisode(animeId, episode);
     
-    // Highlight current episode in list
+    // Highlight current episode di daftar episode
     const episodeButtons = document.querySelectorAll('.episode-item');
     episodeButtons.forEach(btn => {
         if (parseInt(btn.dataset.episode) === episode) {
@@ -129,7 +146,8 @@ function playEpisode(url, episode, animeId, mirrors = []) {
             btn.style.backgroundColor = '#3a3a3a';
         }
     });
-}
+    
+    // Tampilkan tombol ganti server jika tersedia mirror\n    if (mirrors.length > 0) {\n        switchButton.style.display = \"block\";\n        switchButton.onclick = () => switchServer(mirrors);\n    } else {\n        switchButton.style.display = \"none\";\n    }\n}
 
 // Fungsi untuk memperbarui URL dengan episode terpilih
 function updateUrlWithEpisode(animeId, episode) {
