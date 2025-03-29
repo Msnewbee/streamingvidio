@@ -905,7 +905,7 @@
   "studio": "Lerche",
   "genre": ["Drama", "Psikologis"],
   "episodes": [
-    { "episode": 1, "url": ["https://pixeldrain.com/api/file/6HoRwMb2", "https://mega.nz/embed/5nkQ3ZaQ#qKfmUqmtF2URP_yw3RBR-lBp3uhvP-OP4yxZV5rp8nY"] },
+    { "episode": 1, "url": "https://pixeldrain.com/api/file/6HoRwMb2" },
     { "episode": 2, "url": "https://acefile.co/player/102819406" },
     { "episode": 3, "url": "https://acefile.co/player/102945887" },
     { "episode": 4, "url": "https://acefile.co/player/103072152" },
