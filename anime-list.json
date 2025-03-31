@@ -1034,11 +1034,36 @@
     { "episode": 23, "url": "https://mega.nz/embed/pARwgKxQ#49TKJFTQYaMpkgCM92pzL_FLUJ9Z0EYG8rVsaYwaa04" },
     { "episode": 24, "url": "https://mega.nz/embed/BUJCGI5Z#lBLjd9aIP1w_6uR2mC6gifCdoYHx_RQBSKLeYiUDh18" }
   ]
+},
+{
+  "id": 29,
+  "title": "Shikanoko Nokonoko Koshitantan(My Deer Friend Nokotan)",
+  "folder": "my_deer_friend_nokotan",
+  "image": "my_deer_friend_nokotan.jpg",
+  "japanese_title": "しかのこのこのここしたんたん",
+  "score": 7.5,
+  "producers": ["Wit Studio", "Kodansha"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "24 Menit per episode",
+  "release_date": "2024-07-07",
+  "studio": "Wit Studio",
+  "genre": ["Komedi", "Slice of Life", "Surreal"],
+  "synopsis": "Torako Koshi, seorang siswi kelas dua di SMA Hino Minami, mempertahankan citra sebagai siswa teladan untuk menyembunyikan masa lalunya sebagai seorang berandalan. Hidupnya berubah ketika ia bertemu dengan Noko Shikanoko, seorang siswi pindahan yang sebenarnya adalah seekor rusa dalam bentuk manusia. Dengan enggan, Torako menjadi pemandu Noko dalam kehidupan manusia dan memimpin Klub Rusa yang baru dibentuk. Persahabatan yang tidak biasa ini menantang identitas yang telah dibangun Torako dengan hati-hati dan sering kali menimbulkan situasi komikal saat ia menjalani kehidupan sekolah bersama gadis-rusa tersebut.",
+  "episodes": [
+    { "episode": 1, "url": "https://pixeldrain.com/api/file/EUwJxudf" },
+    { "episode": 2, "url": "https://pixeldrain.com/api/file/QhHaFLKA" },
+    { "episode": 3, "url": "https://pixeldrain.com/api/file/JR3RAmf7" },
+    { "episode": 4, "url": "https://pixeldrain.com/api/file/vZTANECj" },
+    { "episode": 5, "url": "https://pixeldrain.com/api/file/cCSs8pcL" },
+    { "episode": 6, "url": "https://pixeldrain.com/api/file/kHPET3X5" },
+    { "episode": 7, "url": "https://pixeldrain.com/api/file/c4evueVm" },
+    { "episode": 8, "url": "https://pixeldrain.com/api/file/8T8GiBxh" },
+    { "episode": 9, "url": "https://pixeldrain.com/api/file/Zu4hh6Dm" },
+    { "episode": 10, "url": "https://pixeldrain.com/api/file/DoG8xVEN" },
+    { "episode": 11, "url": "https://pixeldrain.com/api/file/Q3nrKoFD" },
+    { "episode": 12, "url": "https://pixeldrain.com/api/file/kwppzTwU" }
+  ]
 }
-
-
-
-
-
-
 ]
