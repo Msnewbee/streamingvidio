@@ -992,7 +992,52 @@
     { "episode": 23, "url": "https://pixeldrain.com/api/file/YaowDLVa" },
     { "episode": 24, "url": "https://pixeldrain.com/api/file/yiCrzRke" }
   ]
+},
+{
+  "id": 28,
+  "title": "Enen no Shouboutai(Fire Force)",
+  "folder": "fire_force",
+  "image": "fire_force.jpg",
+  "japanese_title": "炎炎ノ消防隊",
+  "score": 7.7,
+  "producers": ["David Production", "Kodansha"],
+  "type": "TV",
+  "status": "Berjalan",
+  "total_episodes": 24,
+  "duration": "24 Menit per episode",
+  "release_date": "2019-07-06",
+  "studio": "David Production",
+  "genre": ["Action", "Supernatural", "Shounen"],
+  "episodes": [
+    { "episode": 1, "url": "https://mega.nz/embed/AdBAmYoR#LZrQbnYl_-OMA-IvhdevZLdgpagfkvxLk5JBVhlE4_8" },
+    { "episode": 2, "url": "https://mega.nz/embed/MZBU2AbJ#e7NFvMNnpT62jVUS1EGLICye8z86yNWEE6GFxpkt-D0" },
+    { "episode": 3, "url": "https://mega.nz/embed/0FB0xARB#kAGuA5iSIw1FEtXexl4ssgLQuSw8fKRFwjOu36u8KIs" },
+    { "episode": 4, "url": "https://mega.nz/embed/cZZyDa7C#pQTChOQWqvsegghA2tfx1VAUFbvkIJH9iSz7DnxOHW0" },
+    { "episode": 5, "url": "https://mega.nz/embed/EJJU2KJK#fiRkNajrNmCwcrjU0vMNXl1Qr5BbMPUSzN-HL_nnLIk" },
+    { "episode": 6, "url": "https://mega.nz/embed/ccBQmKBA#FnwDWIXu9j4vKwzIJIvrX3chtJtPskUyNJOrvIKIFd4" },
+    { "episode": 7, "url": "https://mega.nz/embed/ARZE2IpT#uSrvQfjMCWqMIs_INPzrnqomukralVmpcKG_qfLeIUQ" },
+    { "episode": 8, "url": "https://mega.nz/embed/NFRAHK7b#5Z0KLdWcR_4nFAm2HFZLqQu3FfmswFFBSPpWI_28CVQ" },
+    { "episode": 9, "url": "https://mega.nz/embed/cEAgnSCA#ww14nBlo4ZLeHk5Qj9VTFHbMGfvvOftS_vfK-P5IpsE" },
+    { "episode": 10, "url": "https://mega.nz/embed/kRJmVKSK#Ht8nY2WN9NBMqxEZw3fgb-17B1Qo6rH2wNcmYU8JbQI" },
+    { "episode": 11, "url": "https://mega.nz/embed/pIQCGIhb#WDhaX2_BLSaqZpMzBHzCgqqedhsscY9D6FpZffkDxV8" },
+    { "episode": 12, "url": "https://mega.nz/embed/EZQigIhY#CBsr8M6eVMMPlFTVeZhHqJYY62LDQvJbpJMu5xXUQXM" },
+    { "episode": 13, "url": "https://mega.nz/embed/gYJgyQID#DxB2WwhMSa_5Hswhf0UFDTa5EOHL4OEGuvJsx1pDX14" },
+    { "episode": 14, "url": "https://mega.nz/embed/tIIQ3SZB#-rjzPnAP-HbYBDa9wPcnpkzdTE_4qCCvun4Lz5DbQKA" },
+    { "episode": 15, "url": "https://mega.nz/embed/wIAgXA6J#aJ1rSJCLHF07Dfqb4lyADtBjNOb5djXXItR05F7x09U" },
+    { "episode": 16, "url": "https://mega.nz/embed/9MBQTCKL#D4O8eZhitfF1_q-OTQ3PqBNAr-1Lg6eXw7Hj2fCcjqc" },
+    { "episode": 17, "url": "https://mega.nz/embed/AIJg1YLA#hlUMQx-4u5w4Z0kBrt5mTdPAWwzUp31runUp65IcfOw" },
+    { "episode": 18, "url": "https://mega.nz/embed/FMAgRaJa#2Dv8f1ZwrK87j3LBAVlZnakPIOJQl5AOhFmc4kH18YU" },
+    { "episode": 19, "url": "https://mega.nz/embed/xMQgwApD#8KPE6VcnvWlLw-RKzbFvFRWvSO1F1di-g8X9k3iMbaI" },
+    { "episode": 20, "url": "https://mega.nz/embed/oIAQDCRC#WfpNzxOKEMhHeXplFdFN2xcTsH4qmip5SpCD55yyXQE" },
+    { "episode": 21, "url": "https://mega.nz/embed/4AYWCSaK#dUJw-Nad85mGaSa27UgnoVFIHY3TFJMrqjjjkH-xQuU" },
+    { "episode": 22, "url": "https://mega.nz/embed/dIJyGIbB#Nz07EiUgCDNlRLYcARzS21Nm_FQLcjp1OISx9RTjGqk" },
+    { "episode": 23, "url": "https://mega.nz/embed/pARwgKxQ#49TKJFTQYaMpkgCM92pzL_FLUJ9Z0EYG8rVsaYwaa04" },
+    { "episode": 24, "url": "https://mega.nz/embed/BUJCGI5Z#lBLjd9aIP1w_6uR2mC6gifCdoYHx_RQBSKLeYiUDh18" }
+  ]
 }
+
+
+
 
 
 
