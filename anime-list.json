@@ -1107,7 +1107,53 @@
     { "episode": 23, "url": "https://pixeldrain.com/api/file/ijGPqryL" },
     { "episode": 24, "url": "https://pixeldrain.com/api/file/hXocbv5x" }
   ]
+},
+{
+  "id": 31,
+  "title": "Enen no Shouboutai(Fire Force) 2nd Season",
+  "folder": "fire_force_s2",
+  "image": "fire_force_s2.jpg",
+  "japanese_title": "炎炎ノ消防隊 弐ノ章",
+  "score": 7.8,
+  "producers": ["David Production"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 24,
+  "duration": "23 Menit per episode",
+  "release_date": "2020-07-04",
+  "studio": "David Production",
+  "genre": ["Action", "Supernatural", "Shounen"],
+  "episodes": [
+    { 
+      "episode": 1, 
+      "url": "https://www.blogger.com/video.g?token=AD6v5dx5jfp8r--1EOLMSab9uZETfb69-rVcVq9s-GRfDEkbCkNzDKCR06QqyTekgEVsCzPCSGS7GmKFQNWAc23xlSbbsAOuW17mAHz_3ebvrkEIPkBf2m48Z_sbGgyxBO0kg5nGWmA"
+    },
+    { "episode": 2, "url": "https://filedon.co/embed/example2" },
+    { "episode": 3, "url": "https://filedon.co/embed/example3" },
+    { "episode": 4, "url": "https://filedon.co/embed/example4" },
+    { "episode": 5, "url": "https://filedon.co/embed/example5" },
+    { "episode": 6, "url": "https://filedon.co/embed/example6" },
+    { "episode": 7, "url": "https://filedon.co/embed/example7" },
+    { "episode": 8, "url": "https://filedon.co/embed/example8" },
+    { "episode": 9, "url": "https://filedon.co/embed/example9" },
+    { "episode": 10, "url": "https://filedon.co/embed/example10" },
+    { "episode": 11, "url": "https://filedon.co/embed/example11" },
+    { "episode": 12, "url": "https://filedon.co/embed/example12" },
+    { "episode": 13, "url": "https://filedon.co/embed/example13" },
+    { "episode": 14, "url": "https://filedon.co/embed/example14" },
+    { "episode": 15, "url": "https://filedon.co/embed/example15" },
+    { "episode": 16, "url": "https://filedon.co/embed/example16" },
+    { "episode": 17, "url": "https://filedon.co/embed/example17" },
+    { "episode": 18, "url": "https://filedon.co/embed/example18" },
+    { "episode": 19, "url": "https://filedon.co/embed/example19" },
+    { "episode": 20, "url": "https://filedon.co/embed/example20" },
+    { "episode": 21, "url": "https://filedon.co/embed/example21" },
+    { "episode": 22, "url": "https://filedon.co/embed/example22" },
+    { "episode": 23, "url": "https://filedon.co/embed/example23" },
+    { "episode": 24, "url": "https://filedon.co/embed/example24" }
+  ]
 }
+
 
 
 ]
