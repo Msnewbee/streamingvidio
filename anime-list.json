@@ -1209,7 +1209,38 @@
     { "episode": 11, "url": "https://mega.nz/embed/LohkHArR#at80w2S8tredJ4nlJTr5_GVaydEsgZSz9Kb0eRO8wXs" },
     { "episode": 12, "url": "https://mega.nz/embed/71AlWK4S#IN8fSm0asrDrCNtKpN4XiG5OGEsyyMoP5fmgc-fsMVI" }
   ]
+},
+{
+  "id": 34,
+  "title": "Unnamed Memory",
+  "folder": "unnamed_memory",
+  "image": "unnamed_memory.jpg",
+  "japanese_title": "アンネームドメモリー",
+  "score": 7.5,
+  "producers": ["ENGI", "ASCII Media Works"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "23 Menit per episode",
+  "release_date": "2024-04-09",
+  "studio": "ENGI",
+  "genre": ["Fantasy", "Romance"],
+  "episodes": [
+    { "episode": 1, "url": "https://pixeldrain.com/api/file/mu8MHyMj" },
+    { "episode": 2, "url": "https://pixeldrain.com/api/file/kjuDVm1j" },
+    { "episode": 3, "url": "https://pixeldrain.com/api/file/aPA9ytoF" },
+    { "episode": 4, "url": "https://pixeldrain.com/api/file/jKnPqije" },
+    { "episode": 5, "url": "https://pixeldrain.com/api/file/JsLkihHS" },
+    { "episode": 6, "url": "https://pixeldrain.com/api/file/azPTZE8Y" },
+    { "episode": 7, "url": "https://pixeldrain.com/api/file/jfxjEdos" },
+    { "episode": 8, "url": "https://pixeldrain.com/api/file/BQqiWisQ" },
+    { "episode": 9, "url": "https://pixeldrain.com/api/file/SywH7S3Y" },
+    { "episode": 10, "url": "https://pixeldrain.com/api/file/kPg8g989" },
+    { "episode": 11, "url": "https://pixeldrain.com/api/file/2J9xqzEU" },
+    { "episode": 12, "url": "https://pixeldrain.com/api/file/8xstT2HN" }
+  ]
 }
+
 
 
 
