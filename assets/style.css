@@ -14,21 +14,30 @@ body {
 }
 
 /* Fixed Header */
+/* Header Styling */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(26, 26, 26, 0.9);
-    padding: 10px 20px;
-    z-index: 100;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header img {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #00bcd4;
 }
 
 /* =========[ Film Page Styles ]========= */
