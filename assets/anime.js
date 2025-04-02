@@ -1,24 +1,21 @@
-// Fungsi untuk mengambil data anime dari JSON
+// Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
     try {
-        const response = await fetch('./anime-list.json');
-        if (!response.ok) throw new Error('Gagal mengambil data dari server');
-        return await response.json();
+        // Ambil data dari anime-list.json
+        const response1 = await fetch('./anime-list.json');
+        if (!response1.ok) throw new Error('Gagal mengambil data dari anime-list.json');
+        const animeList = await response1.json();
+
+        // Ambil data dari One_piece.json
+        const response2 = await fetch('./One_piece.json');
+        if (!response2.ok) throw new Error('Gagal mengambil data dari One_piece.json');
+        const onePieceData = await response2.json();
+
+        // Gabungkan data dari kedua file JSON
+        return [...animeList, ...onePieceData];
     } catch (error) {
         console.error('Error fetching anime list:', error);
         return [];
-    }
-}
-
-// Fungsi untuk mengambil data One Piece dari JSON
-export async function fetchOnePieceData() {
-    try {
-        const response = await fetch('./One_piece.json');
-        if (!response.ok) throw new Error('Gagal mengambil data dari server');
-        return await response.json();
-    } catch (error) {
-        console.error('Error fetching One Piece data:', error);
-        return {}; // Return empty object instead of null
     }
 }
 
