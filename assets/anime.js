@@ -18,7 +18,7 @@ export async function fetchOnePieceData() {
         return await response.json();
     } catch (error) {
         console.error('Error fetching One Piece data:', error);
-        return null; // Mengembalikan null jika terjadi kesalahan
+        return {}; // Return empty object instead of null
     }
 }
 
