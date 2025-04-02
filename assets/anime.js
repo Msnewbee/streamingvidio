@@ -1,15 +1,15 @@
 // Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
     try {
-        // Ambil data dari anime-list.json
-        const response1 = await fetch('./anime-list.json');
-        if (!response1.ok) throw new Error('Gagal mengambil data dari anime-list.json');
-        const animeList = await response1.json();
-
         // Ambil data dari One_piece.json
-        const response2 = await fetch('./One_piece.json');
-        if (!response2.ok) throw new Error('Gagal mengambil data dari One_piece.json');
-        const onePieceData = await response2.json();
+        const response1 = await fetch('./One_piece.json');
+        if (!response1.ok) throw new Error('Gagal mengambil data dari One_piece.json');
+        const onePieceData = await response1.json();
+
+        // Ambil data dari anime-list.json
+        const response2 = await fetch('./anime-list.json');
+        if (!response2.ok) throw new Error('Gagal mengambil data dari anime-list.json');
+        const animeList = await response2.json();
 
         // Gabungkan data dari kedua file JSON
         return [...animeList, ...onePieceData];
