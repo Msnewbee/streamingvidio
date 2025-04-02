@@ -1,0 +1,31 @@
+{
+    "id": 1,
+    "title": "One Piece",
+    "folder": "one_piece",
+    "image": "one_piece.jpg",
+    "japanese_title": "ワンピース",
+    "score": 8.8,
+    "producers": ["Toei Animation", "Shueisha"],
+    "type": "TV",
+    "status": "Berlangsung",
+    "total_episodes": 1123,
+    "duration": "23 Menit per episode",
+    "release_date": "1999-10-20",
+    "studio": "Toei Animation",
+    "genre": ["Action", "Adventure", "Fantasy"],
+    "episodes": [
+      { "episode": 1, "url": "https://filedon.co/embed/episode1_url" },
+      { "episode": 2, "url": "https://filedon.co/embed/episode2_url" },
+      { "episode": 3, "url": "https://filedon.co/embed/episode3_url" },
+      { "episode": 4, "url": "https://filedon.co/embed/episode4_url" },
+      { "episode": 5, "url": "https://filedon.co/embed/episode5_url" },
+      { "episode": 6, "url": "https://filedon.co/embed/episode6_url" },
+      { "episode": 7, "url": "https://filedon.co/embed/episode7_url" },
+      { "episode": 8, "url": "https://filedon.co/embed/episode8_url" },
+      { "episode": 9, "url": "https://filedon.co/embed/episode9_url" },
+      { "episode": 10, "url": "https://filedon.co/embed/episode10_url" },
+      { "episode": 11, "url": "https://filedon.co/embed/episode11_url" },
+      { "episode": 12, "url": "https://filedon.co/embed/episode12_url" }
+    ]
+  }
+  
