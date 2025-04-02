@@ -11,7 +11,7 @@ export async function fetchAnimeList() {
 }
 
 // Fungsi untuk mengambil data One Piece dari JSON
-export async function fetchAnimeList() {
+export async function fetchOnePieceData() {
     try {
         const response = await fetch('./One_piece.json');
         if (!response.ok) throw new Error('Gagal mengambil data dari server');
