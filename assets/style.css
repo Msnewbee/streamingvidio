@@ -180,10 +180,14 @@ nav ul li a:hover {
 
 /* Anime Grid */
 .anime-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.anime-grid .anime-item {
+    width: 30%; /* Untuk 3 kolom */
 }
 
 @media screen and (max-width: 480px) {
@@ -546,6 +550,5 @@ footer {
     background: #222;
     color: white;
     position: fixed;
-    bottom: 0;
     width: 100%;
 }
