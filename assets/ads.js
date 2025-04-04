@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inisialisasi dasar AdSense (parameter tambahan opsional)
+    // Inisialisasi dasar AdSense (opsional: kirim parameter tambahan)
     if (window.adsbygoogle) {
       (adsbygoogle = window.adsbygoogle || []).push({
         params: {
@@ -27,25 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
       if (stickyAds) stickyAds.style.display = 'none';
     }
     
-    // Inisialisasi iklan Multipleks (langsung ditampilkan)
+    // Inisialisasi iklan Multipleks (pastikan push hanya dipanggil sekali)
     const multiplexAd = document.getElementById('ad-multiplex');
-    if (multiplexAd) {
+    if (multiplexAd && !multiplexAd.getAttribute("data-ads-loaded")) {
       (adsbygoogle = window.adsbygoogle || []).push({});
+      multiplexAd.setAttribute("data-ads-loaded", "true");
     }
     
     // Tampilkan Iklan Vinyet (Interstitial) setelah delay (misalnya 5 detik)
     setTimeout(() => {
       const vinyetAd = document.getElementById('ad-vinyet');
       if (vinyetAd) {
-        vinyetAd.style.display = 'block';
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        // Ganti visibility menjadi visible agar container memiliki lebar non-0
+        vinyetAd.style.visibility = 'visible';
+        if (!vinyetAd.getAttribute("data-ads-loaded")) {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          vinyetAd.setAttribute("data-ads-loaded", "true");
+        }
       }
     }, 5000);
     
-    // Inisialisasi Sticky Ads jika masih ditampilkan
+    // Inisialisasi Sticky Ads jika masih ditampilkan dan belum diinisialisasi
     const stickyAds = document.getElementById('stickyAds');
-    if (stickyAds && stickyAds.style.display !== 'none') {
+    if (stickyAds && stickyAds.style.display !== 'none' && !stickyAds.getAttribute("data-ads-loaded")) {
       (adsbygoogle = window.adsbygoogle || []).push({});
+      stickyAds.setAttribute("data-ads-loaded", "true");
     }
   });
   
@@ -59,4 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }, true);
-  
+   

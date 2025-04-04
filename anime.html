@@ -40,18 +40,14 @@
             </div>
         </div>
 
-        <!-- Container untuk Iklan Multipleks -->
-        <div id="ad-multiplex" class="ad-container" style="width:100%; min-width:300px;">
-        <!-- Kode iklan multipleks; sesuaikan data-ad-slot dengan akun AdSense kamu -->
+    <!-- Container untuk Iklan Multipleks -->
+    <div id="ad-multiplex" class="ad-container" style="width:100%; min-width:300px;">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-format="auto"
              data-full-width-responsive="true"
              data-ad-client="ca-pub-1357574968133580"
              data-ad-slot="3333333333"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
       </div>
 
         <section class="player-section">
@@ -82,29 +78,27 @@
         </section>
    
 
-    <div id="ad-vinyet" class="ad-container" style="display:none; width:100%; min-width:300px;">
-        <!-- Kode iklan vinyet; sesuaikan data-ad-slot dengan akun AdSense kamu -->
+    <!-- Container untuk Iklan Vinyet (Interstitial) -->
+    <!-- Gunakan display:block agar container dihitung lebarnya, tetapi sembunyikan dengan visibility -->
+    <div id="ad-vinyet" class="ad-container" style="display:block; visibility:hidden; width:100%; min-width:300px;">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-format="autorelaxed"
              data-ad-client="ca-pub-1357574968133580"
              data-ad-slot="2222222222"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
       </div>
-
-   <!-- Sticky Footer Ads - Diperbarui -->
-   <div class="sticky-ads" id="stickyAds" style="width:100%; min-width:300px;">
-    <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-1357574968133580"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-</div>
-</main>
+  
+      <!-- Sticky Footer Ads -->
+      <div class="sticky-ads" id="stickyAds" style="width:100%; min-width:300px;">
+        <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1357574968133580"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </main>
 
 <footer>
  <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
