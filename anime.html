@@ -40,6 +40,20 @@
             </div>
         </div>
 
+        <!-- Container untuk Iklan Multipleks -->
+    <div id="ad-multiplex" class="ad-container">
+        <!-- Kode iklan multipleks; sesuaikan data-ad-slot dengan akun AdSense kamu -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"
+             data-ad-client="ca-pub-1357574968133580"
+             data-ad-slot="3333333333"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
         <section class="player-section">
             <h2>Pemutar</h2>
             <div class="embed-container">
@@ -68,22 +82,35 @@
         </section>
     </main>
 
-    <!-- Sticky Footer Ads -->
-    <div class="sticky-ads" id="stickyAds">
-        <button class="close-ads" onclick="closeAds()">Tutup Iklan [X]</button>
-        <div>
-            <ins class="adsbygoogle"
-                style="display:inline-block;width:728px;height:90px"
-                data-ad-client="ca-pub-1357574968133580"
-                data-ad-slot="5544332211"></ins>
-        </div>
-    </div>
+    <div id="ad-vinyet" class="ad-container" style="display:none;">
+        <!-- Kode iklan vinyet; sesuaikan data-ad-slot dengan akun AdSense kamu -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="ca-pub-1357574968133580"
+             data-ad-slot="2222222222"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
-    <script src="assets/anime.js" type="module"></script>
-    <script>
-        function closeAds() {
-            document.getElementById("stickyAds").style.display = "none";
-        }
-    </script>
+   <!-- Sticky Footer Ads - Diperbarui -->
+   <div class="sticky-ads" id="stickyAds">
+    <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1357574968133580"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+</div>
+
+<footer>
+ <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
+   <p><a href="about.html">Tentang Kami</a> | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a> | <a href="dmca.html">DMCA</a></p>  
+</footer>
+
+<script src="assets/anime.js" type="module"></script>
+<script type="module" src="assets/ads.js"></script>
 </body>
 </html>
