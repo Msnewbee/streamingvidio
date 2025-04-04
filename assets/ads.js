@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inisialisasi dasar AdSense
+    // Inisialisasi dasar AdSense (parameter tambahan opsional)
     if (window.adsbygoogle) {
       (adsbygoogle = window.adsbygoogle || []).push({
         params: {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
-    // Handler untuk tombol tutup iklan sticky
+    // Handler untuk tombol tutup pada Sticky Ads
     const closeBtn = document.getElementById('closeAdsBtn');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
@@ -21,13 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
-    // Cek preferensi pengguna untuk menyembunyikan iklan sticky
+    // Cek preferensi pengguna untuk menyembunyikan Sticky Ads
     if (localStorage.getItem('hideAds') === 'true') {
       const stickyAds = document.getElementById('stickyAds');
       if (stickyAds) stickyAds.style.display = 'none';
     }
     
-    // Tampilkan iklan vinyet (interstitial) setelah 5 detik (sesuaikan sesuai kebutuhan)
+    // Inisialisasi iklan Multipleks (langsung ditampilkan)
+    const multiplexAd = document.getElementById('ad-multiplex');
+    if (multiplexAd) {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+    
+    // Tampilkan Iklan Vinyet (Interstitial) setelah delay (misalnya 5 detik)
     setTimeout(() => {
       const vinyetAd = document.getElementById('ad-vinyet');
       if (vinyetAd) {
@@ -36,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 5000);
     
-    // Inisialisasi iklan multipleks (ditampilkan langsung)
-    const multiplexAd = document.getElementById('ad-multiplex');
-    if (multiplexAd) {
+    // Inisialisasi Sticky Ads jika masih ditampilkan
+    const stickyAds = document.getElementById('stickyAds');
+    if (stickyAds && stickyAds.style.display !== 'none') {
       (adsbygoogle = window.adsbygoogle || []).push({});
     }
   });
@@ -47,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('error', (e) => {
     if (e.message && e.message.includes('adsbygoogle')) {
       console.warn('Ad error:', e.message);
+      // Sembunyikan semua elemen iklan jika terjadi error
       document.querySelectorAll('.adsbygoogle').forEach(ad => {
         ad.style.display = 'none';
       });
