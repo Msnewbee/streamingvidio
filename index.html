@@ -5,20 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamingX - Nonton Anime Gratis</title> 
 
+  <!-- ✅ Verifikasi Google Search Console -->
+  <meta name="google-site-verification" content="Q1_n62VDnCSykk9EJFc0uD2NMh9oXJxym67Ks-Z8dyQ" />
+
+  <!-- ✅ SEO Meta Tags -->
   <meta name="description" content="StreamingX adalah situs terbaik untuk nonton anime subtitle Indonesia dengan kualitas tinggi. Tonton anime favoritmu tanpa buffering!">
-  <meta name="keywords" content="anime, streaming anime, nonton anime, anime subtitle indonesia, anime sub indo, anime HD">
+  <meta name="keywords" content="anime, streaming anime, nonton anime, anime subtitle indonesia, anime sub indo, anime HD, StreamingX, anime gratis">
   <meta name="author" content="StreamingX">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://streamingvidio.pages.dev/">
+
+  <!-- ✅ Open Graph untuk Sosial Media -->
   <meta property="og:title" content="StreamingX - Nonton Anime Gratis">
   <meta property="og:description" content="Saksikan anime favoritmu secara gratis dengan kualitas terbaik hanya di StreamingX.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://streamingvidio.pages.dev/">
-  <meta property="og:image" content="public/preview.jpg">
-  <link rel="canonical" href="https://streamingvidio.pages.dev/">
+  <meta property="og:image" content="https://streamingvidio.pages.dev/public/preview.jpg">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StreamingX - Nonton Anime Subtitle Indonesia Gratis">
+  <meta name="twitter:description" content="Tonton anime favoritmu dengan kualitas tinggi dan subtitle Indonesia.">
+  <meta name="twitter:image" content="https://streamingvidio.pages.dev/public/preview.jpg">
+
+  <!-- ✅ Info internal -->
+  <meta name="data-source" content="Data anime berasal dari file JSON di folder /Anime/ seperti One_piece.json, anime-list.json, bleach.json">
+  <meta name="script-used" content="Script anime.js digunakan untuk memuat dan menampilkan data anime pada halaman anime.html">
+  <meta name="related-pages" content="anime.html adalah halaman utama untuk melihat daftar anime yang dimuat dari file JSON">
+
+  <!-- ✅ CSS -->
   <link rel="stylesheet" href="assets/style.css">
 
-  <!-- Google AdSense Header Script -->
+  <!-- ✅ Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580" crossorigin="anonymous"></script>
+
+  <!-- ✅ Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StreamingX",
+    "url": "https://streamingvidio.pages.dev/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://streamingvidio.pages.dev/anime.html?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -95,5 +129,6 @@
   <!-- Panggil file JavaScript -->
   <script type="module" src="assets/script.js"></script>
   <script type="module" src="assets/ads.js"></script>
+  <script src="assets/anime.js" defer></script>
 </body>
 </html>
