@@ -11,8 +11,13 @@ export async function fetchAnimeList() {
         if (!response2.ok) throw new Error('Gagal mengambil data dari anime-list.json');
         const animeList = await response2.json();
 
+        const response3 = await fetch('./Anime/bleach.json');
+        if (!response3.ok) throw new Error('Gagal mengambil data dari anime-list.json');
+        const bleachData = await response3.json();
+
+
         // Gabungkan data dari kedua file JSON
-        return [...animeList, ...onePieceData];
+        return [...animeList, ...onePieceData, ...bleachData];
     } catch (error) {
         console.error('Error fetching anime list:', error);
         return [];

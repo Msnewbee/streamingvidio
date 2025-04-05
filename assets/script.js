@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
         <p>Genre: ${anime.genre.join(', ')}</p>
-        <p>Terakhir Diperbarui: ${anime.last_updated}</p>
       </div>
     `;
 
