@@ -375,6 +375,18 @@ nav ul li a:hover {
     border-color: #007bff;
 }
 
+@media (max-width: 600px) {
+    .episode-item {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .episode-list {
+        flex-direction: column;
+    }
+}
+
+
 .episode-list p {
     font-style: italic;
     color: #777;
@@ -467,14 +479,6 @@ nav ul li a:hover {
         font-size: 0.95em;
     }
     
-    .episode-list {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-    
-    .episode-item {
-        padding: 10px;
-        font-size: 13px;
-    }
     
     .episode-nav-btn, .fullscreen-button, #download-link {
         padding: 10px 12px;
