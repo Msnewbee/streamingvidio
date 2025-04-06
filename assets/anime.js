@@ -42,7 +42,7 @@ export async function loadAnimeDetail() {
     populateEpisodeList(anime);
 
     if (episodeParam) {
-        const selectedEpisode = anime.episodes.find(ep => ep.episode == episodeParam);
+        const selectedEpisode = anime.episodes.find(ep => parseInt(ep.episode) === parseInt(episodeParam));
         if (selectedEpisode) {
             playEpisode(selectedEpisode.url, selectedEpisode.episode, anime.id, selectedEpisode.mirrors || []);
         } else {
@@ -108,7 +108,7 @@ function navigateEpisode(direction) {
         const anime = animeList.find(a => a.id == animeId);
         if (!anime) return;
 
-        const episodeIndex = anime.episodes.findIndex(ep => ep.episode == currentEpisode);
+        const episodeIndex = anime.episodes.findIndex(ep => parseInt(ep.episode) === currentEpisode);
         const newIndex = episodeIndex + direction;
 
         if (newIndex >= 0 && newIndex < anime.episodes.length) {
@@ -131,10 +131,9 @@ function playEpisode(url, episode, animeId, mirrors = []) {
     iframePlayer.src = url;
     updateUrlWithEpisode(animeId, episode);
 
-    // Highlight current episode
     const episodeButtons = document.querySelectorAll('.episode-item');
     episodeButtons.forEach(btn => {
-        if (parseInt(btn.dataset.episode) === episode) {
+        if (parseInt(btn.dataset.episode) === parseInt(episode)) {
             btn.classList.add('active-episode');
         } else {
             btn.classList.remove('active-episode');
@@ -149,6 +148,11 @@ function updateUrlWithEpisode(animeId, episode) {
     window.history.pushState(null, '', newUrl.toString());
 }
 
+// Saat tombol back/forward ditekan di browser
+window.addEventListener('popstate', () => {
+    loadAnimeDetail();
+});
+
 // Event listener saat DOM siap
 document.addEventListener("DOMContentLoaded", () => {
     const prevEpisodeBtn = document.getElementById('prev-episode');
@@ -161,4 +165,5 @@ document.addEventListener("DOMContentLoaded", () => {
         loadAnimeDetail();
     }
 });
+
 
