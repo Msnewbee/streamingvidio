@@ -340,25 +340,11 @@ nav ul li a:hover {
     border: none;
 }
 
-/* Download Button */
-.download-container {
-    margin-top: 20px;
-}
-
-.download-btn {
-    display: inline-block;
-    background: #007bff;
+.episode-item.active-episode {
+    background-color: #007bff;
     color: white;
-    padding: 12px 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background 0.3s;
 }
 
-.download-btn:hover {
-    background: #0056b3;
-}
 
 /* Episode Navigation */
 .episode-navigation {
