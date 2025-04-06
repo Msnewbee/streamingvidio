@@ -340,9 +340,50 @@ nav ul li a:hover {
     border: none;
 }
 
+/* SECTION UTAMA */
+.episode-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* JUDUL */
+.episode-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* DAFTAR EPISODE */
+.episode-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* TOMBOL EPISODE */
+.episode-item {
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.episode-item:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+}
+
 .episode-item.active-episode {
     background-color: #007bff;
     color: white;
+    border-color: #007bff;
 }
 
 
