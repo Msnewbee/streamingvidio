@@ -125,8 +125,6 @@ function navigateEpisode(direction) {
 // Fungsi untuk memutar episode
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
-    const downloadLink = document.getElementById('download-link');
-    const switchButton = document.getElementById('switch-server');
 
     if (!iframePlayer) {
         console.error('Elemen #anime-embed tidak ditemukan');
