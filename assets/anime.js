@@ -63,8 +63,18 @@ function updateAnimeDetails(anime) {
     document.getElementById('anime-duration').textContent = anime.duration;
     document.getElementById('anime-release').textContent = anime.release_date;
     document.getElementById('anime-genre').textContent = anime.genre.join(', ');
+    document.getElementById('anime-synopsis').textContent = anime.synopsis;
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 }
+
+    // Menampilkan trailer (jika tersedia)
+    const trailerElement = document.getElementById('anime-trailer');
+    if (anime.trailer_url) {
+        trailerElement.src = anime.trailer_url;
+    } else {
+        trailerElement.src = "";
+    }
+
 
 // Fungsi untuk menampilkan daftar episode
 function populateEpisodeList(anime) {
