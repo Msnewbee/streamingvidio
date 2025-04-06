@@ -1,23 +1,23 @@
 // Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
     try {
-        // Ambil data dari One_piece.json
-        const response1 = await fetch('./Anime/One_piece.json');
-        if (!response1.ok) throw new Error('Gagal mengambil data dari One_piece.json');
-        const onePieceData = await response1.json();
+        const urls = [
+            { path: './Anime/One_piece.json', label: 'One_piece.json' },
+            { path: './Anime/anime-list.json', label: 'anime-list.json' },
+            { path: './Anime/bleach.json', label: 'bleach.json' }
+        ];
 
-        // Ambil data dari anime-list.json
-        const response2 = await fetch('./Anime/anime-list.json');
-        if (!response2.ok) throw new Error('Gagal mengambil data dari anime-list.json');
-        const animeList = await response2.json();
+        const results = await Promise.all(urls.map(async ({ path, label }) => {
+            const res = await fetch(path);
+            if (!res.ok) throw new Error(`Gagal mengambil data dari ${label}`);
+            return await res.json();
+        }));
 
-        const response3 = await fetch('./Anime/bleach.json');
-        if (!response3.ok) throw new Error('Gagal mengambil data dari anime-list.json');
-        const bleachData = await response3.json();
+        // Gabungkan dan hilangkan duplikat berdasarkan ID
+        const combined = results.flat();
+        const uniqueAnime = Array.from(new Map(combined.map(a => [a.id, a])).values());
+        return uniqueAnime;
 
-
-        // Gabungkan data dari kedua file JSON
-        return [...animeList, ...onePieceData, ...bleachData];
     } catch (error) {
         console.error('Error fetching anime list:', error);
         return [];
@@ -53,34 +53,31 @@ export async function loadAnimeDetail() {
 
 // Fungsi untuk memperbarui tampilan detail anime
 function updateAnimeDetails(anime) {
-    document.getElementById('anime-title').textContent = anime.title;
-    document.getElementById('anime-jtitle').textContent = anime.japanese_title;
-    document.getElementById('anime-score').textContent = anime.score;
-    document.getElementById('anime-producers').textContent = anime.producers;
-    document.getElementById('anime-studio').textContent = anime.studio;
-    document.getElementById('anime-type').textContent = anime.type;
-    document.getElementById('anime-status').textContent = anime.status;
-    document.getElementById('anime-duration').textContent = anime.duration;
-    document.getElementById('anime-release').textContent = anime.release_date;
-    document.getElementById('anime-genre').textContent = anime.genre.join(', ');
-    document.getElementById('anime-synopsis').textContent = anime.synopsis;
+    document.getElementById('anime-title').textContent = anime.title || '-';
+    document.getElementById('anime-jtitle').textContent = anime.japanese_title || '-';
+    document.getElementById('anime-score').textContent = anime.score ?? '-';
+    document.getElementById('anime-producers').textContent = anime.producers || '-';
+    document.getElementById('anime-studio').textContent = anime.studio || '-';
+    document.getElementById('anime-type').textContent = anime.type || '-';
+    document.getElementById('anime-status').textContent = anime.status || '-';
+    document.getElementById('anime-duration').textContent = anime.duration || '-';
+    document.getElementById('anime-release').textContent = anime.release_date || '-';
+    document.getElementById('anime-genre').textContent = Array.isArray(anime.genre) ? anime.genre.join(', ') : '-';
+    document.getElementById('anime-synopsis').textContent = anime.synopsis || '-';
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
- // Tampilkan trailer kalau ada
- const trailerFrame = document.getElementById('anime-trailer');
- if (trailerFrame && anime.trailer_url) {
-     trailerFrame.src = anime.trailer_url;
- } else if (trailerFrame) {
-     trailerFrame.src = ''; // Kosongkan kalau tidak ada trailer
- }
-}
 
+    const trailerFrame = document.getElementById('anime-trailer');
+    if (trailerFrame) {
+        trailerFrame.src = anime.trailer_url || '';
+    }
+}
 
 // Fungsi untuk menampilkan daftar episode
 function populateEpisodeList(anime) {
     const episodeList = document.getElementById('episode-list');
     episodeList.innerHTML = '';
 
-    if (anime.episodes.length === 0) {
+    if (!anime.episodes || anime.episodes.length === 0) {
         episodeList.innerHTML = '<p>Belum ada episode tersedia.</p>';
         return;
     }
@@ -131,19 +128,16 @@ function playEpisode(url, episode, animeId, mirrors = []) {
         return;
     }
 
-    // Update player source
     iframePlayer.src = url;
-    
-    // Update URL
     updateUrlWithEpisode(animeId, episode);
-    
-    // Highlight current episode in list
+
+    // Highlight current episode
     const episodeButtons = document.querySelectorAll('.episode-item');
     episodeButtons.forEach(btn => {
         if (parseInt(btn.dataset.episode) === episode) {
-            btn.style.backgroundColor = '#007bff';
+            btn.classList.add('active-episode');
         } else {
-            btn.style.backgroundColor = '#3a3a3a';
+            btn.classList.remove('active-episode');
         }
     });
 }
@@ -167,3 +161,4 @@ document.addEventListener("DOMContentLoaded", () => {
         loadAnimeDetail();
     }
 });
+
