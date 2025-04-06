@@ -136,11 +136,6 @@ function playEpisode(url, episode, animeId, mirrors = []) {
     // Update player source
     iframePlayer.src = url;
     
-    // Update download link
-    downloadLink.href = url;
-    downloadLink.textContent = `Download Episode ${episode}`;
-    downloadLink.download = `Episode_${episode}.mp4`;
-    
     // Update URL
     updateUrlWithEpisode(animeId, episode);
     
