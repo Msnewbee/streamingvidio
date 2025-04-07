@@ -1,10 +1,11 @@
-const watchCounts = new Map(); // Sementara, bisa ganti ke KV storage kalau butuh persist
+const watchCounts = new Map(); // Sementara, bisa diganti KV untuk persist
 
 export default {
   async fetch(request) {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
+    // GET /api/get-watch?id=...
     if (request.method === 'GET' && pathname === '/api/get-watch') {
       const id = url.searchParams.get('id');
       if (!id) {
@@ -23,6 +24,7 @@ export default {
       });
     }
 
+    // POST /api/increase-watch
     if (request.method === 'POST' && pathname === '/api/increase-watch') {
       try {
         const body = await request.json();
@@ -52,6 +54,18 @@ export default {
       }
     }
 
+    // ✅ Tambahan baru: POST /api/reset-watch
+    if (request.method === 'POST' && pathname === '/api/reset-watch') {
+      watchCounts.clear(); // Hapus semua data tonton
+      return new Response(JSON.stringify({ message: 'All watch counts reset' }), {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        },
+      });
+    }
+
+    // 404 fallback
     return new Response('Not found', { status: 404 });
   },
 };
