@@ -5,7 +5,7 @@ export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
     try {
-        const res = await fetch("https://anime-cache-worker.bilariko2.workers.dev/anime-list"); // Ganti sesuai domain kamu
+        const res = await fetch("https://streamingvidio.pages.dev.bilariko2.workers.dev/anime-list"); // Ganti sesuai domain kamu
         if (!res.ok) throw new Error("Gagal mengambil data dari worker");
 
         const data = await res.json();
