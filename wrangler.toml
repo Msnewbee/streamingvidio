@@ -9,3 +9,4 @@ workers_dev = true
 [[kv_namespaces]]
 binding = "MY_KV"
 id = "a1922f7dbe90435ea54837d383d9aae9"
+preview_id = "a1922f7dbe90435ea54837d383d9aae9"  # <- Ini penting buat testing
