@@ -11,16 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
-    .then(async (data) => {
+    .then((data) => {
       const newAnimeIds = data.map(anime => anime.id);
       const isUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
-
+      
       animeData = data;
       if (isUpdated) {
         localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
+        resetWatchCounts();
       }
-
-      await loadServerWatchCounts(); // Load dari server (KV)
+      loadWatchCounts();
       populateGenreOptions(animeData);
       displayAnime(animeData);
       displayNewlyAddedAnime(animeData);
@@ -94,12 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return animes.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
   }
 
-  function loadWatchCounts() {
-    animeData.forEach(anime => {
-      anime.watchCount = getWatchCount(anime.id);
-    });
+  async function loadServerWatchCounts() {
+    for (let anime of animeData) {
+      try {
+        const count = await getWatchCount(anime.id);
+        anime.watchCount = count;
+      } catch (err) {
+        console.error(`Gagal mengambil watch count untuk ${anime.id}:`, err);
+        anime.watchCount = 0;
+      }
+    }
+  
+    // Urutkan berdasarkan jumlah tontonan
     animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
+  
 
   async function getWatchCount(animeId) {
     const res = await fetch(`https://anime-watch-count.bilariko2.workers.dev/api/get-watch?id=${animeId}`);
