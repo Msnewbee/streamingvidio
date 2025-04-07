@@ -29,7 +29,7 @@ function renderAnimeList(animeList) {
         card.className = "anime-card";
 
         // Sesuaikan path gambar jika perlu
-        const thumbnailUrl = `https://streamingvidio.pages.dev/Public/${anime.image}`;
+        const thumbnailUrl = `https://streamingvidio.pages.dev/thumbnail/${anime.image}`;
 
         card.innerHTML = `
             <a href="anime.html?folder=${anime.folder}">
