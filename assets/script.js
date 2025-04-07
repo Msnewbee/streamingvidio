@@ -112,11 +112,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
 
-  async function getWatchCount(animeId) {
-    const res = await fetch(`https://anime-watch-count.bilariko2.workers.dev/api/get-watch?id=${animeId}`);
-    const data = await res.json();
-    return data.count;
+  async function getWatchCount(id) {
+    try {
+      const response = await fetch(`https://watchcount-proxy.bilariko2.workers.dev/?id=${id}`);
+      const data = await response.json();
+      console.log('Watch count:', data);
+      return data;
+    } catch (error) {
+      console.error(`Gagal mengambil watch count untuk ${id}:`, error);
+    }
   }
+  
 
   function increaseWatchCount(animeId) {
     fetch("https://anime-watch-count.bilariko2.workers.dev/api/increase-watch", {
