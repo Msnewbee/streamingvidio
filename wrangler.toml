@@ -1,11 +1,10 @@
 name = "anime-watch-count"
-main = "anime-watch-count.js"
+main = "workers/anime-watch-count.js"
 type = "javascript"
 compatibility_date = "2025-03-13"
 
 account_id = "b28649ce82eac859f113666c482934e9"
 workers_dev = true
-compatibility_date = "2025-03-13"
 
 [[kv_namespaces]]
 binding = "MY_KV"
