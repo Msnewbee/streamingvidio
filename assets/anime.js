@@ -1,10 +1,11 @@
 let cachedAnimeList = null;
 
+// Ambil data dari Worker
 export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
     try {
-        const res = await fetch("https://streamingvidio.pages.dev/anime-cache");
+        const res = await fetch("https://streamingvidio.pages.dev/anime-cache"); // Ganti jika domain berbeda
         if (!res.ok) throw new Error("Gagal mengambil data dari worker");
 
         const data = await res.json();
@@ -16,6 +17,32 @@ export async function fetchAnimeList() {
         return [];
     }
 }
+
+// Fungsi render anime ke dalam HTML
+function renderAnimeList(animeList) {
+    const container = document.getElementById("anime-list");
+    if (!container) return;
+
+    container.innerHTML = "";
+    animeList.forEach(anime => {
+        const card = document.createElement("div");
+        card.className = "anime-card";
+        card.innerHTML = `
+            <a href="anime.html?id=${anime.id}">
+                <img src="${anime.thumbnail}" alt="${anime.title}" class="anime-thumb" />
+                <h3 class="anime-title">${anime.title}</h3>
+            </a>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Panggil saat halaman dimuat
+window.addEventListener("DOMContentLoaded", async () => {
+    const list = await fetchAnimeList();
+    renderAnimeList(list);
+});
+
 
 // Fungsi untuk memuat detail anime
 export async function loadAnimeDetail() {
