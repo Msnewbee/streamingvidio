@@ -1,34 +1,31 @@
 export default {
-    async fetch(request, env) {
+    async fetch(request, env, ctx) {
       const url = new URL(request.url);
   
-      if (request.method === "POST" && url.pathname === "/api/increase-watch") {
+      if (url.pathname === "/api/increase-watch" && request.method === "POST") {
         const { animeId } = await request.json();
+        if (!animeId) return new Response("animeId diperlukan", { status: 400 });
   
-        if (!animeId) {
-          return new Response("Missing animeId", { status: 400 });
-        }
+        const count = await env.WATCH_KV.get(animeId);
+        const newCount = parseInt(count || "0") + 1;
+        await env.WATCH_KV.put(animeId, newCount.toString());
   
-        const key = `watchCount_${animeId}`;
-        const currentCount = parseInt(await env.MY_KV.get(key)) || 0;
-        await env.MY_KV.put(key, currentCount + 1);
-  
-        return new Response(JSON.stringify({ success: true, newCount: currentCount + 1 }), {
+        return new Response(JSON.stringify({ animeId, count: newCount }), {
           headers: { "Content-Type": "application/json" },
         });
       }
   
-      if (request.method === "GET" && url.pathname.startsWith("/api/get-watch")) {
+      if (url.pathname === "/api/get-watch" && request.method === "GET") {
         const animeId = url.searchParams.get("id");
-        const key = `watchCount_${animeId}`;
-        const count = parseInt(await env.MY_KV.get(key)) || 0;
+        if (!animeId) return new Response("id diperlukan", { status: 400 });
   
-        return new Response(JSON.stringify({ count }), {
+        const count = await env.WATCH_KV.get(animeId);
+        return new Response(JSON.stringify({ animeId, count: parseInt(count || "0") }), {
           headers: { "Content-Type": "application/json" },
         });
       }
   
-      return new Response("Not found", { status: 404 });
+      return new Response("Not Found", { status: 404 });
     },
   };
   

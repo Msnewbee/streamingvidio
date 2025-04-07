@@ -101,32 +101,19 @@ document.addEventListener("DOMContentLoaded", function () {
     animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
-  async function loadServerWatchCounts() {
-    for (const anime of animeData) {
-      try {
-        const res = await fetch(`https://anime-watch-count.YOUR_SUBDOMAIN.workers.dev/api/get-watch?id=${anime.id}`);
-        const data = await res.json();
-        anime.watchCount = data.count || 0;
-      } catch (err) {
-        console.error(`Gagal ambil watch count untuk ${anime.id}`, err);
-        anime.watchCount = 0;
-      }
-    }
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
+  async function getWatchCount(animeId) {
+    const res = await fetch(`https://anime-watch-count.bilariko2.workers.dev/api/get-watch?id=${animeId}`);
+    const data = await res.json();
+    return data.count;
   }
 
-  async function increaseWatchCount(animeId) {
-    try {
-      await fetch("https://anime-watch-count.YOUR_SUBDOMAIN.workers.dev/api/increase-watch", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ animeId })
-      });
-    } catch (err) {
-      console.error("Gagal update watch count", err);
-    }
+  function increaseWatchCount(animeId) {
+    fetch("https://anime-watch-count.bilariko2.workers.dev/api/increase-watch", {
+      method: "POST",
+      body: JSON.stringify({ animeId }),
+    });
   }
-
+  
   function populateGenreOptions(animes) {
     const genres = new Set();
     animes.forEach((anime) => {
