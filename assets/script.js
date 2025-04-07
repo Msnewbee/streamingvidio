@@ -94,27 +94,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return animes.sort((a, b) => new Date(b.last_updated) - new Date(a.last_updated));
   }
 
-  function loadWatchCounts() {
-    animeData.forEach(anime => {
-      anime.watchCount = getWatchCount(anime.id);
-    });
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
+  async function getWatchCount(animeId) {
+    try {
+      const res = await fetch(`/api/watch-count?id=${animeId}`);
+      const data = await res.json();
+      return data.count || 0;
+    } catch (err) {
+      console.error("Failed to fetch watch count", err);
+      return 0;
+    }
   }
-
-  function resetWatchCounts() {
-    animeData.forEach(anime => {
-      localStorage.removeItem(`watchCount_${anime.id}`);
-    });
+  
+  async function increaseWatchCount(animeId) {
+    try {
+      const res = await fetch(`/api/watch-count?id=${animeId}`, {
+        method: "POST"
+      });
+      const data = await res.json();
+      return data.count || 0;
+    } catch (err) {
+      console.error("Failed to increase watch count", err);
+      return 0;
+    }
   }
-
-  function getWatchCount(animeId) {
-    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
-  }
-
-  function increaseWatchCount(animeId) {
-    const currentCount = getWatchCount(animeId);
-    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
-  }
+  
 
   function populateGenreOptions(animes) {
     const genres = new Set();

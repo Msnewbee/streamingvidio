@@ -1,42 +1,18 @@
 let cachedAnimeList = null;
-const CACHE_KEY = 'animeListCache';
-const CACHE_TTL = 3600 * 1000; // 1 jam
 
-// Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
-    const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
-    const now = Date.now();
-
-    if (cached.data && now - cached.timestamp < CACHE_TTL) {
-        cachedAnimeList = cached.data;
-        return cached.data;
-    }
-
     try {
-        const urls = [
-            { path: './Anime/One_piece.json', label: 'One_piece.json' },
-            { path: './Anime/anime-list.json', label: 'anime-list.json' },
-            { path: './Anime/bleach.json', label: 'bleach.json' }
-        ];
+        const res = await fetch("https://streamingvidio.pages.dev/api/anime-cache");
+        if (!res.ok) throw new Error("Gagal mengambil data dari worker");
 
-        const results = await Promise.all(urls.map(async ({ path, label }) => {
-            const res = await fetch(path);
-            if (!res.ok) throw new Error(`Gagal mengambil data dari ${label}`);
-            return await res.json();
-        }));
-
-        const combined = results.flat();
-        const uniqueAnime = Array.from(new Map(combined.map(a => [a.id, a])).values());
-
-        cachedAnimeList = uniqueAnime;
-        localStorage.setItem(CACHE_KEY, JSON.stringify({ data: uniqueAnime, timestamp: now }));
-
-        return uniqueAnime;
+        const data = await res.json();
+        cachedAnimeList = data;
+        return data;
 
     } catch (error) {
-        console.error('Error fetching anime list:', error);
+        console.error("Error fetching anime list from worker:", error);
         return [];
     }
 }

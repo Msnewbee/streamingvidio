@@ -1,0 +1,14 @@
+name = "anime-cache-worker"
+type = "javascript"
+
+account_id = "Bilariko2@gmail.com's Account"
+workers_dev = true
+compatibility_date = "2025-03-13"
+
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "a1922f7dbe90435ea54837d383d9aae9"
+
+[[routes]]
+pattern = "streamingvidio.pages.dev/api/anime-cache"
+zone_id = "your-zone-id"
