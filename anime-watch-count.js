@@ -1,15 +1,20 @@
-function handleOptions(request) {
-  return new Response(null, {
-    status: 204,
-    headers: corsHeaders,
-  });
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const id = url.searchParams.get("id");
+
+    const json = JSON.stringify({ id, count: 123 });
+
+    return new Response(json, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*', // <-- ini penting
+        'Access-Control-Allow-Methods': 'GET',
+      }
+    });
+  }
 }
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*", // or a specific domain
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
 
 async function handleRequest(request) {
   const url = new URL(request.url);
