@@ -1,11 +1,11 @@
 let cachedAnimeList = null;
 
-// Ambil data dari Worker
+// Ambil data anime dari Cloudflare Worker
 export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
     try {
-        const res = await fetch("https://streamingvidio.pages.dev/anime-cache"); // Ganti jika domain berbeda
+        const res = await fetch("https://streamingvidio.pages.dev/anime-cache"); // Ganti sesuai domain kamu
         if (!res.ok) throw new Error("Gagal mengambil data dari worker");
 
         const data = await res.json();
@@ -18,7 +18,7 @@ export async function fetchAnimeList() {
     }
 }
 
-// Fungsi render anime ke dalam HTML
+// Fungsi render daftar anime ke dalam halaman
 function renderAnimeList(animeList) {
     const container = document.getElementById("anime-list");
     if (!container) return;
@@ -27,9 +27,13 @@ function renderAnimeList(animeList) {
     animeList.forEach(anime => {
         const card = document.createElement("div");
         card.className = "anime-card";
+
+        // Sesuaikan path gambar jika perlu
+        const thumbnailUrl = `https://streamingvidio.pages.dev/Public/${anime.image}`;
+
         card.innerHTML = `
-            <a href="anime.html?id=${anime.id}">
-                <img src="${anime.thumbnail}" alt="${anime.title}" class="anime-thumb" />
+            <a href="anime.html?folder=${anime.folder}">
+                <img src="${thumbnailUrl}" alt="${anime.title}" class="anime-thumb" />
                 <h3 class="anime-title">${anime.title}</h3>
             </a>
         `;
@@ -37,11 +41,12 @@ function renderAnimeList(animeList) {
     });
 }
 
-// Panggil saat halaman dimuat
+// Panggil saat halaman selesai dimuat
 window.addEventListener("DOMContentLoaded", async () => {
-    const list = await fetchAnimeList();
-    renderAnimeList(list);
+    const animeList = await fetchAnimeList();
+    renderAnimeList(animeList);
 });
+
 
 
 // Fungsi untuk memuat detail anime
