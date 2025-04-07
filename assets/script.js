@@ -11,21 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
-    .then((data) => {
-      const newAnimeIds = data.map(anime => anime.id);
-      const isUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
-      
-      animeData = data;
-      if (isUpdated) {
-        localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
-        resetWatchCounts();
-      }
-      loadWatchCounts();
-      populateGenreOptions(animeData);
-      displayAnime(animeData);
-      displayNewlyAddedAnime(animeData);
-    })
-    .catch((error) => console.error("Error fetching data:", error));
+  .then(async (data) => {
+    const newAnimeIds = data.map(anime => anime.id);
+    const isUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
+    
+    animeData = data;
+    if (isUpdated) {
+      localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
+      resetWatchCounts(); // <-- pastikan fungsi ini juga didefinisikan ya
+    }
+
+    await loadServerWatchCounts(); // <- perbaikan di sini
+    populateGenreOptions(animeData);
+    displayAnime(animeData);
+    displayNewlyAddedAnime(animeData);
+  })
+  .catch((error) => console.error("Error fetching data:", error));
+
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
