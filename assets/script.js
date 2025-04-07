@@ -25,8 +25,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       await loadServerWatchCounts();
 
-      // 🔥 Urutkan berdasarkan watch count
-      animeData.sort((a, b) => b.watchCount - a.watchCount);
+      // Resort ulang jika barusan ada anime yang diklik
+      const lastWatchedAnimeId = localStorage.getItem("lastWatchedAnimeId");
+      if (lastWatchedAnimeId) {
+        localStorage.removeItem("lastWatchedAnimeId");
+        animeData.sort((a, b) => b.watchCount - a.watchCount);
+      }
 
       populateGenreOptions(animeData);
       displayNewlyAddedAnime(animeData);
@@ -81,22 +85,23 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
-  
+
     animeCard.addEventListener("click", async () => {
+      // Update watch count lokal
       anime.watchCount = (anime.watchCount || 0) + 1;
+
+      // Kirim ke server
       await increaseWatchCount(anime.id);
-  
-      animeData.sort((a, b) => b.watchCount - a.watchCount);
-      displayAnime(animeData);
-  
-      setTimeout(() => {
-        window.location.href = `anime.html?id=${anime.id}`;
-      }, 300);
+
+      // Simpan ke localStorage agar bisa resort pas balik
+      localStorage.setItem("lastWatchedAnimeId", anime.id);
+
+      // Redirect ke halaman detail
+      window.location.href = `anime.html?id=${anime.id}`;
     });
-  
+
     return animeCard;
   }
-  
 
   async function loadServerWatchCounts() {
     for (let anime of animeData) {
