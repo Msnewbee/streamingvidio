@@ -4,7 +4,7 @@ export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
     try {
-        const res = await fetch("https://streamingvidio.pages.dev/api/anime-cache");
+        const res = await fetch("https://streamingvidio.pages.dev/anime-cache");
         if (!res.ok) throw new Error("Gagal mengambil data dari worker");
 
         const data = await res.json();
