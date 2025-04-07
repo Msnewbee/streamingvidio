@@ -1,44 +1,58 @@
+const watchCounts = new Map(); // Sementara, bisa ganti ke KV storage kalau butuh persist
+
 export default {
   async fetch(request) {
     const url = new URL(request.url);
-    const id = url.searchParams.get("id");
+    const pathname = url.pathname;
 
-    const json = JSON.stringify({ id, count: 123 });
-
-    return new Response(json, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*', // <-- ini penting
-        'Access-Control-Allow-Methods': 'GET',
+    if (request.method === 'GET' && pathname === '/api/get-watch') {
+      const id = url.searchParams.get('id');
+      if (!id) {
+        return new Response(JSON.stringify({ error: 'Missing id' }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' },
+        });
       }
-    });
-  }
-}
 
+      const count = watchCounts.get(id) || 0;
+      return new Response(JSON.stringify(count), {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        },
+      });
+    }
 
-async function handleRequest(request) {
-  const url = new URL(request.url);
-  const { pathname, searchParams } = url;
+    if (request.method === 'POST' && pathname === '/api/increase-watch') {
+      try {
+        const body = await request.json();
+        const id = body.animeId;
 
-  if (request.method === "OPTIONS") {
-    return handleOptions(request);
-  }
+        if (!id) {
+          return new Response(JSON.stringify({ error: 'Missing animeId' }), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json' },
+          });
+        }
 
-  if (pathname.startsWith("/api/get-watch")) {
-    const id = searchParams.get("id");
-    const count = await WATCH_KV.get(`watch:${id}`) || "0";
-    return new Response(JSON.stringify({ id, count: Number(count) }), {
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/json",
-      },
-    });
-  }
+        const current = watchCounts.get(id) || 0;
+        watchCounts.set(id, current + 1);
 
-  // Default fallback
-  return new Response("Not found", { status: 404 });
-}
+        return new Response(JSON.stringify({ animeId: id, watchCount: current + 1 }), {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+          },
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: 'Invalid JSON or request error' }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' },
+        });
+      }
+    }
 
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request));
-});
+    return new Response('Not found', { status: 404 });
+  },
+};
+

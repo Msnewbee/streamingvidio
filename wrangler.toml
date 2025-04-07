@@ -1,6 +1,7 @@
 name = "anime-watch-count"
 main = "anime-watch-count.js"
 type = "javascript"
+compatibility_date = "2025-03-13"
 
 account_id = "b28649ce82eac859f113666c482934e9"
 workers_dev = true
@@ -9,7 +10,3 @@ compatibility_date = "2025-03-13"
 [[kv_namespaces]]
 binding = "MY_KV"
 id = "a1922f7dbe90435ea54837d383d9aae9"
-
-[[routes]]
-pattern = "streamingvidio.pages.dev/api/anime-cache"
-zone_id = "your-zone-id"
