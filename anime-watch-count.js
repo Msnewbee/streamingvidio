@@ -1,31 +1,43 @@
-export default {
-    async fetch(request, env, ctx) {
-      const url = new URL(request.url);
-  
-      if (url.pathname === "/api/increase-watch" && request.method === "POST") {
-        const { animeId } = await request.json();
-        if (!animeId) return new Response("animeId diperlukan", { status: 400 });
-  
-        const count = await env.WATCH_KV.get(animeId);
-        const newCount = parseInt(count || "0") + 1;
-        await env.WATCH_KV.put(animeId, newCount.toString());
-  
-        return new Response(JSON.stringify({ animeId, count: newCount }), {
-          headers: { "Content-Type": "application/json" },
-        });
-      }
-  
-      if (url.pathname === "/api/get-watch" && request.method === "GET") {
-        const animeId = url.searchParams.get("id");
-        if (!animeId) return new Response("id diperlukan", { status: 400 });
-  
-        const count = await env.WATCH_KV.get(animeId);
-        return new Response(JSON.stringify({ animeId, count: parseInt(count || "0") }), {
-          headers: { "Content-Type": "application/json" },
-        });
-      }
-  
-      return new Response("Not Found", { status: 404 });
+function handleOptions(request) {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "https://streamingvidio.pages.dev",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
     },
-  };
-  
+  });
+}
+
+export default {
+  async fetch(request, env, ctx) {
+    if (request.method === "OPTIONS") {
+      return handleOptions(request);
+    }
+
+    const url = new URL(request.url);
+
+    if (url.pathname === "/api/get-watch") {
+      const id = url.searchParams.get("id");
+      if (!id) {
+        return new Response("Missing id", { status: 400 });
+      }
+
+      const count = await env.MY_KV.get(`watch_count_${id}`);
+      const response = {
+        id,
+        watch_count: parseInt(count || "0"),
+      };
+
+      return new Response(JSON.stringify(response), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*", // <- Tambahkan ini
+        },
+      });
+    }
+
+    return new Response("Not found", { status: 404 });
+  },
+};
