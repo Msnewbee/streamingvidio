@@ -37,22 +37,25 @@ document.addEventListener("DOMContentLoaded", async function () {
     })
     .catch((error) => console.error("Error fetching data:", error));
 
-  async function checkForAnimeChanges() {
-    try {
-      const res = await fetch("public/commit-hash.json");
-      const data = await res.json();
-      const currentHash = data.hash;
-      const lastHash = localStorage.getItem("lastCommitHash");
-
-      if (lastHash !== currentHash) {
-        console.log("🚨 Commit hash berubah, reset watch count...");
-        resetWatchCounts();
-        localStorage.setItem("lastCommitHash", currentHash);
+    async function checkForAnimeChanges() {
+      try {
+        const res = await fetch("/commit-hash.json");
+        if (!res.ok) throw new Error("File tidak ditemukan");
+    
+        const data = await res.json();
+        const currentHash = data.hash;
+    
+        const lastHash = localStorage.getItem("lastCommitHash");
+    
+        if (lastHash !== currentHash) {
+          console.log("🚨 Commit hash berubah, reset watch count...");
+          resetWatchCounts();
+          localStorage.setItem("lastCommitHash", currentHash);
+        }
+      } catch (err) {
+        console.warn("⚠️ Lewatkan pengecekan commit hash (tidak ditemukan atau rusak):", err.message);
       }
-    } catch (err) {
-      console.error("❌ Gagal cek commit hash:", err);
     }
-  }
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
