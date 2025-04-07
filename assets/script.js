@@ -11,16 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
-    .then((data) => {
+    .then(async (data) => {
       const newAnimeIds = data.map(anime => anime.id);
       const isUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
-      
+
       animeData = data;
       if (isUpdated) {
         localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
-        resetWatchCounts();
       }
-      loadWatchCounts();
+
+      await loadServerWatchCounts(); // Load dari server (KV)
       populateGenreOptions(animeData);
       displayAnime(animeData);
       displayNewlyAddedAnime(animeData);
@@ -101,19 +101,30 @@ document.addEventListener("DOMContentLoaded", function () {
     animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
-  function resetWatchCounts() {
-    animeData.forEach(anime => {
-      localStorage.removeItem(`watchCount_${anime.id}`);
-    });
+  async function loadServerWatchCounts() {
+    for (const anime of animeData) {
+      try {
+        const res = await fetch(`https://anime-watch-count.YOUR_SUBDOMAIN.workers.dev/api/get-watch?id=${anime.id}`);
+        const data = await res.json();
+        anime.watchCount = data.count || 0;
+      } catch (err) {
+        console.error(`Gagal ambil watch count untuk ${anime.id}`, err);
+        anime.watchCount = 0;
+      }
+    }
+    animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
-  function getWatchCount(animeId) {
-    return parseInt(localStorage.getItem(`watchCount_${animeId}`)) || 0;
-  }
-
-  function increaseWatchCount(animeId) {
-    const currentCount = getWatchCount(animeId);
-    localStorage.setItem(`watchCount_${animeId}`, currentCount + 1);
+  async function increaseWatchCount(animeId) {
+    try {
+      await fetch("https://anime-watch-count.YOUR_SUBDOMAIN.workers.dev/api/increase-watch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ animeId })
+      });
+    } catch (err) {
+      console.error("Gagal update watch count", err);
+    }
   }
 
   function populateGenreOptions(animes) {

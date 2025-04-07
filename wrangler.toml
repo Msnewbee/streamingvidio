@@ -1,4 +1,5 @@
-name = "anime-cache-worker"
+name = "anime-watch-count"
+main = "anime-watch-count.js"
 type = "javascript"
 
 account_id = "b28649ce82eac859f113666c482934e9"
