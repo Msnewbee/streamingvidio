@@ -119,18 +119,23 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
       const response = await fetch(`https://lingering-union-0acf.bilariko2.workers.dev/api/get-watch?id=${id}`);
       const data = await response.json();
-      return data;
+      return data.count || 0;
     } catch (error) {
       console.error(`Gagal mengambil watch count untuk ${id}:`, error);
+      return 0;
     }
   }
-
+  
   function increaseWatchCount(animeId) {
-    fetch("https://lingering-union-0acf.bilariko2.workers.dev/api/increase-watch", {
+    return fetch("https://lingering-union-0acf.bilariko2.workers.dev/api/increase-watch", {
       method: "POST",
-      body: JSON.stringify({ animeId }),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ animeId })
     });
   }
+  
 
   function populateGenreOptions(animes) {
     const genres = new Set();
