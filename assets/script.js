@@ -81,15 +81,22 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
-
+  
     animeCard.addEventListener("click", async () => {
       anime.watchCount = (anime.watchCount || 0) + 1;
       await increaseWatchCount(anime.id);
-      window.location.href = `anime.html?id=${anime.id}`;
+  
+      animeData.sort((a, b) => b.watchCount - a.watchCount);
+      displayAnime(animeData);
+  
+      setTimeout(() => {
+        window.location.href = `anime.html?id=${anime.id}`;
+      }, 300);
     });
-
+  
     return animeCard;
   }
+  
 
   async function loadServerWatchCounts() {
     for (let anime of animeData) {
