@@ -1,53 +1,45 @@
 let cachedAnimeList = null;
+const CACHE_KEY = 'animeListCache';
+const CACHE_TTL = 3600 * 1000; // 1 jam
 
-// Ambil data anime dari Cloudflare Worker
+// Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
     if (cachedAnimeList) return cachedAnimeList;
 
-    try {
-        const res = await fetch("https://streamingvidio.pages.dev.bilariko2.workers.dev/anime-list"); // Ganti sesuai domain kamu
-        if (!res.ok) throw new Error("Gagal mengambil data dari worker");
+    const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
+    const now = Date.now();
 
-        const data = await res.json();
-        cachedAnimeList = data;
-        return data;
+    if (cached.data && now - cached.timestamp < CACHE_TTL) {
+        cachedAnimeList = cached.data;
+        return cached.data;
+    }
+
+    try {
+        const urls = [
+            { path: './Anime/One_piece.json', label: 'One_piece.json' },
+            { path: './Anime/anime-list.json', label: 'anime-list.json' },
+            { path: './Anime/bleach.json', label: 'bleach.json' }
+        ];
+
+        const results = await Promise.all(urls.map(async ({ path, label }) => {
+            const res = await fetch(path);
+            if (!res.ok) throw new Error(`Gagal mengambil data dari ${label}`);
+            return await res.json();
+        }));
+
+        const combined = results.flat();
+        const uniqueAnime = Array.from(new Map(combined.map(a => [a.id, a])).values());
+
+        cachedAnimeList = uniqueAnime;
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ data: uniqueAnime, timestamp: now }));
+
+        return uniqueAnime;
 
     } catch (error) {
-        console.error("Error fetching anime list from worker:", error);
+        console.error('Error fetching anime list:', error);
         return [];
     }
 }
-
-// Fungsi render daftar anime ke dalam halaman
-function renderAnimeList(animeList) {
-    const container = document.getElementById("anime-list");
-    if (!container) return;
-
-    container.innerHTML = "";
-    animeList.forEach(anime => {
-        const card = document.createElement("div");
-        card.className = "anime-card";
-
-        // Sesuaikan path gambar jika perlu
-        const thumbnailUrl = `https://streamingvidio.pages.dev/thumbnail/${anime.image}`;
-
-        card.innerHTML = `
-            <a href="anime.html?folder=${anime.folder}">
-                <img src="${thumbnailUrl}" alt="${anime.title}" class="anime-thumb" />
-                <h3 class="anime-title">${anime.title}</h3>
-            </a>
-        `;
-        container.appendChild(card);
-    });
-}
-
-// Panggil saat halaman selesai dimuat
-window.addEventListener("DOMContentLoaded", async () => {
-    const animeList = await fetchAnimeList();
-    renderAnimeList(animeList);
-});
-
-
 
 // Fungsi untuk memuat detail anime
 export async function loadAnimeDetail() {
@@ -202,5 +194,4 @@ document.addEventListener("DOMContentLoaded", () => {
         loadAnimeDetail();
     }
 });
-
 
