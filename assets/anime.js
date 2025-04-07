@@ -1,19 +1,5 @@
-let cachedAnimeList = null;
-const CACHE_KEY = 'animeListCache';
-const CACHE_TTL = 3600 * 1000; // 1 jam
-
 // Fungsi untuk mengambil data anime dari beberapa file JSON
 export async function fetchAnimeList() {
-    if (cachedAnimeList) return cachedAnimeList;
-
-    const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
-    const now = Date.now();
-
-    if (cached.data && now - cached.timestamp < CACHE_TTL) {
-        cachedAnimeList = cached.data;
-        return cached.data;
-    }
-
     try {
         const urls = [
             { path: './Anime/One_piece.json', label: 'One_piece.json' },
@@ -27,12 +13,9 @@ export async function fetchAnimeList() {
             return await res.json();
         }));
 
+        // Gabungkan dan hilangkan duplikat berdasarkan ID
         const combined = results.flat();
         const uniqueAnime = Array.from(new Map(combined.map(a => [a.id, a])).values());
-
-        cachedAnimeList = uniqueAnime;
-        localStorage.setItem(CACHE_KEY, JSON.stringify({ data: uniqueAnime, timestamp: now }));
-
         return uniqueAnime;
 
     } catch (error) {
@@ -61,7 +44,7 @@ export async function loadAnimeDetail() {
     if (episodeParam) {
         const selectedEpisode = anime.episodes.find(ep => parseInt(ep.episode) === parseInt(episodeParam));
         if (selectedEpisode) {
-            playEpisode(anime, selectedEpisode.url, selectedEpisode.episode, selectedEpisode.mirrors || []);
+            playEpisode(selectedEpisode.url, selectedEpisode.episode, anime.id, selectedEpisode.mirrors || []);
         } else {
             alert('Episode tidak ditemukan!');
         }
@@ -84,7 +67,9 @@ function updateAnimeDetails(anime) {
     document.getElementById('anime-poster').src = anime.image ? `public/${anime.image}` : 'default-poster.jpg';
 
     const trailerFrame = document.getElementById('anime-trailer');
-    if (trailerFrame) trailerFrame.src = anime.trailer_url || '';
+    if (trailerFrame) {
+        trailerFrame.src = anime.trailer_url || '';
+    }
 }
 
 // Fungsi untuk menampilkan daftar episode
@@ -105,7 +90,7 @@ function populateEpisodeList(anime) {
 
         episodeButton.addEventListener('click', (event) => {
             event.preventDefault();
-            playEpisode(anime, ep.url, ep.episode, ep.mirrors || []);
+            playEpisode(ep.url, ep.episode, anime.id, ep.mirrors || []);
             updateUrlWithEpisode(anime.id, ep.episode);
         });
 
@@ -129,21 +114,22 @@ function navigateEpisode(direction) {
         if (newIndex >= 0 && newIndex < anime.episodes.length) {
             const newEpisode = anime.episodes[newIndex];
             updateUrlWithEpisode(animeId, newEpisode.episode);
-            playEpisode(anime, newEpisode.url, newEpisode.episode, newEpisode.mirrors || []);
+            playEpisode(newEpisode.url, newEpisode.episode, animeId, newEpisode.mirrors || []);
         }
     });
 }
 
 // Fungsi untuk memutar episode
-function playEpisode(anime, url, episode, mirrors = []) {
+function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
+
     if (!iframePlayer) {
         console.error('Elemen #anime-embed tidak ditemukan');
         return;
     }
 
     iframePlayer.src = url;
-    updateUrlWithEpisode(anime.id, episode);
+    updateUrlWithEpisode(animeId, episode);
 
     const episodeButtons = document.querySelectorAll('.episode-item');
     episodeButtons.forEach(btn => {
@@ -153,21 +139,6 @@ function playEpisode(anime, url, episode, mirrors = []) {
             btn.classList.remove('active-episode');
         }
     });
-
-    // Prefetch episode selanjutnya
-    preloadNextEpisode(anime, episode);
-}
-
-// Prefetch episode berikutnya
-function preloadNextEpisode(anime, currentEpisode) {
-    const nextIndex = anime.episodes.findIndex(ep => parseInt(ep.episode) === parseInt(currentEpisode)) + 1;
-    const nextEp = anime.episodes[nextIndex];
-    if (nextEp && nextEp.url) {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = nextEp.url;
-        document.head.appendChild(link);
-    }
 }
 
 // Fungsi untuk memperbarui URL dengan episode terpilih
