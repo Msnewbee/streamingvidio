@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
     animeCard.innerHTML = `
-      <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
+      <img src="${anime.image ? `thumbnail/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" />
       <div class="card-content">
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
