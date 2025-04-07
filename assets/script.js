@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function getWatchCount(id) {
     try {
-      const response = await fetch(`https://watchcount-proxy.bilariko2.workers.dev/?id=${id}`);
+      const response = await fetch(`https://lingering-union-0acf.bilariko2.workers.dev/api/get-watch?id=${id}`);
       const data = await response.json();
       console.log('Watch count:', data);
       return data;
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
   function increaseWatchCount(animeId) {
-    fetch("https://anime-watch-count.bilariko2.workers.dev/api/increase-watch", {
+    fetch("https://lingering-union-0acf.bilariko2.workers.dev/api/increase-watch", {
       method: "POST",
       body: JSON.stringify({ animeId }),
     });
