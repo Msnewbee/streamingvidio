@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   let animeData = [];
 
-  await checkForAnimeChanges(); // 🔁 Reset jika commit berbeda
+  await checkForAnimeChanges();
 
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
@@ -27,9 +27,13 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
 
       await loadServerWatchCounts();
+
+      // 🔥 Urutkan berdasarkan watch count
+      animeData.sort((a, b) => b.watchCount - a.watchCount);
+
       populateGenreOptions(animeData);
-      displayAnime(animeData);
-      displayNewlyAddedAnime(animeData);
+      displayNewlyAddedAnime(animeData);  // urut release date
+      displayAnime(animeData);            // urut watch count
     })
     .catch((error) => console.error("Error fetching data:", error));
 
@@ -38,7 +42,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       const res = await fetch("public/commit-hash.json");
       const data = await res.json();
       const currentHash = data.hash;
-
       const lastHash = localStorage.getItem("lastCommitHash");
 
       if (lastHash !== currentHash) {
@@ -75,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       newAnimeContainer.innerHTML = "";
 
-      const latestAnimes = animes
+      const latestAnimes = [...animes]
         .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
         .slice(0, 12);
 
@@ -95,6 +98,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
         <p>Genre: ${anime.genre.join(', ')}</p>
+        <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
 
@@ -115,8 +119,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         anime.watchCount = 0;
       }
     }
-
-    animeData.sort((a, b) => b.watchCount - a.watchCount);
   }
 
   async function getWatchCount(id) {
