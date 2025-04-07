@@ -104,13 +104,17 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
-
-    animeCard.addEventListener("click", () => {
-      increaseWatchCount(anime.id);
-      window.location.href = `anime.html?id=${anime.id}`;
+  
+    // ✅ Perubahan mulai di sini
+    animeCard.addEventListener("click", async () => {
+      anime.watchCount = (anime.watchCount || 0) + 1;         // Tambah lokal
+      await increaseWatchCount(anime.id);                      // Kirim ke server
+      window.location.href = `anime.html?id=${anime.id}`;      // Redirect
     });
+  
     return animeCard;
   }
+  
 
   async function loadServerWatchCounts() {
     for (let anime of animeData) {
