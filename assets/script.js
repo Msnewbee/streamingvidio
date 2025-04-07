@@ -1,6 +1,6 @@
 import { fetchAnimeList } from "./anime.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
   const genreSelect = document.getElementById("genre-anime");
@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const newAnimeContainer = document.getElementById("new-anime-list");
 
   let animeData = [];
+
+  await checkForAnimeChanges(); // 🔁 Reset jika commit berbeda
+
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
-  let previousUpdateTimes = JSON.parse(localStorage.getItem("animeUpdateTimes")) || {};
 
   fetchAnimeList()
     .then(async (data) => {
@@ -18,22 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const newAnimeIds = animeData.map(anime => anime.id);
       const isAnimeListUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
 
-      let isContentUpdated = false;
-      let currentUpdateTimes = {};
-
-      animeData.forEach(anime => {
-        currentUpdateTimes[anime.id] = anime.last_updated || "";
-
-        if (previousUpdateTimes[anime.id] !== anime.last_updated) {
-          isContentUpdated = true;
-        }
-      });
-
-      // Reset kalau ada anime baru atau episode baru
-      if (isAnimeListUpdated || isContentUpdated) {
-        console.log("📢 Terjadi perubahan data anime, mereset watch count...");
+      if (isAnimeListUpdated) {
         localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
-        localStorage.setItem("animeUpdateTimes", JSON.stringify(currentUpdateTimes));
+        console.log("📢 Daftar anime berubah, reset watch count.");
         resetWatchCounts();
       }
 
@@ -43,6 +32,24 @@ document.addEventListener("DOMContentLoaded", function () {
       displayNewlyAddedAnime(animeData);
     })
     .catch((error) => console.error("Error fetching data:", error));
+
+  async function checkForAnimeChanges() {
+    try {
+      const res = await fetch("public/commit-hash.json");
+      const data = await res.json();
+      const currentHash = data.hash;
+
+      const lastHash = localStorage.getItem("lastCommitHash");
+
+      if (lastHash !== currentHash) {
+        console.log("🚨 Commit hash berubah, reset watch count...");
+        resetWatchCounts();
+        localStorage.setItem("lastCommitHash", currentHash);
+      }
+    } catch (err) {
+      console.error("❌ Gagal cek commit hash:", err);
+    }
+  }
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
@@ -59,10 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     newAnimeContainer.innerHTML = "<p>Loading...</p>";
-
-    const searchInput = document.getElementById("search-anime");
-    const sortSelect = document.getElementById("sort-anime");
-    const genreSelect = document.getElementById("genre-anime");
 
     setTimeout(() => {
       if (searchInput.value || sortSelect.value || genreSelect.value) {
@@ -198,3 +201,4 @@ document.addEventListener("DOMContentLoaded", function () {
     displayAnime(filteredAnime);
   }
 });
+
