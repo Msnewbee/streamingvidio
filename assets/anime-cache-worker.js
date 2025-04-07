@@ -15,9 +15,9 @@ export default {
   
       // URL file JSON dari Cloudflare Pages (ganti sesuai domain kamu)
       const urls = [
-        "https://your-site.pages.dev/Anime/One_piece.json",
-        "https://your-site.pages.dev/Anime/anime-list.json",
-        "https://your-site.pages.dev/Anime/bleach.json"
+        "https://streamingvidio.pages.dev/Anime/One_piece.json",
+        "https://streamingvidio.pages.dev//Anime/anime-list.json",
+        "https://streamingvidio.pages.dev/Anime/bleach.json"
       ];
   
       try {
