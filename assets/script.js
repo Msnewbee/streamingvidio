@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   let animeData = [];
 
-  await checkForAnimeChanges();
-
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
@@ -22,8 +20,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       if (isAnimeListUpdated) {
         localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
-        console.log("📢 Daftar anime berubah, reset watch count.");
-        resetWatchCounts();
+        console.log("📢 Daftar anime berubah.");
       }
 
       await loadServerWatchCounts();
@@ -32,30 +29,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       animeData.sort((a, b) => b.watchCount - a.watchCount);
 
       populateGenreOptions(animeData);
-      displayNewlyAddedAnime(animeData);  // urut release date
-      displayAnime(animeData);            // urut watch count
+      displayNewlyAddedAnime(animeData);
+      displayAnime(animeData);
     })
     .catch((error) => console.error("Error fetching data:", error));
-
-    async function checkForAnimeChanges() {
-      try {
-        const res = await fetch("/commit-hash.json");
-        if (!res.ok) throw new Error("File tidak ditemukan");
-    
-        const data = await res.json();
-        const currentHash = data.hash;
-    
-        const lastHash = localStorage.getItem("lastCommitHash");
-    
-        if (lastHash !== currentHash) {
-          console.log("🚨 Commit hash berubah, reset watch count...");
-          resetWatchCounts();
-          localStorage.setItem("lastCommitHash", currentHash);
-        }
-      } catch (err) {
-        console.warn("⚠️ Lewatkan pengecekan commit hash (tidak ditemukan atau rusak):", err.message);
-      }
-    }
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
@@ -104,17 +81,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
-  
-    // ✅ Perubahan mulai di sini
+
     animeCard.addEventListener("click", async () => {
-      anime.watchCount = (anime.watchCount || 0) + 1;         // Tambah lokal
-      await increaseWatchCount(anime.id);                      // Kirim ke server
-      window.location.href = `anime.html?id=${anime.id}`;      // Redirect
+      anime.watchCount = (anime.watchCount || 0) + 1;
+      await increaseWatchCount(anime.id);
+      window.location.href = `anime.html?id=${anime.id}`;
     });
-  
+
     return animeCard;
   }
-  
 
   async function loadServerWatchCounts() {
     for (let anime of animeData) {
@@ -143,22 +118,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       method: "POST",
       body: JSON.stringify({ animeId }),
     });
-  }
-
-  function resetWatchCounts() {
-    fetch("https://lingering-union-0acf.bilariko2.workers.dev/api/reset-watch", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log("✅ Reset watch count berhasil:", data);
-      })
-      .catch(error => {
-        console.error("❌ Gagal reset watch count:", error);
-      });
   }
 
   function populateGenreOptions(animes) {
@@ -210,4 +169,3 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayAnime(filteredAnime);
   }
 });
-
