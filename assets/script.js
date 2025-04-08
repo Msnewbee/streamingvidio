@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   const newAnimeContainer = document.getElementById("new-anime-list");
 
   let animeData = [];
-
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
   fetchAnimeList()
@@ -25,16 +24,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       await loadServerWatchCounts();
 
-      // Resort ulang jika barusan ada anime yang diklik
-      const lastWatchedAnimeId = localStorage.getItem("lastWatchedAnimeId");
-      if (lastWatchedAnimeId) {
-        localStorage.removeItem("lastWatchedAnimeId");
-        animeData.sort((a, b) => b.watchCount - a.watchCount);
-      }
-
+      // Simpan data genre
       populateGenreOptions(animeData);
+
+      // Tampilkan anime terbaru
       displayNewlyAddedAnime(animeData);
-      displayAnime(animeData);
+
+      // Tampilkan anime berdasarkan klik terbanyak
+      const sortedByWatch = [...animeData].sort((a, b) => b.watchCount - a.watchCount);
+      displayAnime(sortedByWatch);
     })
     .catch((error) => console.error("Error fetching data:", error));
 
