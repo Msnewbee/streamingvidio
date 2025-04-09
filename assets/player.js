@@ -78,20 +78,32 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Tampilkan daftar episode
-    const episodeListDiv = document.getElementById("episode-list");
-    if (episodeListDiv) {
-        episodeListDiv.innerHTML = '';
-        anime.episodes.forEach(ep => {
-            const epLink = document.createElement('a');
-            epLink.href = `player.html?id=${animeId}&episode=${ep.episode}`;
-            epLink.textContent = `Episode ${ep.episode}`;
-            epLink.classList.add("episode-link", "player-style-link");
-            if (parseInt(ep.episode) === episodeNumber) {
-                epLink.classList.add("active");
-            }
-            episodeListDiv.appendChild(epLink);
-        });
-    }
+// Tampilkan daftar episode bergaya seperti Animasu
+const episodeListDiv = document.getElementById("episode-list");
+if (episodeListDiv) {
+    episodeListDiv.innerHTML = '';
+
+    anime.episodes.forEach(ep => {
+        const episodeRow = document.createElement('div');
+        episodeRow.className = 'episode-row';
+
+        const label = document.createElement('span');
+        label.className = 'episode-label';
+        label.textContent = `Episode ${ep.episode}`;
+
+        const watchBtn = document.createElement('a');
+        watchBtn.className = 'watch-button';
+        watchBtn.href = `player.html?id=${animeId}&episode=${ep.episode}`;
+        watchBtn.textContent = '▶ Tonton';
+
+        if (parseInt(ep.episode) === episodeNumber) {
+            watchBtn.classList.add('active');
+        }
+
+        episodeRow.appendChild(label);
+        episodeRow.appendChild(watchBtn);
+        episodeListDiv.appendChild(episodeRow);
+    });
+}
 });
 
