@@ -340,12 +340,12 @@ button:focus-visible {
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 90%; /* Sedikit diperkecil dari 100% */
-    margin: 0 auto; /* Tengahin kontainer */
+    max-width: 85%; /* Lebih ramping */
+    margin: 20px auto; /* Tengah + spasi */
     background-color: #000;
-    border: 4px solid #333; /* Frame */
-    border-radius: 10px; /* Sudut melengkung */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .embed-container iframe {
@@ -354,26 +354,25 @@ button:focus-visible {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Tidak perlu border di dalam iframe */
+    border: none;
     border-radius: 6px;
 }
 
-/* Responsif tambahan untuk layar kecil (HP) */
 @media (max-width: 480px) {
     .embed-container {
-        padding-bottom: 70%; /* Lebih tinggi sedikit */
+        padding-bottom: 65%;
         max-width: 95%;
         border-width: 2px;
     }
 }
 
-/* Untuk layar sangat lebar (TV/monitor 2K+) */
 @media (min-width: 1920px) {
     .embed-container {
-        padding-bottom: 42%; /* Lebih rendah agar tidak terlalu tinggi */
-        max-width: 75%;
+        padding-bottom: 42%;
+        max-width: 65%; /* Lebih kecil di layar besar */
     }
 }
+
 
 
 /* Episode List & Navigation */
