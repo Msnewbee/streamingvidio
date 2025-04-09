@@ -337,11 +337,15 @@ button:focus-visible {
 
 .embed-container {
     position: relative;
-    padding-bottom: 56.25%; /* Default 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 90%; /* Sedikit diperkecil dari 100% */
+    margin: 0 auto; /* Tengahin kontainer */
     background-color: #000;
+    border: 4px solid #333; /* Frame */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Efek bayangan */
 }
 
 .embed-container iframe {
@@ -350,19 +354,24 @@ button:focus-visible {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: none; /* Tidak perlu border di dalam iframe */
+    border-radius: 6px;
 }
 
-/* Responsif tambahan untuk perangkat dengan rasio ekstrem */
+/* Responsif tambahan untuk layar kecil (HP) */
 @media (max-width: 480px) {
     .embed-container {
-        padding-bottom: 75%; /* Untuk layar HP tinggi (4:3-ish) */
+        padding-bottom: 70%; /* Lebih tinggi sedikit */
+        max-width: 95%;
+        border-width: 2px;
     }
 }
 
+/* Untuk layar sangat lebar (TV/monitor 2K+) */
 @media (min-width: 1920px) {
     .embed-container {
-        padding-bottom: 45%; /* Untuk layar lebar seperti TV */
+        padding-bottom: 42%; /* Lebih rendah agar tidak terlalu tinggi */
+        max-width: 75%;
     }
 }
 
