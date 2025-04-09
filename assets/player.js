@@ -93,17 +93,5 @@ document.addEventListener("DOMContentLoaded", async () => {
             episodeListDiv.appendChild(epLink);
         });
     }
-
-    // Aktifkan iklan setelah beberapa detik
-    setTimeout(() => {
-        const ad1 = document.getElementById("ad-multiplex");
-        const ad2 = document.getElementById("ad-vinyet");
-        if (ad1) ad1.style.visibility = "visible";
-        if (ad2) ad2.style.visibility = "visible";
-        if (window.adsbygoogle) {
-            window.adsbygoogle.push({});
-            window.adsbygoogle.push({});
-        }
-    }, 3000);
 });
 
