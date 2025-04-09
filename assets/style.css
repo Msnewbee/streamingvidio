@@ -337,15 +337,15 @@ button:focus-visible {
 
 .embed-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 50%; /* Lebih ramping dari 56.25% */
     height: 0;
     overflow: hidden;
-    max-width: 85%; /* Lebih ramping */
-    margin: 20px auto; /* Tengah + spasi */
+    max-width: 800px; /* Batas lebar player */
+    margin: 20px auto; /* Tengah + ada jarak */
     background-color: #000;
     border: 3px solid #333;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .embed-container iframe {
@@ -358,22 +358,21 @@ button:focus-visible {
     border-radius: 6px;
 }
 
-@media (max-width: 480px) {
+/* Mobile Responsive */
+@media (max-width: 768px) {
     .embed-container {
         padding-bottom: 65%;
         max-width: 95%;
-        border-width: 2px;
     }
 }
 
+/* TV / Monitor Lebar */
 @media (min-width: 1920px) {
     .embed-container {
-        padding-bottom: 42%;
-        max-width: 65%; /* Lebih kecil di layar besar */
+        padding-bottom: 38%;
+        max-width: 60%;
     }
 }
-
-
 
 /* Episode List & Navigation */
 .episode-list {
