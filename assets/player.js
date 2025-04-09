@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const animeList = await fetchAnimeList();
-    const anime = animeList.find(a => a.id === animeId);
+    const anime = animeList.find(a => String(a.id) === animeId);
 
     if (!anime) {
         alert("Anime tidak ditemukan.");
