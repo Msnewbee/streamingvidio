@@ -79,20 +79,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 // Tampilkan daftar episode bergaya seperti Animasu
-const episodeListDiv = document.getElementById("episode-list");
+const episodeListDiv = document.getElementById("player-episode-list");
 if (episodeListDiv) {
     episodeListDiv.innerHTML = '';
 
     anime.episodes.forEach(ep => {
         const episodeRow = document.createElement("div");
-        episodeRow.classList.add("episode-row");
+        episodeRow.classList.add("player-episode-card");
     
         const label = document.createElement("div");
-        label.classList.add("episode-label");
+        label.classList.add("player-episode-label");
         label.textContent = `Episode ${ep.episode}`;
     
         const button = document.createElement("a");
-        button.classList.add("watch-button");
+        button.classList.add("player-watch-button");
         button.href = `player.html?id=${animeId}&episode=${ep.episode}`;
         button.textContent = "Tonton";
     
