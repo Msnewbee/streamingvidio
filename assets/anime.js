@@ -119,7 +119,6 @@ function navigateEpisode(direction) {
     });
 }
 
-// Fungsi untuk memutar episode
 function playEpisode(url, episode, animeId, mirrors = []) {
     const iframePlayer = document.getElementById('anime-embed');
 
@@ -128,7 +127,27 @@ function playEpisode(url, episode, animeId, mirrors = []) {
         return;
     }
 
-    iframePlayer.src = url;
+    // Lazy load: assign src hanya jika iframe dalam viewport
+    const loadIframe = () => {
+        if (iframePlayer.src !== url) {
+            iframePlayer.src = url;
+        }
+    };
+
+    // Check apakah iframe sudah visible di viewport
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadIframe();
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '100px' });
+
+    iframePlayer.removeAttribute('src'); // reset dulu untuk memaksa reload
+    iframePlayer.dataset.src = url; // simpan URL
+    observer.observe(iframePlayer);
+
     updateUrlWithEpisode(animeId, episode);
 
     const episodeButtons = document.querySelectorAll('.episode-item');
