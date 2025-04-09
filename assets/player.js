@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const epLink = document.createElement('a');
             epLink.href = `player.html?id=${animeId}&episode=${ep.episode}`;
             epLink.textContent = `Episode ${ep.episode}`;
-            epLink.classList.add("episode-link");
+            epLink.classList.add("episode-link", "player-style-link");
             if (parseInt(ep.episode) === episodeNumber) {
                 epLink.classList.add("active");
             }
