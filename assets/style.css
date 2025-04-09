@@ -9,6 +9,7 @@
 body {
     background-color: #111;
     color: #fff;
+    padding-bottom: 120px; /* agar tidak tertutup footer/sticky ads */
 }
 
 /* Header Styling */
@@ -56,6 +57,18 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #00bcd4;
+}
+
+/* Back Button (untuk link kembali) */
+.back-button {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #00bcd4;
+}
+.back-button:hover {
+    color: #008c9e;
 }
 
 /* Search Bar */
@@ -165,7 +178,7 @@ nav ul li a:hover {
     border: none;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Film Page */
 @media (max-width: 768px) {
     .film-item iframe {
         height: 300px;
@@ -244,7 +257,10 @@ nav ul li a:hover {
     transition: 0.3s ease;
 }
 
-#search-anime:focus, #sort-anime:focus {
+#search-anime:focus,
+#sort-anime:focus,
+input:focus-visible,
+button:focus-visible {
     border: 2px solid #6c63ff;
     box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
 }
@@ -326,22 +342,22 @@ nav ul li a:hover {
     overflow: hidden;
     max-width: 100%;
     background-color: #000;
-  }
-  
-  .embed-container iframe {
+}
+
+.embed-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
+}
 
+/* Episode List & Navigation */
 .episode-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
-    max-height: 300px; /* bisa kamu sesuaikan */
+    max-height: 300px;
     overflow-y: auto;
     padding-right: 10px;
     border: 1px solid #ddd;
@@ -349,7 +365,7 @@ nav ul li a:hover {
     background-color: #fff;
 }
 
-/* Kotak Episode */
+/* Styling untuk setiap kotak episode */
 .episode-item {
     background-color: #f2f2f2;
     border: 1px solid #ccc;
@@ -383,20 +399,17 @@ nav ul li a:hover {
     }
 }
 
-
 .episode-list p {
     font-style: italic;
     color: #777;
     animation: pulse 1.5s infinite ease-in-out;
 }
 
+/* Animasi Pulse */
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
-
-
 
 /* Episode Navigation */
 .episode-navigation {
@@ -421,7 +434,7 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Player */
 @media (max-width: 768px) {
     .embed-container {
         height: 400px;
@@ -434,71 +447,89 @@ nav ul li a:hover {
     }
 }
 
-.close-ads {
-    position: absolute;
-    top: -15px;
-    right: 10px;
-    background: red;
+/* Perbaikan Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.page-btn {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 15px 25px;
+    margin: 5px;
+    font-size: 20px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-btn.active {
+    background-color: #28a745;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background: #222;
+    color: #f9f9f9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+footer a {
+    color: #f9f9f9;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-bottom: 80px;
+}
+
+/* Tombol Switch Server */
+#switch-server {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .anime-info {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    #anime-poster {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        margin: 0 auto;
-    }
-    
-    .anime-meta {
-        width: 100%;
-        padding: 15px;
-    }
-    
-    .anime-meta p {
-        font-size: 0.95em;
-    }
-    
-    
-    .episode-nav-btn, .fullscreen-button, #download-link {
-        padding: 10px 12px;
-        font-size: 15px;
-    }
+#switch-server:hover {
+    background-color: #218838;
 }
 
-@media (max-width: 480px) {
-    .video-container {
-        padding-bottom: 60%; /* Slightly taller for mobile */
-    }
-    
-    .episode-list {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    }
-    
-    .episode-item {
-        padding: 8px;
-        font-size: 12px;
-    }
-    
-
-/* Tambahkan ini untuk error handling */
+/* Error Handling */
 .error {
     color: #ff4444;
     padding: 20px;
@@ -515,7 +546,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Sticky ads responsive */
+/* Sticky Ads */
 .sticky-ads {
     position: fixed;
     bottom: 0;
@@ -540,86 +571,67 @@ nav ul li a:hover {
     }
 }
 
-/* Perbaikan Pagination */
-.pagination-container {
+/* Advertisement Container */
+.ad-container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Contact Page Container */
+.contact-container {
+    padding: 20px;
+    background: #1a1a1a;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.contact-container form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    position: relative;
-    z-index: 10; /* Pastikan tidak tertutup elemen lain */
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Perbaikan Tombol Pagination */
-.page-btn {
-    background-color: #007bff;
-    color: white;
+.contact-container input,
+.contact-container textarea {
+    padding: 10px;
+    border-radius: 5px;
     border: none;
-    padding: 15px 25px; /* Perbesar tombol */
-    margin: 5px;
-    font-size: 20px; /* Perbesar teks tombol */
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.page-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
-
-.page-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.page-btn.active {
-    background-color: #28a745; /* Hijau untuk halaman aktif */
-    font-weight: bold;
-}
-
-/* Pastikan footer tidak menutupi konten */
-main {
-    margin-bottom: 80px; /* Tambahkan ruang agar pagination tidak tertutup footer */
-}
-
-#switch-server {
-    background-color: #28a745;
-    border: none;
+    outline: none;
+    background: #333;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
+}
+
+.contact-container button {
+    padding: 10px;
+    background: #007bff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 10px 0;
+    color: #fff;
+    transition: background 0.3s;
 }
 
-#switch-server:hover {
-    background-color: #218838;
+.contact-container button:hover {
+    background: #0056b3;
 }
 
+/* ========== MEDIA QUERIES KHUSUS ========== */
 
-/* Perbaikan untuk footer */
-footer {
-    text-align: center;
-    padding: 15px 10px;
-    background: #222;
-    color: #f9f9f9;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-    z-index: 1000;
-}
-
-footer a {
-    color: #f9f9f9;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
+/* Responsive Optimizations */
+@media (max-width: 480px) {
+    .video-container {
+        padding-bottom: 60%; /* Slightly taller for mobile */
+    }
+    
+    .episode-list {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .episode-item {
+        padding: 8px;
+        font-size: 12px;
+    }
+}  /* <-- Menutup media query max-width:480px */
