@@ -28,7 +28,6 @@ export async function fetchAnimeList() {
 export async function loadAnimeDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
-    const episodeParam = urlParams.get('episode');
 
     const animeList = await fetchAnimeList();
     const anime = animeList.find(a => a.id == animeId);
@@ -40,15 +39,6 @@ export async function loadAnimeDetail() {
 
     updateAnimeDetails(anime);
     populateEpisodeList(anime);
-
-    if (episodeParam) {
-        const selectedEpisode = anime.episodes.find(ep => parseInt(ep.episode) === parseInt(episodeParam));
-        if (selectedEpisode) {
-            playEpisode(selectedEpisode.url, selectedEpisode.episode, anime.id, selectedEpisode.mirrors || []);
-        } else {
-            alert('Episode tidak ditemukan!');
-        }
-    }
 }
 
 // Fungsi untuk memperbarui tampilan detail anime
@@ -83,88 +73,12 @@ function populateEpisodeList(anime) {
     }
 
     anime.episodes.forEach((ep) => {
-        const episodeButton = document.createElement('button');
+        const episodeButton = document.createElement('a');
         episodeButton.textContent = `Episode ${ep.episode}`;
         episodeButton.classList.add("episode-item");
-        episodeButton.dataset.episode = ep.episode;
-
-        episodeButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            playEpisode(ep.url, ep.episode, anime.id, ep.mirrors || []);
-            updateUrlWithEpisode(anime.id, ep.episode);
-        });
-
+        episodeButton.href = `player.html?id=${anime.id}&episode=${ep.episode}`;
         episodeList.appendChild(episodeButton);
     });
-}
-
-// Fungsi untuk navigasi episode (sebelum/sesudah)
-function navigateEpisode(direction) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const animeId = urlParams.get('id');
-    let currentEpisode = parseInt(urlParams.get('episode')) || 1;
-
-    fetchAnimeList().then(animeList => {
-        const anime = animeList.find(a => a.id == animeId);
-        if (!anime) return;
-
-        const episodeIndex = anime.episodes.findIndex(ep => parseInt(ep.episode) === currentEpisode);
-        const newIndex = episodeIndex + direction;
-
-        if (newIndex >= 0 && newIndex < anime.episodes.length) {
-            const newEpisode = anime.episodes[newIndex];
-            updateUrlWithEpisode(animeId, newEpisode.episode);
-            playEpisode(newEpisode.url, newEpisode.episode, animeId, newEpisode.mirrors || []);
-        }
-    });
-}
-
-function playEpisode(url, episode, animeId, mirrors = []) {
-    const iframePlayer = document.getElementById('anime-embed');
-
-    if (!iframePlayer) {
-        console.error('Elemen #anime-embed tidak ditemukan');
-        return;
-    }
-
-    // Lazy load: assign src hanya jika iframe dalam viewport
-    const loadIframe = () => {
-        if (iframePlayer.src !== url) {
-            iframePlayer.src = url;
-        }
-    };
-
-    // Check apakah iframe sudah visible di viewport
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                loadIframe();
-                obs.unobserve(entry.target);
-            }
-        });
-    }, { rootMargin: '100px' });
-
-    iframePlayer.removeAttribute('src'); // reset dulu untuk memaksa reload
-    iframePlayer.dataset.src = url; // simpan URL
-    observer.observe(iframePlayer);
-
-    updateUrlWithEpisode(animeId, episode);
-
-    const episodeButtons = document.querySelectorAll('.episode-item');
-    episodeButtons.forEach(btn => {
-        if (parseInt(btn.dataset.episode) === parseInt(episode)) {
-            btn.classList.add('active-episode');
-        } else {
-            btn.classList.remove('active-episode');
-        }
-    });
-}
-
-// Fungsi untuk memperbarui URL dengan episode terpilih
-function updateUrlWithEpisode(animeId, episode) {
-    const newUrl = new URL(window.location.href);
-    newUrl.searchParams.set('episode', episode);
-    window.history.pushState(null, '', newUrl.toString());
 }
 
 // Saat tombol back/forward ditekan di browser
@@ -174,14 +88,7 @@ window.addEventListener('popstate', () => {
 
 // Event listener saat DOM siap
 document.addEventListener("DOMContentLoaded", () => {
-    const prevEpisodeBtn = document.getElementById('prev-episode');
-    const nextEpisodeBtn = document.getElementById('next-episode');
-
-    if (prevEpisodeBtn) prevEpisodeBtn.addEventListener('click', () => navigateEpisode(-1));
-    if (nextEpisodeBtn) nextEpisodeBtn.addEventListener('click', () => navigateEpisode(1));
-
     if (document.getElementById('anime-title')) {
         loadAnimeDetail();
     }
 });
-
