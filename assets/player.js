@@ -84,24 +84,24 @@ if (episodeListDiv) {
     episodeListDiv.innerHTML = '';
 
     anime.episodes.forEach(ep => {
-        const episodeRow = document.createElement('div');
-        episodeRow.className = 'episode-row';
-
-        const label = document.createElement('span');
-        label.className = 'episode-label';
+        const episodeRow = document.createElement("div");
+        episodeRow.classList.add("episode-row");
+    
+        const label = document.createElement("div");
+        label.classList.add("episode-label");
         label.textContent = `Episode ${ep.episode}`;
-
-        const watchBtn = document.createElement('a');
-        watchBtn.className = 'watch-button';
-        watchBtn.href = `player.html?id=${animeId}&episode=${ep.episode}`;
-        watchBtn.textContent = '▶ Tonton';
-
+    
+        const button = document.createElement("a");
+        button.classList.add("watch-button");
+        button.href = `player.html?id=${animeId}&episode=${ep.episode}`;
+        button.textContent = "Tonton";
+    
         if (parseInt(ep.episode) === episodeNumber) {
-            watchBtn.classList.add('active');
+            button.classList.add("active");
         }
-
+    
         episodeRow.appendChild(label);
-        episodeRow.appendChild(watchBtn);
+        episodeRow.appendChild(button);
         episodeListDiv.appendChild(episodeRow);
     });
 }
