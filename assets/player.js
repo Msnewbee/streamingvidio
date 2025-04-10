@@ -78,32 +78,40 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-// Tampilkan daftar episode bergaya seperti Animasu
-const episodeListDiv = document.getElementById("player-episode-list");
-if (episodeListDiv) {
-    episodeListDiv.innerHTML = '';
+    // Tampilkan daftar episode - gaya Animasu + support TV
+    const episodeListDiv = document.getElementById("player-episode-list");
+    if (episodeListDiv) {
+        episodeListDiv.innerHTML = '';
 
-    anime.episodes.forEach(ep => {
-        const episodeRow = document.createElement("div");
-        episodeRow.classList.add("player-episode-card");
-    
-        const label = document.createElement("div");
-        label.classList.add("player-episode-label");
-        label.textContent = `Episode ${ep.episode}`;
-    
-        const button = document.createElement("a");
-        button.classList.add("player-watch-button");
-        button.href = `player.html?id=${animeId}&episode=${ep.episode}`;
-        button.textContent = "Tonton";
-    
-        if (parseInt(ep.episode) === episodeNumber) {
-            button.classList.add("active");
-        }
-    
-        episodeRow.appendChild(label);
-        episodeRow.appendChild(button);
-        episodeListDiv.appendChild(episodeRow);
-    });
-}
+        anime.episodes.forEach(ep => {
+            const episodeRow = document.createElement("div");
+            episodeRow.classList.add("player-episode-card");
+
+            const label = document.createElement("div");
+            label.classList.add("player-episode-label");
+            label.textContent = `Episode ${ep.episode}`;
+
+            const button = document.createElement("a");
+            button.classList.add("player-watch-button");
+            button.href = `player.html?id=${animeId}&episode=${ep.episode}`;
+            button.textContent = "Tonton";
+            button.setAttribute("tabindex", "0"); // TV remote support
+
+            if (parseInt(ep.episode) === episodeNumber) {
+                button.classList.add("active");
+
+                // Fokus dan scroll otomatis ke tombol aktif
+                setTimeout(() => {
+                    button.focus();
+                    button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            }
+
+            episodeRow.appendChild(label);
+            episodeRow.appendChild(button);
+            episodeListDiv.appendChild(episodeRow);
+        });
+    }
 });
+
 
