@@ -100,18 +100,23 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (parseInt(ep.episode) === episodeNumber) {
                 button.classList.add("active");
             
-                // Scroll ke iframe video
                 setTimeout(() => {
+                    // 1. Scroll daftar episode agar tombol aktif muncul di atas
+                    const container = document.getElementById("player-episode-list");
+                    if (container) {
+                        const offsetTop = button.offsetTop;
+                        container.scrollTo({
+                            top: offsetTop - 10,
+                            behavior: 'smooth'
+                        });
+                    }
+            
+                    // 2. Scroll ke iframe video agar langsung terlihat
                     const iframe = document.getElementById("anime-embed");
                     if (iframe) {
                         iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // Optional: iframe.focus(); // aktifkan jika iframe bisa difokuskan di TV
                     }
-            
-                    // Scroll ke episode aktif di daftar, posisikan di atas
-                    button.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-                    // Fokus ke tombol episode aktif (opsional untuk remote TV)
-                    button.focus();
                 }, 300);
             }
 
