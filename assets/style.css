@@ -337,21 +337,18 @@ button:focus-visible {
 
 .embed-container {
     position: relative;
-    padding-bottom: 50%; /* Lebih ramping dari 56.25% */
-    height: 0;
-    overflow: hidden;
-    max-width: 800px; /* Batas lebar player */
-    margin: 20px auto; /* Tengah + ada jarak */
+    width: 90%;
+    max-width: 720px; /* Player tidak melebihi 720px */
+    aspect-ratio: 16 / 9; /* Modern rasio 16:9 */
+    margin: 20px auto;
     background-color: #000;
     border: 3px solid #333;
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
 .embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: none;
