@@ -99,11 +99,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (parseInt(ep.episode) === episodeNumber) {
                 button.classList.add("active");
-
-                // Fokus dan scroll otomatis ke tombol aktif
+            
+                // Fokus dan scroll otomatis ke iframe video
                 setTimeout(() => {
-                    button.focus();
-                    button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    const iframe = document.getElementById("anime-embed");
+                    if (iframe) {
+                        iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        iframe.focus(); // Opsional, hanya jika iframe bisa difokuskan di TV
+                    }
                 }, 300);
             }
 
