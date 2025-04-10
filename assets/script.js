@@ -10,31 +10,39 @@ document.addEventListener("DOMContentLoaded", async function () {
   let animeData = [];
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
 
+  animeListContainer.innerHTML = "<p>Memuat daftar anime...</p>";
+
   fetchAnimeList()
     .then(async (data) => {
       animeData = data;
 
       const newAnimeIds = animeData.map(anime => anime.id);
       const isAnimeListUpdated = JSON.stringify(previousAnimeIds) !== JSON.stringify(newAnimeIds);
-
       if (isAnimeListUpdated) {
         localStorage.setItem("previousAnimeIds", JSON.stringify(newAnimeIds));
         console.log("📢 Daftar anime berubah.");
       }
 
-      await loadServerWatchCounts();
+      // Tampilkan anime SEBELUM fetch watch count (biar gak lambat)
+      displayAnime(animeData);
 
-      // Simpan data genre
-      populateGenreOptions(animeData);
-
-      // Tampilkan anime terbaru
+      // Tampilkan anime terbaru (tanpa delay)
       displayNewlyAddedAnime(animeData);
 
-      // Tampilkan anime berdasarkan klik terbanyak
+      // Isi dropdown genre
+      populateGenreOptions(animeData);
+
+      // Ambil dan update watch count
+      await loadServerWatchCounts();
+
+      // Resort berdasarkan watchCount
       const sortedByWatch = [...animeData].sort((a, b) => b.watchCount - a.watchCount);
       displayAnime(sortedByWatch);
     })
-    .catch((error) => console.error("Error fetching data:", error));
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+      animeListContainer.innerHTML = "<p>Gagal memuat data anime.</p>";
+    });
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
@@ -46,29 +54,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function displayNewlyAddedAnime(animes) {
     if (!newAnimeContainer) {
-      console.error("Element with ID 'new-anime-list' not found.");
+      console.error("Element dengan ID 'new-anime-list' tidak ditemukan.");
       return;
     }
 
-    newAnimeContainer.innerHTML = "<p>Loading...</p>";
+    newAnimeContainer.innerHTML = "";
 
-    setTimeout(() => {
-      if (searchInput.value || sortSelect.value || genreSelect.value) {
-        newAnimeContainer.innerHTML = "";
-        return;
-      }
+    const latestAnimes = [...animes]
+      .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
+      .slice(0, 12);
 
-      newAnimeContainer.innerHTML = "";
-
-      const latestAnimes = [...animes]
-        .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
-        .slice(0, 12);
-
-      latestAnimes.forEach((anime) => {
-        const animeCard = createAnimeCard(anime);
-        newAnimeContainer.appendChild(animeCard);
-      });
-    }, 500);
+    latestAnimes.forEach((anime) => {
+      const animeCard = createAnimeCard(anime);
+      newAnimeContainer.appendChild(animeCard);
+    });
   }
 
   function createAnimeCard(anime) {
@@ -85,16 +84,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     `;
 
     animeCard.addEventListener("click", async () => {
-      // Update watch count lokal
       anime.watchCount = (anime.watchCount || 0) + 1;
-
-      // Kirim ke server
       await increaseWatchCount(anime.id);
-
-      // Simpan ke localStorage agar bisa resort pas balik
       localStorage.setItem("lastWatchedAnimeId", anime.id);
-
-      // Redirect ke halaman detail
       window.location.href = `anime.html?id=${anime.id}`;
     });
 
@@ -102,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   async function loadServerWatchCounts() {
-    for (let anime of animeData) {
+    await Promise.all(animeData.map(async (anime) => {
       try {
         const count = await getWatchCount(anime.id);
         anime.watchCount = count;
@@ -110,7 +102,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error(`Gagal mengambil watch count untuk ${anime.id}:`, err);
         anime.watchCount = 0;
       }
-    }
+    }));
   }
 
   async function getWatchCount(id) {
@@ -119,21 +111,17 @@ document.addEventListener("DOMContentLoaded", async function () {
       const data = await response.json();
       return data.count || 0;
     } catch (error) {
-      console.error(`Gagal mengambil watch count untuk ${id}:`, error);
       return 0;
     }
   }
-  
+
   function increaseWatchCount(animeId) {
     return fetch("https://lingering-union-0acf.bilariko2.workers.dev/api/increase-watch", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ animeId })
     });
   }
-  
 
   function populateGenreOptions(animes) {
     const genres = new Set();
@@ -184,3 +172,4 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayAnime(filteredAnime);
   }
 });
+
