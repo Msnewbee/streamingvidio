@@ -23,19 +23,19 @@ window.loadFilms = function () {
     const films = [
         {
             title: "Langkah kaka membantu adiknya",
-            embed: "https://terabox.com/sharing/embed?surl=oEY8jxE4Tv0pJaz6d_2oYQ&resolution=1080&autoplay=true&mute=false"
+            embed: ""
         },
         {
             title: "Mengintip kaka bermain di kamar mandi",
-            embed: "https://terabox.com/sharing/embed?surl=8eNwlybnhiOoLzAC__1MGw&resolution=1080&autoplay=true&mute=false"
+            embed: ""
         },
         {
             title: "Dinda bermain dengan bantal",
-            embed: "https://terabox.com/sharing/embed?surl=355FHPJlwRhisnF8keIbjg&resolution=360&autoplay=true&mute=false"
+            embed: ""
         },
         {
             title: "Ibu Rere bermain dengan botol besar",
-            embed: "https://terabox.com/sharing/embed?surl=OcKoQEy8pG5vTiLMr2WCMg&resolution=1080&autoplay=true&mute=false"
+            embed: ""
         }
     ];
 
