@@ -22,21 +22,10 @@ window.verifyAge = function () {
 window.loadFilms = function () {
     const films = [
         {
-            title: "Langkah kaka membantu adiknya",
-            embed: ""
-        },
-        {
-            title: "Mengintip kaka bermain di kamar mandi",
-            embed: ""
-        },
-        {
-            title: "Dinda bermain dengan bantal",
-            embed: ""
-        },
-        {
-            title: "Ibu Rere bermain dengan botol besar",
+            title: "Langkah",
             embed: ""
         }
+        
     ];
 
     const filmList = document.getElementById('film-list');
