@@ -1,7 +1,30 @@
 import { fetchAnimeList } from "./anime.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  // Konfigurasi untuk pencarian anime
+  // Variabel global untuk menyimpan token Google setelah login
+  let googleUserToken = null;
+
+  // --- Inisialisasi Google Identity Services ---
+  function handleCredentialResponse(response) {
+    googleUserToken = response.credential;
+    console.log("Login berhasil! Token:", googleUserToken);
+    // Setelah login, sembunyikan tombol sign in dan tampilkan form komentar
+    document.getElementById("g-signin-container").style.display = "none";
+    document.getElementById("comment-form").style.display = "block";
+  }
+
+  // Konfigurasi dan render tombol Google Sign In
+  google.accounts.id.initialize({
+    client_id: 'YOUR_GOOGLE_CLIENT_ID', // Ganti dengan Client ID Google Anda
+    callback: handleCredentialResponse
+  });
+  google.accounts.id.renderButton(
+    document.getElementById("g-signin-container"),
+    { theme: "outline", size: "large" }
+  );
+  google.accounts.id.prompt();
+
+  // --- Kode untuk memuat data anime ---
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
   const genreSelect = document.getElementById("genre-anime");
@@ -24,10 +47,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log("📢 Daftar anime berubah.");
       }
 
-      // Tampilkan anime SEBELUM fetch watch count
+      // Tampilkan anime awal
       displayAnime(animeData);
 
-      // Tampilkan anime terbaru (tanpa delay)
+      // Tampilkan anime terbaru
       displayNewlyAddedAnime(animeData);
 
       // Isi dropdown genre
@@ -36,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Ambil dan update watch count
       await loadServerWatchCounts();
 
-      // Resort berdasarkan watchCount
+      // Tampilkan ulang anime yang telah diurutkan berdasarkan watch count
       const sortedByWatch = [...animeData].sort((a, b) => b.watchCount - a.watchCount);
       displayAnime(sortedByWatch);
     })
@@ -166,20 +189,49 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayAnime(filteredAnime);
   }
 
-  // Fungsi Komentar Pengunjung
-  window.submitComment = function() {
+  // --- Fungsi Komentar Pengunjung ---
+  window.submitComment = async function() {
+    // Pastikan pengguna sudah login dengan Google
+    if (!googleUserToken) {
+      alert("Silakan login dengan akun Google Anda terlebih dahulu.");
+      return;
+    }
     const name = document.getElementById('visitor-name').value.trim();
     const comment = document.getElementById('visitor-comment').value.trim();
     if (!name || !comment) {
       alert("Nama dan komentar wajib diisi!");
       return;
     }
-    const commentBox = document.createElement('div');
-    commentBox.className = 'comment';
-    commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
-    document.getElementById('comment-list').prepend(commentBox);
-    // Reset form komentar
-    document.getElementById('visitor-name').value = '';
-    document.getElementById('visitor-comment').value = '';
+    const commentData = {
+      name,
+      comment,
+      token: googleUserToken, // Sertakan token Google untuk verifikasi di server
+      timestamp: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch('https://lingering-union-0acf.bilariko2.workers.dev/api/submit-comment', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(commentData)
+      });
+      if (response.ok) {
+        // Tambahkan komentar ke daftar komentar pada DOM
+        const commentBox = document.createElement('div');
+        commentBox.className = 'comment';
+        commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+        document.getElementById('comment-list').prepend(commentBox);
+        // Reset form komentar
+        document.getElementById('visitor-name').value = '';
+        document.getElementById('visitor-comment').value = '';
+        alert("Komentar berhasil dikirim!");
+      } else {
+        alert("Gagal mengirim komentar ke server.");
+      }
+    } catch (err) {
+      console.error("Error submitting comment:", err);
+      alert("Terjadi kesalahan saat mengirim komentar.");
+    }
   };
 });
+
