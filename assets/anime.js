@@ -3,7 +3,6 @@ export async function fetchAnimeList() {
     try {
       const urls = [
         { path: './Anime/One_piece.json', label: 'One_piece.json' },
-        { path: './Anime/anime-list.json', label: 'anime-list.json' },
         { path: './Anime/bleach.json', label: 'bleach.json' },
         { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
         { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
@@ -18,7 +17,14 @@ export async function fetchAnimeList() {
         { path: './Anime/Tensei_Shitara_Slime_Datta_Ken.json', label: 'Tensei_Shitara_Slime_Datta_Ken.json' },
         { path: './Anime/Classroom_of_the_Elite.json', label: 'Classroom_of_the_Elite.json' },
         { path: './Anime/fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta.json', label: 'fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta.json' },
-        { path: './Anime/Kusuriya_no_Hitorigoto.json', label: 'Kusuriya_no_Hitorigoto.json' }
+        { path: './Anime/Kusuriya_no_Hitorigoto.json', label: 'Kusuriya_no_Hitorigoto.json' },
+        { path: './Anime/Fire_Force.json', label: 'Fire_Force.json' },
+        { path: './Anime/my_deer_friend_nokotan.json', label: 'my_deer_friend_nokotan.json' },
+        { path: './Anime/Dungeon_Meshi.json', label: 'Dungeon_Meshi.json' },
+        { path: './Anime/Farmagia.json', label: 'Farmagia.json' },
+        { path: './Anime/sousei_no_aquarion_myth_of_emotions.json', label: 'sousei_no_aquarion_myth_of_emotions.json' },
+        { path: './Anime/Unnamed_Memory.json', label: 'Unnamed_Memory.json' },
+        { path: './Anime/Ao_no_Exorcist.json', label: 'Ao_no_Exorcist.json' }
 
       ];
   

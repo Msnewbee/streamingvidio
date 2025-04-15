@@ -42,5 +42,37 @@
           { "episode": 23, "url": "https://pixeldrain.com/api/file/YaowDLVa" },
           { "episode": 24, "url": "https://pixeldrain.com/api/file/yiCrzRke" }
         ]
+      },
+      {
+        "id": 37,
+        "title": "Kusuriya no Hitorigoto 2nd Season",
+        "folder": "kusuriya_no_hitorigoto_2nd_season",
+        "image": "kusuriya_no_hitorigoto_2nd_season.jpg",
+        "japanese_title": "薬屋のひとりごと 第2期",
+        "score": 8.6,
+        "producers": ["TOHO animation STUDIO", "OLM"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 24,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-01-10",
+        "studio": "TOHO animation STUDIO, OLM",
+        "genre": ["Drama", "Misteri", "Romansa"],
+        "synopsis": "Musim Kedua dari Kusuriya no Hitorigoto.",
+        "trailer_url": "https://www.youtube.com/embed/6RWa03RbyOM?si=mkKbTzQ3fFvW-3oK",
+        "episodes": [
+          { "episode": 1, "url": "https://mega.nz/embed/WDJWVTaT#V5wBv09FzDFH56bDb6l-hXSeS1IcbvV4abSkmAkYBZk"  },
+          { "episode": 2, "url": "https://acefile.co/player/108306841" },
+          { "episode": 3, "url": "https://acefile.co/player/108373962" },
+          { "episode": 4, "url": "https://acefile.co/player/108442535" },
+          { "episode": 5, "url": "https://acefile.co/player/108508631" },
+          { "episode": 6, "url": "https://acefile.co/player/108571919" },
+          { "episode": 7, "url": "https://mega.nz/embed/WCR0wY5D#9ZkTcp3WZtS6aANhxpo4rjJCUbKhER8V37YQdWN1stI" },
+          { "episode": 8, "url": "https://mega.nz/embed/4ZB0BLiS#5VtXXSmcMGbTmmaVm-ClSHQlLLmTR3pNR2T0WDtFfgA" },
+          { "episode": 9, "url": "https://mega.nz/embed/jLhRQBDY#qb0iAj4VWl8e7yHuflN9usaGZalAY12rSsnISprJNR8" },
+          { "episode": 10, "url": "https://mega.nz/embed/xhpRHDhb#N_Wlft2o2_2NFT_QsHMHqtMePcphPmB6QbHNvoTOahI" },
+          { "episode": 11, "url": "https://mega.nz/embed/18AyUToQ#VRjMMlzCW-nYuRqUtIq-jk-cnTEmUXgjepBEQfIHnwI" },
+          { "episode": 12, "url": "https://mega.nz/embed/alpTQBJZ#fj-ManFZehFVSMLi3BgzjJpSdR0U6WModACc31xQDiA" }
+        ]
       }
 ]

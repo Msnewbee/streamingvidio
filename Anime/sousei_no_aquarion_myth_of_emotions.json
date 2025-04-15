@@ -1,0 +1,34 @@
+[
+    {
+        "id": 33,
+        "title": "Sousei no Aquarion: Myth of Emotions",
+        "folder": "sousei_no_aquarion_myth_of_emotions",
+        "image": "sousei_no_aquarion_myth_of_emotions.jpg",
+        "japanese_title": "想星のアクエリオン Myth of Emotions",
+        "score": 7.5,
+        "producers": ["Satelight", "Crunchyroll"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2025-01-10",
+        "studio": "Satelight",
+        "genre": ["Action", "Science Fiction", "Mecha"],
+        "synopsis": "Enoshima adalah pulau kecil yang terapung di Laut Shonan. Di pantainya yang indah dan tenang terdapat Akademi Swasta Enoshima. Sekolah ini mengumpulkan anak-anak berbakat dari seluruh negeri dan membekali mereka dengan pendidikan berbakat dengan menggunakan peralatan terbaru. Sakko, Rimiya, dan Toshi, yang telah terpilih sebagai siswa di kelas penguatan khusus “Elemen”, diperintahkan untuk mengemudikan “Mesin Vektor”, sebuah pesawat tempur yang ditenagai oleh kekuatan emosi, dan dipaksa untuk bertarung melawan makhluk misterius. senjata invasi “Mythical Beasts”. Anak laki-laki dan perempuan, yang terbebani dengan takdir mereka, akan berhadapan dengan kebenaran alam semesta saat organisasi misterius Space Egg Society dan niat orang dewasa bertemu.",
+        "trailer_url": "https://www.youtube.com/embed/T9zHdVOM7qE?si=fnegYiEwckHU7gFI",
+        "episodes": [
+          { "episode": 1, "url": "https://mega.nz/embed/emAxmD5Z#cUwAcxoDIzM8WioYKfKVC0osDI8yOidqU04JdHx20AM" },
+          { "episode": 2, "url": "https://mega.nz/embed/tkgklJiC#DS61nXNUkd99XIhivqficC-B6L0hp60kIJQ28pIMAuE" },
+          { "episode": 3, "url": "https://mega.nz/embed/p9pDxS4S#dExadWsSaji4PSIb4bLAmUT2Ny5daFDD2lcByO3lCSQ" },
+          { "episode": 4, "url": "https://mega.nz/embed/PUZFgDyY#aO4M0mOvH3Ypzedh5K-I1CYLlDBFcpIiey5IjOiJNXc" },
+          { "episode": 5, "url": "https://mega.nz/embed/yVhkjDqJ#WfCXpCs2XJqSe21suns7PkyPrXIX8wWyrDhjSKSA-zs" },
+          { "episode": 6, "url": "https://mega.nz/embed/yTYAhLyC#Ntkf3jJdvkZ15rU9YP0_CiPPIr9Ha5kPCCna7SEdMN0" },
+          { "episode": 7, "url": "https://mega.nz/embed/2CRVhR5S#fg2FtlVCU9V5lRulN3_lr2Q5HqMQrUBuJOOLIQRGYc0" },
+          { "episode": 8, "url": "https://mega.nz/embed/fjpERTgb#cfwk0UFTV0I8yLuIu5Lkl2tpxF42pscgPb9xhKzTS4Q" },
+          { "episode": 9, "url": "https://mega.nz/embed/Ly4l2bjB#bqqbzkJ8V8ygIDBrxndZ6c0DBt42anJtUL-z3KLzKT0" },
+          { "episode": 10, "url": "https://mega.nz/embed/3l4jBSQQ#Tr3VKT_kLgDhl-55arFvrUugMsoBuCNiuohbZV9Pm4c" },
+          { "episode": 11, "url": "https://mega.nz/embed/LohkHArR#at80w2S8tredJ4nlJTr5_GVaydEsgZSz9Kb0eRO8wXs" },
+          { "episode": 12, "url": "https://mega.nz/embed/71AlWK4S#IN8fSm0asrDrCNtKpN4XiG5OGEsyyMoP5fmgc-fsMVI" }
+        ]
+      }
+]

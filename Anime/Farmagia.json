@@ -1,0 +1,34 @@
+[
+    {
+        "id": 32,
+        "title": "Farmagia",
+        "folder": "farmagia",
+        "image": "farmagia.jpg",
+        "japanese_title": "ファルマギア",
+        "score": 7.5,
+        "producers": ["Bridge", "Marvelous"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-01-10",
+        "studio": "Bridge",
+        "genre": ["Action", "Fantasy", "Adventure"],
+        "synopsis": "Proyek Anime berdasarkan permainan dengan nama yang sama. Setelah kematian penguasa Felicidad, penguasa lalim Glaza merebut kekuasaan dan memberlakukan rezim yang menindas pada penduduk dunia. Sebagai Ten dan teman-teman Farmagia lainnya, pimpin pasukan monster saat Anda menjelajahi dan bertempur di tanah berbahaya di Dunia Bawah, mengumpulkan sumber daya untuk dibawa kembali ke pertanian Anda. Di sana Anda akan meningkatkan keterampilan Anda sebagai Farmagia, menumbuhkan lebih banyak monster untuk dipelihara, dan mengembangkan sifat-sifat baru mereka untuk membantu pertempuran Anda melawan Glaza dan Oración Seis.",
+        "trailer_url": "https://www.youtube.com/embed/B99NDDzkIxU?si=RIgTon5cY1mcUUgl",
+        "episodes": [
+          { "episode": 1, "url": "https://mega.nz/embed/miZm3AKQ#etE8CD8anwXrqFq5y4bM321wTkUlKKoU53Y3wsN186s" },
+          { "episode": 2, "url": "https://mega.nz/embed/Ytp1XRIS#UTB0xUfh94CIwX2wGPk7ACEZpr9dLtLDtaFOdHbifi0" },
+          { "episode": 3, "url": "https://mega.nz/embed/N4h22ZBC#bBJrQ0OpLI-1nOlKBqYm_WiOXbAEIc9_7a8njD5JY-o" },
+          { "episode": 4, "url": "https://mega.nz/embed/SEw3FSrJ#JcGSDgVYaXvKyk2hr2R8YHb6Pr1cX4YpxFy4IeUrshM" },
+          { "episode": 5, "url": "https://mega.nz/embed/GVYF2YIA#GKYg7QkWC_jYQ08OEnBgxkdyhnMEb0j22UVnTDjjxQg" },
+          { "episode": 6, "url": "https://mega.nz/embed/2SYEQB7C#AvgMuT8bJudDqldkmTNklUL0Ns9uTiQcCvaqi7rOrqs" },
+          { "episode": 7, "url": "https://mega.nz/embed/jKQBgCgK#sT6zXIPIGtHee1biG4AYbvkjO4mzZ9ZC18CuYrBBXGU" },
+          { "episode": 8, "url": "https://mega.nz/embed/LzwmXCzb#ZgFRezpUTArPsOir49-uz4Qc_otk77QNtMwEmhyvTxk" },
+          { "episode": 9, "url": "https://mega.nz/embed/CiJgFRJJ#BSK-Jpfemii4Pv9D-l8dTENVw52opHNt3BaAhCJK0qE" },
+          { "episode": 10, "url": "https://mega.nz/embed/GpozEBjJ#RrMZAmVii_I7PNCBGn2qAj_n0-IemPbpe6sRrRQcOoo" },
+          { "episode": 11, "url": "https://mega.nz/embed/DkZ0USBC#HbE2Dgs41hT7rHpKWLgKvzYsimGM4LhkDejmPoPZYe4" },
+          { "episode": 12, "url": "https://mega.nz/embed/v4IjyR7a#uGav0JNJFUJPqlFnCOY7T_FWybDkx-qMpER00nV0uI0" }
+        ]
+      }
+]

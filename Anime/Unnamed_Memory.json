@@ -1,0 +1,34 @@
+[
+    {
+        "id": 34,
+        "title": "Unnamed Memory",
+        "folder": "unnamed_memory",
+        "image": "unnamed_memory.jpg",
+        "japanese_title": "アンネームドメモリー",
+        "score": 7.5,
+        "producers": ["ENGI", "ASCII Media Works"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2024-04-09",
+        "studio": "ENGI",
+        "genre": ["Fantasy", "Romance"],
+        "synopsis": "Unnamed Memory – “Harapanku sebagai juara adalah agar kamu turun menara dan menjadi istriku.” Memanjat menara mematikan, Oscar mencari kekuatan tuannya, Penyihir Bulan Azure. Dia berharap sihirnya yang luar biasa dapat mematahkan kutukan yang akan membunuh wanita mana pun yang dia jadikan istri. Namun, ketika sang pangeran melihat betapa cantiknya Tinasha, dia punya ide yang lebih baik—karena dia pasti cukup kuat untuk bertahan dari kutukannya, dia sebaiknya menikah dengannya saja! Tinasha tidak tertarik dengan gagasan itu, tetapi setuju untuk tinggal bersama Oscar di istana kerajaan selama setahun sambil meneliti mantra yang diberikan pada sang pangeran. Namun, wajah cantik sang penyihir menyembunyikan rahasia kelam selama beberapa masa hidup—rahasia yang mulai muncul kembali…",
+        "trailer_url": "https://www.youtube.com/embed/jKNscVwATwI?si=0nrhK6a4V-zuU7gM",
+        "episodes": [
+          { "episode": 1, "url": "https://pixeldrain.com/api/file/mu8MHyMj" },
+          { "episode": 2, "url": "https://pixeldrain.com/api/file/kjuDVm1j" },
+          { "episode": 3, "url": "https://pixeldrain.com/api/file/aPA9ytoF" },
+          { "episode": 4, "url": "https://pixeldrain.com/api/file/jKnPqije" },
+          { "episode": 5, "url": "https://pixeldrain.com/api/file/JsLkihHS" },
+          { "episode": 6, "url": "https://pixeldrain.com/api/file/azPTZE8Y" },
+          { "episode": 7, "url": "https://pixeldrain.com/api/file/jfxjEdos" },
+          { "episode": 8, "url": "https://pixeldrain.com/api/file/BQqiWisQ" },
+          { "episode": 9, "url": "https://pixeldrain.com/api/file/SywH7S3Y" },
+          { "episode": 10, "url": "https://pixeldrain.com/api/file/kPg8g989" },
+          { "episode": 11, "url": "https://pixeldrain.com/api/file/2J9xqzEU" },
+          { "episode": 12, "url": "https://pixeldrain.com/api/file/8xstT2HN" }
+        ]
+      }
+]
