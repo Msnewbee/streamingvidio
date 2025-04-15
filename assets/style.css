@@ -246,6 +246,23 @@ nav ul li a:hover {
     margin-bottom: 4px;
 }
 
+.image-container {
+    position: relative;
+  }
+  
+  .type-label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }  
+
 /* Search and Sort Input Fields */
 #search-anime, #sort-anime {
     padding: 10px;

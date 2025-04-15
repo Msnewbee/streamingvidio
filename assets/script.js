@@ -94,10 +94,20 @@ document.addEventListener("DOMContentLoaded", async function () {
   function createAnimeCard(anime) {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
+  
+    // Tentukan warna label berdasarkan jenis
+    const type = anime.type?.toUpperCase() || "TV";
+    let labelColor = "#3498db"; // Default: biru untuk TV
+    if (type === "OVA") labelColor = "#e74c3c"; // Merah
+    else if (type === "MOVIE") labelColor = "#f1c40f"; // Kuning
+    else if (type === "SPECIAL") labelColor = "#9b59b6"; // Ungu untuk Special
+  
     animeCard.innerHTML = `
-      <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
-      <div class="card-content">${anime.type || "TV"}</div>
+      <div class="image-container">
+        <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
+        <div class="type-label" style="background-color: ${labelColor}">${type}</div>
       </div>
+      <div class="card-content">
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
         <p>Genre: ${anime.genre.join(', ')}</p>
