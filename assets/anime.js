@@ -13,8 +13,18 @@ export async function fetchAnimeList() {
   
       const results = await Promise.all(urls.map(async ({ path, label }) => {
         const res = await fetch(path);
-        if (!res.ok) throw new Error(`Gagal mengambil data dari ${label}`);
-        return await res.json();
+        if (!res.ok) {
+        const text = await res.text();
+        console.error(`Gagal mengambil ${label}:`, text);
+        throw new Error(`Gagal mengambil data dari ${label}`);
+       }
+       const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+        const text = await res.text();
+        console.error(`Respons dari ${label} bukan JSON:\n`, text);
+        throw new SyntaxError(`Respons dari ${label} bukan JSON`);
+      }
+       return await res.json();
       }));
   
       // Gabungkan dan hilangkan duplikat berdasarkan ID
