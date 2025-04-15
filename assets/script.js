@@ -1,6 +1,7 @@
 import { fetchAnimeList } from "./anime.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
+  // Konfigurasi untuk pencarian anime
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
   const genreSelect = document.getElementById("genre-anime");
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log("📢 Daftar anime berubah.");
       }
 
-      // Tampilkan anime SEBELUM fetch watch count (biar gak lambat)
+      // Tampilkan anime SEBELUM fetch watch count
       displayAnime(animeData);
 
       // Tampilkan anime terbaru (tanpa delay)
@@ -57,13 +58,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.error("Element dengan ID 'new-anime-list' tidak ditemukan.");
       return;
     }
-
     newAnimeContainer.innerHTML = "";
-
     const latestAnimes = [...animes]
       .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
       .slice(0, 12);
-
     latestAnimes.forEach((anime) => {
       const animeCard = createAnimeCard(anime);
       newAnimeContainer.appendChild(animeCard);
@@ -82,14 +80,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         <p>Ditonton: ${anime.watchCount || 0}x</p>
       </div>
     `;
-
     animeCard.addEventListener("click", async () => {
       anime.watchCount = (anime.watchCount || 0) + 1;
       await increaseWatchCount(anime.id);
       localStorage.setItem("lastWatchedAnimeId", anime.id);
       window.location.href = `anime.html?id=${anime.id}`;
     });
-
     return animeCard;
   }
 
@@ -128,7 +124,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     animes.forEach((anime) => {
       anime.genre.forEach((g) => genres.add(g));
     });
-
     genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
     genres.forEach((genre) => {
       const option = document.createElement("option");
@@ -168,8 +163,23 @@ document.addEventListener("DOMContentLoaded", async function () {
     } else if (sortBy === "release_date") {
       filteredAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
-
     displayAnime(filteredAnime);
   }
-});
 
+  // Fungsi Komentar Pengunjung
+  window.submitComment = function() {
+    const name = document.getElementById('visitor-name').value.trim();
+    const comment = document.getElementById('visitor-comment').value.trim();
+    if (!name || !comment) {
+      alert("Nama dan komentar wajib diisi!");
+      return;
+    }
+    const commentBox = document.createElement('div');
+    commentBox.className = 'comment';
+    commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+    document.getElementById('comment-list').prepend(commentBox);
+    // Reset form komentar
+    document.getElementById('visitor-name').value = '';
+    document.getElementById('visitor-comment').value = '';
+  };
+});
