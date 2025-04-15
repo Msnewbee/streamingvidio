@@ -71,50 +71,45 @@
     </nav>
   </header>
 
-  <!-- Konten utama -->
-  <div class="container">
-    <!-- Konten Utama -->
-    <div class="main-content">
-      <div class="search-container">
-        <input type="text" id="search-anime" placeholder="Cari anime...">
-        <select id="sort-anime">
-          <option value="">Sort By</option>
-          <option value="score">Score</option>
-          <option value="release_date">Tanggal Rilis</option>
-        </select>
-        <select id="genre-anime">
-          <option value="">Pilih Genre</option>
-        </select>
-      </div>
+  <!-- Container utama -->
+<div class="container">
+  
+  <!-- Konten Utama -->
+  <div class="main-content">
+    <div class="search-container">
+      <input type="text" id="search-anime" placeholder="Cari anime...">
+      <select id="sort-anime">
+        <option value="">Sort By</option>
+        <option value="score">Score</option>
+        <option value="release_date">Tanggal Rilis</option>
+      </select>
+      <select id="genre-anime">
+        <option value="">Pilih Genre</option>
+      </select>
+    </div>
 
-      <!-- Container untuk Iklan Multipleks -->
-      <div id="ad-multiplex" class="ad-container" style="visibility:hidden; min-height: 250px;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-format="autorelaxed"
-             data-ad-client="ca-pub-1357574968133580"
-             data-ad-slot="1111111111"></ins>
-      </div>
-      
-      <h2>Anime Terbaru</h2>
-      <div class="anime-grid" id="new-anime-list"></div>
+    <h2>Anime Terbaru</h2>
+    <div class="anime-grid" id="new-anime-list"></div>
 
-      <h2>Daftar Anime</h2>
-      <div class="anime-grid" id="anime-list"></div>
-      
-       <!-- Sidebar Komentar -->
-    <aside class="comment-sidebar">
-      <h3>Komentar Pengunjung</h3>
-      <div class="comment-form">
-        <input type="text" id="visitor-name" placeholder="Nama">
-        <textarea id="visitor-comment" placeholder="Tulis komentar..."></textarea>
-        <button onclick="submitComment()">Kirim</button>
-      </div>
-      <div class="comment-list" id="comment-list">
-        <!-- Komentar akan tampil di sini -->
-      </div>
-    </aside>
+    <h2>Daftar Anime</h2>
+    <div class="anime-grid" id="anime-list"></div>
   </div>
+
+  <!-- Sidebar Komentar -->
+  <aside class="comment-sidebar">
+    <h3>Komentar Pengunjung</h3>
+    <div class="comment-form">
+      <input type="text" id="visitor-name" placeholder="Nama">
+      <textarea id="visitor-comment" placeholder="Tulis komentar..."></textarea>
+      <button onclick="submitComment()">Kirim</button>
+    </div>
+    <div class="comment-list" id="comment-list">
+      <!-- Komentar akan tampil di sini -->
+    </div>
+  </aside>
+
+ </div> <!-- Penutup .container -->
+
 
       <!-- Iklan Vinyet -->
       <div id="ad-vinyet" class="ad-container" style="visibility:hidden; min-height: 250px;">
