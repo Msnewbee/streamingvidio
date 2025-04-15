@@ -706,16 +706,21 @@ main {
     background: #0056b3;
 }
 
-/* Container utama yang membungkus konten utama dan sidebar komentar */
+/* Container utama */
 .container {
     display: flex;
     gap: 20px;
     padding: 20px;
+    width: 100%; /* Tambahan agar full width */
+    box-sizing: border-box;
+    align-items: flex-start; /* Tambahan agar sidebar sejajar atas */
+    flex-wrap: wrap; /* Untuk responsif */
   }
   
   /* Konten utama */
   .main-content {
     flex: 3;
+    min-width: 0; /* Menghindari overflow */
   }
   
   /* Sidebar komentar */
@@ -727,48 +732,6 @@ main {
     color: #fff;
     max-height: 80vh;
     overflow-y: auto;
+    min-width: 250px;
   }
   
-  /* Form komentar */
-  .comment-form input,
-  .comment-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #1f2937;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  .comment-form button {
-    width: 100%;
-    padding: 10px;
-    background: #3b82f6;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-  }
-  
-  .comment-form button:hover {
-    background: #357ab8;
-  }
-  
-  /* Tampilan list komentar */
-  .comment-list {
-    margin-top: 20px;
-  }
-  
-  .comment {
-    padding: 10px;
-    background: #1f2937;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .comment strong {
-    display: block;
-    margin-bottom: 5px;
-  }
