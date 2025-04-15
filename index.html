@@ -71,11 +71,10 @@
     </nav>
   </header>
 
-  <!-- Container utama -->
+<!-- Container utama -->
 <div class="container">
-  
-  <!-- Konten Utama -->
-  <div class="main-content">
+  <!-- Konten utama -->
+  <main class="main-content">
     <div class="search-container">
       <input type="text" id="search-anime" placeholder="Cari anime...">
       <select id="sort-anime">
@@ -93,22 +92,25 @@
 
     <h2>Daftar Anime</h2>
     <div class="anime-grid" id="anime-list"></div>
-  </div>
+  </main>
 
   <!-- Sidebar Komentar -->
   <aside class="comment-sidebar">
     <h3>Komentar Pengunjung</h3>
+
+    <div class="comment-list" id="comment-list">
+      <!-- Komentar akan muncul di sini -->
+    </div>
+
     <div class="comment-form">
       <input type="text" id="visitor-name" placeholder="Nama">
-      <textarea id="visitor-comment" placeholder="Tulis komentar..."></textarea>
-      <button onclick="submitComment()">Kirim</button>
-    </div>
-    <div class="comment-list" id="comment-list">
-      <!-- Komentar akan tampil di sini -->
+      <div class="form-footer">
+        <input type="text" id="visitor-comment" placeholder="Tulis komentar...">
+        <button onclick="submitComment()">Kirim</button>
+      </div>
     </div>
   </aside>
-
- </div> <!-- Penutup .container -->
+</div>
 
 
       <!-- Iklan Vinyet -->
