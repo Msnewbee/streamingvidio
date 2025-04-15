@@ -7,7 +7,11 @@ export async function fetchAnimeList() {
         { path: './Anime/bleach.json', label: 'bleach.json' },
         { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
         { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
-        { path: './Anime/Hunter_x_Hunter.json', label: 'Hunter_x_Hunter.json' }
+        { path: './Anime/Hunter_x_Hunter.json', label: 'Hunter_x_Hunter.json' },
+        { path: './Anime/Jujutsu_Kaisen.json', label: 'Jujutsu_Kaisen.json' },
+        { path: './Anime/Dandadan.json', label: 'Dandadan.json' },
+        { path: './Anime/Sakamoto_Days.json', label: 'Sakamoto_Days.json' },
+        { path: './Anime/Chainsaw_Man.json', label: 'Chainsaw_Man.json' }
 
       ];
   
