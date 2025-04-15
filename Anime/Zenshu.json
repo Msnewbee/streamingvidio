@@ -1,0 +1,34 @@
+[
+    {
+        "id": 13,
+        "title": "Zenshu",
+        "folder": "zenshu",
+        "image": "zenshu.jpg",
+        "japanese_title": "全修。",
+        "score": 8.9,
+        "producers": ["MAPPA", "Crunchyroll"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2025-01-05",
+        "studio": "MAPPA",
+        "genre": ["Isekai", "Fantasi", "Petualangan", "Drama"],
+        "synopsis": "Setelah lulus SMA, Natsuko Hirose memulai kariernya sebagai animator. Bakatnya berkembang pesat, dan ia langsung memulai debutnya sebagai sutradara. Anime pertamanya menjadi hit besar, memicu fenomena sosial, dan membuatnya dikenal sebagai sutradara jenius yang sedang naik daun. Proyek berikutnya adalah film komedi romantis bertema cinta pertama! Namun, karena tidak pernah jatuh cinta, Natsuko kesulitan memahami konsep cinta pertama, dan akibatnya, ia tidak dapat membuat alur cerita, yang menyebabkan produksi film terhenti.",
+        "trailer_url": "https://www.youtube.com/embed/tt_ci57IszQ?si=eqMf1oy7O1r4O9Uq",
+        "episodes": [
+          { "episode": 1, "url": "https://filedon.co/embed/FmOgv3cF4g" },
+          { "episode": 2, "url": "https://filedon.co/embed/zF9MrTEKrS" },
+          { "episode": 3, "url": "https://filedon.co/embed/FbhmpwV4SB" },
+          { "episode": 4, "url": "https://filedon.co/embed/rd23Kdr6Xz" },
+          { "episode": 5, "url": "https://filedon.co/embed/fUyaykwkS7" },
+          { "episode": 6, "url": "https://filedon.co/embed/qhzeOUQWqS" },
+          { "episode": 7, "url": "https://filedon.co/embed/nKeu6quJq7" },
+          { "episode": 8, "url": "https://filedon.co/embed/2S3OVMYPsp" },
+          { "episode": 9, "url": "https://filedon.co/embed/aLzKTxCFpj" },
+          { "episode": 10, "url": "https://filedon.co/embed/ZW7RXA8WCm" },
+          { "episode": 11, "url": "https://filedon.co/embed/LqcpTzHXrK" },
+          { "episode": 12, "url": "https://filedon.co/embed/vW7fBKNMVb" }
+        ]
+      }
+]

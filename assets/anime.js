@@ -11,7 +11,11 @@ export async function fetchAnimeList() {
         { path: './Anime/Jujutsu_Kaisen.json', label: 'Jujutsu_Kaisen.json' },
         { path: './Anime/Dandadan.json', label: 'Dandadan.json' },
         { path: './Anime/Sakamoto_Days.json', label: 'Sakamoto_Days.json' },
-        { path: './Anime/Chainsaw_Man.json', label: 'Chainsaw_Man.json' }
+        { path: './Anime/Chainsaw_Man.json', label: 'Chainsaw_Man.json' },
+        { path: './Anime/Zenshu.json', label: 'Zenshu.json' },
+        { path: './Anime/Oshi_no_Ko.json', label: 'Oshi_no_Ko.json' },
+        { path: './Anime/Kaiju_No_8.json', label: 'Kaiju_No_8.json' },
+        { path: './Anime/Tensei_Shitara_Slime_Datta_Ken.json', label: 'Tensei_Shitara_Slime_Datta_Ken.json' }
 
       ];
   
