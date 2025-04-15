@@ -1168,6 +1168,31 @@
         "episodes": [
           { "episode": 1, "url": "https://mega.nz/embed/EBQDRCpK#BE59vyu-s18zL60h7y-S7iO11X_-Cgv9ELkKm3MXehI!1a" }
         ]
+      },
+      {
+        "id": 40,
+        "title": "One Piece Movie 2: Clockwork Island Adventure",
+        "folder": "one_piece_movie_2",
+        "image": "one_piece_movie_2.jpg",
+        "japanese_title": "ワンピース ねじまき島の冒険",
+        "score": 6.6,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "55 Menit",
+        "release_date": "2001-03-03",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy", "Shounen", "Super Power"],
+        "synopsis": "Saat bersantai di pantai, kru Topi Jerami mendapati kapal mereka, Going Merry, telah dicuri. Mereka bertemu dengan Thief Brothers yang memberi tahu bahwa kapal tersebut dibawa ke Pulau Jam (Clockwork Island) oleh kelompok bajak laut Trump Kyoudai. Dalam upaya untuk merebut kembali kapal mereka, Luffy dan kru harus menghadapi berbagai rintangan dan menyelamatkan Nami yang diculik.",
+        "trailer_url": "https://www.youtube.com/embed/CYs07PDKFRw",
+        "episodes": [
+          {
+            "episode": 1,
+            "url": "https://pixeldrain.com/api/file/EXAMPLE"
+          }
+        ]
       }
+      
       
     ] 
