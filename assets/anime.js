@@ -15,7 +15,10 @@ export async function fetchAnimeList() {
         { path: './Anime/Zenshu.json', label: 'Zenshu.json' },
         { path: './Anime/Oshi_no_Ko.json', label: 'Oshi_no_Ko.json' },
         { path: './Anime/Kaiju_No_8.json', label: 'Kaiju_No_8.json' },
-        { path: './Anime/Tensei_Shitara_Slime_Datta_Ken.json', label: 'Tensei_Shitara_Slime_Datta_Ken.json' }
+        { path: './Anime/Tensei_Shitara_Slime_Datta_Ken.json', label: 'Tensei_Shitara_Slime_Datta_Ken.json' },
+        { path: './Anime/Classroom_of_the_Elite.json', label: 'Classroom_of_the_Elite.json' },
+        { path: './Anime/fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta.json', label: 'fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta.json' },
+        { path: './Anime/Kusuriya_no_Hitorigoto.json', label: 'Kusuriya_no_Hitorigoto.json' }
 
       ];
   

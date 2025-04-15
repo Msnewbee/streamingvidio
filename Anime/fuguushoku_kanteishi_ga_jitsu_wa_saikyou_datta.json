@@ -1,0 +1,34 @@
+[
+    {
+        "id": 26,
+        "title": "Fuguushoku 'Kanteishi' ga Jitsu wa Saikyou Datta",
+        "folder": "fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta",
+        "image": "fuguushoku_kanteishi_ga_jitsu_wa_saikyou_datta.jpg",
+        "japanese_title": "不遇職〖鑑定士〗が実は最強だった",
+        "score": 5.47,
+        "producers": ["Sotsu", "Kodansha", "Movic", "Tokyo MX", "BS11", "Crunchyroll", "Exa International", "AQUA ARIS", "Bit grooove promotion", "Kotowari", "West Japan Marketing Communications"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-01-09",
+        "studio": "Okuruto Noboru",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "synopsis": "Dalam dunia fantasi di mana “pekerjaan” diberikan Tuhan sejak lahir, pahlawan dilahirkan, bukan diciptakan—dan pekerjaan Ein sebagai “Penilai” telah menempatkannya sejauh mungkin dari kedudukan “pahlawan”. Dimanfaatkan, disalahgunakan, dan akhirnya ditinggalkan oleh sesama petualang, Ein memutuskan bahwa tidak ada gunanya melanjutkan hidup. Namun, beruntung bagi Ein, akhir mungkin hanyalah awal, sekaligus kesempatan hidup baru. Ternyata, pekerjaannya yang “tidak berharga” mungkin adalah kunci untuk menjadi pahlawan.",
+        "trailer_url": "https://www.youtube.com/embed/3ZDbVRlCI4o?si=tN3wpsaIbAebetWe",
+        "episodes": [
+          { "episode": 1, "url": "https://pixeldrain.com/api/file/EjFxERjQ" },
+          { "episode": 2, "url": "https://pixeldrain.com/api/file/dGSPdJ5J" },
+          { "episode": 3, "url": "https://pixeldrain.com/api/file/DhuyD7WG" },
+          { "episode": 4, "url": "https://pixeldrain.com/api/file/4b2yzdHN" },
+          { "episode": 5, "url": "https://pixeldrain.com/api/file/2JNVpQgg" },
+          { "episode": 6, "url": "https://pixeldrain.com/api/file/Zbp8RPVb" },
+          { "episode": 7, "url": "https://pixeldrain.com/api/file/oa5wLjC1" },
+          { "episode": 8, "url": "https://pixeldrain.com/api/file/SeabymdQ" },
+          { "episode": 9, "url": "https://pixeldrain.com/api/file/sQSRPi1i" },
+          { "episode": 10, "url": "https://pixeldrain.com/api/file/VR6yPTR3" },
+          { "episode": 11, "url": "https://pixeldrain.com/api/file/E82JtMq8" },
+          { "episode": 12, "url": "https://pixeldrain.com/api/file/XwMbLujL" }
+        ]
+      }
+]
