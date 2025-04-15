@@ -7,7 +7,7 @@ export async function fetchAnimeList() {
         { path: './Anime/bleach.json', label: 'bleach.json' },
         { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
         { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
-        { path: './Hunter_x_Hunter.json', label: 'Hunter_x_Hunter.json' }
+        { path: './Anime/Hunter_x_Hunter.json', label: 'Hunter_x_Hunter.json' }
 
       ];
   
