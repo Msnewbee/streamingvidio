@@ -1187,12 +1187,116 @@
         "synopsis": "Saat bersantai di pantai, kru Topi Jerami mendapati kapal mereka, Going Merry, telah dicuri. Mereka bertemu dengan Thief Brothers yang memberi tahu bahwa kapal tersebut dibawa ke Pulau Jam (Clockwork Island) oleh kelompok bajak laut Trump Kyoudai. Dalam upaya untuk merebut kembali kapal mereka, Luffy dan kru harus menghadapi berbagai rintangan dan menyelamatkan Nami yang diculik.",
         "trailer_url": "https://www.youtube.com/embed/CYs07PDKFRw",
         "episodes": [
-          {
-            "episode": 1,
-            "url": "https://pixeldrain.com/api/file/EXAMPLE"
-          }
+          { "episode": 1, "url": "https://mega.nz/embed/8QBGABLJ#nRf53XSNPmoiHws_X--Tjs8dgbmOTUwFFIg8h_T7CoA!1a" }
+        ]
+      },
+      {
+        "id": 41,
+        "title": "One Piece Movie 3: Chinjuu-jima no Chopper Oukoku",
+        "folder": "one_piece_movie_3",
+        "image": "one_piece_movie_3.jpg",
+        "japanese_title": "ワンピース 珍獣島のチョッパー王国",
+        "score": 6.3,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "55 Menit",
+        "release_date": "2002-03-02",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy"],
+        "synopsis": "Dalam petualangan ketiga mereka di layar lebar, kru Topi Jerami tiba di Pulau Mahkota, sebuah tempat misterius di mana hewan-hewan dapat berbicara. Di sana, Tony Tony Chopper secara tak terduga dinobatkan sebagai raja oleh para hewan penghuni pulau. Namun, kedamaian mereka terancam oleh sekelompok pemburu manusia yang mencari 'tanduk legendaris' yang konon memberikan kekuatan luar biasa kepada siapa pun yang mengonsumsinya. Luffy dan teman-temannya harus menghadapi ancaman ini untuk melindungi kerajaan hewan dan sahabat mereka, Chopper.",
+        "trailer_url": "https://www.youtube.com/embed/1EfCUxmGYfk",
+        "episodes": [
+          { "episode": 1, "url": "https://bestx.stream/v/2jd4w7xaP7eq/" }
+              ]
+      },
+      {
+        "id": 42,
+        "title": "One Piece Movie 4: Dead End no Bouken",
+        "folder": "one_piece_movie_4_dead_end_no_bouken",
+        "image": "one_piece_movie_4_dead_end_no_bouken.jpg",
+        "japanese_title": "ワンピース デッドエンドの冒険",
+        "score": 7.2,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "95 Menit",
+        "release_date": "2003-03-01",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy"],
+        "synopsis": "Dalam upaya mendapatkan uang, kru Topi Jerami mengikuti 'Dead End Competition', sebuah perlombaan rahasia antar bajak laut. Mereka menghadapi berbagai tantangan, termasuk melawan mantan Marinir yang menjadi bajak laut, Kapten Gasparde, yang memiliki rencana jahat untuk menyingkirkan semua pesaingnya. Dengan bantuan pemburu hadiah Shuraiya, Luffy dan krunya berusaha menggagalkan rencana Gasparde dan memenangkan perlombaan.",
+        "trailer_url": "https://www.youtube.com/embed/1Zx3N3rj0xg",
+        "episodes": [
+          { "episode": 1, "url": "https://bestx.stream/v/09iTtFL9uEMc/" }
+        ]
+      },
+      {
+        "id": 43,
+        "title": "One Piece Movie 5: The Cursed Holy Sword",
+        "folder": "one_piece_movie_5",
+        "image": "one_piece_movie_5.jpg",
+        "japanese_title": "ワンピース 呪われた聖剣",
+        "score": 7.1,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "95 Menit",
+        "release_date": "2004-03-06",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Shounen", "Pirates"],
+        "synopsis": "Di Pulau Asuka, kru Bajak Laut Topi Jerami mendengar tentang Shichiseiken, pedang legendaris yang dikatakan sebagai yang terindah di dunia namun membawa kutukan mematikan. Setelah Zoro menghilang secara misterius, kru menemukan bahwa dia terlibat dengan Marinir dan seorang teman lamanya, Saga, yang berusaha membangkitkan kekuatan pedang tersebut. Luffy dan kru harus menghadapi ancaman pedang terkutuk yang dapat membawa kegelapan ke dunia.",
+        "trailer_url": "https://www.youtube.com/embed/WpaemMYYc9E",
+        "episodes": [
+          { "episode": 1, "url": "https://voe.sx/e/7auwd404t4di" }
+        ]
+      },
+      {
+        "id": 44,
+        "title": "One Piece: Mezase! Kaizoku Yakyuu Ou",
+        "folder": "one_piece_mezase_kaizoku_yakyuu_ou",
+        "image": "one_piece_mezase_kaizoku_yakyuu_ou.jpg",
+        "japanese_title": "ワンピース めざせ！海賊野球王",
+        "score": 6.4,
+        "producers": ["Toei Animation"],
+        "type": "Special",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "5 Menit",
+        "release_date": "2004-03-06",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy", "Sports"],
+        "synopsis": "Dalam film pendek ini, kru Topi Jerami menghadapi kru Arlong dalam pertandingan bisbol yang tidak biasa. Pertandingan ini disiarkan oleh Buggy dan Mr. 2 Bon Clay. Arlong dan timnya menggunakan bola besi berduri sebagai bola bisbol untuk memberikan keuntungan tidak adil. Luffy dan timnya harus mengatasi berbagai rintangan untuk memenangkan pertandingan dan menjadi Raja Bisbol Bajak Laut.",
+        "trailer_url": "https://www.youtube.com/embed/izJTWZ1yUf4",
+        "episodes": [
+          { "episode": 1, "url": "https://short.ink/C0HjxjmUY" }
+        ]
+      },
+      {
+        "id": 45,
+        "title": "One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima",
+        "folder": "one_piece_movie_6_omatsuri_danshaku_to_himitsu_no_shima",
+        "image": "one_piece_movie_6_omatsuri_danshaku_to_himitsu_no_shima.jpg",
+        "japanese_title": "ワンピース オマツリ男爵と秘密の島",
+        "score": 7.2,
+        "producers": ["Toei Animation", "Fuji TV", "Fujipacific Music"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "91 Menit",
+        "release_date": "2005-03-05",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy", "Shounen"],
+        "synopsis": "Kru Topi Jerami menerima undangan ke Pulau Omatsuri, sebuah resor rekreasi di Grand Line. Tertarik dengan janji relaksasi, mereka segera menuju pulau tersebut. Namun, setibanya di sana, mereka dipaksa mengikuti 'Ordeals of Hell' oleh Baron Omatsuri sebelum dapat menikmati fasilitas pulau. Seiring waktu, ketegangan mulai muncul di antara kru, dan satu per satu anggota mulai menghilang. Luffy dan yang lainnya harus mengungkap rahasia gelap di balik pulau ini sebelum semuanya terlambat.",
+        "trailer_url": "https://www.youtube.com/embed/1Zx3N3rj0xg",
+        "episodes": [
+          { "episode": 1, "url": "https://boosterx.stream/v/2ShfpNYHwDSn/" }
         ]
       }
       
       
-    ] 
+      
+           
+] 

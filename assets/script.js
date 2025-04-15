@@ -96,7 +96,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     animeCard.classList.add("anime-card");
     animeCard.innerHTML = `
       <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
-      <div class="card-content">
+      <div class="card-content">${anime.type || "TV"}</div>
+      </div>
         <h3>${anime.title}</h3>
         <p>Tanggal Rilis: ${anime.release_date}</p>
         <p>Genre: ${anime.genre.join(', ')}</p>
