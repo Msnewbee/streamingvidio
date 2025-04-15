@@ -4,7 +4,11 @@ export async function fetchAnimeList() {
       const urls = [
         { path: './Anime/One_piece.json', label: 'One_piece.json' },
         { path: './Anime/anime-list.json', label: 'anime-list.json' },
-        { path: './Anime/bleach.json', label: 'bleach.json' }
+        { path: './Anime/bleach.json', label: 'bleach.json' },
+        { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
+        { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
+        { path: './Hunter_x_Hunter.json', label: 'Hunter_x_Hunter.json' }
+
       ];
   
       const results = await Promise.all(urls.map(async ({ path, label }) => {
