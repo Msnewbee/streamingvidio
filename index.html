@@ -71,6 +71,9 @@
     </nav>
   </header>
 
+    <!-- Container utama -->
+    <div class="container">
+
   <!-- Konten utama -->
   <main class="main-content">
     <div class="search-container">
@@ -84,10 +87,7 @@
         <option value="">Pilih Genre</option>
       </select>
     </div>
-
-    <!-- Container utama -->
-   <div class="container">
-
+    
     <h2>Anime Terbaru</h2>
     <div class="anime-grid" id="new-anime-list"></div>
 
@@ -103,15 +103,25 @@
       <!-- Komentar akan muncul di sini -->
     </div>
 
-    <div class="comment-form">
-      <input type="text" id="visitor-name" placeholder="Nama">
-      <div class="form-footer">
-        <input type="text" id="visitor-comment" placeholder="Tulis komentar...">
-        <button onclick="submitComment()">Kirim</button>
-      </div>
+    <!-- Sidebar Komentar -->
+<aside class="comment-sidebar">
+  <h3>Komentar Pengunjung</h3>
+
+  <!-- Daftar komentar -->
+  <div class="comment-list" id="comment-list">
+    <!-- Komentar akan muncul di sini -->
+  </div>
+
+  <!-- Form komentar -->
+  <div class="comment-form">
+    <input type="text" id="visitor-name" placeholder="Nama">
+    <div class="form-footer">
+      <input type="text" id="visitor-comment" placeholder="Tulis komentar...">
+      <button onclick="submitComment()">Kirim</button>
     </div>
-  </aside>
-</div>
+  </div>
+</aside>
+</div> <!-- Penutup .container -->
 
 
       <!-- Iklan Vinyet -->
