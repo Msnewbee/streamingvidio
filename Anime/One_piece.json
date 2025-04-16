@@ -1294,9 +1294,94 @@
         "episodes": [
           { "episode": 1, "url": "https://boosterx.stream/v/2ShfpNYHwDSn/" }
         ]
+      },
+      {
+        "id": 46,
+        "title": "One Piece Movie 7: Karakuri-jou no Mecha Kyohei",
+        "folder": "one_piece_movie_7",
+        "image": "one_piece_movie_7.jpg",
+        "japanese_title": "ワンピース THE MOVIE カラクリ城のメカ巨兵",
+        "score": 7.1,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "94 Menit",
+        "release_date": "2006-03-04",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy"],
+        "synopsis": "Dalam petualangan ini, kru Topi Jerami menyelamatkan seorang wanita tua dari kapal yang tenggelam. Sebagai imbalan, wanita tersebut menjanjikan harta karun legendaris berupa Mahkota Emas yang tersembunyi di Pulau Mecha. Setibanya di pulau tersebut, mereka bertemu dengan Ratchet, pemimpin pulau yang juga mencari mahkota tersebut. Bersama-sama, mereka menjelajahi pulau yang ternyata adalah kura-kura raksasa mekanik, menghadapi berbagai tantangan dan mengungkap rahasia di balik Mahkota Emas.",
+        "trailer_url": "https://www.youtube.com/embed/b5uZKbrKnLE",
+        "episodes": [
+          { "episode": 1, "url": "https://short.icu/AKnfO2avz" }
+        ]
+      },
+      {
+        "id": 47,
+        "title": "One Piece Movie 8: Episode of Alabasta – Sabaku no Oujo to Kaizoku-tachi",
+        "folder": "one_piece_movie_8",
+        "image": "one_piece_movie_8.jpg",
+        "japanese_title": "ワンピース エピソードオブアラバスタ 砂漠の王女と海賊たち",
+        "score": 7.4,
+        "producers": ["Toei Animation", "Fuji TV", "Shueisha", "Bandai Entertainment"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "90 Menit",
+        "release_date": "2007-03-03",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Shounen"],
+        "synopsis": "Film ini merupakan adaptasi ulang dari Arc Alabasta dalam serial One Piece. Luffy dan kru Topi Jerami berusaha menyelamatkan Kerajaan Alabasta dari perang saudara yang dipicu oleh organisasi kriminal Baroque Works yang dipimpin oleh Shichibukai Crocodile. Bersama Putri Vivi, mereka berjuang mengungkap konspirasi dan menghentikan kehancuran kerajaan.",
+        "trailer_url": "https://www.youtube.com/watch?v=Y36qG0eB7KQ",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dyKrn2VmchFTVvxYqyKCVc4MlKsOVjMg-EHD5ocimLsZRbv9k-IFAxom06JPrcOJfNAFwcstbdkny5jbDn7Z-0ndGYDPJxSF4Z4pWfBnymILybTHZigyUy7xJyN74pNJUFfHw" }
+        ]
+      },
+      {
+        "id": 48,
+        "title": "One Piece Movie 9: Episode of Chopper Plus – Fuyu ni Saku, Kiseki no Sakura",
+        "folder": "one_piece_movie_9_chopper_plus",
+        "image": "one_piece_movie_9.jpg",
+        "japanese_title": "エピソード オブ チョッパー+ 冬に咲く、奇跡の桜",
+        "score": 7.2,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "113 Menit",
+        "release_date": "2008-03-01",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Drama", "Fantasy"],
+        "synopsis": "Film ini merupakan adaptasi ulang dari arc Drum Island dalam seri One Piece. Ketika Nami jatuh sakit, kru Topi Jerami mencari bantuan medis di Pulau Drum. Di sana, mereka bertemu dengan dokter rusa kutub bernama Tony Tony Chopper dan menghadapi ancaman dari Wapol serta saudara barunya, Musshuru. Versi ini memperkenalkan karakter baru dan menampilkan anggota kru seperti Franky dan Nico Robin yang tidak ada dalam versi asli arc tersebut.",
+        "trailer_url": "https://www.youtube.com/watch?v=tl1McAv8zCk",
+        "episodes": [
+          { "episode": 1, "url": "https://bestx.stream/v/1rHulOOcJQ4J/" }
+        ]
+      },
+      {
+        "id": 49,
+        "title": "One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima",
+        "folder": "one_piece_movie_6",
+        "image": "one_piece_movie_6.jpg",
+        "japanese_title": "ワンピース オマツリ男爵と秘密の島",
+        "score": 7.4,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "91 Menit",
+        "release_date": "2005-03-05",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Drama", "Fantasy"],
+        "synopsis": "Kru Topi Jerami menerima undangan ke sebuah pulau resor yang dikelola oleh Baron Omatsuri. Meskipun awalnya tampak seperti liburan yang menyenangkan, mereka segera dihadapkan pada serangkaian tantangan yang menguji persahabatan dan kepercayaan mereka. Ketika rahasia kelam pulau tersebut terungkap, Luffy harus berjuang untuk menyelamatkan krunya dari ancaman yang tak terduga.",
+        "trailer_url": "https://www.youtube.com/embed/EK9AfY901ZM",
+        "episodes": [
+          { "episode": 1, "url": "https://short.icu/mlM0haN14" }
+        ]
       }
       
       
       
-           
+      
+            
 ] 
