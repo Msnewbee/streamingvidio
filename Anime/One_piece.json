@@ -1359,26 +1359,26 @@
         ]
       },
       {
-        "id": 49,
-        "title": "One Piece Movie 6: Omatsuri Danshaku to Himitsu no Shima",
-        "folder": "one_piece_movie_6",
-        "image": "one_piece_movie_6.jpg",
-        "japanese_title": "ワンピース オマツリ男爵と秘密の島",
-        "score": 7.4,
-        "producers": ["Toei Animation"],
+        "id": 44,
+        "title": "One Piece Film: Strong World",
+        "folder": "one_piece_strong_world",
+        "image": "one_piece_strong_world.jpg",
+        "japanese_title": "ワンピース フィルム ストロングワールド",
+        "score": 7.6,
+        "producers": ["Toei Animation", "Shueisha"],
         "type": "Movie",
         "status": "Selesai",
         "total_episodes": 1,
-        "duration": "91 Menit",
-        "release_date": "2005-03-05",
+        "duration": "115 Menit",
+        "release_date": "2009-12-12",
         "studio": "Toei Animation",
-        "genre": ["Action", "Adventure", "Drama", "Fantasy"],
-        "synopsis": "Kru Topi Jerami menerima undangan ke sebuah pulau resor yang dikelola oleh Baron Omatsuri. Meskipun awalnya tampak seperti liburan yang menyenangkan, mereka segera dihadapkan pada serangkaian tantangan yang menguji persahabatan dan kepercayaan mereka. Ketika rahasia kelam pulau tersebut terungkap, Luffy harus berjuang untuk menyelamatkan krunya dari ancaman yang tak terduga.",
-        "trailer_url": "https://www.youtube.com/embed/EK9AfY901ZM",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "synopsis": "Dalam film ke-10 dari seri One Piece ini, bajak laut legendaris Shiki si Singa Emas kembali muncul dan menculik Nami untuk memaksa dia menjadi navigatornya. Shiki berencana menghancurkan East Blue dengan melepaskan hewan-hewan buas yang telah dimodifikasi secara genetik. Kru Topi Jerami harus bersatu kembali setelah terpisah di pulau terapung milik Shiki untuk menyelamatkan Nami dan menggagalkan rencana jahat Shiki.",
+        "trailer_url": "https://www.youtube.com/embed/3N4jRk3zj5A",
         "episodes": [
           { "episode": 1, "url": "https://short.icu/mlM0haN14" }
         ]
-      },
+      },      
       {
         "id": 50,
         "title": "One Piece 3D: Mugiwara Chase",
@@ -1439,7 +1439,7 @@
         "synopsis": "Zephyr, mantan laksamana Angkatan Laut yang kini memimpin kelompok Neo Marines, mencuri Dyna Stones—senjata pemusnah massal yang dapat menghancurkan pulau-pulau. Dengan tujuan membasmi semua bajak laut, termasuk Topi Jerami, Zephyr menjadi ancaman terbesar yang pernah mereka hadapi. Luffy dan kru harus menghadapi kekuatan Zephyr dan menghentikan rencananya sebelum dunia tenggelam dalam kehancuran.",
         "trailer_url": "https://www.youtube.com/embed/1gGt1Mg_zSo",
         "episodes": [
-          { "episode": 1, "url": "https://terabox.com/sharing/embed?surl=7ExKlsLmjDgsDCfflAM65g&amp;resolution=720&amp;autoplay=false&amp;mute=false&amp;uk=4401497379468&amp;fid=321632623069156" }
+          { "episode": 1, "url": "https://bestx.stream/d/kegZ8v8kIQa9/" }
         ]
       },
       {
