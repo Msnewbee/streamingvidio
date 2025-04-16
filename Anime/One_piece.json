@@ -1378,7 +1378,98 @@
         "episodes": [
           { "episode": 1, "url": "https://short.icu/mlM0haN14" }
         ]
+      },
+      {
+        "id": 50,
+        "title": "One Piece 3D: Mugiwara Chase",
+        "folder": "one_piece_3d_mugiwara_chase",
+        "image": "one_piece_3d_mugiwara_chase.jpg",
+        "japanese_title": "ONE PIECE 3D 麦わらチェイス",
+        "score": 6.5,
+        "producers": ["Toei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "31 Menit",
+        "release_date": "2011-03-19",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Comedy", "Fantasy", "Shounen"],
+        "synopsis": "Ketika topi jerami kesayangan Luffy dicuri oleh seekor burung misterius, kru Topi Jerami memulai pengejaran seru melintasi lautan. Dalam pencarian mereka, Usopp dan Chopper menemukan seorang bajak laut tua yang sakit di kapal kosong dan membawanya ke Thousand Sunny untuk dirawat. Namun, sebelum mereka dapat menangani tamu baru tersebut, kru harus mengejar burung pencuri, menghindari kejaran Angkatan Laut, dan melarikan diri dari sarang monster laut raksasa.",
+        "trailer_url": "https://www.youtube.com/embed/hXBBd9_2_lg",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dwBb72Lq77m05-81d_RYdWBrdiQizRg8ueWktRXzvDBUyGw-1-hxE37Mc3ZGpCFXFjwYtSX3D-oNI9hWV89hVdGCCbaCrbYgBBta1oAZphFf7tipW3wuFIOehFnAsXK1qUPY1g" }
+        ]
+      },
+      {
+        "id": 51,
+        "title": "One Piece: Episode of Nami – Koukaishi no Namida to Nakama no Kizuna",
+        "folder": "one_piece_episode_of_nami",
+        "image": "one_piece_episode_of_nami.jpg",
+        "japanese_title": "ONE PIECE エピソードオブナミ ～航海士の涙と仲間の絆～",
+        "score": 7.8,
+        "producers": ["Toei Animation", "Fuji TV"],
+        "type": "Special",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "106 Menit",
+        "release_date": "2012-08-25",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Drama", "Fantasy", "Comedy"],
+        "synopsis": "Episode spesial ini merupakan versi ulang dari Arlong Park Arc dalam serial One Piece, dengan animasi baru dan alur yang lebih padat. Cerita mengikuti Nami yang kembali ke kampung halamannya di Desa Cocoyasi setelah mencuri kapal Going Merry. Di sana, terungkap masa lalu kelam Nami sebagai anggota bajak laut Arlong yang menindas desa tersebut. Setelah mengetahui kebenaran, Luffy dan kru Topi Jerami lainnya berjuang untuk membebaskan desa dan mengajak Nami kembali bergabung dengan mereka.",
+        "trailer_url": "https://www.youtube.com/embed/your_trailer_id_here",
+        "episodes": [
+          { "episode": 1, "url": "https://short.ink/oE3ne9GQ8?autoplay=1" }
+        ]
+      },
+      {
+        "id": 52,
+        "title": "One Piece Film: Z",
+        "folder": "one_piece_film_z",
+        "image": "one_piece_film_z.jpg",
+        "japanese_title": "ワンピース フィルム ゼット",
+        "score": 7.9,
+        "producers": ["Toei Animation", "Fuji TV", "Shueisha"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "107 Menit",
+        "release_date": "2012-12-15",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "synopsis": "Zephyr, mantan laksamana Angkatan Laut yang kini memimpin kelompok Neo Marines, mencuri Dyna Stones—senjata pemusnah massal yang dapat menghancurkan pulau-pulau. Dengan tujuan membasmi semua bajak laut, termasuk Topi Jerami, Zephyr menjadi ancaman terbesar yang pernah mereka hadapi. Luffy dan kru harus menghadapi kekuatan Zephyr dan menghentikan rencananya sebelum dunia tenggelam dalam kehancuran.",
+        "trailer_url": "https://www.youtube.com/embed/1gGt1Mg_zSo",
+        "episodes": [
+          { "episode": 1, "url": "https://terabox.com/sharing/embed?surl=7ExKlsLmjDgsDCfflAM65g&amp;resolution=720&amp;autoplay=false&amp;mute=false&amp;uk=4401497379468&amp;fid=321632623069156" }
+        ]
+      },
+      {
+        "id": 53,
+        "title": "One Piece: Episode of Luffy – Hand Island no Bouken",
+        "folder": "one_piece_episode_of_luffy_hand_island_no_bouken",
+        "image": "one_piece_episode_of_luffy_hand_island_no_bouken.jpg",
+        "japanese_title": "ワンピース エピソードオブルフィ ～ハンドアイランドの冒険～",
+        "score": 7.5,
+        "producers": ["Toei Animation"],
+        "type": "TV Spesial",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "102 Menit",
+        "release_date": "2012-12-15",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy"],
+        "synopsis": "Ketika Bajak Laut Topi Jerami diserang oleh kapal perang Angkatan Laut, mereka menggunakan Coup de Burst untuk melarikan diri dan mendarat darurat di Pulau Hand. Di sana, mereka bertemu Diego, seorang pengrajin lilin, dan mengetahui bahwa pulau tersebut pernah berada di bawah perlindungan Whitebeard sebelum dikuasai oleh Komodor Angkatan Laut Bilić. Luffy dan kru memutuskan untuk membantu penduduk pulau melawan penindasan Bilić. Cerita ini juga menampilkan kilas balik dari masa kecil Luffy dengan animasi baru.",
+        "trailer_url": "https://www.youtube.com/embed/1vK5Yd8zR1Y",
+        "episodes": [
+          {
+            "episode": 1,
+            "url": "https://9animetv.to/watch/one-piece-episode-of-luffy-hand-island-adventure-1085?ep=73497"
+          }
+        ]
       }
+      
+      
+      
+      
       
       
       
