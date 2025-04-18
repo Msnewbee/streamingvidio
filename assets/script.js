@@ -200,49 +200,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     displayAnime(filteredAnime);
   }
 
-  // --- Fungsi Komentar Pengunjung ---
-  window.submitComment = async function() {
-    // Pastikan pengguna sudah login dengan Google
-    if (!googleUserToken) {
-      alert("Silakan login dengan akun Google Anda terlebih dahulu.");
-      return;
-    }
-    const name = document.getElementById('visitor-name').value.trim();
-    const comment = document.getElementById('visitor-comment').value.trim();
-    if (!name || !comment) {
-      alert("Nama dan komentar wajib diisi!");
-      return;
-    }
-    const commentData = {
-      name,
-      comment,
-      token: googleUserToken, // Sertakan token Google untuk verifikasi di server
-      timestamp: new Date().toISOString()
-    };
-
-    try {
-      const response = await fetch('https://lingering-union-0acf.bilariko2.workers.dev/api/submit-comment', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(commentData)
-      });
-      if (response.ok) {
-        // Tambahkan komentar ke daftar komentar pada DOM
-        const commentBox = document.createElement('div');
-        commentBox.className = 'comment';
-        commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
-        document.getElementById('comment-list').prepend(commentBox);
-        // Reset form komentar
-        document.getElementById('visitor-name').value = '';
-        document.getElementById('visitor-comment').value = '';
-        alert("Komentar berhasil dikirim!");
-      } else {
-        alert("Gagal mengirim komentar ke server.");
-      }
-    } catch (err) {
-      console.error("Error submitting comment:", err);
-      alert("Terjadi kesalahan saat mengirim komentar.");
-    }
-  };
 });
 
