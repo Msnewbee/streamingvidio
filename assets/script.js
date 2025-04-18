@@ -1,29 +1,7 @@
 import { fetchAnimeList } from "./anime.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  // Variabel global untuk menyimpan token Google setelah login
-  let googleUserToken = null;
-
-  // --- Inisialisasi Google Identity Services ---
-  function handleCredentialResponse(response) {
-    googleUserToken = response.credential;
-    console.log("Login berhasil! Token:", googleUserToken);
-    // Setelah login, sembunyikan tombol sign in dan tampilkan form komentar
-    document.getElementById("g-signin-container").style.display = "none";
-    document.getElementById("comment-form").style.display = "block";
-  }
-
-  // Konfigurasi dan render tombol Google Sign In
-  google.accounts.id.initialize({
-    client_id: 'YOUR_GOOGLE_CLIENT_ID', // Ganti dengan Client ID Google Anda
-    callback: handleCredentialResponse
-  });
-  google.accounts.id.renderButton(
-    document.getElementById("g-signin-container"),
-    { theme: "outline", size: "large" }
-  );
-  google.accounts.id.prompt();
-
+ 
   // --- Kode untuk memuat data anime ---
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
