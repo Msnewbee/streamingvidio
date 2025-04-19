@@ -33,6 +33,9 @@
   <meta name="script-used" content="Script anime.js digunakan untuk memuat dan menampilkan data anime pada halaman anime.html">
   <meta name="related-pages" content="anime.html adalah halaman utama untuk melihat daftar anime yang dimuat dari file JSON">
 
+  <!-- ✅ Preload logo untuk percepat loading -->
+  <link rel="preload" as="image" href="public/Logo.png">
+
   <!-- ✅ CSS -->
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" type="image/png" href="public/Logo.png">
@@ -61,7 +64,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="public/Logo.png" alt="StreamingX Logo">
+      <img src="public/Logo.png" alt="Logo StreamingX" width="48" height="48">
       <h1>StreamingX</h1>
     </div>
     <nav>
@@ -132,6 +135,10 @@
   <!-- Panggil file JavaScript -->
   <script type="module" src="assets/script.js" defer></script>
   <script type="module" src="assets/ads.js" defer></script>
+
+  <!-- Fallback jika JS dimatikan -->
+  <noscript>
+    <p style="text-align: center; color: red;">JavaScript diperlukan untuk menampilkan konten situs ini. Silakan aktifkan JavaScript di browser Anda.</p>
+  </noscript>
 </body>
 </html>
-
