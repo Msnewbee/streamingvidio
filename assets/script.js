@@ -1,16 +1,17 @@
 import { fetchAnimeList } from "./anime.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
- 
-  // --- Kode untuk memuat data anime ---
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
   const genreSelect = document.getElementById("genre-anime");
   const animeListContainer = document.getElementById("anime-list");
   const newAnimeContainer = document.getElementById("new-anime-list");
+  const paginationContainer = document.getElementById("pagination");
 
   let animeData = [];
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
+  let currentPage = 1;
+  const itemsPerPage = 20;
 
   animeListContainer.innerHTML = "<p>Memuat daftar anime...</p>";
 
@@ -25,21 +26,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log("📢 Daftar anime berubah.");
       }
 
-      // Tampilkan anime awal
-      displayAnime(animeData);
-
-      // Tampilkan anime terbaru
-      displayNewlyAddedAnime(animeData);
-
-      // Isi dropdown genre
-      populateGenreOptions(animeData);
-
-      // Ambil dan update watch count
       await loadServerWatchCounts();
 
-      // Tampilkan ulang anime yang telah diurutkan berdasarkan watch count
+      // Urut berdasarkan watch count default
       const sortedByWatch = [...animeData].sort((a, b) => b.watchCount - a.watchCount);
       displayAnime(sortedByWatch);
+
+      displayNewlyAddedAnime(animeData);
+      populateGenreOptions(animeData);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
@@ -48,10 +42,45 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";
-    animes.forEach((anime) => {
+
+    const totalPages = Math.ceil(animes.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedAnimes = animes.slice(startIndex, endIndex);
+
+    paginatedAnimes.forEach((anime) => {
       const animeCard = createAnimeCard(anime);
       animeListContainer.appendChild(animeCard);
     });
+
+    renderPaginationControls(totalPages, animes);
+  }
+
+  function renderPaginationControls(totalPages, animes) {
+    paginationContainer.innerHTML = "";
+
+    const prevBtn = document.createElement("button");
+    prevBtn.textContent = "Sebelumnya";
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.addEventListener("click", () => {
+      currentPage--;
+      displayAnime(animes);
+    });
+
+    const nextBtn = document.createElement("button");
+    nextBtn.textContent = "Berikutnya";
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.addEventListener("click", () => {
+      currentPage++;
+      displayAnime(animes);
+    });
+
+    const pageInfo = document.createElement("span");
+    pageInfo.textContent = `Halaman ${currentPage} dari ${totalPages}`;
+
+    paginationContainer.appendChild(prevBtn);
+    paginationContainer.appendChild(pageInfo);
+    paginationContainer.appendChild(nextBtn);
   }
 
   function displayNewlyAddedAnime(animes) {
@@ -72,14 +101,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   function createAnimeCard(anime) {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
-  
-    // Tentukan warna label berdasarkan jenis
+
     const type = anime.type?.toUpperCase() || "TV";
-    let labelColor = "#3498db"; // Default: biru untuk TV
-    if (type === "OVA") labelColor = "#e74c3c"; // Merah
-    else if (type === "MOVIE") labelColor = "#f1c40f"; // Kuning
-    else if (type === "SPECIAL") labelColor = "#9b59b6"; // Ungu untuk Special
-  
+    let labelColor = "#3498db";
+    if (type === "OVA") labelColor = "#e74c3c";
+    else if (type === "MOVIE") labelColor = "#f1c40f";
+    else if (type === "SPECIAL") labelColor = "#9b59b6";
+
     animeCard.innerHTML = `
       <div class="image-container">
         <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
@@ -161,6 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
 
   function filterAnime() {
+    currentPage = 1; // Reset halaman saat filter berubah
     const query = searchInput.value.toLowerCase();
     const sortBy = sortSelect.value;
     const selectedGenre = genreSelect.value;
@@ -175,8 +204,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     } else if (sortBy === "release_date") {
       filteredAnime.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     }
+
     displayAnime(filteredAnime);
   }
 
 });
+
 

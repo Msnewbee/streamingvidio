@@ -739,4 +739,30 @@ main {
     flex: 3;
     min-width: 0;
   }
+
+  .pagination-controls {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .pagination-controls button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .pagination-controls span {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
   
