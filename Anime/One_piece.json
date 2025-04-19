@@ -1546,7 +1546,29 @@
         "episodes": [
           { "episode": 1, "url": "https://mega.nz/embed/BbgmFKxR#uyCtuzKqgjuMUQw3gnTzjq0jnQAAFPaeU925gJBtDKg" }
         ]
+      },
+      {
+        "id": 58,
+        "title": "One Piece Film: Red",
+        "folder": "one_piece_film_red",
+        "image": "one_piece_film_red.jpg",
+        "japanese_title": "ワンピース フィルム レッド",
+        "score": 7.8,
+        "producers": ["Toei Animation", "Shueisha"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "115 Menit",
+        "release_date": "2022-08-06",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Music"],
+        "synopsis": "Di pulau musik Elegia, diva terkenal dunia Uta mengadakan konser pertamanya yang mengundang perhatian global. Namun, konser ini mengungkap fakta mengejutkan bahwa Uta adalah putri dari Shanks, kapten bajak laut Rambut Merah. Ketika Uta menggunakan kekuatan buah iblis Uta Uta no Mi untuk menciptakan dunia mimpi yang damai, Luffy dan kru Topi Jerami harus menghadapi konsekuensi dari dunia ilusi ini yang mengancam kenyataan.",
+        "trailer_url": "https://www.youtube.com/embed/89JWRYEIG-s",
+        "episodes": [
+          { "episode": 1, "url": "https://voe.sx/e/o6wu0ebrbtji" }
+        ]
       }
+      
       
            
 ] 
