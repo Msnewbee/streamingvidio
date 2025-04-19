@@ -1504,16 +1504,27 @@
         "episodes": [
           { "episode": 1, "url": "https://pixeldrain.com/api/file/EXAMPLE123" }
         ]
+      },
+      {
+        "id": 56,
+        "title": "One Piece: Episode of Sorajima",
+        "folder": "one_piece_episode_of_sorajima",
+        "image": "one_piece_episode_of_sorajima.jpg",
+        "japanese_title": "ワンピース エピソードオブ空島",
+        "score": 6.9,
+        "producers": ["Toei Animation"],
+        "type": "Special",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "105 Menit",
+        "release_date": "2018-08-25",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Comedy", "Drama"],
+        "synopsis": "Dalam 'One Piece: Episode of Sorajima', kru Topi Jerami memulai petualangan menuju pulau legendaris di langit, Skypiea. Setelah bertemu Mont Blanc Cricket, mereka menemukan cara untuk mencapai pulau tersebut melalui arus laut vertikal yang kuat. Di Skypiea, mereka menghadapi Enel, penguasa tirani yang mengaku sebagai 'dewa', dan terlibat dalam konflik antara penduduk asli Shandia dan penduduk Skypiea. Luffy dan kru berjuang untuk mengakhiri penindasan dan mengungkap misteri kota emas Shandora.",
+        "trailer_url": "https://www.youtube.com/embed/qN02RGAuKSc",
+        "episodes": [
+          { "episode": 1, "url": "https://8njctn.neonime.net/vqz9le.php?url=a0dmWkFTeEx2b1lxQWh2SlZDRmh6eG1jdnF6ZnVsQlVJcEZkeHd2SmIwTy9saUluMW0rdGRUeHNqK0wxNWdraQ==" }
+        ]
       }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-            
+           
 ] 
