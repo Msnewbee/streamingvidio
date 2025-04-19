@@ -1567,7 +1567,123 @@
         "episodes": [
           { "episode": 1, "url": "https://voe.sx/e/o6wu0ebrbtji" }
         ]
+      },
+      {
+        "id": 59,
+        "title": "One Piece (Live Action)",
+        "folder": "one_piece_live_action",
+        "image": "one_piece_live_action.jpg",
+        "japanese_title": "ワンピース",
+        "score": 8.2,
+        "producers": ["Tomorrow Studios", "Shueisha", "Kaji Productions"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 8,
+        "duration": "49–63 Menit per episode",
+        "release_date": "2023-08-31",
+        "studio": "Netflix",
+        "genre": ["Action", "Adventure", "Fantasy", "Comedy-drama"],
+        "synopsis": "Serial live-action *One Piece* mengikuti petualangan Monkey D. Luffy, seorang pemuda yang bercita-cita menjadi Raja Bajak Laut dengan menemukan harta karun legendaris 'One Piece'. Bersama kru Topi Jerami—Zoro, Nami, Usopp, dan Sanji—mereka menjelajahi East Blue, menghadapi tantangan dari Marinir hingga bajak laut lain, sambil membangun persahabatan dan mengejar impian masing-masing.",
+        "trailer_url": "https://www.youtube.com/embed/Ades3pQbeh8",
+        "episodes": [
+          { "episode": 1, "url": "https://filedon.co/embed/ZJdcRQr1hI"  },
+          { "episode": 2, "url": "https://acefile.co/player/100450854" },
+          { "episode": 3, "url": "https://acefile.co/player/100451679"  },
+          { "episode": 4, "url": "https://acefile.co/player/100454594"  },
+          { "episode": 5, "url": "https://acefile.co/player/100454765" },
+          { "episode": 6, "url": "https://acefile.co/player/100454890"  },
+          { "episode": 7, "url": "https://acefile.co/player/100455133" },
+          { "episode": 8, "url": "https://acefile.co/player/100455933"  }
+        ]
+      },
+      {
+        "id": 60,
+        "title": "One Piece: Dai Tokushuu! Momonosuke no Mei Shogun e no Michi",
+        "folder": "one_piece_momonosuke_special",
+        "image": "one_piece_momonosuke_special.jpg",
+        "japanese_title": "ワンピース 大特集！モモの助の名将軍への道",
+        "score": 6.3,
+        "producers": ["Toei Animation"],
+        "type": "TV Spesial",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "24 Menit",
+        "release_date": "2023-12-24",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Comedy", "Shounen"],
+        "synopsis": "Spesial recap ini menyoroti perjalanan Kozuki Momonosuke menjadi Shogun Wano. Bersama Yamato dan Kin'emon, mereka mengulas peristiwa penting setelah kekalahan Kaido dan Orochi, termasuk invasi singkat Ryokugyu dan kepergian Bajak Laut Topi Jerami dari Wano. Spesial ini juga merefleksikan perjuangan Momonosuke dalam memulihkan Wano dan membangun masa depan yang lebih baik.",
+        "trailer_url": "https://www.youtube.com/watch?v=PsiIBPAueFY",
+        "episodes": [
+          { "episode": 1, "url": "https://bestx.stream/v/yOgg4t8oxoaR/" }
+        ]
+      },
+      {
+        "id": 61,
+        "title": "One Piece Fan Letter",
+        "folder": "one_piece_fan_letter",
+        "image": "one_piece_fan_letter.jpg",
+        "japanese_title": "ONE PIECE FAN LETTER",
+        "score": 9.0,
+        "producers": ["Toei Animation", "Fuji TV"],
+        "type": "Special",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "24 Menit",
+        "release_date": "2024-10-20",
+        "studio": "Toei Animation",
+        "genre": ["Drama", "Slice of Life"],
+        "synopsis": "One Piece Fan Letter adalah episode spesial yang dirilis untuk merayakan ulang tahun ke-25 anime One Piece. Cerita ini mengikuti seorang gadis muda yang sangat mengidolakan Nami. Ketika kru Topi Jerami kembali ke Kepulauan Sabaody setelah dua tahun, gadis tersebut berusaha keras untuk menyampaikan surat penggemarnya kepada Nami. Dalam perjalanannya, ia menyamar sebagai bajak laut dan tanpa sengaja terlibat dengan kelompok Bajak Laut Topi Jerami palsu serta menghadapi ancaman dari Pacifista Sentomaru. Episode ini menyoroti dampak kru Topi Jerami terhadap kehidupan orang biasa di dunia One Piece.",
+        "trailer_url": "https://www.youtube.com/embed/MCb13lX0f3w",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dw2M7iwMAH5S-GAuQA7WLOsXcmEFcjJOqyurkZHsNr8ZHEKMwcl4Tdrfk6MdLqmBiwxhCzWIK4zZV1XHpE6r4Bcv_LK7C3FGhdhvVmWgOCe2gt94c9yMuTC4JyXgDBtfDSQ7BQ" }
+        ]
+      },
+      {
+        "id": 62,
+        "title": "One Piece: Gyojin Tou-hen",
+        "folder": "one_piece_gyojin_touhen",
+        "image": "one_piece_gyojin_touhen.jpg",
+        "japanese_title": "ワンピース 魚人島編",
+        "score": 7.9,
+        "producers": ["Toei Animation"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 21,
+        "duration": "24 Menit per episode",
+        "release_date": "2024-11-03",
+        "studio": "Toei Animation",
+        "genre": ["Action", "Adventure", "Fantasy", "Drama", "Comedy"],
+        "synopsis": "Setelah dua tahun berlatih secara terpisah, kru Topi Jerami bersatu kembali di Kepulauan Sabaody dan memulai perjalanan menuju Pulau Manusia Ikan yang terletak di bawah laut. Di sana, mereka menghadapi ancaman dari Hody Jones dan Bajak Laut Manusia Ikan Baru yang berusaha menggulingkan kerajaan Ryugu. Arc ini mengeksplorasi tema diskriminasi antara manusia dan manusia ikan, serta mengungkap rahasia tentang senjata kuno Poseidon dan janji Joy Boy kepada Putri Shirahoshi.",
+        "trailer_url": "https://www.youtube.com/embed/4DN5evy0ibA",
+        "episodes": [
+          { "episode": 1, "url": "https://filedon.co/embed/2fVQU7TPps" },
+          { "episode": 2, "url": "https://filedon.co/embed/A4BfX0wI94" },
+          { "episode": 3, "url": "https://filedon.co/embed/WcctakOMFR" },
+          { "episode": 4, "url": "https://filedon.co/embed/HUMIcjz37O" },
+          { "episode": 5, "url": "https://filedon.co/embed/6ivw91IR3z" },
+          { "episode": 6, "url": "https://filedon.co/embed/kFPvvlXta8" },
+          { "episode": 7, "url": "https://filedon.co/embed/Ph0W7O175i" },
+          { "episode": 8, "url": "https://filedon.co/embed/pOzJdno8QC" },
+          { "episode": 9, "url": "https://filedon.co/embed/Rv4iJk1gkA" },
+          { "episode": 10, "url": "https://filedon.co/embed/ilxuNVWaky" },
+          { "episode": 11, "url": "https://filedon.co/embed/Nb1Fqbj5YG" },
+          { "episode": 12, "url": "https://filedon.co/embed/wqxqnLYCCy" },
+          { "episode": 13, "url": "https://filedon.co/embed/DXcqO8nXlu" },
+          { "episode": 14, "url": "https://filedon.co/embed/4KSBrJgjzI" },
+          { "episode": 15, "url": "https://filedon.co/embed/Gb2jcEscNV" },
+          { "episode": 16, "url": "https://pixeldrain.com/api/file/NnZzYx66" },
+          { "episode": 17, "url": "https://www.blogger.com/video.g?token=AD6v5dz1TAjQO0icwlxKzbNimQ4YR-biSLw990su3RGF_5gtCkGAtyI_jjYGDINPTuSrRwMeD6O9CBM5pRpZf-tnniVHQpLXO5WbvTGr9CqhcfbUNcsBebB5EVAlpiqFPVLqhDWZkLu2" },
+          { "episode": 18, "url": "https://filedon.co/embed/yEX6FbW7iS" },
+          { "episode": 19, "url": "https://filedon.co/embed/OozW6dei8W" },
+          { "episode": 20, "url": "https://filedon.co/embed/8x1AQXq4fT" },
+          { "episode": 21, "url": "https://filedon.co/embed/or2wUehUwL" }
+        ]
       }
+      
+      
+    
+      
+      
       
       
            
