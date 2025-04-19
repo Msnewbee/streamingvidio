@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   
     const airingAnimes = animes.filter((anime) => {
       const status = anime.status?.toLowerCase();
-      return status !== "selesai"; // tampilkan semua selain 'selesai'
+      return status !== "selesai", "Completed"; // tampilkan semua selain 'selesai'
     });
   
     airingAnimes.slice(0, 12).forEach((anime) => {
