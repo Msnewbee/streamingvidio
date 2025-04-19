@@ -89,14 +89,18 @@ document.addEventListener("DOMContentLoaded", async function () {
       return;
     }
     newAnimeContainer.innerHTML = "";
-    const latestAnimes = [...animes]
-      .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
-      .slice(0, 12);
-    latestAnimes.forEach((anime) => {
+  
+    const airingAnimes = animes.filter((anime) => {
+      const status = anime.status?.toLowerCase();
+      return status !== "selesai"; // tampilkan semua selain 'selesai'
+    });
+  
+    airingAnimes.slice(0, 12).forEach((anime) => {
       const animeCard = createAnimeCard(anime);
       newAnimeContainer.appendChild(animeCard);
     });
   }
+  
 
   function createAnimeCard(anime) {
     const animeCard = document.createElement("div");
