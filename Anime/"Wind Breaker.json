@@ -1,0 +1,60 @@
+[
+    {
+        "id": 65,
+        "title": "Wind Breaker",
+        "folder": "wind_breaker",
+        "image": "wind_breaker.jpg",
+        "japanese_title": "ウィンドブレイカー",
+        "score": 8.1,
+        "producers": ["CloverWorks", "Aniplex"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 13,
+        "duration": "23 Menit per episode",
+        "release_date": "2024-04-05",
+        "studio": "CloverWorks",
+        "genre": ["Action", "Martial Arts", "School", "Delinquent"],
+        "synopsis": "Haruka Sakura adalah siswa baru di SMA Furin, sekolah yang terkenal sebagai tempat berkumpulnya para berandalan. Berambisi menjadi yang terkuat, Haruka terkejut saat mengetahui bahwa para siswa Furin, yang tergabung dalam kelompok 'Bofurin', sebenarnya melindungi kota dari ancaman luar. Melalui interaksi dengan teman-teman barunya, Haruka mulai memahami bahwa kekuatan sejati bukan hanya tentang bertarung, tetapi juga tentang melindungi dan mempercayai orang lain.",
+        "trailer_url": "https://www.youtube.com/embed/62r_G9bEPlU",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dyt7xjkh_GntCeyjqIhEilWVKEILEWv9HLMKoPgJPRRyox8YmPnkNYEtuBat49YzTTH1FupHDBmjHF5J4P8iN6q-rmZsOdoUQAFzapdgD9CpAIVjXzSUPaEW0-ygH-uDOs3atI" },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dyYQjW6fBJzyrwvUe7JZGdRzBbNzAOnM1kEMOyCm2lf26T9HbYNcylsIhlRQEbSLI4TirH31VHc8y5BPDYlneGsZaOA5cguXA-rF3k4RJfIZOeIuVVw7tf5m-7LBkMg9ZgCEcg" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dwAap1cAOGmTGx35UIyGjkdv17Y6gPEC69rwdzvEj4D4fcujCaLF98v3DxGkO-9EoR0-Cdt73O3LY4dEBFwi7NlIJNDPXz6AyJ96onld8t_Zaj1ukbplX89r4jkoQmoKWbteVUG"  },
+          { "episode": 4, "url": "https://www.blogger.com/video.g?token=AD6v5dx--B38tqfDx8Ax178hW3zgI4j_pRpvYH5q5VmNsQXVretXtZEk9FrqeS9VtiUwW50OiUThv07GJ_lHoZsid0Yc-ZtsrZKHJmy-o5ks-OZ3VA9516_d3Jya5CzUL9kmF2Reph4" },
+          { "episode": 5, "url": "https://www.blogger.com/video.g?token=AD6v5dwfryyIR3YCCuChQQfeikkP7my0GD4FC5yZkRaZ2TljZmdm4fFPyWlElulyxB-3okYdK0NU6vFmKGzFR6XYsx0arcO-kFyVlHuyHASS6MF2gAl9pM6NnwSM3S251po6fEooQzw" },
+          { "episode": 6, "url": "https://www.blogger.com/video.g?token=AD6v5dzpnz1ASXHKcpnBU2plAvY5hG-9PdFOY2kyup7EeipdCP2uFsHu56Kt0JMBt9d-avJdRZlhVehaBh3m6HenUHcgco4d8bMGrMV6PPjiOjYis1jXz-0mTfrQIsHiVNKItQrPxss" },
+          { "episode": 7, "url": "https://www.blogger.com/video.g?token=AD6v5dzlWGw_QCinjqiQvgQ7ff7hx81oqA5jtd6SE4I-49rliOEuoAP3R2AeOuq9VmWWtn8vDsIaPP_cb01o8NEHiPhEitlY6Z55VnlPwwUu9qd1isz-1mRk7IUpVGMaVlbJR8rkknA" },
+          { "episode": 8, "url": "https://www.blogger.com/video.g?token=AD6v5dygPNW99_KjRxBcJWgbOqJU3oCjkuy37SAGKQd9HpBpcnEzj8ec7Nl4eZXwE_7-uXCmgxGlcB8hWuaVk4AQPUlcxE8wcRNmIt50tgN4tBAjzf3VzrtyBgL8ipTnlOAoCENDYw" },
+          { "episode": 9, "url": "https://www.blogger.com/video.g?token=AD6v5dzmdL7UyJD92wYYiDhWCdrLERutDzSvRoMDMpKeHNFwRCM-Cwrzk9mWPJmN24EErToaa1Pv4DBDvND0TK1AKAp1k5viQDAjXP7NlRsP35_f_RjNGC2W0oA5QhYStzeEDwigxXCj" },
+          { "episode": 10, "url": "https://www.blogger.com/video.g?token=AD6v5dwgIPkATPXxxdNuV24D5bTu0QBAAIR7fURMr79UQsuf_WfypyzcSc9CwpNwqxBM3c9MiamgU3rQz41_N7uqtjR54outwGE7joDCm5i_3js0TWwQqJ_tOv8qB8PvF8V6_mYNhLc" },
+          { "episode": 11, "url": "https://www.blogger.com/video.g?token=AD6v5dxbCYr5W45OsxCj8dZc38v84RvG97jaosoxl8sa6iP7x6VF78HEKsv6W8ZJ201f6TfarOthNpfQLisG6jkoDVeIpQtF15936bMVQMkEjKm9PSJxYEo5b8QrSEMmRWEOrhxaRfk" },
+          { "episode": 12, "url": "https://www.blogger.com/video.g?token=AD6v5dwzqcKJ_TrflbRzkSz_SMCwyMTKvvUBEAk3fdj3WquSOCjLlrIFWTk2qJW9U3NaC5doYbKEz6MLzEJKHtZgiG1hB6iEUKXIRWxepnbtw6hXB5nDahuEO1EVLaz3VYU18ZAvMzb-" },
+          { "episode": 13, "url": "https://www.blogger.com/video.g?token=AD6v5dxMSb3AzekcGdjhjGmt2tKF-9PlyuTecHtahR1UrXBGKv51LS_0DbpbfBZhI-O65SMvWj8qqv7Wc32M-xhh4lLflP28DjiRbmCW_t0MBfRj3E3fz1fMIZymzv0lxftChirHt2Q" }
+        ]
+      },
+      {
+        "id": 66,
+        "title": "Wind Breaker Season 2",
+        "folder": "wind_breaker_s2",
+        "image": "wind_breaker_s2.jpg",
+        "japanese_title": "ウィンドブレイカー 第2期",
+        "score": 8.3,
+        "producers": ["CloverWorks", "Aniplex"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-04-03",
+        "studio": "CloverWorks",
+        "genre": ["Action", "Martial Arts", "School", "Delinquent"],
+        "synopsis": "Musim kedua dari *Wind Breaker* melanjutkan kisah Haruka Sakura dan kelompok Bofurin saat mereka menghadapi tantangan baru dari geng KEEL yang misterius. Pertarungan untuk melindungi kota semakin intens, menguji batas kekuatan, persahabatan, dan tekad mereka.",
+        "trailer_url": "https://www.youtube.com/embed/jp1bVUvYwYQ",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dzsPWAE4n9aUlmKIJlSSCPcimJgb59-dnUEYoSWJM1j18O2VegOXGxWw3OLCe7Y6TCxbQ-AZhA7iVQenq3xMr_BeujWDTd-tjopyfj-5V9dSiWUu3C7lWomGwXof9kZZrjj2JY2" },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dzW6Myg6VDWh8-6NIcrnmdh7sKczB7BaDJcXexl44tfWRAq_4L_cce7f_D3_sZM0p9l3LarPTGqtNnsg3SS3PEn49ikaO-ylc19WhNR4py8rtMpC3hsKECvp1Z-4cePkhQmZaQ" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dyivQ_9EX4Nbda7zh1dWbWSLYtWqrQN7kmupdsjfoSgXeNSE-vfDarVwQaw-XRmJ0DFQITAphdSeaI4gVBOGNR8IOtU3PCFFS3Tzofme9RAam5vr6Ovj25SHHK10hQI5Dzva7l8" }
+        ]
+      }
+      
+      
+]

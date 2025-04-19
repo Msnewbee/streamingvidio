@@ -24,7 +24,9 @@ export async function fetchAnimeList() {
         { path: './Anime/Farmagia.json', label: 'Farmagia.json' },
         { path: './Anime/sousei_no_aquarion_myth_of_emotions.json', label: 'sousei_no_aquarion_myth_of_emotions.json' },
         { path: './Anime/Unnamed_Memory.json', label: 'Unnamed_Memory.json' },
-        { path: './Anime/Ao_no_Exorcist.json', label: 'Ao_no_Exorcist.json' }
+        { path: './Anime/Ao_no_Exorcist.json', label: 'Ao_no_Exorcist.json' },
+        { path: './Anime/Haite Kudasai, Takamine-san.json', label: 'Haite Kudasai, Takamine-san.json'},
+        { path: './Anime/"Wind Breaker.json', label: '"Wind Breaker.json'}
 
       ];
   

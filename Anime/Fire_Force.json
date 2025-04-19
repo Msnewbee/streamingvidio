@@ -8,7 +8,7 @@
         "score": 7.7,
         "producers": ["David Production", "Kodansha"],
         "type": "TV",
-        "status": "Berjalan",
+        "status": "Selesai",
         "total_episodes": 24,
         "duration": "24 Menit per episode",
         "release_date": "2019-07-06",
@@ -86,5 +86,29 @@
           {  "episode": 23,  "url": "https://www.blogger.com/video.g?token=AD6v5dyEEkRe143_njk0qQK8chigFZafdTtyx3Tls39Y0vX7RVfJ3xdWMlDIN4nra4yon8d9Ueepk3JDXu0kFANodbqTnoBdV7AM40exvpqOsoz_I4yeS7FL_GnLdsZr4mJ2LyWuDwRB" },
           {  "episode": 24,  "url": "https://www.blogger.com/video.g?token=AD6v5dxK9bryiCjaAL3IEhnzPsXutitmmhGpS4tX_TJ29l5NhiBuOi1udIszRM5rEeryLXWQJZpS9xkRGJuwMFlV1Pd2WUlQTZTNBVC2XR73sKvOdxcKSM8RWZfnDPspqsjRHaBTHGY" }
         ]
+      },
+      {
+        "id": 63,
+        "title": "Enen no Shouboutai: San no Shou (Fire Force) 3nd Season",
+        "folder": "fire_force_s3",
+        "image": "fire_force_s3.jpg",
+        "japanese_title": "炎炎ノ消防隊 第参章",
+        "score": 8.1,
+        "producers": ["David Production"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 24,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-04-04",
+        "studio": "David Production",
+        "genre": ["Action", "Drama", "Sci-Fi", "Shounen", "Supernatural", "Superpower"],
+        "synopsis": "Musim ketiga dan terakhir dari *Fire Force* mengikuti perjalanan Shinra Kusakabe dan Pasukan Pemadam Kebakaran Khusus Kompi 8 dalam menghadapi ancaman dari White-Clad dan Evangelist. Dengan Tokyo yang dilanda kebakaran dan warga yang mengalami pembakaran spontan, Kompi 8 harus bersatu untuk menghadapi pertempuran paling sulit mereka.",
+        "trailer_url": "https://www.youtube.com/embed/JOlRi9YFA5c",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dwxGt0RLfZyzp2sREsMkobtxAFXlM9HjUPGP6XJew24abCrSEYxm7EPUiBzupMmT6qtbtyCwRQK6pUYI6t0dspw7MT-89P-7xxkA7i8ay2haNotWucTvOvldDM6jW5zbSxYK62A"  },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dzFG6j-HfnU4jiBGvpcEYOh2zPJ-OLB8C-OhHX2GcA9QyJl1J3ZGx6uncPMWR6XaWBjjoOmSUJVRE3O04rKOjOCiC329EPSOv6xzbvJiZZVJRMaEfS_m8weTpY7YjSpTjmj06c"  },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dzSRhxAWDXs5PqtFLxsYKohNeyh2h7goyi4590iKh4XElFJ3KbAOxOZz7S5n3kCGsFznRJ-qcVHCJurX6oi02KDwuPGTez0QWiZoDpvftXzQzvdcaRS3-kuImIuuEPQOYlH8i6U"  }
+        ]
       }
+      
 ]

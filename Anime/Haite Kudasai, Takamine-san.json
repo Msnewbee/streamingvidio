@@ -1,0 +1,26 @@
+[
+    {
+        "id": 64,
+        "title": "Haite Kudasai, Takamine-san (Please Put Them On, Takamine-san)",
+        "folder": "please_put_them_on_takamine_san",
+        "image": "please_put_them_on_takamine_san.jpg",
+        "japanese_title": "履いてください、鷹峰さん",
+        "score": 6.8,
+        "producers": ["Liden Films", "Square Enix"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2025-04-02",
+        "studio": "Liden Films",
+        "genre": ["Romance", "Sci-Fi", "Ecchi", "Comedy"],
+        "synopsis": "Takane Takamine adalah dewi di SMA-nya—cantik, cerdas, dan atletis. Namun, rahasia kesuksesannya adalah kemampuan untuk mengulang waktu dengan melepas pakaian dalamnya. Koushi Shirota, siswa biasa, secara tidak sengaja mengetahui rahasia ini dan dipaksa menjadi 'lemari pakaian' pribadi Takamine. Kini, hidupnya berubah drastis saat ia terlibat dalam kekacauan waktu dan hubungan yang rumit dengan sang presiden OSIS.",
+        "trailer_url": "https://www.youtube.com/embed/rkhpwiw8G6M",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dwFm1uW_X2dSQe6pf88byTtylKS87jJQlcSeapPebSF3M1mMz97gMGwFiqagyF4ZBgxVUFlpNBzvE7raS5b87BfjxbVW7gyNoWd8LcTWl_nrZ6vUhXV_Zn43054SqRf21JU7lA"  },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dznnymVnFkQ45bjgn72W8k7B-Sa3BZwHlhMho1hEdQvKZL7Nw7-VW64QvAQVsYLLY0G-XvdgsobdCN6mT3i7MzJwcSfOeanTXc3w4K28jKahPEEPoIVHHPQJdqge_afCAE7TY8" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dxj5mjWPHR4Iz00SgBAY-pnde82pH_-S0PSj83rQatJzsIVECvw31CTFGKJ0x7t6dk-Fusfse7HCOwdkz9V0T0pSZgZpfJKeUlUuUuwFqlpdnPMEy0p_u-h9YXhgleGCsPclyQ"  }
+        ]
+      }
+      
+]
