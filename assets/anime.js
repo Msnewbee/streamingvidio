@@ -26,7 +26,8 @@ export async function fetchAnimeList() {
         { path: './Anime/Unnamed_Memory.json', label: 'Unnamed_Memory.json' },
         { path: './Anime/Ao_no_Exorcist.json', label: 'Ao_no_Exorcist.json' },
         { path: './Anime/Haite Kudasai, Takamine-san.json', label: 'Haite Kudasai, Takamine-san.json'},
-        { path: './Anime/"Wind Breaker.json', label: '"Wind Breaker.json'}
+        { path: './Anime/"Wind Breaker.json', label: '"Wind Breaker.json'},
+        { path: './Anime/Kuroshitsuji.json', label: 'Kuroshitsuji.json'}
 
       ];
   
