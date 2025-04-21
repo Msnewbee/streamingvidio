@@ -27,7 +27,8 @@ export async function fetchAnimeList() {
         { path: './Anime/Ao_no_Exorcist.json', label: 'Ao_no_Exorcist.json' },
         { path: './Anime/Haite Kudasai, Takamine-san.json', label: 'Haite Kudasai, Takamine-san.json'},
         { path: './Anime/"Wind Breaker.json', label: '"Wind Breaker.json'},
-        { path: './Anime/Kuroshitsuji.json', label: 'Kuroshitsuji.json'}
+        { path: './Anime/Kuroshitsuji.json', label: 'Kuroshitsuji.json'},
+        { path: './Anime/The Beginning After the End.json', label: 'The Beginning After the End.json'}
 
       ];
   
