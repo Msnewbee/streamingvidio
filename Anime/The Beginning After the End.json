@@ -1,0 +1,26 @@
+[
+    {
+        "id": 75,
+        "title": "Saikyou no Ousama, Nidome no Jinsei wa Nani wo Suru (The Beginning After the End)",
+        "folder": "the_beginning_after_the_end",
+        "image": "the_beginning_after_the_end.jpg",
+        "japanese_title": "最強の王様、二度目の人生は何をする？",
+        "score": 7.8,
+        "producers": ["Studio A-Cat", "Crunchyroll"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 24,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-04-02",
+        "studio": "Studio A-Cat",
+        "genre": ["Fantasy", "Action", "Isekai", "Adventure"],
+        "synopsis": "Setelah kematian misteriusnya, Raja Grey terlahir kembali sebagai Arthur Leywin di benua magis Dicathen. Dengan ingatan kehidupan sebelumnya, Arthur memulai perjalanan untuk memperbaiki kesalahan masa lalunya, menguasai sihir, dan menghadapi ancaman yang membayangi dunia barunya.",
+        "trailer_url": "https://www.youtube.com/embed/bz8IJKde9hs",
+        "episodes": [
+          { "episode": 1, "url": "https://filedon.co/embed/1flKxWoCRv" },
+          { "episode": 2, "url": "https://oplv.io/X5AM3R" },
+          { "episode": 3, "url": "https://oplv.io/aeuW8C" }
+        ]
+      }
+      
+]
