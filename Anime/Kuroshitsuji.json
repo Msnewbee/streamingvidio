@@ -140,18 +140,41 @@
         "synopsis": "Di London era Victoria, pertunjukan spektakuler Noah's Ark Circus memukau penonton dengan atraksi luar biasa. Namun, di balik gemerlap sirkus, anak-anak mulai menghilang secara misterius di setiap kota yang mereka kunjungi. Atas perintah Ratu Victoria, Ciel Phantomhive dan pelayannya yang setia, Sebastian Michaelis, menyusup ke dalam sirkus untuk menyelidiki kasus ini. Dengan menyamar sebagai anggota sirkus, mereka mengungkap rahasia kelam yang tersembunyi di balik tirai panggung.",
         "trailer_url": "https://www.youtube.com/embed/2H4DjqSEdS8",
         "episodes": [
-          { "episode": 1, "url": "https://pixeldrain.com/api/file/episode1" },
-          { "episode": 2, "url": "https://pixeldrain.com/api/file/episode2" },
-          { "episode": 3, "url": "https://pixeldrain.com/api/file/episode3" },
-          { "episode": 4, "url": "https://pixeldrain.com/api/file/episode4" },
-          { "episode": 5, "url": "https://pixeldrain.com/api/file/episode5" },
-          { "episode": 6, "url": "https://pixeldrain.com/api/file/episode6" },
-          { "episode": 7, "url": "https://pixeldrain.com/api/file/episode7" },
-          { "episode": 8, "url": "https://pixeldrain.com/api/file/episode8" },
-          { "episode": 9, "url": "https://pixeldrain.com/api/file/episode9" },
-          { "episode": 10, "url": "https://pixeldrain.com/api/file/episode10" }
+          { "episode": 1, "url": "https://acefile.co/player/16567585" },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dyQvOqlqVAjI55dZiQXk8UIwglJoD0gwSX9KwCwaO7f48j0eCObmhVsFmr_RPY49W3_CuqBtGc9rF_lPdqxO_8PjqoHsIuzqmJgmdFRjQ43Imuv--9p6Q-dkeYv6VsCQ8nwZgk" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dx26ELqTpddYH0T18OQJECGIwUEcvU4EqSE-qe-C9YKvp-TFsuUi0IDj2-rMRMJwbpb75eNYiX0_V3F3Zb6nYU3Jw8KHUMG2Kbdui4SKm20MNmjM_XXIGV6oXwbQGihrFelwm4" },
+          { "episode": 4, "url": "https://www.blogger.com/video.g?token=AD6v5dxVdzUE6p-ItACoTG2bLXJ-cReIDWWP5XL5V5N5ANOeK57sjyT4oie7CwQ0aGQBie9QiMQVQRZZyDxbI5yPN-HI6PLc-F6evhGPhAnWehyVfdwPlzw3Jq--23QcsxVXEoelrTA" },
+          { "episode": 5, "url": "https://www.blogger.com/video.g?token=AD6v5dx1C_0Ose4qcYQoygYezBcfKm1R0i4edp-Q35Lb9u8m4b3MyauTCo5_K86_2ikr3HxWEsdS4tr55nSy_WzSnkLJLAKJr31AKZ0eOSY9jlqkuVYgO5PytaxcxENOZ7jTfeYgCrE" },
+          { "episode": 6, "url": "https://www.blogger.com/video.g?token=AD6v5dxL8W88s_J09czB9xaAxsNjTi3Ah-_9BIiS--1iFXOuq1T18J1vcswwFTIdKRx3Q8b5xAW6m0XP1jRlGCajQ6TK3YAlWcuTfvZRxZEp0fEGwqiBXITyO55gouBaJvKJW09SR4F6" },
+          { "episode": 7, "url": "https://www.blogger.com/video.g?token=AD6v5dzpIliHSGeIO8dLypEfYJx6YR62-SP8cDqXcjRhshKKEIsyCST4idcGt7CZ9hNlgzeh2suN-DtEuXp43fzazcnZS6NEkhYjsI6Igxu2INKrR3XmL770S3w5XQXU2aT9zOPi1l6F" },
+          { "episode": 8, "url": "https://www.blogger.com/video.g?token=AD6v5dyJp_uOEvVDKDkbCj9xwcLZIPDhtCh3-bdMv5OMmueTO5PfjHYlIkh7BBP9Nzmquc_Lmz4MG9kfe8JT3_-43qfwGALyzuEg-t0RK82HRqrCyfODpPrlzxkqzNvwXM54Vz4pLhL3" },
+          { "episode": 9, "url": "https://www.blogger.com/video.g?token=AD6v5dziyJOjxyNC8tB523mWZGLy_6e-wiiBRtk9nzXOybT-j1lR8Fs_KBdeyYQHwtJ710YVEKXd15pQX94U0mwTPa3v5Jn0ReT2ffxiQ3yt3sBWhpMOQhs4oyTrtO6QrJnUS5L0rlQ" },
+          { "episode": 10, "url": "https://www.blogger.com/video.g?token=AD6v5dxfP3Qz6SbLm1eKtLxf19SxsL57uSq3v497qiqgRqie6UTh2Y9R1WrPKts5UyMW69Kq9idw1r587xF6Ql9O0mZdkTu1ierd__vAi6qekdRrVxutZep36bPHTLhfRkQN_iI_Xo4" }
+        ]
+      },
+      {
+        "id": 71,
+        "title": "Kuroshitsuji: Book of Murder",
+        "folder": "kuroshitsuji_book_of_murder",
+        "image": "kuroshitsuji_book_of_murder.jpg",
+        "japanese_title": "黒執事 Book of Murder",
+        "score": 7.8,
+        "producers": ["Aniplex", "Square Enix"],
+        "type": "OVA",
+        "status": "Selesai",
+        "total_episodes": 2,
+        "duration": "57–65 Menit per episode",
+        "release_date": "2014-10-25",
+        "studio": "A-1 Pictures",
+        "genre": ["Mystery", "Historical", "Supernatural", "Shounen"],
+        "synopsis": "Pada musim semi tahun 1889, atas perintah Ratu Victoria, Earl Ciel Phantomhive mengadakan jamuan makan malam mewah di kediamannya, Phantomhive Manor. Di antara para tamu istimewa, termasuk penulis muda Arthur Conan Doyle, terjadi pembunuhan misterius yang membuat Ciel menjadi tersangka utama. Ketika Sebastian Michaelis, sang kepala pelayan setia, ditemukan tewas, ketegangan meningkat. Dengan bantuan 'Jeremy Rathbone', seorang detektif eksentrik, para tamu harus mengungkap kebenaran di balik serangkaian pembunuhan ini sebelum menjadi korban berikutnya.",
+        "trailer_url": "https://www.youtube.com/embed/9c3n1fHkXj0",
+        "episodes": [
+          { "episode": 1, "url": "https://pixeldrain.com/api/file/episode1_url" },
+          { "episode": 2, "url": "https://pixeldrain.com/api/file/episode2_url" }
         ]
       }
+      
       
       
       
