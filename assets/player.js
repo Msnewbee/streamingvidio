@@ -1,12 +1,14 @@
+// player.js (update)
 import { fetchAnimeList } from './anime.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const animeId = urlParams.get('id');
-    let episodeNumber = parseInt(urlParams.get('episode'));
+    const episodeParam = urlParams.get('episode');  // gunakan langsung string
 
-    if (!animeId || isNaN(episodeNumber)) {
-        alert("ID anime atau nomor episode tidak valid.");
+    // Validasi dasar: id dan episode harus ada
+    if (!animeId || !episodeParam) {
+        alert("ID anime atau parameter episode tidak valid.");
         window.location.href = "index.html";
         return;
     }
@@ -20,30 +22,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
-    const currentEpisode = anime.episodes.find(ep => parseInt(ep.episode) === episodeNumber);
+    // Cari episode berdasarkan string match
+    const currentEpisode = anime.episodes.find(ep => String(ep.episode) === episodeParam);
 
     if (!currentEpisode) {
         alert("Episode tidak ditemukan.");
         return;
     }
 
-    // Set judul anime
+    // Set judul
     const titleElement = document.getElementById("anime-title");
-    titleElement.textContent = `${anime.title} - Episode ${episodeNumber}`;
+    if (titleElement) {
+        titleElement.textContent = `${anime.title} - Episode ${episodeParam}`;
+    }
 
-    // Set tombol kembali ke detail anime
+    // Tombol kembali
     const backToDetail = document.getElementById("back-to-detail");
     if (backToDetail) {
         backToDetail.href = `anime.html?id=${animeId}`;
     }
 
-    // Pasang video ke iframe
+    // Pasang video
     const iframe = document.getElementById("anime-embed");
-    iframe.src = currentEpisode.url;
+    if (iframe) {
+        iframe.src = currentEpisode.url;
+    }
 
-    // Navigasi episode
-    const episodeIndex = anime.episodes.findIndex(ep => parseInt(ep.episode) === episodeNumber);
+    // Index dalam array untuk navigasi
+    const episodeIndex = anime.episodes.findIndex(ep => String(ep.episode) === episodeParam);
 
+    // Tombol prev/next
     const prevBtn = document.getElementById("prev-episode");
     const nextBtn = document.getElementById("next-episode");
 
@@ -51,8 +59,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         prevBtn.disabled = episodeIndex <= 0;
         prevBtn.addEventListener("click", () => {
             if (episodeIndex > 0) {
-                const prevEpisode = anime.episodes[episodeIndex - 1];
-                window.location.href = `player.html?id=${animeId}&episode=${prevEpisode.episode}`;
+                const prevEp = anime.episodes[episodeIndex - 1];
+                window.location.href = `player.html?id=${animeId}&episode=${prevEp.episode}`;
             }
         });
     }
@@ -61,13 +69,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         nextBtn.disabled = episodeIndex >= anime.episodes.length - 1;
         nextBtn.addEventListener("click", () => {
             if (episodeIndex < anime.episodes.length - 1) {
-                const nextEpisode = anime.episodes[episodeIndex + 1];
-                window.location.href = `player.html?id=${animeId}&episode=${nextEpisode.episode}`;
+                const nextEp = anime.episodes[episodeIndex + 1];
+                window.location.href = `player.html?id=${animeId}&episode=${nextEp.episode}`;
             }
         });
     }
 
-    // Tombol ganti server (jika banyak mirror)
+    // Jika ada mirrors array, tombol switch-server tetap bekerja
     const serverBtn = document.getElementById("switch-server");
     if (serverBtn && Array.isArray(currentEpisode.mirrors) && currentEpisode.mirrors.length > 0) {
         let currentMirrorIndex = 0;
@@ -78,53 +86,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Tampilkan daftar episode - gaya Animasu + support TV
+    // Render ulang daftar episode dengan highlight yang aktif
     const episodeListDiv = document.getElementById("player-episode-list");
     if (episodeListDiv) {
         episodeListDiv.innerHTML = '';
-
         anime.episodes.forEach(ep => {
-            const episodeRow = document.createElement("div");
-            episodeRow.classList.add("player-episode-card");
+            const row = document.createElement("div");
+            row.classList.add("player-episode-card");
 
             const label = document.createElement("div");
             label.classList.add("player-episode-label");
             label.textContent = `Episode ${ep.episode}`;
 
-            const button = document.createElement("a");
-            button.classList.add("player-watch-button");
-            button.href = `player.html?id=${animeId}&episode=${ep.episode}`;
-            button.textContent = "Tonton";
-            button.setAttribute("tabindex", "0"); // TV remote support
+            const btn = document.createElement("a");
+            btn.classList.add("player-watch-button");
+            btn.href = `player.html?id=${animeId}&episode=${ep.episode}`;
+            btn.textContent = "Tonton";
+            btn.setAttribute("tabindex", "0");
 
-            if (parseInt(ep.episode) === episodeNumber) {
-                button.classList.add("active");
-            
+            if (String(ep.episode) === episodeParam) {
+                btn.classList.add("active");
                 setTimeout(() => {
-                    // 1. Scroll daftar episode agar tombol aktif muncul di atas
-                    const container = document.getElementById("player-episode-list");
-                    if (container) {
-                        const offsetTop = button.offsetTop;
-                        container.scrollTo({
-                            top: offsetTop - 10,
-                            behavior: 'smooth'
-                        });
-                    }
-            
-                    // 2. Scroll ke iframe video agar langsung terlihat
-                    const iframe = document.getElementById("anime-embed");
-                    if (iframe) {
-                        iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        // Optional: iframe.focus(); // aktifkan jika iframe bisa difokuskan di TV
-                    }
+                    // scroll episode list & video
+                    const container = episodeListDiv;
+                    container.scrollTo({ top: btn.offsetTop - 10, behavior: 'smooth' });
+                    iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 300);
             }
 
-            episodeRow.appendChild(label);
-            episodeRow.appendChild(button);
-            episodeListDiv.appendChild(episodeRow);
+            row.append(label, btn);
+            episodeListDiv.appendChild(row);
         });
     }
 });
+
 
 
