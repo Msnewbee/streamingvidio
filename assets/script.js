@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   let animeData = [];
   let previousAnimeIds = JSON.parse(localStorage.getItem("previousAnimeIds")) || [];
   let currentPage = 1;
-  const itemsPerPage = 10;
+  const itemsPerPage = 12;
 
   animeListContainer.innerHTML = "<p>Memuat daftar anime...</p>";
 
