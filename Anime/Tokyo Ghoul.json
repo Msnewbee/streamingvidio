@@ -1,0 +1,25 @@
+[
+    {
+        "id": 83,
+        "title": "Tokyo Ghoul",
+        "folder": "tokyo_ghoul",
+        "image": "tokyo_ghoul.jpg",
+        "japanese_title": "東京喰種トーキョーグール",
+        "score": 7.9,
+        "producers": ["Pierrot", "Marvelous", "TC Entertainment"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2014-07-04",
+        "studio": "Pierrot",
+        "genre": ["Action", "Horror", "Supernatural", "Psychological"],
+        "synopsis": "Di Tokyo, makhluk misterius yang disebut 'ghoul' hidup berdampingan dengan manusia, menyamar di antara mereka. Ken Kaneki, seorang mahasiswa biasa, mengalami perubahan drastis setelah bertemu dengan Rize Kamishiro, seorang ghoul. Setelah insiden tragis, Kaneki menjalani operasi transplantasi organ dari Rize, yang mengubahnya menjadi setengah ghoul. Kini, ia harus beradaptasi dengan kehidupan barunya, menyeimbangkan sisi manusianya dengan naluri ghoul, sambil menghadapi ancaman dari organisasi anti-ghoul dan konflik internal komunitas ghoul.",
+        "trailer_url": "https://www.youtube.com/embed/7aMOurgDB-o",
+        "episodes": [
+          { "episode": 1, "url": "https://abysscdn.com/?v=wPzFnaKiK&autoplay=1" },
+          { "episode": 2, "url": "https://abysscdn.com/?v=T7bVKiIuD&autoplay=1" }
+        ]
+      }
+      
+]

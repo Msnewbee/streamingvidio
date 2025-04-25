@@ -29,7 +29,8 @@ export async function fetchAnimeList() {
         { path: './Anime/"Wind Breaker.json', label: '"Wind Breaker.json'},
         { path: './Anime/Kuroshitsuji.json', label: 'Kuroshitsuji.json'},
         { path: './Anime/The Beginning After the End.json', label: 'The Beginning After the End.json'},
-        { path: './Anime/Sentai Daishikkaku.json', label: 'Sentai Daishikkaku.json'}
+        { path: './Anime/Sentai Daishikkaku.json', label: 'Sentai Daishikkaku.json'},
+        { path: './Anime/Tokyo Ghoul.json', label: 'Tokyo Ghoul.json' }
 
       ];
   
