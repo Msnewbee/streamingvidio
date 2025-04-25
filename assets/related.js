@@ -2,52 +2,33 @@
 import { fetchAnimeList } from './anime.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const params        = new URLSearchParams(window.location.search);
-  const animeId       = params.get('id');
-  const relatedListEl = document.getElementById('related-list');
+  // Kita tahu ini halaman khusus untuk Attack on Titan
+  // jadi langsung gunakan prefix folder:
+  const prefix = 'attack_on_titan';
+  const container = document.getElementById('related-list');
 
-  if (!animeId) {
-    relatedListEl.innerHTML = '<p>ID anime tidak valid.</p>';
-    return;
-  }
-
-  let animeData;
+  let allAnime;
   try {
-    animeData = await fetchAnimeList();
-  } catch {
-    relatedListEl.innerHTML = '<p>Gagal memuat data.</p>';
+    allAnime = await fetchAnimeList();
+  } catch (err) {
+    container.innerHTML = `<p>Gagal memuat data: ${err.message}</p>`;
     return;
   }
 
-  // Cari data anime yang sedang dibuka
-  const current = animeData.find(a => String(a.id) === animeId);
-  if (!current) {
-    relatedListEl.innerHTML = '<p>Anime tidak ditemukan.</p>';
-    return;
-  }
-
-  // Ambil judul dasar: sebelum ":" atau "("
-  // e.g. "Shingeki no Kyojin"
-  const baseTitle = current.title
-    .split(':')[0]      // hilangin subtitle setelah ":"
-    .split('(')[0]      // hilangin teks dalam kurung
-    .trim();
-
-  // Filter semua obyek yang memiliki baseTitle
-  const related = animeData.filter(a =>
-    a.id !== current.id &&
-    a.title.includes(baseTitle)
+  // Filter semua entri yang folder-nya mulai dengan prefix
+  const related = allAnime.filter(a =>
+    a.folder.toLowerCase().startsWith(prefix + '_')
   );
 
   if (related.length === 0) {
-    relatedListEl.innerHTML = '<p>Tidak ada serial serupa.</p>';
+    container.innerHTML = '<p>Tidak ada serial serupa.</p>';
     return;
   }
 
-  // Kosongkan dulu
-  relatedListEl.innerHTML = '';
+  // Reset loading text
+  container.innerHTML = '';
 
-  // Render setiap card
+  // Buat card untuk setiap entri
   related.forEach(anime => {
     const card = document.createElement('div');
     card.classList.add('anime-card');
@@ -76,8 +57,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       window.location.href = `anime.html?id=${anime.id}`;
     });
 
-    relatedListEl.appendChild(card);
+    container.appendChild(card);
   });
 });
-
-
