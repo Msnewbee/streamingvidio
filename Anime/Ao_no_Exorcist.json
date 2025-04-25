@@ -160,7 +160,40 @@
           { "episode": 11, "url": "https://s0.wibufile.com/video01/AoEYnHh-11-FULLHD-SAMEHADAKU.CARE.mp4" },
           { "episode": 12, "url": "https://s0.wibufile.com/video01/AoEYnHh-12-END-FULLHD-SAMEHADAKU.CARE.mp4" }
         ]
+      },
+      {
+        "id": 82,
+        "title": "Ao no Exorcist: Yosuga-hen",
+        "folder": "ao_no_exorcist_yosuga_hen",
+        "image": "ao_no_exorcist_yosuga_hen.jpg",
+        "japanese_title": "青の祓魔師 終夜篇",
+        "score": 7.8,
+        "producers": ["Dentsu", "Mainichi Broadcasting System", "Movic", "Rakuonsha", "Shueisha"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2025-01-04",
+        "studio": "Studio VOLN",
+        "genre": ["Action", "Fantasy", "School", "Shounen", "Supernatural"],
+        "synopsis": "Setelah perpisahan dengan Yukio yang bergabung dengan Illuminati, Rin memutuskan untuk mengungkap rahasia kelahiran mereka. Dengan bantuan Mephisto, Rin melakukan perjalanan ke masa lalu untuk menelusuri kehidupan ibu mereka, Yuri Egin, dan ayah angkat mereka, Shirou Fujimoto. Perjalanan ini mengungkap kebenaran yang lebih kelam dari yang pernah dibayangkan Rin.",
+        "trailer_url": "https://www.youtube.com/embed/your_trailer_id",
+        "episodes": [
+          { "episode": 1, "url": "https://s0.wibufile.com/video01/AnEYh-1-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 2, "url": "https://s0.wibufile.com/video01/AnEYh-2-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 3, "url": "https://s0.wibufile.com/video01/AnEYh-3-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 4, "url": "https://s0.wibufile.com/video01/AnEYh-4-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 5, "url": "https://s0.wibufile.com/video01/AnEYh-5-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 6, "url": "https://s0.wibufile.com/video01/AnEYh-6-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 7, "url": "https://s0.wibufile.com/video01/AnEYh-7-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 8, "url": "https://s0.wibufile.com/video01/AnEYh-8-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 9, "url": "https://s0.wibufile.com/video01/AnEYh-9-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 10, "url": "https://s0.wibufile.com/video01/AnEYh-10-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 11, "url": "https://s0.wibufile.com/video01/AnEYh-11-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 12, "url": "https://s0.wibufile.com/video01/AnEYh-12-END-FULLHD-SAMEHADAKU.CARE.mp4" }
+        ]
       }
+      
       
       
       
