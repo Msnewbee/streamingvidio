@@ -2,16 +2,16 @@
 import { fetchAnimeList } from './anime.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const params          = new URLSearchParams(window.location.search);
-  const animeId         = params.get('id');
-  const relatedListEl   = document.getElementById('related-list');
+  const params        = new URLSearchParams(window.location.search);
+  const animeId       = params.get('id');
+  const relatedListEl = document.getElementById('related-list');
 
   if (!animeId) {
     relatedListEl.innerHTML = '<p>ID anime tidak valid.</p>';
     return;
   }
 
-  let animeData = [];
+  let animeData;
   try {
     animeData = await fetchAnimeList();
   } catch {
@@ -19,17 +19,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
+  // Cari data anime yang sedang dibuka
   const current = animeData.find(a => String(a.id) === animeId);
   if (!current) {
     relatedListEl.innerHTML = '<p>Anime tidak ditemukan.</p>';
     return;
   }
 
-  // Ambil prefix folder (misal 'shingeki_no_kyojin') untuk franchise
-  const prefix = current.folder.split('_').slice(0, 3).join('_');
+  // Ambil judul dasar: sebelum ":" atau "("
+  // e.g. "Shingeki no Kyojin"
+  const baseTitle = current.title
+    .split(':')[0]      // hilangin subtitle setelah ":"
+    .split('(')[0]      // hilangin teks dalam kurung
+    .trim();
+
+  // Filter semua obyek yang memiliki baseTitle
   const related = animeData.filter(a =>
     a.id !== current.id &&
-    a.folder.startsWith(prefix + '_')
+    a.title.includes(baseTitle)
   );
 
   if (related.length === 0) {
@@ -37,10 +44,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  // Reset container
+  // Kosongkan dulu
   relatedListEl.innerHTML = '';
 
-  // Buat card ala script.js
+  // Render setiap card
   related.forEach(anime => {
     const card = document.createElement('div');
     card.classList.add('anime-card');
@@ -72,4 +79,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     relatedListEl.appendChild(card);
   });
 });
+
 
