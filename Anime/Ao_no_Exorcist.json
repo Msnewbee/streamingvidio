@@ -96,7 +96,31 @@
           { "episode": 11, "url": "https://www.blogger.com/video.g?token=AD6v5dyxRWQBj02xZRV4LJa7Bz2drk2h1qWOdi__5Sf9I4S3kgiki0MfdTGYKwxZG8fgMD6wsfOCt-B2w5YasOEHB6EJ1L5Fmr-ptT0yodaIGA9XlDoMlKOB-4Hsxuv1gp5W2O9eHac" },
           { "episode": 12, "url": "https://www.blogger.com/video.g?token=AD6v5dy6Bl0V5gEuQbrd-hr4Ea2eHfiEs4FgQc8Ccnn88z0cmhljdkoZjBBwEJruivIZW15tO-fg-TkmKA4khZggBjMpsSocoxRd4wgmR1Re_tqxgJwGdZ0E1lmBSUvA6Az06fs8BIw" }
         ]
+      },
+      {
+        "id": 80,
+        "title": "Ao no Exorcist: Shimane Illuminati-hen",
+        "folder": "ao_no_exorcist_shimane_illuminati_hen",
+        "image": "ao_no_exorcist_shimane_illuminati_hen.jpg",
+        "japanese_title": "青の祓魔師 島根啓明結社篇",
+        "score": 7.1,
+        "producers": ["Aniplex", "Shueisha", "Rakuonsha", "Dentsu", "Mainichi Broadcasting System", "Movic"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2024-01-07",
+        "studio": "Studio VOLN",
+        "genre": ["Action", "Fantasy", "School", "Shounen", "Supernatural"],
+        "synopsis": "Saat Rin dan teman-temannya bersiap untuk Ujian Sertifikasi Pengusir Setan tahunan, Ordo Salib Sejati menemukan gerbang buatan pertama ke dunia iblis Gehenna. Melihat ukurannya dan teknologi canggih yang membuatnya mungkin, para pengusir setan menyadari bahwa mereka sekarang berhadapan dengan Illuminati, sebuah organisasi yang sangat kaya dan kuat.",
+        "trailer_url": "https://www.youtube.com/embed/your_trailer_id",
+        "episodes": [
+          { "episode": 1, "url": "https://uploads4.krakenfiles.com/play/video/YmYzNDkyMWIxN2EwZDk5MYI6ESsx5M_F_6s1HXynVKZGGB25AfXvzadcM6OLYMfodb4lwI7-zhr1OstFxAe3P9idEXq2Yld_SM5QYwVp5rIBYGMM36a2z9oK5hxWgvSr" },
+          { "episode": 2, "url": "https://uploads4.krakenfiles.com/play/video/MDFiYTZmZTFjNjQyYWJiZd27DCSK2LSBWWdrcBpZVDuAWPCNpGr6xn2wgf8kWymUD87X3fTJhu__L9ijAwmva_xQDuqCkwlxafXOIvq2JFyiPzmlbbO5dRgaObCCF2PQ" },
+          { "episode": 3, "url": "https://uploads4.krakenfiles.com/play/video/Mjg5YTUxZTdjY2JiMjI5OAm6OhqFCXS3U4Uy3kbe-fcvULCD6Lur0XjUddz8NA7KPxwJg_63r1ZjCd3xTYiM8Ft7rAPQQP0-Ki66RQPjTMFyLKrj5kUs6e_LPtvdJi8Z" }
+        ]
       }
+      
       
       
 ]
