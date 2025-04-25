@@ -1,0 +1,96 @@
+[
+    {
+        "id": 88,
+        "title": "Shingeki no Kyojin (Attack on Titan) Season 1",
+        "folder": "attack_on_titan_s1",
+        "image": "attack_on_titan_s1.jpg",
+        "japanese_title": "進撃の巨人",
+        "score": 8.8,
+        "producers": ["Wit Studio", "Production I.G", "Kodansha"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 25,
+        "duration": "24 Menit per episode",
+        "release_date": "2013-04-07",
+        "studio": "Wit Studio",
+        "genre": ["Action", "Drama", "Fantasy", "Mystery", "Military", "Shounen"],
+        "synopsis": "Dalam dunia di mana umat manusia berada di ambang kepunahan akibat serangan makhluk raksasa yang disebut Titan, Eren Yeager bersama teman masa kecilnya, Mikasa Ackerman dan Armin Arlert, menyaksikan kehancuran kampung halaman mereka setelah tembok pelindung ditembus oleh Titan Kolosal. Bertekad untuk membalas dendam dan merebut kembali dunia dari para Titan, mereka bergabung dengan Pasukan Pengintai, kelompok elit yang bertugas melawan Titan dan mengungkap misteri di balik keberadaan mereka.",
+        "trailer_url": "https://www.youtube.com/embed/MGRm4IzK1SQ",
+        "episodes": [
+          { "episode": 1, "url": "https://mega.nz/embed/fcUziYLD#F8ewot_rSQXFWtrVXAI3shr7yqArko1MWoqaZkLgc14" },
+          { "episode": 2, "url": "https://mega.nz/embed/qNUxVaga#5WKT0N0XUoj0foZUh1wZujfjR9-tiIGntfhk_wt1Vlc" },
+          { "episode": 3, "url": "https://mega.nz/embed/rZFziCgY#PSjPbLHcVMV8KZjyP37Xog-R-deKhv_0EyIiL11Cvvs" },
+          { "episode": 4, "url": "https://mega.nz/embed/WddhBIwB#h2VKHOKzw7anxj8IawS92-MWRgZuhZ-uTyB-tNfRDvo" },
+          { "episode": 5, "url": "https://mega.nz/embed/PcEjBYwJ#rav49I2isOwmNfwN5CtmG9h2f0wA9C_j213q9Gw1pX0" },
+          { "episode": 6, "url": "https://mega.nz/embed/zYdzmS4Q#7set8uwiQ-wAy4LOTejkwbtrdDkd_ZBVgOOVycqSU4c" },
+          { "episode": 7, "url": "https://mega.nz/embed/qUEBEYbC#IYQAPUvP43VfUmDgWb9kRGMSS0RwdDeOqxxoT513zIc" },
+          { "episode": 8, "url": "https://mega.nz/embed/PYMVUQCB#KumSd_v4ubdhUHPZOH64kT-SD6ZRXefrfvUKdpmNX24" },
+          { "episode": 9, "url": "https://mega.nz/embed/uAFRmIjD#GMNTmr2i5hUh5LF9FY5YlARuVQ7QqjNL_-TVkkdU9tA" },
+          { "episode": 10, "url": "https://mega.nz/embed/SNUj3CoK#d08o_3U7yfg9-br-5FjzrhF-HIjj8aqox7hAo2CrnKA" },
+          { "episode": 11, "url": "https://mega.nz/embed/uMdB1A4D#xQm1SSLHSdS54mIijf9Fs1UeZsBXsr1MmlztbBDTmuY" },
+          { "episode": 12, "url": "https://mega.nz/embed/DVdFjSxA#khp5N8ADfG6wQLIhErWaTYeLT27_zILEcr10eyzGPeA" },
+          { "episode": 12.5, "url": "https://www.blogger.com/video.g?token=AD6v5dyNWTu0zslj62UnO93ZXfFIIsLBsEWmJ9yk55uanxJ7vA3K68QCvzluILBvPd4huGWk3wvJ0JpX0EVL2kVRBHw9Ih6EPWwTTjfYWxpFkkkkxcWTDy4gB9jYOLNPikpOYmFFddA" },
+          { "episode": 13, "url": "https://mega.nz/embed/7YcTSQ4C#YfPs52ZrhnMIfoSSeVwWegonN9iHTow7IKbC44xGUL4" },
+          { "episode": 14, "url": "https://mega.nz/embed/PANzzapZ#MOGK1VxJQITRRqjXrzZJ_kfk0PQBlZtK3rp1PNW5Ues" },
+          { "episode": 15, "url": "https://mega.nz/embed/PEc1hKSJ#4Nrr8uBqTCuESxL7nAOUrr5mFyZRD4J9dA92LgpK_BE" },
+          { "episode": 16, "url": "https://mega.nz/embed/PFETHAiQ#KpAdyT-vIIuB19zk0HZifMoBZiO1L_dr0dUtNxrjjYs" },
+          { "episode": 17, "url": "https://mega.nz/embed/TAMDWISS#5j20JVlBbSAdt9fGR5l1e3Myt-Fmc17yX8ZJTHBrvbY" },
+          { "episode": 18, "url": "https://mega.nz/embed/zYcjQSZL#_HFJ0GZGQTdUEK1CXpv32MdqOfs_gqvJ98Z0uOxZil8" },
+          { "episode": 19, "url": "https://mega.nz/embed/uRFH2K5Z#7mn7TY0Jk59cHPi6bcMMXV5aAYhdHPzBFwpxlctVS_s" },
+          { "episode": 20, "url": "https://mega.nz/embed/6Ncx2K6S#byF9B_tyRja-r5L6JSlXbiplTiLZpOGMP4-oLTXTLvY" },
+          { "episode": 21, "url": "https://mega.nz/embed/yIFVXAgZ#1L2Fh_DJK-YVV6MRvpekpBTNTg4fU707t7MPfUv4xII" },
+          { "episode": 22, "url": "https://mega.nz/embed/mYNX1QxA#__EJHS2Snj04NRWlGupZCgvtqKfSfVJLZlWM4uHhcmc" },
+          { "episode": 23, "url": "https://mega.nz/embed/6cNnnAiA#WQUEukNKgXx66DblujPZS65KUbPYVf5uoPyybxNt-Fs" },
+          { "episode": 24, "url": "https://mega.nz/embed/XFFjWaSA#b0C4PQTmAMv4BwctdwkoxK6_1gDRVMcb0u0YMJUA2FY" },
+          { "episode": 25, "url": "https://mega.nz/embed/eVdDBCKT#JGunswnUsKugdrAxou89bOrca2zOh4nrAYLem5GNVO8" }
+        ]
+      },
+      {
+        "id": 90,
+        "title": "Shingeki no Kyojin: Kuinaki Sentaku",
+        "folder": "shingeki_no_kyojin_kuinaki_sentaku",
+        "image": "shingeki_no_kyojin_kuinaki_sentaku.jpg",
+        "japanese_title": "進撃の巨人 悔いなき選択",
+        "score": 8.4,
+        "producers": ["Production I.G", "Kodansha"],
+        "type": "OVA",
+        "status": "Selesai",
+        "total_episodes": 2,
+        "duration": "27 Menit per episode",
+        "release_date": "2014-12-09",
+        "studio": "Wit Studio",
+        "genre": ["Action", "Fantasy", "Drama"],
+        "synopsis": "Bertahun-tahun sebelum menjadi kapten terkenal dari Survey Corps, Levi muda berjuang untuk bertahan hidup di tempat pembuangan sampah ibu kota, Underground. Sebagai pemimpin operasi kriminalnya sendiri, Levi berusaha bertahan dengan penghasilan yang minim dibantu oleh sesama penjahat, Isabel Magnolia dan Farlan Church. Dengan sedikit harapan untuk masa depan, Levi menerima kesepakatan dari pemimpin faksi anti-ekspedisi, Nicholas Lobov, yang menjanjikan mereka kewarganegaraan di atas permukaan jika mereka berhasil membunuh Erwin Smith, seorang pemimpin skuad dari Survey Corps. Saat Levi dan Erwin bertemu, Erwin mengakui kelincahan dan keterampilan Levi dan memberinya pilihan untuk menjadi bagian dari tim ekspedisi, atau diserahkan kepada Polisi Militer untuk menebus kejahatannya. Kini lebih dekat dengan pria yang harus mereka bunuh, kelompok tersebut berencana untuk menyelesaikan misi mereka dan menyelamatkan diri dari nasib suram di kedalaman rumah masa lalu mereka. Namun, mereka akan belajar bahwa dunia permukaan tidak sebebas yang mereka pikirkan dan bahwa terkadang, kebebasan bisa datang dengan harga yang mahal.",
+        "trailer_url": "https://www.youtube.com/embed/3c3Jr2p8nHk",
+        "episodes": [
+          { "episode": 1, "url": "https://mega.nz/embed/UO9xnYoC#1bI3L77FG3exa2faCga0pd5KCxiaDTrTr39S1W33NyI" },
+          { "episode": 2, "url": "https://mega.nz/embed/NasU0JzY#W_c0chG2ea3-V-WoNSkXFuGdBifVVTcQ6Kz5LLzyGz4" }
+        ]
+      },
+      {
+        "id": 91,
+        "title": "Shingeki no Kyojin Movie 2: Jiyuu no Tsubasa",
+        "folder": "shingeki_no_kyojin_movie_2",
+        "image": "shingeki_no_kyojin_movie_2.jpg",
+        "japanese_title": "進撃の巨人 後編〜自由の翼〜",
+        "score": 7.9,
+        "producers": ["Production I.G", "Kodansha"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "120 Menit",
+        "release_date": "2015-06-27",
+        "studio": "Wit Studio",
+        "genre": ["Action", "Drama", "Fantasy", "Military", "Shounen"],
+        "synopsis": "Film ini merupakan kompilasi dari episode 14 hingga 25 dari serial anime *Attack on Titan* musim pertama. Cerita melanjutkan perjuangan Eren Yeager dan anggota Survey Corps dalam menghadapi ancaman Titan, mengungkap misteri di balik dinding, serta konflik internal yang menguji kepercayaan dan pengorbanan mereka.",
+        "trailer_url": "https://www.youtube.com/embed/4Y82o1fZz8U",
+        "episodes": [
+          { "episode": 1, "url": "https://www.yourupload.com/embed/34AAeC2VrUix" }
+        ]
+      }
+      
+      
+      
+      
+      
+]

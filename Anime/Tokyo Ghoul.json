@@ -52,18 +52,106 @@
         "episodes": [
           { "episode": 1, "url": "https://abysscdn.com/?v=WExaETOQH&autoplay=1&autoplay=1" },
           { "episode": 2, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvdkd0Vm5R&autoplay=1" },
-          { "episode": 3, "url": "https://pixeldrain.com/api/file/episode3" },
-          { "episode": 4, "url": "https://pixeldrain.com/api/file/episode4" },
-          { "episode": 5, "url": "https://pixeldrain.com/api/file/episode5" },
-          { "episode": 6, "url": "https://pixeldrain.com/api/file/episode6" },
-          { "episode": 7, "url": "https://pixeldrain.com/api/file/episode7" },
-          { "episode": 8, "url": "https://pixeldrain.com/api/file/episode8" },
-          { "episode": 9, "url": "https://pixeldrain.com/api/file/episode9" },
-          { "episode": 10, "url": "https://pixeldrain.com/api/file/episode10" },
-          { "episode": 11, "url": "https://pixeldrain.com/api/file/episode11" },
-          { "episode": 12, "url": "https://pixeldrain.com/api/file/episode12" }
+          { "episode": 3, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvNXBWR3Zp&autoplay=1" },
+          { "episode": 4, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvc0ZseG55&autoplay=1" },
+          { "episode": 5, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvV3hFYkla&autoplay=1" },
+          { "episode": 6, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvckVTanBE&autoplay=1" },
+          { "episode": 7, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvblY2RjdI&autoplay=1" },
+          { "episode": 8, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcva04wMWlW&autoplay=1" },
+          { "episode": 9, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvc0hnTHlv&autoplay=1" },
+          { "episode": 10, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvcW0yQVBP&autoplay=1" },
+          { "episode": 11, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvRWFza0U2&autoplay=1" },
+          { "episode": 12, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvRExQcnNE&autoplay=1" }
+        ]
+      },
+      {
+        "id": 85,
+        "title": "Tokyo Ghoul: Jack",
+        "folder": "tokyo_ghoul_jack",
+        "image": "tokyo_ghoul_jack.jpg",
+        "japanese_title": "東京喰種トーキョーグール【JACK】",
+        "score": 7.2,
+        "producers": ["Studio Pierrot", "Marvelous", "Shueisha"],
+        "type": "OVA",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "30 Menit",
+        "release_date": "2015-09-30",
+        "studio": "Studio Pierrot",
+        "genre": ["Action", "Horror", "Supernatural", "Drama"],
+        "synopsis": "Tokyo Ghoul: Jack adalah prekuel dari seri utama Tokyo Ghoul yang berfokus pada masa remaja Kishou Arima, seorang penyelidik ghoul muda dari CCG. Bersama dengan Taishi Fura, seorang siswa SMA yang kehilangan temannya akibat serangan ghoul bernama 'Lantern', mereka menyelidiki serangkaian pembunuhan brutal di distrik ke-13 Tokyo. Cerita ini menggambarkan awal mula perjalanan Arima sebagai 'Shinigami' legendaris dan hubungan awalnya dengan CCG.",
+        "trailer_url": "https://www.youtube.com/embed/1mJvU4S9aVw",
+        "episodes": [
+          { "episode": 1, "url": "https://abysscdn.com/?v=wHZf3RuKR&autoplay=1" }
+        ]
+      },
+      {
+        "id": 86,
+        "title": "Tokyo Ghoul:re Part 1",
+        "folder": "tokyo_ghoul_re_part1",
+        "image": "tokyo_ghoul_re_part1.jpg",
+        "japanese_title": "東京喰種トーキョーグール：re",
+        "score": 7.0,
+        "producers": ["Studio Pierrot", "Marvelous", "TC Entertainment", "Shueisha"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2018-04-03",
+        "studio": "Studio Pierrot",
+        "genre": ["Action", "Drama", "Horror", "Mystery", "Psychological", "Supernatural"],
+        "synopsis": "Dua tahun setelah serangan CCG terhadap Anteiku, Tokyo berada di bawah pengawasan ketat CCG. Haise Sasaki, identitas baru Ken Kaneki yang kehilangan ingatannya, memimpin Quinx Squad—sekelompok penyidik muda yang telah menjalani prosedur untuk memperoleh kemampuan ghoul tanpa kehilangan kemanusiaan mereka. Saat mereka menghadapi ancaman ghoul yang terus berkembang, Haise mulai menghadapi ingatan masa lalunya yang kelam dan identitas sejatinya sebagai Kaneki mulai terungkap.",
+        "trailer_url": "https://www.youtube.com/embed/mxbrwiqhHuQ",
+        "episodes": [
+          { "episode": 1, "url": "https://abysscdn.com/?v=1pptnAvyu&autoplay=1&autoplay=1" },
+          { "episode": 2, "url": "https://abysscdn.com/?v=ulidDftoC&autoplay=1&autoplay=1" },
+          { "episode": 3, "url": "https://abysscdn.com/?v=OZV3iH7FK&autoplay=1&autoplay=1" },
+          { "episode": 4, "url": "https://abysscdn.com/?v=Sq3wjc_3w&autoplay=1&autoplay=1" },
+          { "episode": 5, "url": "https://abysscdn.com/?v=aczZB3XVR&autoplay=1&autoplay=1" },
+          { "episode": 6, "url": "https://abysscdn.com/?v=nB6BFX3vT&autoplay=1&autoplay=1" },
+          { "episode": 7, "url": "https://abysscdn.com/?v=QYd96U9Uo&autoplay=1&autoplay=1" },
+          { "episode": 8, "url": "https://abysscdn.com/?v=WijJRc5Q9&autoplay=1&autoplay=1" },
+          { "episode": 9, "url": "https://abysscdn.com/?v=Vx3hc1niW&autoplay=1&autoplay=1" },
+          { "episode": 10, "url": "https://abysscdn.com/?v=DWX6Fubuz&autoplay=1&autoplay=1" },
+          { "episode": 11, "url": "https://abysscdn.com/?v=FK2nXJlVo&autoplay=1&autoplay=1" },
+          { "episode": 12, "url": "https://abysscdn.com/?v=lObZ2E52u&autoplay=1&autoplay=1" }
+        ]
+      },
+      {
+        "id": 87,
+        "title": "Tokyo Ghoul:re Part 2",
+        "folder": "tokyo_ghoul_re_part2",
+        "image": "tokyo_ghoul_re_part2.jpg",
+        "japanese_title": "東京喰種トーキョーグール：re 第2期",
+        "score": 6.45,
+        "producers": ["Marvelous Entertainment", "Pierrot Plus", "Shueisha", "TC Entertainment"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "24 Menit per episode",
+        "release_date": "2018-10-09",
+        "studio": "Pierrot",
+        "genre": ["Action", "Fantasy", "Horror", "Supernatural", "Drama"],
+        "synopsis": "Setelah Operasi Pemusnahan Keluarga Tsukiyama berakhir, anggota Komisi Penanggulangan Ghoul (CCG) telah tumbuh secara eksponensial dalam kekuatan dan terus mengejar tujuan mereka untuk membasmi setiap ghoul di Jepang. Setelah mengundurkan diri dari Quinx Squad, Haise Sasaki yang sekarang tampak tanpa emosi mulai mengambil lebih banyak tugas dari CCG tanpa mempedulikan kesulitannya. Meskipun ekspresinya kosong, ingatan Ken Kaneki muncul kembali di Haise, membuatnya dalam keadaan konflik internal. Sementara itu, perilakunya yang baru dan dingin memengaruhi orang-orang di sekitarnya. Quinx Squad dibiarkan berantakan, harus menghadapi kematian salah satu anggota mereka tanpa dukungan dari mantan mentor mereka. Di tengah kekacauan ini, baik Quinx Squad maupun Haise harus terus memenuhi tugas mereka kepada CCG, baik dengan sukarela maupun tidak. Namun, keberadaan kelompok misterius di balik CCG telah diketahui oleh Haise, dan bisikan-bisikan tertentu tentang korupsi juga tidak luput dari perhatian Quinx Squad.",
+        "trailer_url": "https://www.youtube.com/embed/3H4Yz0iY3u0",
+        "episodes": [
+          { "episode": 1, "url": "https://abysscdn.com/?v=IwJd54d64&autoplay=1&autoplay=1" },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dxUDlMxMW91UVYHCaaBQNd6Xxlg6O6wsNMHrKa3aRsI_fsBfSZMzCCZpcdLFGqQpb36kMAMt4pKJRigUsDlIYzAT_CE1rIOeyrWFL5GdNfwY6L0mZf3K1h2kKt9wr1GpYDj1bo" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dzhS7opugQ8gJT0oRRGOGxHd11fHjahYTE7I6P2V-6BhOaf402agrVgQxpt4sKKksOxsKhU_x2iOWd9-fC59h7TaB1yJHNoByCE_aDaU8cm8aSpA9eZmIU5OrjRSgKZvhBysTB_" },
+          { "episode": 4, "url": "https://www.blogger.com/video.g?token=AD6v5dxVQj-Vnw2K7M6qf8UJo18z13Ar1bY_hLKjjWYTB3EYHnWjcII3rAtAMS0zt5ff7rqCoOONEsazvJ0ZsHN49UHs2OxRJlnVjdWUKBdgcJ1-tDYJuMf8FaEUdORPgT9XID-QRbcn" },
+          { "episode": 5, "url": "https://www.blogger.com/video.g?token=AD6v5dwZTOwZAxAjtZMAMx8xRoueVGFFJSZoJRBIwjuW7I8ndik4_WOHy3496u18-6N8cluWTxZ3u1hLuSiQ-40vBAHOAfBkC9VXeQj29Ns5p3mk-_rtmoFuD6SC8IP8XojDLNbxUeU" },
+          { "episode": 6, "url": "https://www.blogger.com/video.g?token=AD6v5dyu8OMXOb0H0JEc0hAUOzId8noEAkMtaFaFSsTyWQvDMlEF4PY6g3OhoeP6yt3k2ylNrzTKSIwpiullHpjuy4m5K2kg_b53Ii-LqH5kd1VbKQYJ1HN1J-_LC_D9UAUvXjIEtiJS" },
+          { "episode": 7, "url": "https://www.blogger.com/video.g?token=AD6v5dwrZDzeGCqX0GWkuh9IIl0MrcKldIng4l0Z0u_pGhuaLL9QfNbi0_e3zI_0uoUXpjl_uUgvLl-UPUwrFHkZrfX5n9SPX4nKyCJY0GdRxl78rKJso_tJmtVMxo9TyA32kaPTbQg" },
+          { "episode": 8, "url": "https://www.blogger.com/video.g?token=AD6v5dyShmKT7Lgu_snkwQJcMSW5qLEnnZSelmbKgiUd2AVERgm3ZkWKaO8SIOf79rh5X11R0OPgzIBQhkZUmfnEIGM6ZhuoXyulLn43oi8O1V3oA7RUmj3pxBdrpWVNpC3-rHFDpyw" },
+          { "episode": 9, "url": "https://www.blogger.com/video.g?token=AD6v5dzH0rCWIRDhjGvtxpnfMX6LCxtsyyWCj7YKpSZDPBJBW7BJTfwGKrq5j6oikwhGN7rIQ7CUDBjlQIEgew-cnv9DalXrzhM_vvqJ3KkPVQVZB4ZvkD5HcAqyetyIlng3vLJ-ZCg" },
+          { "episode": 10, "url": "https://www.blogger.com/video.g?token=AD6v5dws0ErZgI5LHJuP87VavwwOhsqqTZ0RNFmMpGmNvcKhzObit8YDVFbwGt1z8Y3GGtcI0ciXY2wB7sS4IRy1q62Voenmx7ehGNfPHUP7Y94x1RXt4vVikFRe_tnXHS2f3zkMy7Xs" },
+          { "episode": 11, "url": "https://www.blogger.com/video.g?token=AD6v5dwjJ5LHMLsFyDRz8wrKYfw5Wc3stgDHJMfv08rXc91ivpZuC3YXXc5r6dFxjFTaDlEmsr5glcL6zDTBM7b96GguOmDwES3BCkP9pEc_6yHHW5nDwHUOKYJbOnFxsLmBgjOHE5Ew" },
+          { "episode": 12, "url": "https://www.blogger.com/video.g?token=AD6v5dz6DwvsURcoSovbHu59W5lVTWboIHRKE4wUaC6x4Dl7ak66e7KZZ4KqFVSMpMW_96pOZsh7XzXKOkxqaMj3Ok1JmmzcihRL-Us-qRbOuhpWIWgMI3Ex8euC9ByxeLwRxuTylqsI" }
         ]
       }
+      
+      
+      
       
       
 ]

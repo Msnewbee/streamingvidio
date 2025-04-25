@@ -66,14 +66,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (nextBtn) {
-        nextBtn.disabled = episodeIndex >= anime.episodes.length - 1;
-        nextBtn.addEventListener("click", () => {
-            if (episodeIndex < anime.episodes.length - 1) {
+        if (episodeIndex < anime.episodes.length - 1) {
+            nextBtn.textContent = "Episode Selanjutnya";
+            nextBtn.addEventListener("click", () => {
                 const nextEp = anime.episodes[episodeIndex + 1];
                 window.location.href = `player.html?id=${animeId}&episode=${nextEp.episode}`;
-            }
-        });
+            });
+        } else {
+            nextBtn.textContent = "Cek Serial Serupa";
+            nextBtn.addEventListener("click", () => {
+                window.location.href = `related.html?id=${animeId}`;
+              });
+        }
     }
+    
 
     // Jika ada mirrors array, tombol switch-server tetap bekerja
     const serverBtn = document.getElementById("switch-server");
