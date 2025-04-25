@@ -18,8 +18,52 @@
         "trailer_url": "https://www.youtube.com/embed/7aMOurgDB-o",
         "episodes": [
           { "episode": 1, "url": "https://abysscdn.com/?v=wPzFnaKiK&autoplay=1" },
-          { "episode": 2, "url": "https://abysscdn.com/?v=T7bVKiIuD&autoplay=1" }
+          { "episode": 2, "url": "https://abysscdn.com/?v=T7bVKiIuD&autoplay=1" },
+          { "episode": 3, "url": "https://abysscdn.com/?v=A1u9GxBA2&autoplay=1" },
+          { "episode": 4, "url": "https://abysscdn.com/?v=nPPeFgOBZ&autoplay=1" },
+          { "episode": 5, "url": "https://abysscdn.com/?v=jT3e7snCC&autoplay=1" },
+          { "episode": 6, "url": "https://abysscdn.com/?v=uKwlLr9e7&autoplay=1" },
+          { "episode": 7, "url": "https://abysscdn.com/?v=ipQECRJsu&autoplay=1" },
+          { "episode": 8, "url": "https://abysscdn.com/?v=_n6aWOX1f&autoplay=1" },
+          { "episode": 9, "url": "https://abysscdn.com/?v=j_DExoo-5&autoplay=1" },
+          { "episode": 10, "url": "https://abysscdn.com/?v=XUtZwACoI&autoplay=1" },
+          { "episode": 11, "url": "https://abysscdn.com/?v=VPG8ZYTrf&autoplay=1" },
+          { "episode": 12, "url": "https://abysscdn.com/?v=r4B7gG0Iq&autoplay=1" },
+          { "episode": 13, "url": "https://www.blogger.com/video.g?token=AD6v5dzGmSRLMww-UT7ix_3RS_bJhV5kw6oq9mwKMAw6PKe0AvGkOTGCVCIydScnXoRnMMLiJICzDXpL9GMjJQrYQe3GGHeM6wIGDZwfyVqXew2_2BWaEMclO52HmMZBxQlkgfhqKK4g" }
+        ]
+      },
+      {
+        "id": 83,
+        "title": "Tokyo Ghoul √A (Season 2)",
+        "folder": "tokyo_ghoul_root_a",
+        "image": "tokyo_ghoul_root_a.jpg",
+        "japanese_title": "東京喰種√A",
+        "score": 7.0,
+        "producers": ["Pierrot", "Marvelous", "TC Entertainment"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2015-01-09",
+        "studio": "Pierrot",
+        "genre": ["Action", "Drama", "Horror", "Psychological", "Supernatural"],
+        "synopsis": "Setelah disiksa oleh Aogiri Tree, Kaneki Ken berubah menjadi ghoul yang lebih kuat dan bergabung dengan organisasi tersebut. Musim ini mengikuti perjalanan Kaneki yang penuh konflik batin saat ia terlibat dalam pertarungan antara Aogiri Tree dan CCG. Berbeda dari manga, musim ini menampilkan alur cerita orisinal yang ditulis oleh Sui Ishida, pencipta seri ini.",
+        "trailer_url": "https://www.youtube.com/embed/7aMOurgDB-o",
+        "episodes": [
+          { "episode": 1, "url": "https://abysscdn.com/?v=WExaETOQH&autoplay=1&autoplay=1" },
+          { "episode": 2, "url": "https://pixeldrain.com/api/file/episode2" },
+          { "episode": 3, "url": "https://pixeldrain.com/api/file/episode3" },
+          { "episode": 4, "url": "https://pixeldrain.com/api/file/episode4" },
+          { "episode": 5, "url": "https://pixeldrain.com/api/file/episode5" },
+          { "episode": 6, "url": "https://pixeldrain.com/api/file/episode6" },
+          { "episode": 7, "url": "https://pixeldrain.com/api/file/episode7" },
+          { "episode": 8, "url": "https://pixeldrain.com/api/file/episode8" },
+          { "episode": 9, "url": "https://pixeldrain.com/api/file/episode9" },
+          { "episode": 10, "url": "https://pixeldrain.com/api/file/episode10" },
+          { "episode": 11, "url": "https://pixeldrain.com/api/file/episode11" },
+          { "episode": 12, "url": "https://pixeldrain.com/api/file/episode12" }
         ]
       }
+      
       
 ]
