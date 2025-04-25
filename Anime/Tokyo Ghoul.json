@@ -33,7 +33,7 @@
         ]
       },
       {
-        "id": 83,
+        "id": 84,
         "title": "Tokyo Ghoul √A (Season 2)",
         "folder": "tokyo_ghoul_root_a",
         "image": "tokyo_ghoul_root_a.jpg",
@@ -51,7 +51,7 @@
         "trailer_url": "https://www.youtube.com/embed/7aMOurgDB-o",
         "episodes": [
           { "episode": 1, "url": "https://abysscdn.com/?v=WExaETOQH&autoplay=1&autoplay=1" },
-          { "episode": 2, "url": "https://pixeldrain.com/api/file/episode2" },
+          { "episode": 2, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvdkd0Vm5R&autoplay=1" },
           { "episode": 3, "url": "https://pixeldrain.com/api/file/episode3" },
           { "episode": 4, "url": "https://pixeldrain.com/api/file/episode4" },
           { "episode": 5, "url": "https://pixeldrain.com/api/file/episode5" },
