@@ -128,7 +128,40 @@
           { "episode": 11, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvS0dpSWhG&autoplay=1" },
           { "episode": 12, "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvODRacTRi&autoplay=1" }
         ]
+      },
+      {
+        "id": 81,
+        "title": "Ao no Exorcist: Yuki no Hate-hen",
+        "folder": "ao_no_exorcist_yuki_no_hate_hen",
+        "image": "ao_no_exorcist_yuki_no_hate_hen.png",
+        "japanese_title": "青の祓魔師 雪ノ果篇",
+        "score": 8.4,
+        "producers": ["Aniplex", "Dentsu", "Mainichi Broadcasting System", "Movic", "Shueisha", "Rakuonsha"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 12,
+        "duration": "23 Menit per episode",
+        "release_date": "2024-10-06",
+        "studio": "Studio VOLN",
+        "genre": ["Action", "Supernatural", "Fantasy", "Shounen"],
+        "synopsis": "Setelah berhasil menundukkan Fujou-ou yang dihidupkan kembali di Kyoto, Rin dan kawan-kawan kembali menjalani hari-hari normal di Akademi Seijuuji. Namun, kedamaian itu terganggu oleh kemunculan organisasi misterius, Illuminati, yang dipimpin oleh Lucifer. Mereka berencana membangkitkan Satan dan menghubungkan dunia material dengan dunia hampa. Rin dan para Kesatria Salib Suci harus bersatu untuk menghadapi ancaman besar ini dan mengungkap kebenaran di balik peristiwa 'Blue Night'.",
+        "trailer_url": "https://www.youtube.com/embed/your_trailer_id",
+        "episodes": [
+          { "episode": 1, "url": "https://s0.wibufile.com/video01/AoEYnHh-1-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 2, "url": "https://s0.wibufile.com/video01/AoEYnHh-2-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 3, "url": "https://s0.wibufile.com/video01/AoEYnHh-3-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 4, "url": "https://s0.wibufile.com/video01/AoEYnHh-4-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 5, "url": "https://s0.wibufile.com/video01/AoEYnHh-5-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 6, "url": "https://s0.wibufile.com/video01/AoEYnHh-6-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 7, "url": "https://s0.wibufile.com/video01/AoEYnHh-7-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 8, "url": "https://s0.wibufile.com/video01/AoEYnHh-8-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 9, "url": "https://s0.wibufile.com/video01/AoEYnHh-9-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 10, "url": "https://s0.wibufile.com/video01/AoEYnHh-10-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 11, "url": "https://s0.wibufile.com/video01/AoEYnHh-11-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 12, "url": "https://s0.wibufile.com/video01/AoEYnHh-12-END-FULLHD-SAMEHADAKU.CARE.mp4" }
+        ]
       }
+      
       
       
       
