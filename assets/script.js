@@ -105,25 +105,30 @@ document.addEventListener("DOMContentLoaded", async function () {
   function createAnimeCard(anime) {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
-
+  
     const type = anime.type?.toUpperCase() || "TV";
     let labelColor = "#3498db";
     if (type === "OVA") labelColor = "#e74c3c";
     else if (type === "MOVIE") labelColor = "#f1c40f";
     else if (type === "SPECIAL") labelColor = "#9b59b6";
+  
+    // Proteksi untuk genre yang mungkin undefined
+    const genreText = Array.isArray(anime.genre)
+      ? anime.genre.join(', ')
+      : '-';
 
     animeCard.innerHTML = `
-      <div class="image-container">
-        <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
-        <div class="type-label" style="background-color: ${labelColor}">${type}</div>
-      </div>
-      <div class="card-content">
-        <h3>${anime.title}</h3>
-        <p>Tanggal Rilis: ${anime.release_date}</p>
-        <p>Genre: ${anime.genre.join(', ')}</p>
-        <p>Ditonton: ${anime.watchCount || 0}x</p>
-      </div>
-    `;
+    <div class="image-container">
+      <img src="${anime.image ? `public/${anime.image}` : 'default-poster.jpg'}" alt="${anime.title}" loading="lazy" />
+      <div class="type-label" style="background-color: ${labelColor}">${type}</div>
+    </div>
+    <div class="card-content">
+      <h3>${anime.title}</h3>
+      <p>Tanggal Rilis: ${anime.release_date || '-'}</p>
+      <p>Genre: ${genreText}</p>
+      <p>Ditonton: ${anime.watchCount || 0}x</p>
+    </div>
+  `;
     animeCard.addEventListener("click", async () => {
       anime.watchCount = (anime.watchCount || 0) + 1;
       await increaseWatchCount(anime.id);
@@ -166,7 +171,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   function populateGenreOptions(animes) {
     const genres = new Set();
     animes.forEach((anime) => {
-      anime.genre.forEach((g) => genres.add(g));
+      if (Array.isArray(anime.genre)) {
+        anime.genre.forEach((g) => genres.add(g));
+      }
     });
     genreSelect.innerHTML = '<option value="">Pilih Genre</option>';
     genres.forEach((genre) => {
