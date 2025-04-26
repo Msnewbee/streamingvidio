@@ -1,36 +1,47 @@
-// related.js
+// assets/related.js
 document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
-  const file = params.get('file');
+  const folder = params.get('folder');  // misal "one_piece"
   const container = document.getElementById('anime-list');
 
-  if (!file) {
-    console.error('Parameter "file" tidak ditemukan di URL.');
+  if (!folder) {
     container.textContent = 'Data serial serupa tidak tersedia.';
     return;
   }
 
-  let animeData;
+  // Gunakan path absolut agar pasti ke root
+  const jsonPath = `/Anime/${folder}.json`;
+  console.log("Mencoba load:", jsonPath);
+
+  let data;
   try {
-    const res = await fetch(`./Anime/${file}`);
+    const res = await fetch(jsonPath);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    animeData = await res.json();
+    // kalau bukan JSON valid, akan throw
+    data = await res.json();
   } catch (err) {
-    console.error('Gagal memuat:', err);
+    console.error("Gagal memuat JSON:", err);
     container.textContent = 'Gagal memuat data serial serupa.';
     return;
   }
 
-  // Render semua entries di JSON
+  // Render array dari JSON
   container.innerHTML = '';
-  animeData.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'anime-item';
-    div.innerHTML = `
+  data.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'anime-item';
+    card.innerHTML = `
       <h3>${item.title || 'Untitled'}</h3>
-      ${item.image  ? `<img src="public/${item.image}" alt="${item.title}" width="150">` : ''}
-      ${item.description ? `<p>${item.description}</p>` : ''}
+      ${ item.image 
+        ? `<img src="public/${item.image}" alt="${item.title}" width="150">`
+        : ''
+      }
+      ${ item.synopsis
+        ? `<p>${item.synopsis.substring(0, 100)}…</p>`
+        : ''
+      }
     `;
-    container.appendChild(div);
+    container.appendChild(card);
   });
 });
+
