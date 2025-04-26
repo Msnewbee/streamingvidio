@@ -55,30 +55,35 @@ document.addEventListener("DOMContentLoaded", async () => {
     const prevBtn = document.getElementById("prev-episode");
     const nextBtn = document.getElementById("next-episode");
 
-    if (prevBtn) {
-        prevBtn.disabled = episodeIndex <= 0;
-        prevBtn.addEventListener("click", () => {
-            if (episodeIndex > 0) {
-                const prevEp = anime.episodes[episodeIndex - 1];
-                window.location.href = `player.html?id=${animeId}&episode=${prevEp.episode}`;
-            }
+   // Prev
+   if (prevBtn) {
+    prevBtn.disabled = episodeIndex <= 0;
+    prevBtn.addEventListener("click", () => {
+        if (episodeIndex > 0) {
+            const prevEp = anime.episodes[episodeIndex - 1];
+            window.location.href = `player.html?id=${animeId}&episode=${prevEp.episode}`;
+        }
+    });
+}
+
+// Next atau Serial Serupa
+if (nextBtn) {
+    if (episodeIndex < anime.episodes.length - 1) {
+        nextBtn.textContent = "Episode Selanjutnya";
+        nextBtn.addEventListener("click", () => {
+            const nextEp = anime.episodes[episodeIndex + 1];
+            window.location.href = `player.html?id=${animeId}&episode=${nextEp.episode}`;
+        });
+    } else {
+        // Kalau ini episode terakhir, tampilkan tombol serial serupa
+        nextBtn.textContent = "Cek Serial Serupa";
+        nextBtn.addEventListener("click", () => {
+            // Nama file JSON: judul diganti spasi → underscore
+            const fileName = `${anime.title.replace(/\s+/g, '_')}.json`;
+            window.location.href = `related.html?file=${encodeURIComponent(fileName)}`;
         });
     }
-
-    if (nextBtn) {
-        if (episodeIndex < anime.episodes.length - 1) {
-            nextBtn.textContent = "Episode Selanjutnya";
-            nextBtn.addEventListener("click", () => {
-                const nextEp = anime.episodes[episodeIndex + 1];
-                window.location.href = `player.html?id=${animeId}&episode=${nextEp.episode}`;
-            });
-        } else {
-            nextBtn.textContent = "Cek Serial Serupa";
-            nextBtn.addEventListener("click", () => {
-                window.location.href = `related.html?id=${animeId}`;
-              });
-        }
-    }
+}
     
 
     // Jika ada mirrors array, tombol switch-server tetap bekerja
