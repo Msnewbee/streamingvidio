@@ -42,6 +42,9 @@ header .logo h1 {
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center; /* Tambahan untuk center */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -58,6 +61,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #00bcd4;
 }
+
 
 /* Back Button (untuk link kembali) */
 .back-button {
