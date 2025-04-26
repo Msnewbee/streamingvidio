@@ -117,38 +117,34 @@
     </div>
     
     <!-- ===== INJECT ALL SCRIPTS VIA JS ===== -->
-  <script>
-    (function(){
-      function injectAd(domain, zoneId, targetId, pathSegment = '400') {
-        var s = document.createElement('script');
-        s.src = 'https://' + domain + '/' + pathSegment + '/' + zoneId;
-        s.defer = true;
-        try {
-          var target = document.getElementById(targetId);
-          (target || document.body).appendChild(s);
-        } catch(e){}
-      }
+    <script>
+      ;(function(){
+        function injectAd(domain, zoneId, targetId, pathSegment) {
+          var s = document.createElement('script');
+          s.src = 'https://' + domain + '/' + pathSegment + '/' + zoneId;
+          s.defer = true;
+          try {
+            var tgt = document.getElementById(targetId);
+            (tgt || document.body).appendChild(s);
+          } catch(e){}
+        }
   
-      // —————————————
-      // 1) MULTIPLEX ADS
-      // Ganti domain & zoneId di bawah ini sesuai 4 zona In-Page Push (Banner) kamu
-      injectAd('vemtoutcheeg.com', 1111111, 'slot1');  // contoh zona 1
-      injectAd('vemtoutcheeg.com', 2222222, 'slot2');  // contoh zona 2
-      injectAd('vemtoutcheeg.com', 3333333, 'slot3');  // contoh zona 3
-      injectAd('vemtoutcheeg.com', 4444444, 'slot4');  // contoh zona 4
+        // —————————————
+        // 1) MULTIPLEX ADS (2 slots)
+        injectAd('vemtoutcheeg.com', 9264100, 'slot1', '400');
+        injectAd('vemtoutcheeg.com', 9264105, 'slot2', '400');
   
-      // —————————————
-      // 2) STICKY ADS
-      // Ini script Fantastic tag kamu yang asli
-      injectAd('vemtoutcheeg.com', 9263758, 'stickyAds');
+        // —————————————
+        // 2) STICKY ADS (Fantastic tag kamu)
+        injectAd('vemtoutcheeg.com', 9263758, 'stickyAds', '400');
   
-      // —————————————
-      // CLOSE BUTTON STICKY ADS
-      var btn = document.getElementById('closeAdsBtn');
-      btn.addEventListener('click', function(){
-        document.getElementById('stickyAds').style.display = 'none';
-      });
-    })();
+        // —————————————
+        // CLOSE BUTTON untuk Sticky Ads
+        var btn = document.getElementById('closeAdsBtn');
+        btn.addEventListener('click', function(){
+          document.getElementById('stickyAds').style.display = 'none';
+        });
+      })();
     </script>
 
     
