@@ -841,3 +841,17 @@ main {
   #vignette-banner .vignette-close:hover {
     color: #000;
   }
+
+
+.ad-slot {
+    margin: 16px auto;       /* spasi atas/bawah */
+    text-align: center;      /* center banner */
+  }
+  .ad-slot img {
+    width: 100%;             /* lebarnya 100% dari container */
+    max-width: 728px;        /* jangan melebihi 728px */
+    height: auto;            /* proporsional */
+    display: inline-block;
+    border: 0;               /* hapus border default kalau ada */
+  }
+  
