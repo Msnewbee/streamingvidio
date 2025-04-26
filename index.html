@@ -97,6 +97,13 @@
       <h1>Sedang Tayang</h1>
       <div class="anime-grid" id="new-anime-list"></div>
 
+      <div id="multiplexAds">
+        <div id="slot1" class="multiplex-slot"></div>
+        <div id="slot2" class="multiplex-slot"></div>
+        <div id="slot3" class="multiplex-slot"></div>
+        <div id="slot4" class="multiplex-slot"></div>
+      </div>
+
       <h1>Daftar Anime</h1>
       <div class="anime-grid" id="anime-list"></div>
       <div id="pagination" class="pagination-controls"></div>
@@ -105,16 +112,46 @@
     
 
     <!-- Sticky Footer Ads -->
-<div class="sticky-ads" id="stickyAds" style="width:100%; min-width:300px;">
-  <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+    <div class="sticky-ads" id="stickyAds" style="width:100%; min-width:300px;">
+      <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+    </div>
+    
+    <!-- ===== INJECT ALL SCRIPTS VIA JS ===== -->
   <script>
-    (function(d,z,s){
-      s.src='https://'+d+'/400/'+z;
-      try{(document.body||document.documentElement).appendChild(s)}
-      catch(e){}
-    })('vemtoutcheeg.com', 9263758, document.createElement('script'))
-  </script>
-</div>
+    (function(){
+      function injectAd(domain, zoneId, targetId, pathSegment = '400') {
+        var s = document.createElement('script');
+        s.src = 'https://' + domain + '/' + pathSegment + '/' + zoneId;
+        s.defer = true;
+        try {
+          var target = document.getElementById(targetId);
+          (target || document.body).appendChild(s);
+        } catch(e){}
+      }
+  
+      // —————————————
+      // 1) MULTIPLEX ADS
+      // Ganti domain & zoneId di bawah ini sesuai 4 zona In-Page Push (Banner) kamu
+      injectAd('vemtoutcheeg.com', 1111111, 'slot1');  // contoh zona 1
+      injectAd('vemtoutcheeg.com', 2222222, 'slot2');  // contoh zona 2
+      injectAd('vemtoutcheeg.com', 3333333, 'slot3');  // contoh zona 3
+      injectAd('vemtoutcheeg.com', 4444444, 'slot4');  // contoh zona 4
+  
+      // —————————————
+      // 2) STICKY ADS
+      // Ini script Fantastic tag kamu yang asli
+      injectAd('vemtoutcheeg.com', 9263758, 'stickyAds');
+  
+      // —————————————
+      // CLOSE BUTTON STICKY ADS
+      var btn = document.getElementById('closeAdsBtn');
+      btn.addEventListener('click', function(){
+        document.getElementById('stickyAds').style.display = 'none';
+      });
+    })();
+    </script>
+
+    
 
 
   <footer>
