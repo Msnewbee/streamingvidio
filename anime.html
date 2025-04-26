@@ -63,12 +63,30 @@
       </div>
     </div>
 
-    <div id="multiplexAds">
-      <div id="slot1" class="multiplex-slot"></div>
-      <div id="slot2" class="multiplex-slot"></div>
-      <div id="slot3" class="multiplex-slot"></div>
-      <div id="slot4" class="multiplex-slot"></div>
-    </div>
+    <!-- slot multipleks 1 -->
+<div id="MNTZ_9264100" class="multiplex-slot"></div>
+<script>
+(function(d,z){
+  var s = document.createElement('script');
+  s.src = 'https://' + d + '/401/' + z;
+  s.defer = true;
+  (document.getElementById('MNTZ_'+z) || document.body)
+    .appendChild(s);
+})('vemtoutcheeg.com', 9264100);
+</script>
+
+<!-- slot multipleks 2 -->
+<div id="MNTZ_9264105" class="multiplex-slot"></div>
+<script>
+(function(d,z){
+  var s = document.createElement('script');
+  s.src = 'https://' + d + '/401/' + z;
+  s.defer = true;
+  (document.getElementById('MNTZ_'+z) || document.body)
+    .appendChild(s);
+})('vemtoutcheeg.com', 9264105);
+</script>
+
     
 
     <!-- Daftar Episode -->
@@ -80,39 +98,25 @@
     </section>
 
 
-    <div class="sticky-ads" id="stickyAds">
-      <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
-    </div>
-    
-    <script>
-      ;(function(){
-        function injectAd(domain, zoneId, targetId, pathSegment) {
-          var s = document.createElement('script');
-          s.src = 'https://' + domain + '/' + pathSegment + '/' + zoneId;
-          s.defer = true;
-          try {
-            var tgt = document.getElementById(targetId);
-            (tgt || document.body).appendChild(s);
-          } catch(e){}
-        }
-  
-        // —————————————
-        // 1) MULTIPLEX ADS (2 slots)
-        injectAd('vemtoutcheeg.com', 9264100, 'slot1', '400');
-        injectAd('vemtoutcheeg.com', 9264105, 'slot2', '400');
-  
-        // —————————————
-        // 2) STICKY ADS (Fantastic tag kamu)
-        injectAd('vemtoutcheeg.com', 9263758, 'stickyAds', '400');
-  
-        // —————————————
-        // CLOSE BUTTON untuk Sticky Ads
-        var btn = document.getElementById('closeAdsBtn');
-        btn.addEventListener('click', function(){
-          document.getElementById('stickyAds').style.display = 'none';
-        });
-      })();
-    </script>
+    <!-- === STICKY ADS === -->
+<div class="sticky-ads" id="stickyAds">
+  <button class="close-ads" id="closeAdsBtn">Tutup Iklan [X]</button>
+</div>
+
+<script>
+  // Sticky gunakan /400/ sesuai Fantastic tag
+  (function(){
+    var s = document.createElement('script');
+    s.src = 'https://vemtoutcheeg.com/400/9263758';
+    s.defer = true;
+    document.getElementById('stickyAds').appendChild(s);
+
+    // Tombol tutup
+    document.getElementById('closeAdsBtn')
+      .addEventListener('click', ()=>document.getElementById('stickyAds').style.display='none');
+  })();
+</script>
+
     
   </main>
 
