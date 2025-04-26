@@ -16,8 +16,11 @@ const films = [
     const filmContainer = document.createElement('div');
     filmContainer.className = 'film-item';
   
+    const filmLink = `pemutarfilm.html?video=${encodeURIComponent(film.embed)}&title=${encodeURIComponent(film.title)}`;
+    console.log(filmLink);  // Periksa URL yang dihasilkan di konsol
+  
     filmContainer.innerHTML = `
-      <a href="pemutarfilm.html?video=${encodeURIComponent(film.embed)}&title=${encodeURIComponent(film.title)}">
+      <a href="${filmLink}">
         <video src="${film.embed}" preload="metadata" muted playsinline style="width:100%; height:auto;">
         </video>
         <p>${film.title}</p>
