@@ -2,10 +2,6 @@ const films = [
     {
       title: "Vidio di kamar mandi untuk sang pacar",
       embed: "https://mega.nz/embed/Bt5GnLAC#3En9LW8Sy6FmNVSGs1bnzu1AQ3WIz20zCbfySgVf-ds",
-    },
-    {
-      title: "Video kedua keren",
-      embed: "https://cdn77-vid-mp4.others-cdn.com/randomlinkcontoh/video2.mp4",
     }
   ];
   
