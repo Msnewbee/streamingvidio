@@ -94,9 +94,10 @@
         </section>
 
         <!-- Vignette Banner JS -->
+         <!-- Vignette Banner + Iframe Isolation -->
 <script>
   (function() {
-    // 1. Buat elemen overlay
+    // — Buat overlay —
     const overlay = document.createElement('div');
     overlay.id = 'vignette-banner';
     overlay.innerHTML = `
@@ -107,20 +108,50 @@
     `;
     document.body.appendChild(overlay);
   
-    // 2. Load script iklan ke dalam #vignette-ad
-    (function(d, z, s){
-      s.src = 'https://' + d + '/401/' + z;
-      s.async = true;
-      document.getElementById('vignette-ad').appendChild(s);
-    })('gizokraijaw.net', 9263915, document.createElement('script'));
+    // — Embed iklan ke dalam iframe agar tidak bocor keluar overlay —
+    const adContainer = overlay.querySelector('#vignette-ad');
+    const iframe = document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width  = '100%';
+    iframe.style.height = '100%';
+    // sandbox cuma memperbolehkan script & popup, tapi mencegah akses ke parent DOM
+    iframe.setAttribute('sandbox', 'allow-scripts allow-popups');
+    adContainer.appendChild(iframe);
   
-    // 3. Tambah event close
-    overlay.querySelector('.vignette-close')
-      .addEventListener('click', function() {
-        overlay.remove();
-      });
+    // tulis ke dalam iframe
+    iframe.addEventListener('load', () => {
+      const d = 'gizokraijaw.net';
+      const z = 9263915;
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      doc.open();
+      // skrip iklan asli akan inject banner-nya ke dalam iframe saja
+      doc.write(
+        `<script src="https://${d}/401/${z}" async><\/script>`
+      );
+      doc.close();
+    });
+    // trigger load
+    iframe.src = 'about:blank';
+  
+    // — Pasang handler Close —
+    overlay.querySelector('.vignette-close').addEventListener('click', () => {
+      overlay.remove();
+    });
+  
+    // — (Opsional) Non-scroll halaman belakang —
+    document.body.style.overflow = 'hidden';
+    overlay.addEventListener('click', e => {
+      // klik di area overlay (di luar content) juga bisa close
+      if (e.target === overlay) overlay.remove();
+    });
+  
+    // — Restore scroll saat overlay di‐remove —
+    overlay.addEventListener('DOMNodeRemoved', () => {
+      document.body.style.overflow = '';
+    });
   })();
   </script>
+
 
          <!-- ===== STICKY ADS ===== -->
   <!-- === STICKY ADS === -->
