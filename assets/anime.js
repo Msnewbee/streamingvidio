@@ -1,10 +1,10 @@
-// Fungsi untuk mengambil data anime dari beberapa file JSON
-let _cache = null;  // untuk cache hasil fetch
+let _cache = null;
 
 export async function fetchAnimeList() {
   if (_cache) return _cache;
-    const urls = [
-      { path: './Anime/One_piece.json', label: 'One_piece.json' },
+
+  const urls = [
+      { path: './Anime/One_piece.json',             label: 'One_piece.json' },
       { path: './Anime/bleach.json', label: 'bleach.json' },
       { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
       { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
@@ -38,10 +38,10 @@ export async function fetchAnimeList() {
 
     ];
 
-    // Gunakan allSettled untuk toleran terhadap 404/JSON error
+    // Promise.allSettled agar satu file gagal nggak crash semuanya
   const settled = await Promise.allSettled(
     urls.map(async ({ path, label }) => {
-      const safePath = `./Anime/${encodeURIComponent(label)}`;
+      const safePath = encodeURI(path);
       const res = await fetch(safePath);
       if (!res.ok) {
         const txt = await res.text();
@@ -52,18 +52,22 @@ export async function fetchAnimeList() {
         console.error(`${label} bukan JSON.`);
         throw new SyntaxError('Bukan JSON');
       }
-      const data = await res.json();
-      return { ...data, label };
+      const dataArray = await res.json();       // JSON adalah array
+      // kita juga bisa simpan sumber file-nya kalau perlu:
+      return dataArray.map(item => ({ ...item, source: label }));
     })
   );
 
-  // Ambil hasil yang sukses
-  const results = settled
+  // kumpulkan semua yang fulfilled jadi satu array
+  const arrays = settled
     .filter(r => r.status === 'fulfilled')
     .map(r => r.value);
 
-  // Hilangkan duplikat berdasarkan id (jika perlu)
-  const unique = Array.from(new Map(results.map(a => [a.id, a])).values());
+  // flatten jadi satu array
+  const combined = arrays.flat();
+
+  // unik berdasarkan id
+  const unique = Array.from(new Map(combined.map(a => [a.id, a])).values());
 
   _cache = unique;
   return unique;
