@@ -1,46 +1,25 @@
-window.verifyAge = function () {
-    const dob = document.getElementById('dob').value;
-    if (!dob) {
-        alert('Silakan masukkan tanggal lahir Anda.');
-        return;
-    }
+import { films } from './assets/film-list.js'; // pastikan path-nya benar
 
-    const birthDate = new Date(dob);
-    const today = new Date();
-    const age = Math.floor((today - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+// Ambil parameter dari URL
+const urlParams = new URLSearchParams(window.location.search);
+const videoTitle = urlParams.get('title');
 
-    if (age < 18) {
-        document.getElementById('error-message').style.display = 'block';
-        return;
-    }
+const container = document.getElementById('video-container');
 
-    document.getElementById('age-verification').style.display = 'none';
-    document.getElementById('restricted-content').style.display = 'block';
-    loadFilms();
-};
+// Cari film berdasarkan title
+const selectedFilm = films.find(film => film.title === decodeURIComponent(videoTitle));
 
-window.loadFilms = function () {
-    const films = [
-        {
-            title: "vidio di kamar mandi untuk sang pacar",
-            embed: "https://cdn77-vid-mp4.others-cdn.com/mbByhg3qM83GdpyiiCZ4XQ==,1745706347/videos/mp4/8/2/7/xvideos.com_82774043ff261f43dde351cd1620e10e.mp4?ui=MTY0LjY4LjEyNC4xNDktLS9odG1sNXBsYXllci9nZXR2aWRlby9vaGtha2ZoNQ=="
-        }
-        
-    ];
+if (selectedFilm) {
+  // Menampilkan video jika film ditemukan
+  container.innerHTML = `
+    <h2>${decodeURIComponent(selectedFilm.title)}</h2>
+    <video width="100%" height="auto" controls autoplay>
+      <source src="${decodeURIComponent(selectedFilm.videoUrl)}" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+  `;
+} else {
+  // Menampilkan pesan jika film tidak ditemukan
+  container.innerHTML = `<p>Video tidak ditemukan.</p>`;
+}
 
-    const filmList = document.getElementById('film-list');
-    filmList.innerHTML = ''; // Prevent duplication on reload
-
-    films.forEach(film => {
-        const filmContainer = document.createElement('div');
-        filmContainer.classList.add('film-item');
-        filmContainer.innerHTML = `
-            <h3>${film.title}</h3>
-            <iframe width="100%" height="400px" src="${film.embed}" frameborder="0" allowfullscreen></iframe>
-        `;
-        filmList.appendChild(filmContainer);
-    });
-};
-
-// Attach event listener to button
-document.getElementById('verify-button').addEventListener('click', window.verifyAge);

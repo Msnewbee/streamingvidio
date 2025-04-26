@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film 18+ - StreamingX</title>
-    <link rel="stylesheet" href="assets/style.css">
-     crossorigin="anonymous"></script>
-     <link rel="icon" type="image/png" href="public/Logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamingX - Daftar Film 18+</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
-        <h1>StreamingX</h1>
+        <div class="logo">
+          <img src="public/Logo.png" alt="Logo StreamingX" width="48" height="48">
+          <h1>StreamingX</h1>
+        </div>
         <nav>
-            <a href="index.html" class="back-button">← Kembali</a>
+          <ul>
+            <li><a href="index.html">Anime</a></li>
+            <li><a href="film.html">Film</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
         </nav>
-    </header>
-    <main>
-    <main class="film-page-container">
-        <div id="age-verification">
-            <h2>Verifikasi Usia</h2>
-            <p>Masukkan tanggal lahir Anda:</p>
-            <input type="date" id="dob">
-            <button id="verify-button">Submit</button>
-            <p id="error-message" style="color: red; display: none;">Maaf, Anda harus berusia minimal 18 tahun.</p>
-        </div>
+      </header>
 
-        <div style="width: 100%; text-align: center; margin: 20px 0;">
-            <a href="https://itoovoor.xyz/4/9264302" target="_blank" rel="noopener noreferrer">
-              <img src="public/APK-VCS-Gratis-1.png" alt="Iklan" style="max-width: 100%; height: auto;">
-            </a>
-          </div>
-
-        <div id="restricted-content" style="display: none;">
-            <h2>Daftar Film 18+</h2>
-            <div id="film-list"></div>
-        </div>
-    </main>
-
-    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',9263913,document.createElement('script'))</script>
-    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9263758,document.createElement('script'))</script>
-    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9264100,document.createElement('script'))</script>
-    <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9264105,document.createElement('script'))</script>
-  
+<main>
+  <div id="film-list" class="grid"></div>
+</main>
 
 <footer>
- <p>&copy; 2025 StreamingX. Semua hak dilindungi.</p>
-   <p><a href="about.html">Tentang Kami</a> | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a> | <a href="dmca.html">DMCA</a></p>  
+  <p>&copy; 2025 StreamingX</p>
 </footer>
 
-<script type="module" src="assets/film.js"></script>
+<script type="module" src="assets/film-list.js"></script>
 </body>
 </html>
-
