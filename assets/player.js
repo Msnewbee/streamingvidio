@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   const animeId      = params.get('id');
   const episodeParam = params.get('episode');
 
-  // 1) Validasi
+  // 1) Validasi dasar
   if (!animeId || !episodeParam) {
-    alert("ID anime atau nomor episode tidak valid.");
+    alert("ID anime atau parameter episode tidak valid.");
     window.location.href = "index.html";
     return;
   }
 
-  // 2) Ambil data anime
+  // 2) Ambil daftar anime & temukan yang dipilih
   const animeList = await fetchAnimeList();
   const anime     = animeList.find(a => String(a.id) === animeId);
   if (!anime) {
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  // 3) Cari data episode
+  // 3) Temukan episode sekarang
   const currentEpisode = anime.episodes.find(ep => String(ep.episode) === episodeParam);
   if (!currentEpisode) {
     alert("Episode tidak ditemukan.");
     return;
   }
 
-  // 4) Set judul & tombol back
+  // 4) Update judul & tombol back
   const titleEl = document.getElementById("anime-title");
   if (titleEl) titleEl.textContent = `${anime.title} — Episode ${episodeParam}`;
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 6) Hitung index untuk navigasi
   const episodeIndex = anime.episodes.findIndex(ep => String(ep.episode) === episodeParam);
 
-  // 7) Prev / Next
+  // 7) Tombol Prev / Next
   const prevBtn = document.getElementById("prev-episode");
   const nextBtn = document.getElementById("next-episode");
 
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       // episode terakhir → tombol Serial Serupa
       nextBtn.textContent = "Cek Serial Serupa";
       nextBtn.addEventListener("click", () => {
-        // gunakan properti folder (sesuai JSON kamu)
-        const folder = anime.folder;  // e.g. "one_piece"
-        window.location.href = `related.html?folder=${encodeURIComponent(folder)}`;
+        // gunakan property `source` (nama file JSON) yang sudah disisipkan di anime.js
+        const file = anime.source;  // misal "Jujutsu_Kaisen.json"
+        window.location.href = `related.html?file=${encodeURIComponent(file)}`;
       });
     }
   }
 
-  // 8) Switch-server (mirrors)
+  // 8) Switch-server (mirrors), jika ada
   const serverBtn = document.getElementById("switch-server");
   if (serverBtn && Array.isArray(currentEpisode.mirrors) && currentEpisode.mirrors.length) {
     let idx = 0;
@@ -87,10 +87,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // 9) Render daftar episode
+  // 9) Render daftar episode dengan highlight
   const listDiv = document.getElementById("player-episode-list");
   if (listDiv) {
-    listDiv.innerHTML = '';
+    listDiv.innerHTML = "";
     anime.episodes.forEach(ep => {
       const card = document.createElement("div");
       card.className = "player-episode-card";
@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       btn.textContent = "Tonton";
       btn.tabIndex = 0;
 
-      // highlight episode aktif & scroll
       if (String(ep.episode) === episodeParam) {
         btn.classList.add("active");
         setTimeout(() => {
@@ -119,6 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
+
 
 
 
