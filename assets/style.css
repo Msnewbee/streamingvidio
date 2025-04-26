@@ -799,3 +799,45 @@ main {
     font-size: 16px;
     cursor: pointer;
   }
+
+  #vignette-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  /* Box konten iklan */
+  #vignette-banner .vignette-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  
+  /* Tombol close (“×”) */
+  #vignette-banner .vignette-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    padding: 4px;
+  }
+  
+  #vignette-banner .vignette-close:hover {
+    color: #000;
+  }

@@ -93,6 +93,35 @@
           </div>        
         </section>
 
+        <!-- Vignette Banner JS -->
+<script>
+  (function() {
+    // 1. Buat elemen overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'vignette-banner';
+    overlay.innerHTML = `
+      <div class="vignette-content">
+        <button class="vignette-close" aria-label="Close">&times;</button>
+        <div id="vignette-ad"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  
+    // 2. Load script iklan ke dalam #vignette-ad
+    (function(d, z, s){
+      s.src = 'https://' + d + '/401/' + z;
+      s.async = true;
+      document.getElementById('vignette-ad').appendChild(s);
+    })('gizokraijaw.net', 9263915, document.createElement('script'));
+  
+    // 3. Tambah event close
+    overlay.querySelector('.vignette-close')
+      .addEventListener('click', function() {
+        overlay.remove();
+      });
+  })();
+  </script>
+
          <!-- ===== STICKY ADS ===== -->
   <!-- === STICKY ADS === -->
   <div class="sticky-ads" id="stickyAds">
