@@ -1,6 +1,8 @@
 // Fungsi untuk mengambil data anime dari beberapa file JSON
+let _cache = null;  // untuk cache hasil fetch
+
 export async function fetchAnimeList() {
-  try {
+  if (_cache) return _cache;
     const urls = [
       { path: './Anime/One_piece.json', label: 'One_piece.json' },
       { path: './Anime/bleach.json', label: 'bleach.json' },
@@ -36,30 +38,35 @@ export async function fetchAnimeList() {
 
     ];
 
-    const results = await Promise.all(urls.map(async ({ path, label }) => {
-      const res = await fetch(path);
+    // Gunakan allSettled untuk toleran terhadap 404/JSON error
+  const settled = await Promise.allSettled(
+    urls.map(async ({ path, label }) => {
+      const safePath = `./Anime/${encodeURIComponent(label)}`;
+      const res = await fetch(safePath);
       if (!res.ok) {
-      const text = await res.text();
-      console.error(`Gagal mengambil ${label}:`, text);
-      throw new Error(`Gagal mengambil data dari ${label}`);
-     }
-     const contentType = res.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-      const text = await res.text();
-      console.error(`Respons dari ${label} bukan JSON:\n`, text);
-      throw new SyntaxError(`Respons dari ${label} bukan JSON`);
-    }
-     return await res.json();
-    }));
+        const txt = await res.text();
+        console.error(`Gagal ambil ${label}:`, txt);
+        throw new Error(`HTTP ${res.status}`);
+      }
+      if (!res.headers.get('content-type')?.includes('application/json')) {
+        console.error(`${label} bukan JSON.`);
+        throw new SyntaxError('Bukan JSON');
+      }
+      const data = await res.json();
+      return { ...data, label };
+    })
+  );
 
-    // Gabungkan dan hilangkan duplikat berdasarkan ID
-    const combined = results.flat();
-    const uniqueAnime = Array.from(new Map(combined.map(a => [a.id, a])).values());
-    return uniqueAnime;
-  } catch (error) {
-    console.error('Error fetching anime list:', error);
-    return [];
-  }
+  // Ambil hasil yang sukses
+  const results = settled
+    .filter(r => r.status === 'fulfilled')
+    .map(r => r.value);
+
+  // Hilangkan duplikat berdasarkan id (jika perlu)
+  const unique = Array.from(new Map(results.map(a => [a.id, a])).values());
+
+  _cache = unique;
+  return unique;
 }
 
 // Fungsi untuk memuat detail anime (dipakai di halaman detail, misalnya: anime.html)
