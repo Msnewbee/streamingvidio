@@ -1,5 +1,12 @@
 import { fetchAnimeList } from "./anime.js";
 
+// Helper untuk memuat skrip iklan
+function loadAd(domain, id) {
+  const s = document.createElement('script');
+  s.src = `https://${domain}/400/${id}`;
+  (document.body || document.documentElement).appendChild(s);
+}
+
 document.addEventListener("DOMContentLoaded", async function () {
   const searchInput = document.getElementById("search-anime");
   const sortSelect = document.getElementById("sort-anime");
@@ -39,6 +46,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.error("Error fetching data:", error);
       animeListContainer.innerHTML = "<p>Gagal memuat data anime.</p>";
     });
+
+  // Panggil unit iklan setelah semua elemen ter-parse
+  loadAd('vemtoutcheeg.com', 9264100);
+  loadAd('vemtoutcheeg.com', 9264105);
 
   function displayAnime(animes) {
     animeListContainer.innerHTML = "";

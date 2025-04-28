@@ -74,6 +74,14 @@ export async function fetchAnimeList() {
   return unique;
 }
 
+function loadAd(domain, id, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return console.warn(`Container ${containerId} tidak ada`);
+  const s = document.createElement('script');
+  s.src = `https://${domain}/400/${id}`;
+  container.appendChild(s);
+}
+
 // Fungsi untuk memuat detail anime (dipakai di halaman detail, misalnya: anime.html)
 export async function loadAnimeDetail() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -89,7 +97,12 @@ export async function loadAnimeDetail() {
 
   updateAnimeDetails(anime);
   populateEpisodeList(anime);
+
+
+loadAd('vemtoutcheeg.com', 9264100, 'counter-detail');
+loadAd('vemtoutcheeg.com', 9264105, 'counter-detail');
 }
+
 
 // Fungsi untuk memperbarui tampilan detail anime (memeriksa apakah elemen ada terlebih dahulu)
 function updateAnimeDetails(anime) {
