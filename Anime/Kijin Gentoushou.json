@@ -1,0 +1,28 @@
+[
+    {
+        "id": 125,
+        "title": "Sword of the Demon Hunter: Kijin Gentoushou",
+        "folder": "kijin_gentoushou",
+        "image": "kijin_gentoushou.jpg",
+        "japanese_title": "鬼人幻燈抄",
+        "score": 8.2,
+        "producers": ["Yokohama Animation Laboratory", "Futabasha"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 24,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-03-31",
+        "studio": "Yokohama Animation Laboratory",
+        "genre": ["Action", "Historical Fantasy", "Supernatural"],
+        "synopsis": "Berlatar di era Tenpō pada periode Edo, Jinta dan adiknya, Suzune, tinggal di desa pegunungan terpencil bernama Kadono. Jinta bertugas sebagai pelindung Shirayuki, seorang miko suci yang menjadi target kekuatan gaib. Setelah pertemuan dengan iblis misterius, Jinta mengalami peristiwa supranatural yang mengubah takdirnya, memulai perjalanan lintas waktu untuk melawan iblis dan mengungkap rahasia dunia spiritual yang lebih dalam.",
+        "trailer_url": "https://www.youtube.com/embed/mADHh_XCTfc",
+        "episodes": [
+          { "episode": 1, "url": "https://s0.wibufile.com/video01/KG-1-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 2, "url": "https://s0.wibufile.com/video01/KG-2-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 3, "url": "https://s0.wibufile.com/video01/KG-3-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 4, "url": "https://s0.wibufile.com/video01/KG-4-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 5, "url": "https://s0.wibufile.com/video01/KG-5-FULLHD-SAMEHADAKU.CARE.mp4" }
+        ]
+      }
+      
+]

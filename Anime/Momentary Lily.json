@@ -1,0 +1,58 @@
+[
+    {
+        "id": 126,
+        "title": "Momentary Lily",
+        "folder": "momentary_lily",
+        "image": "momentary_lily.jpg",
+        "japanese_title": "もめんたりー・リリィ",
+        "score": 5.5,
+        "producers": ["Shochiku", "MAGNET", "U-NEXT", "BS Asahi", "Animoca Brands Japan", "TOKYO MX", "Kansai TV", "GoHands"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 13,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-01-02",
+        "studio": "GoHands",
+        "genre": ["Action", "Sci-Fi", "Post-Apocalyptic", "Slice of Life", "Cooking"],
+        "synopsis": "Dalam dunia pasca-apokaliptik yang dihancurkan oleh invasi robotik, seorang gadis muda bernama Renge Kasumi berjuang untuk bertahan hidup menggunakan kekuatan misterius yang baru ditemukan. Tanpa ingatan masa lalunya, Renge mengembara hingga bertemu dengan lima gadis lain yang masing-masing memiliki kemampuan unik. Bersama-sama, mereka menghadapi ancaman mekanis yang disebut 'Wild Hunts', sambil menemukan kekuatan dalam persahabatan dan memasak hidangan lezat di tengah pertempuran mereka.",
+        "trailer_url": "https://www.youtube.com/embed/jKNscVwATwI?si=0nrhK6a4V-zuU7gM",
+        "episodes": [
+          { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dwIh3X9MnvJxv1f13Yhz0PZZpehi9UgtRKLW892zjxXDTh56XBM6m4tcSlM2AtmXEgIM9dNZhmEuu8izM_8SRv5IQzj0eJn_VggZEx8Dkn3J4e4QRm5XEbr8_2My-mPC80AtxQ" },
+          { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dzmwneRTRZRrQpYttEnwbXvCaJko9UF-i5b1kydlLOlWcTbO7mLfopWEDP9ugR3uIb9PWtUU_Vvj8DfMFwpHKLGENqM7jO6QSHPQ6INOlWiJubD42GdoBCbPeTVzMEGNR5JKq2v" },
+          { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dxAXGxMvRglwE1Qs1Ay1d_g-hfO5bGLSorhYIxAFx4qZJNfEmIAD-I91WzFj38PHXEKKMz-5wi2j1wJnbbVpnjReJBfEFc56H3BR1h3RJacSeW7rUpcQj4rheQ0AWWPMh9DE8VX" },
+          { "episode": 4, "url": "https://www.blogger.com/video.g?token=AD6v5dzrK6OviZfo2TSUXWDe8G4xdgAlIesJprsgjSikwl8pziCqhgnvo_z9SQGO7jlVCHXyzFH34IJdS29teHQ3ZHXocYjpXWV7b7-mVSPZu4SNe-DIbDD0IoLB0WCV13CkgQgDdyc" },
+          { "episode": 5, "url": "https://www.blogger.com/video.g?token=AD6v5dybFkESmyYCNR_QmnFokajybLUM-SoyABANatD-zztE6laBMJGgdx_mrXYiQnunybFfBGrUKMYHJiUGAOfN4g0zcBEcXHOpEnOhXwAx6fkwBwFCc6MCiz94kpkTvb2GM5I9Pg" },
+          { "episode": 6, "url": "https://www.blogger.com/video.g?token=AD6v5dzXTJPuLKsk9u_v1-Xtp2VvAZmAXes71ol8Zq_0ak6PQIAxMpq86Oa9Syq0yR0Mvv8JtSROZlHgXZ4Scoxs9RMPBxMYtj8nDbN7tw7nTaySulCNDDCWBBAltU0Fr3Qu0OMZljo2" },
+          { "episode": 7, "url": "https://www.blogger.com/video.g?token=AD6v5dz2-scR4w9ldysW-UaAHwsPxNshsQ9a1yZM_bordgHgNpjes8pgjQJAUTdJ03qOtWoB7lB2xvKtMxgkuaTphalHuYuuOFntKDoX7DAy3E_XiqqKfFdyUUa6jGe_blwLS8Jc_l0" },
+          { "episode": 8, "url": "https://www.blogger.com/video.g?token=AD6v5dwIDGhqgLMrMXpB78fkRbSI1xZKZ9yRIEGePKfTAyTraGC8ZIrv0bGoqhjPQps47wBV413c69MVeH3UV1Mihb3Ugh9HozRdrJoVT0kWKnuE-bl7RY-9KQt_fqMprKcI9cSVjxDx" },
+          { "episode": 9, "url": "https://www.blogger.com/video.g?token=AD6v5dyecMfBuzAUHb0G7_Wru78SQWGphVHCAEdy2LWI15KHUPwa3ofriPnr0S3oVuKlLJWgmacRP16t59E44KoasELlzmqYZEKTrnv_U3VNYcKon5J0KJ8Db5jx-LPCg_OozBT8NIk" },
+          { "episode": 10, "url": "https://www.blogger.com/video.g?token=AD6v5dx3VEq4Ugwl9x6CDl8KQ_yOUmvW_bouOmAG-7L5zW3vy8EqaeuDgXCbsRAxGY8JZWcy2bC4t50r_FoAUi87vr_LadyXHp4CcJ7Utc_HSIf3ZGqtCWMaQK_98q0DNHx-zmoJVAji" },
+          { "episode": 11, "url": "https://www.blogger.com/video.g?token=AD6v5dzuUOF5kxygp0H3HUzkgPzp0EhZRWCKbhFr6nA0Wt-cv-MaJuvs7daCZeoQ5HIDTFM5aKgnx1Bk483-FGzQ_b09PshVLv37Shu-V-t_zhFPBNHxdjmhRutdv0F7uLmSVmtttPc" },
+          { "episode": 12, "url": "https://www.blogger.com/video.g?token=AD6v5dwwFjfcVQvoA9OEu5mxp4gAb1grsX0SGj5lx6-eydqVlSrGplimTwU7yM-p3sTBGpZ8kA76H1Mchsnyn9wUseR9PbvnlarP858LA5di43NKrTwFF1bpKgEDktwb34IHrzA6D_vC" },
+          { "episode": 13, "url": "https://www.blogger.com/video.g?token=AD6v5dxkCHGAciirvQ90wDCnFM05VZn3MONmNn7Sg1-K1Rm1GO3k-6Fbz_4c4tsC8mqNMust3hJZQ7ZWJxzHf88HCV28YBvwLgi-NoC16eQJG_Mxzwxn3YUya6lJtSYwDcccz4i5NYc" }
+        ]
+      },
+      {
+        "id": 127,
+        "title": "Momentary Lily: Tsuzuiteiku Kappou, Kappou",
+        "folder": "momentary_lily",
+        "image": "momentary_lily2.jpg",
+        "japanese_title": "もめんたりー・リリィ",
+        "score": 5.5,
+        "producers": ["Shochiku", "MAGNET", "U-NEXT", "BS Asahi", "Animoca Brands Japan", "TOKYO MX", "Kansai TV", "GoHands"],
+        "type": "TV",
+        "status": "Selesai",
+        "total_episodes": 13,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-01-02",
+        "studio": "GoHands",
+        "genre": ["Post-apocalyptic", "Science Fantasy", "Adventure", "Cooking", "Slice of Life"],
+        "synopsis": "Dalam dunia yang dihancurkan oleh invasi robotik, seorang gadis bernama Renge Kasumi berjuang untuk bertahan hidup menggunakan kekuatan yang baru ditemukannya. Tanpa ingatan masa lalunya, ia menjelajahi kota hingga bertemu dengan lima gadis lain yang masing-masing memiliki kemampuan unik. Bersama-sama, mereka menjalani kehidupan dengan memasak hidangan lezat di sela-sela pertempuran melawan monster mekanik. Saat mereka mengungkap rahasia kekuatan dan masa lalu mereka, mereka menemukan kekuatan dalam persahabatan mereka.",
+        "trailer_url": "https://www.youtube.com/embed/epsxyWR5psk?si=b1OfilOxanLNHL-A",
+        "episodes": [
+          { "episode": "Momentary Lily: Tsuzuiteiku Kappou", "url": "https://www.blogger.com/video.g?token=AD6v5dwgrrvSPnB-hFU6GQDO52_HduUUnFXGMgcsWg40Gp_ELo1GLRLzXfqNrn7cH32Lticue10sAs3crtw9ebw5H8FPq5zWHoeUXL8hG9XsUSPGyD3gxaJfO5ILAk4_cYpiRJPn4LU&autoplay=1" }
+        ]
+      }
+      
+      
+]

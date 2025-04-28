@@ -35,7 +35,11 @@ export async function fetchAnimeList() {
       { path: './Anime/Tokyo Ghoul.json', label: 'Tokyo Ghoul.json' },
       { path: './Anime/Attack on Titan.json', label: 'Attack on Titan.json' },
       { path: './Anime/Code Geass.json', label: 'Code Geass.json' },
-      { path: './Anime/Doraemon.json', label: 'Doraemon.json' }
+      { path: './Anime/Doraemon.json', label: 'Doraemon.json' },
+      { path: './Anime/Witch Watch.json', label: 'Witch Watch.json' },
+      { path: './Anime/Kijin Gentoushou.json', label: 'Kijin Gentoushou.json' },
+      { path: './Anime/Momentary Lily.json', label: 'Momentary Lily.json' },
+      { path: './Anime/Our Last Crusade or the Rise of a New World.json', label: 'Our Last Crusade or the Rise of a New World.json' }
 
     ];
 

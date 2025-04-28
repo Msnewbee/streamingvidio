@@ -259,7 +259,51 @@
         "episodes": [
           { "episode": "Movie", "url": "https://abysscdn.com/?v=nWgnm0q4o&autoplay=1&autoplay=1" }
         ]
+      },
+      {
+        "id": 122,
+        "title": "Doraemon Movie 41: Nobita no Little Star Wars 2021",
+        "folder": "doraemon_movie_41_nobita_no_little_star_wars",
+        "image": "doraemon_movie_41.jpg",
+        "japanese_title": "映画ドラえもん のび太のリトルスターウォーズ 2021",
+        "score": 7.6,
+        "producers": ["Shin-Ei Animation", "Shogakukan", "TV Asahi"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "109 Menit",
+        "release_date": "2022-03-04",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Sci-Fi", "Kids", "Fantasy"],
+        "synopsis": "Saat Nobita bertemu dengan seorang alien kecil bernama Papi dari planet Pirika yang sedang melarikan diri dari pasukan musuh, Nobita dan teman-temannya membantu menyembunyikannya di Bumi. Namun ketika bahaya datang, mereka berpetualang ke planet asal Papi untuk menyelamatkan dunia kecilnya!",
+        "trailer_url": "https://www.youtube.com/embed/KHq-x7v1hYw",
+        "episodes": [
+          { "episode": 1, "url": "https://playhydrax.com/?v=7THEqKiAR&autoplay=1" }
+        ]
+      },
+      {
+        "id": 123,
+        "title": "Doraemon Movie 42: Nobita to Sora no Utopia",
+        "folder": "doraemon_movie_42",
+        "image": "doraemon_movie_42.jpg",
+        "japanese_title": "映画ドラえもん のび太と空の理想郷",
+        "score": 7.3,
+        "producers": ["Shin-Ei Animation", "Toho"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "107 Menit",
+        "release_date": "2023-03-03",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Sci-Fi"],
+        "synopsis": "Nobita, setelah mendengar tentang Utopia dari Dekisugi, memimpikan dunia sempurna di langit. Bersama Doraemon dan teman-temannya, mereka menggunakan kapal udara dengan fungsi perjalanan waktu untuk mencari tempat tersebut. Mereka menemukan Paradapia, sebuah negeri ideal yang ternyata menyimpan rahasia gelap. Dengan bantuan Marimba, seorang pemburu hadiah dari masa depan, mereka berusaha mengungkap kebenaran dan menyelamatkan Paradapia dari kehancuran.",
+        "trailer_url": "https://www.youtube.com/watch?v=bAhaZLAf7W8",
+        "episodes": [
+          { "episode": 1, "url": "https://niikaplayerr.com/v/dhq4pf9gr0cc?autoplay=1" }
+        ]
       }
+      
+      
       
       
       

@@ -1,0 +1,27 @@
+[
+    {
+        "id": 124,
+        "title": "Witch Watch",
+        "folder": "witch_watch",
+        "image": "witch_watch.jpg",
+        "japanese_title": "ウィッチウォッチ",
+        "score": 8.2,
+        "producers": ["Bibury Animation Studios", "Shueisha"],
+        "type": "TV",
+        "status": "Sedang Tayang",
+        "total_episodes": 26,
+        "duration": "24 Menit per episode",
+        "release_date": "2025-04-06",
+        "studio": "Bibury Animation Studios",
+        "genre": ["Fantasy", "Romantic Comedy", "Slice of Life"],
+        "synopsis": "Nico Wakatsuki, seorang penyihir remaja yang baru menyelesaikan pelatihannya, pindah untuk tinggal bersama teman masa kecilnya, Morihito Otogi, seorang ogre berpenampilan manusia. Nico berharap Morihito menjadi familiar-nya dan diam-diam ingin menjalin hubungan romantis dengannya. Namun, Morihito memiliki tugas untuk melindungi Nico dari ramalan bencana yang mengancam. Kehidupan sehari-hari mereka dipenuhi dengan kejadian supranatural dan kekacauan yang disebabkan oleh sihir Nico.",
+        "trailer_url": "https://www.youtube.com/embed/your_trailer_id",
+        "episodes": [
+          { "episode": 1, "url": "https://s0.wibufile.com/video01/WWtch-1-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 2, "url": "https://s0.wibufile.com/video01/WWtch-2-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 3, "url": "https://s0.wibufile.com/video01/WWtch-3-FULLHD-SAMEHADAKU.CARE.mp4" },
+          { "episode": 4, "url": "https://s0.wibufile.com/video01/WWtch-4-FULLHD-SAMEHADAKU.CARE.mp4" }
+        ]
+      }
+      
+]
