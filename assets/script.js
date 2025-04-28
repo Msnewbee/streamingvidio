@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (type === "OVA") labelColor = "#e74c3c";
     else if (type === "MOVIE") labelColor = "#f1c40f";
     else if (type === "SPECIAL") labelColor = "#9b59b6";
+    else if (type === "ONA") labelColor = "#2ecc71";
   
     // Proteksi untuk genre yang mungkin undefined
     const genreText = Array.isArray(anime.genre)

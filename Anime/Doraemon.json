@@ -1,0 +1,279 @@
+[
+    {
+        "id": 109,
+        "title": "Doraemon: Nobita’s Dinosaur 2006",
+        "folder": "doraemon_nobitas_dinosaur_2006",
+        "image": "doraemon_nobitas_dinosaur_2006.png",
+        "japanese_title": "映画ドラえもん のび太の恐竜2006",
+        "score": 7.5,
+        "producers": ["Shin-Ei Animation"],
+        "type": "Movie",
+        "status": "Selesai",
+        "duration": "107 Menit",
+        "release_date": "2006-03-04",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Science Fiction", "Family"],
+        "synopsis": "Doraemon: Nobita’s Dinosaur 2006 adalah film animasi Jepang yang merupakan remake dari film pertama Doraemon tahun 1980. Film ini menceritakan petualangan Nobita yang menemukan telur fosil dan berhasil menetas menjadi seekor Futabasaurus bernama Piisuke. Nobita dan teman-temannya menggunakan mesin waktu untuk mengembalikan Piisuke ke masa Cretaceous Akhir, menghadapi berbagai tantangan dan bertemu dengan pemburu dinosaurus dari masa depan.",
+        "trailer_url": "https://www.youtube.com/embed/xyz123456",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=HdQO-2QLk" }         
+        ]
+      },
+      {
+        "id": 110,
+        "title": "Doraemon: Nobita and the Island of Miracles ~Animal Adventure",
+        "folder": "doraemon_nobita_and_the_island_of_miracles_animal_adventure",
+        "image": "doraemon_nobita_and_the_island_of_miracles_animal_adventure.jpg",
+        "japanese_title": "映画ドラえもん のび太と奇跡の島 ～アニマル アドベンチャー～",
+        "score": 7.2,
+        "producers": ["Shin-Ei Animation", "Toho", "Pony Canyon"],
+        "type": "Movie",
+        "status": "Selesai",
+        "release_date": "2012-03-03",
+        "runtime": "100 Menit",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Animasi", "Petualangan", "Keluarga", "Fantasi", "Komedi", "Sains Fiksi"],
+        "synopsis": "Nobita dan Doraemon menemukan seekor burung moa besar yang telah punah selama 500 tahun. Untuk melindungi hewan tersebut, mereka pergi ke Pulau Beremon, di mana mereka bertemu dengan seorang gadis dari suku Rokkoro dan seorang anak laki-laki yang mirip dengan Nobita. Di sana, mereka menemukan bahwa pulau tersebut dihuni oleh berbagai spesies yang telah lama punah, yang dilindungi oleh roh kumbang emas bernama Golden Hercules. Namun, mereka harus menghadapi sekelompok penjahat dari masa depan yang berusaha menangkap Golden Hercules untuk keuntungan pribadi.",
+        "trailer_url": "https://www.youtube.com/embed/9QmZ8z2zjJ0",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=2ZwFoSNRb&autoplay=1" }         
+        ]
+      },
+      {
+        "id": 111,
+        "title": "Doraemon: Nobita's Earth Symphony",
+        "folder": "doraemon_nobita_no_chikyuu_symphony",
+        "image": "doraemon_nobita_no_chikyuu_symphony.jpg",
+        "japanese_title": "映画ドラえもん のび太の地球交響楽",
+        "score": 7.5,
+        "producers": ["Shin-Ei Animation", "TV Asahi", "ADK"],
+        "type": "Movie",
+        "status": "Selesai",
+        "release_date": "2024-03-01",
+        "duration": "115 Menit",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Music", "Sci-Fi"],
+        "synopsis": "Doraemon dan teman-temannya berusaha menyelamatkan Bumi dari krisis dengan menggunakan kekuatan musik. Mereka bertemu dengan Mikka, seorang gadis dari planet Mushka, yang membutuhkan bantuan mereka untuk menghidupkan kembali pesawat luar angkasa mereka, Grand Hall of Farre, melalui konser musik. Namun, mereka harus menghadapi Noise, entitas misterius yang mengancam keberadaan musik di Bumi.",
+        "trailer_url": "https://www.youtube.com/embed/4Q8Q6X1V5aA",
+        "episodes": [
+          { "episode": "Movie", "url": "https://abysscdn.com/?v=vO9iTrElD&autoplay=1" }         
+        ]
+      },
+      {
+        "id": 112,
+        "title": "Doraemon Movie 27: Nobita no Shin Makai Daibouken – 7-nin no Mahoutsukai",
+        "folder": "doraemon_movie_27",
+        "image": "doraemon_movie_27.jpg",
+        "japanese_title": "映画ドラえもん のび太の新魔界大冒険 〜7人の魔法使い〜",
+        "score": 7.8,
+        "producers": ["Shin-Ei Animation", "Toho"],
+        "type": "Movie",
+        "status": "Selesai",
+        "release_date": "2007-03-10",
+        "duration": "112 Menit",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Fantasy", "Adventure", "Comedy"],
+        "synopsis": "Nobita menggunakan gadget 'Moshimo-box' milik Doraemon untuk mengubah dunia menjadi tempat di mana sihir menggantikan sains dan teknologi. Namun, dunia baru ini membawa ancaman dari planet iblis yang mendekati Bumi. Nobita dan teman-temannya harus menemukan buku sihir yang dapat menyelamatkan dunia dari kehancuran.",
+        "trailer_url": "https://www.youtube.com/watch?v=example_trailer_url",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=EpQT24R3f-&autoplay=1" }
+        ]
+      },
+      {
+        "id": 113,
+        "title": "Doraemon: The New Record of Nobita's Spaceblazer",
+        "folder": "doraemon_spaceblazer",
+        "image": "doraemon_spaceblazer.jpg",
+        "japanese_title": "映画ドラえもん 新・のび太の宇宙開拓史",
+        "score": 7.0,
+        "producers": ["Takumi Fujimori", "Kumi Ogura", "Tatsuji Yamazaki", "Daisuke Yoshikawa", "Shunsuke Ôkura"],
+        "type": "Film",
+        "status": "Selesai",
+        "release_date": "2009-03-07",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Sci-Fi", "Adventure", "Comedy"],
+        "synopsis": "Nobita dan teman-temannya menemukan sebuah pintu menuju dimensi lain yang membawa mereka ke planet Koya Koya. Di sana, mereka bertemu dengan Roppuru dan Morina, dua penjelajah luar angkasa yang sedang melarikan diri dari perusahaan pertambangan jahat. Bersama-sama, mereka berjuang untuk menyelamatkan planet tersebut dari kehancuran.",
+        "trailer_url": "https://www.youtube.com/watch?v=abc123xyz",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=lzfdPMnJO&autoplay=1" }
+        ]
+      },
+      {
+        "id": 114,
+        "title": "Doraemon: Nobita's Great Battle of the Mermaid King",
+        "folder": "doraemon_movie_30",
+        "image": "doraemon_movie_30.jpg",
+        "japanese_title": "映画ドラえもん のび太の人魚大海戦",
+        "score": 7.2,
+        "producers": ["Shin-Ei Animation", "TV Asahi", "Shogakukan", "ADK", "Fujiko-Pro"],
+        "type": "Movie",
+        "status": "Selesai",
+        "release_date": "2010-03-06",
+        "duration": "99 Menit",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Action", "Adventure", "Animation"],
+        "synopsis": "Doraemon, Nobita, dan teman-temannya bertemu dengan Sophia, seorang putri duyung dari peradaban bawah laut kuno. Mereka mengunjungi kerajaan bawah lautnya dan terlibat dalam konflik antara dua suku duyung yang berseteru. Untuk membawa perdamaian, mereka mencari pedang legendaris yang dapat mengakhiri pertikaian tersebut.",
+        "trailer_url": "https://www.youtube.com/embed/3g8k5Oq5h6A",
+        "episodes": [
+          { "episode": "Movie", "url": "https://dl.berkasdrive.com/streaming/?id=aHR0cHM6Ly9taXRlZHJpdmUuY29tL3ZpZXcvZjBycGZpdzF3cGM2c2wxMDJuOGc=&poster=aHR0cHM6Ly9uaW1lZ2FtaS5pZC93cC1jb250ZW50L3VwbG9hZHMvMjAyMC8wNy9Eb3JhZW1vbi1Nb3ZpZS0zMC1Ob2JpdGEtbm8tTmluZ3lvLURhaWthaXNlbi1TdWItSW5kby5qcGc=&autoplay=1" }
+        ]
+      },
+      {
+        "id": 115,
+        "title": "Doraemon Movie 31: Shin Nobita to Tetsujin Heidan – Habatake Tenshi-tachi",
+        "folder": "doraemon_movie_31",
+        "image": "doraemon_movie_31.jpg",
+        "japanese_title": "映画ドラえもん 新・のび太と鉄人兵団 ～はばたけ 天使たち～",
+        "score": 7.75,
+        "producers": ["Shin-Ei Animation", "Toho"],
+        "type": "Movie",
+        "status": "Selesai",
+        "release_date": "2011-03-05",
+        "duration": "1 jam 48 menit",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Fantasy", "Mecha", "Sci-Fi", "Shounen"],
+        "synopsis": "Di sebuah galaksi jauh, sebuah masyarakat robot berencana untuk menginvasi Bumi dan menjadikan manusia sebagai budak. Seorang robot bernama Riruru dikirim sebagai pengintai untuk mempersiapkan invasi tersebut. Secara tidak sengaja, Nobita mengganggu misi pengintaian ini, dan bersama Doraemon serta teman-temannya, mereka harus menghadapi seluruh pasukan robot untuk menghentikan serangan tersebut.",
+        "trailer_url": "https://www.youtube.com/embed/7Bv8Zk8wQ2I",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=WD4az9T_k&autoplay=1" }
+        ]
+      },
+      {
+        "id": 116,
+        "title": "Doraemon Movie 33: Nobita no Himitsu Dougu Museum",
+        "folder": "doraemon_movie_33",
+        "image": "doraemon_movie_33.jpg",
+        "japanese_title": "映画ドラえもん のび太のひみつ道具博物館（ミュージアム）",
+        "score": 7.14,
+        "producers": ["ADK Marketing Solutions", "Shogakukan", "Shin-Ei Animation", "TV Asahi", "Toho"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "104 Menit",
+        "release_date": "2013-03-09",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Fantasy", "Kids", "Shounen"],
+        "synopsis": "Suatu sore yang biasa, bel Doraemon dicuri oleh Kaito Deluxe, seorang pencuri dari abad ke-22. Tanpa belnya, Doraemon mulai bertindak lebih seperti kucing biasa. Nobita dan teman-temannya memutuskan untuk mengejar Kaito Deluxe dan mengambil kembali bel tersebut yang tersembunyi di dalam Museum Gadget Rahasia abad ke-22.",
+        "trailer_url": "https://www.youtube.com/watch?v=H2gZ5H5B4dE",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=ftYJWQ4cC&autoplay=1" }
+        ]
+      },
+      {
+        "id": 117,
+        "title": "Stand by Me Doraemon",
+        "folder": "stand_by_me_doraemon",
+        "image": "stand_by_me_doraemon.jpg",
+        "japanese_title": "STAND BY ME ドラえもん",
+        "score": 8.0,
+        "producers": ["Shirogumi", "Robot Communications", "Shin-Ei Animation", "Toho"],
+        "type": "Film",
+        "status": "Selesai",
+        "duration": "95 Menit",
+        "release_date": "2014-08-08",
+        "studio": ["Shirogumi", "Robot Communications", "Shin-Ei Animation"],
+        "genre": ["Animasi", "Komedi", "Drama", "Fiksi Ilmiah"],
+        "synopsis": "Nobita Nobi adalah seorang anak kelas empat yang selalu mendapat nilai buruk karena kemalasan dan sering dibuli oleh teman-temannya, Suneo dan Gian. Suatu hari, keturunan Nobita dari abad ke-22, Sewashi, datang bersama robot kucing dari masa depan, Doraemon, untuk membantu Nobita mengubah masa depannya yang suram. Doraemon menggunakan berbagai alat dari kantong ajaibnya untuk membantu Nobita, termasuk mencoba memenangkan hati Shizuka, gadis yang disukainya. Namun, Nobita harus belajar untuk mandiri dan bertanggung jawab atas tindakannya. Film ini menggabungkan cerita-cerita ikonik dari manga Doraemon dalam format 3D CG yang emosional dan menyentuh hati.",
+        "trailer_url": "https://www.youtube.com/watch?v=1Qk2uN1Xj8I",
+        "episodes": [
+          { "episode": "Movie", "url": "https://abysscdn.com/?v=AforYhRRL&autoplay=1&autoplay=1" }
+        ]
+      },
+      {
+        "id": 118,
+        "title": "Doraemon Movie 10: Nobita no Nippon Tanjou",
+        "folder": "doraemon_movie_10_nobita_no_nippon_tanjou",
+        "image": "doraemon_movie_10_nobita_no_nippon_tanjou.jpg",
+        "japanese_title": "ドラえもん のび太の日本誕生",
+        "score": 6.76,
+        "producers": ["Shin-Ei Animation", "Toho"],
+        "type": "Movie",
+        "status": "Selesai",
+        "total_episodes": 1,
+        "duration": "100 Menit",
+        "release_date": "1989-03-11",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Adventure", "Comedy", "Fantasy", "Sci-Fi", "Shounen"],
+        "synopsis": "Doraemon, Nobita, Shizuka, Gian, dan Suneo memutuskan untuk melarikan diri dari rumah mereka dan melakukan perjalanan kembali ke masa prasejarah Jepang, sekitar 70.000 tahun yang lalu. Mereka bertemu dengan Kururu, seorang anak dari suku prasejarah, yang sedang berusaha menyelamatkan sukunya dari seorang dukun jahat. Bersama-sama, mereka berjuang untuk mengembalikan kedamaian dan membantu Kururu bersatu kembali dengan sukunya.",
+        "trailer_url": "https://www.youtube.com/embed/xyz12345678",
+        "episodes": [
+          { "episode": "Movie", "url": "https://playhydrax.com/?v=w831qQTdy&autoplay=1" }
+        ]
+      },
+      {
+        "id": 119,
+        "title": "Doraemon Movie 38: Nobita no Takarajima",
+        "folder": "doraemon_movie_38_nobita_no_takarajima",
+        "image": "doraemon_movie_38_nobita_no_takarajima.jpg",
+        "japanese_title": "映画ドラえもん のび太の宝島",
+        "score": 7.2,
+        "producers": ["Shin-Ei Animation", "Fujiko-Pro", "TV Asahi", "Shogakukan-Shueisha Productions"],
+        "type": "Film",
+        "status": "Selesai",
+        "duration": "109 Menit",
+        "release_date": "2018-03-03",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Animasi", "Petualangan", "Komedi", "Fiksi Ilmiah"],
+        "synopsis": "Doraemon, Nobita, Shizuka, Gian, dan Suneo berlayar menuju Laut Karibia untuk mencari Pulau Harta Karun yang misterius. Dalam perjalanan, mereka menghadapi badai dan musuh, serta dibantu oleh robot Mini-Dora. Setibanya di pulau tersebut, mereka menemukan bahwa pulau itu lebih dari sekadar tempat penyimpanan harta karun.",
+        "trailer_url": "https://www.youtube.com/embed/4D4k5D1s0g0",
+        "episodes": [
+          { "episode": "Movie", "url": "https://abysscdn.com/?v=pHKLwpA-7&autoplay=1&autoplay=1" }
+        ]
+      },
+      {
+        "id": 120,
+        "title": "Doraemon Movie 39: Nobita no Getsumen Tansaki",
+        "folder": "doraemon_movie_39",
+        "image": "doraemon_movie_39.jpg",
+        "japanese_title": "映画ドラえもん のび太の月面探査記",
+        "score": 7.8,
+        "producers": ["Shin-Ei Animation", "TV Asahi", "Asatsu-DK", "TOHO", "Fujiko F. Fujio Pro", "Shogakukan", "Shogakukan-Shueisha Productions"],
+        "type": "Movie",
+        "status": "Selesai",
+        "duration": "111 Menit",
+        "release_date": "2019-03-01",
+        "studio": "Shin-Ei Animation",
+        "genre": ["Sci-Fi", "Adventure", "Family", "Comedy"],
+        "synopsis": "Nobita percaya bahwa di bulan terdapat kelinci yang hidup. Setelah mendapat dukungan dari Doraemon dan teman-temannya, mereka menciptakan koloni kelinci di bulan. Namun, petualangan mereka membawa mereka bertemu dengan Luca Tsukino dan saudara-saudaranya yang ternyata adalah Espals, makhluk dengan kekuatan misterius yang memiliki takdir untuk menyelamatkan Planet Kaguya.",
+        "trailer_url": "https://www.youtube.com/embed/0J4v3t8N8x0",
+        "episodes": [
+          { "episode": "Movie", "url": "https://abysscdn.com/?v=4hjIIewCf&autoplay=1&autoplay=1" }
+        ]
+      },
+      {
+        "id": 121,
+        "title": "Stand by Me Doraemon 2",
+        "folder": "stand_by_me_doraemon_2",
+        "image": "stand_by_me_doraemon_2.jpg",
+        "japanese_title": "STAND BY ME ドラえもん 2",
+        "score": 7.8,
+        "producers": ["Robot Communications", "Shin-Ei Animation", "Shirogumi", "TV Asahi", "Fujiko F. Fujio Productions", "Toho Company", "Dentsu"],
+        "type": "Film",
+        "status": "Selesai",
+        "duration": "96 Menit",
+        "release_date": "2020-11-20",
+        "studio": ["Robot Communications", "Shin-Ei Animation", "Shirogumi"],
+        "genre": ["Drama", "Sci-Fi", "Anime", "Comedy"],
+        "synopsis": "Setelah peristiwa dari film sebelumnya, Nobita dan Doraemon melakukan perjalanan ke masa depan untuk menunjukkan calon istrinya kepada nenek tercinta Nobita. Namun, Nobita dewasa malah melarikan diri dari pernikahannya sendiri. Doraemon dan Nobita muda berusaha membantu Nobita dewasa mengatasi ketakutannya dan kembali ke masa depan untuk menikahi Shizuka.",
+        "trailer_url": "https://www.youtube.com/watch?v=A0wg3Zkxq1c",
+        "episodes": [
+          { "episode": "Movie", "url": "https://abysscdn.com/?v=nWgnm0q4o&autoplay=1&autoplay=1" }
+        ]
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+        
+
+      
+      
+]
