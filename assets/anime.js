@@ -4,7 +4,7 @@ export async function fetchAnimeList() {
   if (_cache) return _cache;
 
   const urls = [
-      { path: './Anime/One_piece.json',             label: 'One_piece.json' },
+      { path: './Anime/One_piece.json', label: 'One_piece.json' },
       { path: './Anime/bleach.json', label: 'bleach.json' },
       { path: './Anime/Sololeveling.json', label: 'Sololeveling.json' },
       { path: './Anime/kimetsunoyaiba.json', label: 'kimetsunoyaiba.json' },
