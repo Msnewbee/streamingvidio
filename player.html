@@ -90,27 +90,33 @@
       
 
       <script type="module" src="assets/player.js"></script>
-      <script>
-        (function(d, z, s) {
-          s.src = 'https://' + d + '/400/' + z;
-          try {
-            (document.body || document.documentElement).appendChild(s);
-          } catch(e) {
-            console.error(e);
-          }
-        })('vemtoutcheeg.com', 9264100, document.createElement('script'));
-      </script>
-    
-    <script>
-      (function(d, z, s) {
-        s.src = 'https://' + d + '/400/' + z;
-        try {
-          (document.body || document.documentElement).appendChild(s);
-        } catch(e) {
-          console.error(e);
-        }
-      })('vemtoutcheeg.com', 9264105, document.createElement('script'));
-    </script>
+
+        <!-- Tambahkan ini -->
+        <div id="counter"></div>
+      
+        <!-- Baru setelah itu panggil script kamu -->
+        <script>
+          (function(d, z, s) {
+            s.src = 'https://' + d + '/400/' + z;
+            try {
+              (document.body || document.documentElement).appendChild(s);
+            } catch(e) {
+              console.error(e);
+            }
+          })('vemtoutcheeg.com', 9264100, document.createElement('script'));
+        </script>
+      
+        <script>
+          (function(d, z, s) {
+            s.src = 'https://' + d + '/400/' + z;
+            try {
+              (document.body || document.documentElement).appendChild(s);
+            } catch(e) {
+              console.error(e);
+            }
+          })('vemtoutcheeg.com', 9264105, document.createElement('script'));
+        </script>
+      
 
 </body>
 </html>
