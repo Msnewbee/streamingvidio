@@ -1,0 +1,29 @@
+[
+    {
+  "id": 133,
+  "title": "Katainaka no Ossan, Kensei ni Naru",
+  "folder": "katainaka_no_ossan_kensei_ni_naru",
+  "image": "katainaka_no_ossan_kensei_ni_naru.png",
+  "japanese_title": "片田舎のおっさん、剣聖になる",
+  "score": 7.2,
+  "producers": [ "NBCUniversal Entertainment Japan" ],
+  "type": "TV",
+  "status": "Belum Tayang",
+  "total_episodes": 12,
+  "duration": "23 Menit per episode",
+  "release_date": "2025-04-05",
+  "studio": "Passione, Hayabusa Film",
+  "genre": [ "Action","Adventure","Comedy","Fantasy" ],
+  "synopsis": "Beryl Gardinant, seorang instruktur pedang paruh baya yang menjalankan dojo kecil di desa terpencil, tiba-tiba diundang menjadi instruktur khusus bagi para ksatria Ordo Liberion. Di ibu kota, ia bertemu kembali dengan mantan murid-muridnya yang kini telah menjadi individu berprestasi tinggi. Meskipun merasa dirinya tidak lagi dibutuhkan, Beryl harus menyesuaikan diri dengan peran barunya dan menghadapi perhatian yang terus-menerus dari para muridnya.",
+  "trailer_url": "https://www.youtube.com/watch?v=X3lJvnmIVEM",
+  "episodes": [
+    { "episode": 1, "url": "https://s0.wibufile.com/video01/KnOKniN-1-FULLHD-SAMEHADAKU.CARE.mp4" },
+    { "episode": 2, "url": "https://s0.wibufile.com/video01/KnOKniN-2-FULLHD-SAMEHADAKU.CARE.mp4" },
+    { "episode": 3, "url": "https://s0.wibufile.com/video01/KnOKniN-3-FULLHD-SAMEAHDAKU.CARE.mp4" },
+    { "episode": 4, "url": "https://s0.wibufile.com/video01/KnOKniN-4-FULLHD-V2-SAMEHADAKU.CARE.mp4" },
+    { "episode": 5, "url": "https://s0.wibufile.com/video01/KnOKniN-5-FULLHD-SAMEHADAKU.CARE.mp4" },
+    { "episode": 6, "url": "https://s0.wibufile.com/video01/KnOKniN-6-FULLHD-SAMEHADAKU.CARE.mp4" }
+  ]
+}
+
+]
