@@ -39,7 +39,8 @@ export async function fetchAnimeList() {
       { path: './Anime/Witch Watch.json', label: 'Witch Watch.json' },
       { path: './Anime/Kijin Gentoushou.json', label: 'Kijin Gentoushou.json' },
       { path: './Anime/Momentary Lily.json', label: 'Momentary Lily.json' },
-      { path: './Anime/Our Last Crusade or the Rise of a New World.json', label: 'Our Last Crusade or the Rise of a New World.json' }
+      { path: './Anime/Our Last Crusade or the Rise of a New World.json', label: 'Our Last Crusade or the Rise of a New World.json' },
+      { path: './Anime/Bye Bye, Earth.json', label: 'Bye Bye, Earth.json' }
 
     ];
 
