@@ -42,7 +42,8 @@ export async function fetchAnimeList() {
       { path: './Anime/Our Last Crusade or the Rise of a New World.json', label: 'Our Last Crusade or the Rise of a New World.json' },
       { path: './Anime/Bye Bye, Earth.json', label: 'Bye Bye, Earth.json' },
       { path: './Anime/Teogonia.json', label: 'Teogonia.json' },
-      { path: './Anime/Katainaka no Ossan, Kensei ni Naru.json', label: 'Katainaka no Ossan, Kensei ni Naru.json' }
+      { path: './Anime/Katainaka no Ossan, Kensei ni Naru.json', label: 'Katainaka no Ossan, Kensei ni Naru.json' },
+      { path: './Anime/Yosuga no Sora.json', label: 'Yosuga no Sora.json' }
 
     ];
 

@@ -1,0 +1,35 @@
+[
+    {
+  "id": 134,
+  "title": "Yosuga no Sora: In Solitude, Where We Are Least Alone",
+  "folder": "yosuga_no_sora",
+  "image": "yosuga_no_sora.jpg",
+  "japanese_title": "ヨスガノソラ",
+  "score": 6.3,
+  "producers": ["feel.", "Starchild Records", "AT-X"],
+  "type": "TV",
+  "status": "Selesai",
+  "total_episodes": 12,
+  "duration": "24 Menit per episode",
+  "release_date": "2010-10-04",
+  "studio": "feel.",
+  "genre": ["Drama", "Romance", "Ecchi"],
+  "synopsis": "Setelah kehilangan kedua orang tua mereka dalam sebuah kecelakaan, Haruka Kasugano dan saudara kembarnya, Sora, pindah ke pedesaan tempat mereka menghabiskan masa kecil mereka. Di sana, Haruka mencoba membangun kembali kehidupannya dan menjalin hubungan dengan teman-teman lama dan baru. Namun, Sora yang rapuh dan tertutup mulai menunjukkan ketergantungan emosional yang kuat terhadap Haruka, mengaburkan batas antara kasih sayang saudara dan perasaan yang lebih dalam. Anime ini mengeksplorasi tema cinta, kehilangan, dan batasan moral dalam hubungan manusia.",
+  "trailer_url": "https://www.youtube.com/embed/Gcyg9zY5QRo",
+  "episodes": [
+    { "episode": 1, "url": "https://www.blogger.com/video.g?token=AD6v5dwU4jAVe_ZHmoE5n-EBgK88cxIbuysLVLaZOvN-T5L48eG-X57B7qPdzv5ifQRZexSIxIZzfp86agzv_9KHS3IzfWpKY7dKaTid3VQGRpAKBwmkFG2huM5hM37mLSdaQfCZug" },
+    { "episode": 2, "url": "https://www.blogger.com/video.g?token=AD6v5dxLFO50eTZK7gmOrnfrQffwySWSPBv1_X4IA0FK7VEX1Sl294nKkUohsz4MwUWtfRqLWmQ6K5Nn7sEoD8h1RLT7U3ImRGtrVl6yF-v2yS4jSCKjp0ypk0MyqJbza8Y9dBvpNhg" },
+    { "episode": 3, "url": "https://www.blogger.com/video.g?token=AD6v5dzVexHoYsYO3ZiGO5BsPIIZYplKwRHKxnD9sLZqAjaT_Qcj_6Tq5wnHYAq7wXH1Hgwk7302gZKnIYHzaSxO8TZ_n7b8U7F-o27szaYusghkfkoirswHH3cwxQDVDkv26fQ91Co" },
+    { "episode": 4, "url": "https://www.blogger.com/video.g?token=AD6v5dy4d0HpQNYKmq_M3MeFtnT9JQU8Up2jG0147GHRREtoW_DrMtwBefqizWZFDHH6JcjSw7Un1zM_OhTsW0FMyVy9w4N94BoisVLsH1Ykk_4sZZaMF_CSPRvCMyPtz6WTXkm_YeQ" },
+    { "episode": 5, "url": "https://www.blogger.com/video.g?token=AD6v5dwLtM7IEMIR9HWGWxwEeWAzR_bMIsSNlqb6csLWFPo_bTNHhP-5mpPu9CL6qKBrfWV5VCgo6oMxafA7KXmLHDajcCWf69OprTOAi2fyQs3y5mKvp370NFSMZeSPkvM2zARspOc-" },
+    { "episode": 6, "url": "https://www.blogger.com/video.g?token=AD6v5dyhPTehv7uwXevIN2OX6pkr67rxS1mVfCERhDZItm3IFHHoMAx3wPFdbqoPZnlDMAil3Rok8LaYKU4glpakvXE5QyDgBoFmgL2PPWZJVw1vkldp_W3Xyu-tI1MrHszVoklA_wM" },
+    { "episode": 7, "url": "https://www.blogger.com/video.g?token=AD6v5dyt3AWFx77oykqrorkuNoXU5Nxzl_6qv4-s7JCije4j38BeVG5h3QuPKIObeDTPkrIWb6ocf0P42ECwduCX-Z511W7mveP3LwYwKdlDcj9DSZyr9KdyRRXNrGvPgXRzdzv9ov7M" },
+    { "episode": 8, "url": "https://www.blogger.com/video.g?token=AD6v5dzujcUL8xsDb6Kt0NkkNaVhAiOcs5TSk1IAPS4SWetchby-XyT1_EQZ3uRVhKtSxfCpdOVu1IS4QjGe9tArfGJkV0zTJpsYP_4q30JphyFxLWO-RZcwoHDUO94zBUEaR5siEnA" },
+    { "episode": 9, "url": "https://www.blogger.com/video.g?token=AD6v5dx36xD1cvEWIM5yiUEUSZIp55Y-5QPxCPjaJWy8VZtEVrBPXou7mda4B7aKSNE-K9dMrH5baAW5C5cg2whOLRkpI5UpD2I2mhF4uhp3f1iw70-ZleaWtmeXF7dbCSbwW87psIK_" },
+    { "episode": 10, "url": "https://www.blogger.com/video.g?token=AD6v5dzCGPpxXXTFGgnY9Prs-ssHEkIsik2TBHYSdyFrjeInI9arzmz5OF4jyR6GZJUHZf44Rc3MZ8bAAGQ-4GokIrk-okLQAPwyx3nkN3kw1sZ__SkFSHI0luPZwCW2a4f7hj_Tn7U" },
+    { "episode": 11, "url": "https://www.blogger.com/video.g?token=AD6v5dzmdFl0ESBOzBw_IPip7Um1fCYYwqRW1eIDY8_oZp4XMqbP4CBRiImMqs1fHto3we3WF3UcBleq2ZYirJMKfZHcYqmTowqrOuiG7_ulGAX1WtOd3yaTfxw9auUoTcx7XhWlqZI" },
+    { "episode": 12, "url": "https://www.blogger.com/video.g?token=AD6v5dz8hGoq_vu1bhmq_7wW4TAK4WsPI8d2fJP8bR8N3AhCizJdXbFZZ9AUBK8E9n54qlY_R4lZess_wZfaPJl_8isJNraOwwywnVMtr_8JPmQ6cIFg3oVQrIpgHWb-3rCIRssH55E" }
+  ]
+}
+
+]
